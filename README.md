@@ -10,11 +10,13 @@ Connector Mysql para .NET
 Provider Mysql para Visual Studio
 
 ESTRUTURA DO PROJETO:
-Diretório	        Finalidade
-SeitonSystem\src\dto	Responsável por gerenciar as configurações padões da spec do RestAssured e também do padrão criado pela interface
-SeitonSystem\src\dao
-SeitonSystem\src\controller
-Seiton System\src\view
+
+Diretório	                  Finalidade
+SeitonSystem\src\dto	      Responsável pela criação das Entidades principais do programa
+SeitonSystem\src\dao        Responsável pela criação de todos os métodos para Leitura, Atualização, Exclusão e Criação de registros no banco de dados
+SeitonSystem\src\controller Responsável por fazer a intermediação entre a camada de interface do usuário com o banco de dados criado no diretório dao
+Seiton System\src\view      Responsável pela interface do programa, utilizando programação orientada a eventos e a objetos.
+
 
 FERRAMENTAS  UTILIZADAS:
 .NET- Plataforma de desenvolvimento do projeto 
