@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A8316963-6BDD-4163-B6E6-FCADA691C747}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeitonSystem</RootNamespace>
+    <AssemblyName>SeitonSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>seitonGbp-4-ConversImagem.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=7.0.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 7.0.4\Assemblies\v4.5.1\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="src\controller\ClienteController.cs" />
+    <Compile Include="src\controller\FinançasController.cs" />
+    <Compile Include="src\controller\ProdutoClassController.cs" />
+    <Compile Include="src\dao\ClienteDAO.cs" />
+    <Compile Include="src\dao\ConnectDAO.cs" />
+    <Compile Include="src\dao\FinançasDAO.cs" />
+    <Compile Include="src\dao\ProdutoClassDAO1.cs" />
+    <Compile Include="src\dto\Cliente.cs" />
+    <Compile Include="src\dto\Finanças.cs" />
+    <Compile Include="src\dto\ProdutoClassPrincipal.cs" />
+    <Compile Include="src\view\ClienteAtualizarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ClienteAtualizarView.Designer.cs">
+      <DependentUpon>ClienteAtualizarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\ClienteCadastrarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ClienteCadastrarView.Designer.cs">
+      <DependentUpon>ClienteCadastrarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\ClienteView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ClienteView.Designer.cs">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FinancasAtualizarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FinancasAtualizarView.Designer.cs">
+      <DependentUpon>FinancasAtualizarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FinancasCadastrarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FinancasCadastrarView.Designer.cs">
+      <DependentUpon>FinancasCadastrarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FinançasView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FinançasView.Designer.cs">
+      <DependentUpon>FinançasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\FinançasViewGráficos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\FinançasViewGráficos.Designer.cs">
+      <DependentUpon>FinançasViewGráficos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\LoginView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\LoginView.Designer.cs">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\MensagensView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\MensagensView.Designer.cs">
+      <DependentUpon>MensagensView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\ProdutoAtualizarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ProdutoAtualizarView.Designer.cs">
+      <DependentUpon>ProdutoAtualizarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\ProdutoCadastrarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ProdutoCadastrarView.Designer.cs">
+      <DependentUpon>ProdutoCadastrarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\ProdutoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ProdutoView.Designer.cs">
+      <DependentUpon>ProdutoView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="src\view\ClienteAtualizarView.resx">
+      <DependentUpon>ClienteAtualizarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ClienteCadastrarView.resx">
+      <DependentUpon>ClienteCadastrarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ClienteView.resx">
+      <DependentUpon>ClienteView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FinancasAtualizarView.resx">
+      <DependentUpon>FinancasAtualizarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FinancasCadastrarView.resx">
+      <DependentUpon>FinancasCadastrarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FinançasView.resx">
+      <DependentUpon>FinançasView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\FinançasViewGráficos.resx">
+      <DependentUpon>FinançasViewGráficos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\LoginView.aa-DJ.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\LoginView.resx">
+      <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\MensagensView.resx">
+      <DependentUpon>MensagensView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ProdutoAtualizarView.resx">
+      <DependentUpon>ProdutoAtualizarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ProdutoCadastrarView.resx">
+      <DependentUpon>ProdutoCadastrarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ProdutoView.resx">
+      <DependentUpon>ProdutoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\chocEscorrendo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_criar_novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_voltar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_voltar2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_deletar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_atualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_recuperar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_erro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_aviso.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_check.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="seitonGbp %281%29.ico" />
+    <Content Include="seitonGbp-4-ConversImagem.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
