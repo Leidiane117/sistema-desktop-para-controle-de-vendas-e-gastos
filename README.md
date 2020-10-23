@@ -16,7 +16,8 @@ SeitonSystem\src\controller	Responsável por fazer a intermediação entre a cam
 Seiton System\src\view	Responsável pela interface do programa, utilizando programação orientada a eventos e a objetos.
 
 FERRAMENTAS UTILIZADAS
-.NET- Plataforma de desenvolvimento do projeto 	MetroUI- Framework para design dos formulários
+.NET- Plataforma de desenvolvimento do projeto 
+MetroUI- Framework para design dos formulários
 HeidSql- Ferramenta gráfica de SGBD	Visual Studio 2017- IDE
 Xamp- Servidor local de código aberto para o banco de dados MySql	Linguagem de Programação C#- Para desenvolver a lógica de programação do sistema
 Interface- Windows Forms	Sistema Operacional -Windows 10
