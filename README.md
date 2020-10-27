@@ -2,23 +2,23 @@ PROGRAMA PARA CONTROLE DE VENDAS E GASTOS
 -----------------------------------------
 Projeto desenvolvido com proposito de ser um modelo de aplicação ERP para pequenos negócios.
 
-PRÉ-REQUISITOS 
+## PRÉ-REQUISITOS 
 
-Plataforma .NET
+* Plataforma .NET
 
-Visual Studio
+* Visual Studio
 
-Banco de Dados MySql
+* Banco de Dados MySql
 
-Servidor Apache
+* Servidor Apache
 
-Conector MySql para .NET
+* Conector MySql para .NET
 
-Provider MySql para Visual Studio
+* Provider MySql para Visual Studio
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-ESTRUTURA DO PROJETO 
+## ESTRUTURA DO PROJETO 
 
 SeitonSystem\src\dto  -------------------	Responsável pela criação das Entidades principais do programa
 
@@ -30,7 +30,7 @@ Seiton System\src\view	------------------- Responsável pela interface do progra
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-FERRAMENTAS UTILIZADAS
+## FERRAMENTAS UTILIZADAS
 
 .NET -----------------------------------------Plataforma de desenvolvimento do projeto
 
