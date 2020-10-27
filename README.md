@@ -1,5 +1,5 @@
 PROGRAMA PARA CONTROLE DE VENDAS E GASTOS
-
+-----------------------------------------
 Projeto desenvolvido com proposito de ser um modelo de aplicação ERP para pequenos negócios.
 
 PRÉ-REQUISITOS 
