@@ -108,11 +108,11 @@ namespace SeitonSystem.src.controller
 
         }
 
-        public List<Finanças>BuscarPNome(string titulo)
+        public List<Finanças>BuscarPFiltro(string filtro)
         {
             try
             {
-                return finançasDAO.BuscarPorNome(titulo);
+                return finançasDAO.BuscarPorFiltro(filtro);
             }
             catch (Exception)
             {
@@ -120,6 +120,7 @@ namespace SeitonSystem.src.controller
             }
         }
 
+       
 
     }
 }

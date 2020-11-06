@@ -58,6 +58,7 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_calda = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.db_clientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_excluidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -77,7 +78,7 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.Location = new System.Drawing.Point(-1, -2);
-            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
             this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 0;
@@ -97,7 +98,7 @@
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_produtos.Location = new System.Drawing.Point(199, -2);
-            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
             this.btn_produtos.Size = new System.Drawing.Size(209, 38);
             this.btn_produtos.TabIndex = 1;
@@ -118,7 +119,7 @@
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_financas.Location = new System.Drawing.Point(800, -2);
-            this.btn_financas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
             this.btn_financas.Size = new System.Drawing.Size(201, 38);
             this.btn_financas.TabIndex = 2;
@@ -139,7 +140,7 @@
             this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pedido.Location = new System.Drawing.Point(584, -2);
-            this.btn_pedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_pedido.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedido.Name = "btn_pedido";
             this.btn_pedido.Size = new System.Drawing.Size(220, 38);
             this.btn_pedido.TabIndex = 3;
@@ -153,7 +154,7 @@
             this.txt_pesquisa.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pesquisa.ForeColor = System.Drawing.Color.White;
             this.txt_pesquisa.Location = new System.Drawing.Point(16, 261);
-            this.txt_pesquisa.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_pesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pesquisa.Multiline = true;
             this.txt_pesquisa.Name = "txt_pesquisa";
             this.txt_pesquisa.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal;
@@ -173,7 +174,7 @@
             this.btn_tbClientes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tbClientes.ForeColor = System.Drawing.Color.White;
             this.btn_tbClientes.Location = new System.Drawing.Point(28, 220);
-            this.btn_tbClientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_tbClientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tbClientes.Name = "btn_tbClientes";
             this.btn_tbClientes.Size = new System.Drawing.Size(124, 37);
             this.btn_tbClientes.TabIndex = 7;
@@ -186,7 +187,7 @@
             // 
             this.linha.BackColor = System.Drawing.Color.White;
             this.linha.Location = new System.Drawing.Point(40, 257);
-            this.linha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
             this.linha.Size = new System.Drawing.Size(923, 2);
             this.linha.TabIndex = 8;
@@ -195,7 +196,7 @@
             // 
             this.linha2.BackColor = System.Drawing.Color.White;
             this.linha2.Location = new System.Drawing.Point(40, 299);
-            this.linha2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linha2.Margin = new System.Windows.Forms.Padding(4);
             this.linha2.Name = "linha2";
             this.linha2.Size = new System.Drawing.Size(923, 2);
             this.linha2.TabIndex = 11;
@@ -240,7 +241,7 @@
             this.db_clientes.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.db_clientes.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.db_clientes.Location = new System.Drawing.Point(40, 322);
-            this.db_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.db_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.db_clientes.Name = "db_clientes";
             this.db_clientes.ReadOnly = true;
             this.db_clientes.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -312,7 +313,7 @@
             this.db_excluidos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.db_excluidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.db_excluidos.Location = new System.Drawing.Point(40, 354);
-            this.db_excluidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.db_excluidos.Margin = new System.Windows.Forms.Padding(4);
             this.db_excluidos.Name = "db_excluidos";
             this.db_excluidos.ReadOnly = true;
             this.db_excluidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -353,7 +354,7 @@
             this.btn_tbExcluidos.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tbExcluidos.ForeColor = System.Drawing.Color.White;
             this.btn_tbExcluidos.Location = new System.Drawing.Point(839, 220);
-            this.btn_tbExcluidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_tbExcluidos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tbExcluidos.Name = "btn_tbExcluidos";
             this.btn_tbExcluidos.Size = new System.Drawing.Size(141, 37);
             this.btn_tbExcluidos.TabIndex = 38;
@@ -375,7 +376,7 @@
             this.btn_recuperar.Image = global::SeitonSystem.Properties.Resources.icone_recuperar;
             this.btn_recuperar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_recuperar.Location = new System.Drawing.Point(376, 767);
-            this.btn_recuperar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_recuperar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_recuperar.Name = "btn_recuperar";
             this.btn_recuperar.Size = new System.Drawing.Size(181, 44);
             this.btn_recuperar.TabIndex = 41;
@@ -398,7 +399,7 @@
             this.btn_atualizar.Image = ((System.Drawing.Image)(resources.GetObject("btn_atualizar.Image")));
             this.btn_atualizar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_atualizar.Location = new System.Drawing.Point(199, 767);
-            this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(181, 44);
             this.btn_atualizar.TabIndex = 40;
@@ -421,7 +422,7 @@
             this.btn_excluir.Image = ((System.Drawing.Image)(resources.GetObject("btn_excluir.Image")));
             this.btn_excluir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_excluir.Location = new System.Drawing.Point(547, 767);
-            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4);
             this.btn_excluir.Name = "btn_excluir";
             this.btn_excluir.Size = new System.Drawing.Size(181, 44);
             this.btn_excluir.TabIndex = 39;
@@ -443,7 +444,7 @@
             this.btn_voltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar2;
             this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_voltar.Location = new System.Drawing.Point(28, 757);
-            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_voltar.Name = "btn_voltar";
             this.btn_voltar.Size = new System.Drawing.Size(112, 74);
             this.btn_voltar.TabIndex = 16;
@@ -460,7 +461,7 @@
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cadastrar.Location = new System.Drawing.Point(788, 743);
-            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(175, 101);
             this.btn_cadastrar.TabIndex = 13;
@@ -480,7 +481,7 @@
             this.btn_pesquisar.Image = global::SeitonSystem.Properties.Resources.icone_lupa;
             this.btn_pesquisar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.btn_pesquisar.Location = new System.Drawing.Point(412, 208);
-            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pesquisar.Name = "btn_pesquisar";
             this.btn_pesquisar.Size = new System.Drawing.Size(181, 49);
             this.btn_pesquisar.TabIndex = 10;
@@ -494,9 +495,9 @@
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_logo.Location = new System.Drawing.Point(397, -12);
-            this.pic_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(196, 203);
+            this.pic_logo.Size = new System.Drawing.Size(143, 203);
             this.pic_logo.TabIndex = 5;
             this.pic_logo.TabStop = false;
             // 
@@ -509,11 +510,31 @@
             this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
             this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_calda.Location = new System.Drawing.Point(-1, 36);
-            this.pic_calda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_calda.Margin = new System.Windows.Forms.Padding(4);
             this.pic_calda.Name = "pic_calda";
             this.pic_calda.Size = new System.Drawing.Size(1003, 151);
             this.pic_calda.TabIndex = 4;
             this.pic_calda.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(190, 195);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 37);
+            this.button1.TabIndex = 44;
+            this.button1.Text = "graficos";
+            this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // ClienteView
             // 
@@ -521,6 +542,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(997, 885);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.pic_calda);
             this.Controls.Add(this.btn_recuperar);
@@ -541,7 +563,7 @@
             this.Controls.Add(this.btn_produtos);
             this.Controls.Add(this.btn_clientes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "ClienteView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -577,5 +599,6 @@
         private System.Windows.Forms.Button btn_excluir;
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Button btn_recuperar;
+        private System.Windows.Forms.Button button1;
     }
 }

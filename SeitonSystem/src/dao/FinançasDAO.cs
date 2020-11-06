@@ -11,22 +11,21 @@ namespace SeitonSystem.src.dao
 {
     public class FinançasDAO
     {
-        public const string inserirFluxo = "INSERT INTO fluxo_de_caixa(titulo, descricao, data_lancamento, tipo_fluxo)" +
-                "VALUES(@titulo, @descricao, @data,@tipo)"; //0k
+        public const string inserirFluxo = "INSERT INTO fluxo_de_caixa(titulo, valor, descricao, data_lancamento, tipo_fluxo)" +
+                "VALUES(@titulo,@valor, @descricao, @data_lancamento,@tipo_fluxo)"; //0k
 
-        public const string atualizarFluxo = "UPDATE fluxo_de_caixa SET titulo=@titulo, valor=@valor"+
-            "descricao=@descricao, data_lancamento=@data," +
-            " tipo_fluxo=@tipo  WHERE id=@id"; // ok
+        public const string atualizarFluxo = "UPDATE fluxo_de_caixa SET titulo=@titulo, valor=@valor,descricao=@descricao, data_lancamento=@data_lancamento, tipo_fluxo=@tipo_fluxo  WHERE id=@id"; // ok
+
 
         public const string selectFluxoTotal = "SELECT id,titulo,valor,descricao,data_lancamento, tipo_fluxo" +
             " FROM fluxo_de_caixa"; // selecionar todas as colunas 0k
 
-        public const string selectPorNome = "SELECT id,titulo, valor,descricao,data_lancamento,tipo_fluxo" +
+        public const string selectPorFiltro = "SELECT id,titulo, valor,descricao,data_lancamento,tipo_fluxo" +
             " FROM fluxo_de_caixa WHERE"; // selecionar os dados por nome/filtro 0k
 
         public const string selectFluxoId = "SELECT * FROM fluxo_de_caixa WHERE id=@id"; //ok
 
-        public const string selectFluxoPorData = "SELECT* FROM fluxo_de_caixa WHERE";// falta esse
+        public const string selectFluxoPorData = "SELECT* FROM fluxo_de_caixa WHERE data_lancamento=@data";// falta esse
 
         public const string selectEntrada = "SELECT id,titulo,valor,descricao,data_lancamento, tipo_fluxo" +
            " FROM fluxo_de_caixa Where tipo_fluxo='Entrada'";// ok
@@ -61,8 +60,8 @@ namespace SeitonSystem.src.dao
                 cmd.Parameters.Add(new MySqlParameter("@titulo", finanças.Titulo));
                 cmd.Parameters.Add(new MySqlParameter("@valor", finanças.Valor));
                 cmd.Parameters.Add(new MySqlParameter("@descricao", finanças.Descricao));
-                cmd.Parameters.Add(new MySqlParameter("@data", finanças.Data_lancamento));
-                cmd.Parameters.Add(new MySqlParameter("@tipo", finanças.Tipo_fluxo));
+                cmd.Parameters.Add(new MySqlParameter("@data_lancamento", finanças.Data_lancamento));
+                cmd.Parameters.Add(new MySqlParameter("@tipo_fluxo", finanças.Tipo_fluxo));
 
 
                 conn.Open();
@@ -90,8 +89,8 @@ namespace SeitonSystem.src.dao
                 cmd.Parameters.Add(new MySqlParameter("@titulo", finanças.Titulo));
                 cmd.Parameters.Add(new MySqlParameter("@valor", finanças.Valor));
                 cmd.Parameters.Add(new MySqlParameter("@descricao", finanças.Descricao));
-                cmd.Parameters.Add(new MySqlParameter("@data", finanças.Data_lancamento));
-                cmd.Parameters.Add(new MySqlParameter("@tipo", finanças.Tipo_fluxo));
+                cmd.Parameters.Add(new MySqlParameter("@data_lancamento", finanças.Data_lancamento));
+                cmd.Parameters.Add(new MySqlParameter("@tipo_fluxo", finanças.Tipo_fluxo));
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -149,7 +148,7 @@ namespace SeitonSystem.src.dao
                     { //enquanto houver leitura
                         Finanças dado = new Finanças
                         {
-                            Id = int.Parse(MySqlDataReader["id"].ToString()),
+                           Id = int.Parse(MySqlDataReader["id"].ToString()),
                             Titulo = MySqlDataReader["titulo"].ToString(),
                             Valor = double.Parse(MySqlDataReader["valor"].ToString()),
                             Descricao = MySqlDataReader["descricao"].ToString(),
@@ -259,26 +258,36 @@ namespace SeitonSystem.src.dao
         }
 
 
-        public List<Finanças> BuscarPorNome(string titulo) // select por nome do produto
+
+
+
+            public List<Finanças> BuscarPorFiltro(string filtro) // select por nome do produto
         {
             List<Finanças> lista2 = new List<Finanças>();// crio um objeto do tipo lista da minha classe
             try
             {
                 int num;
-                string select = selectPorNome;
+                DateTime data;
+                string select = selectPorFiltro;
 
-                if (!int.TryParse(titulo, out num))
+                if (!int.TryParse(filtro, out num))
                 {
-                    select += " titulo LIKE @titulo";
-                    titulo += "%";
+                    select += " titulo LIKE @filtro";
+                    filtro += "%";
                 }
+                else if(!DateTime.TryParse(filtro, out data))
+                {
+                    select += "data_lancamento== @filtro";
+                    
+                }
+               
                 else
                 {
-                    select += " id = @id";
+                    select += " id = @filtro";
                 }                                                                  //produtopincipal,instancio.
 
                 cmd = new MySqlCommand(select, conn); //string query para consultar produtos
-                cmd.Parameters.Add(new MySqlParameter("@titulo", titulo));
+                cmd.Parameters.Add(new MySqlParameter("@filtro", filtro));
 
                 conn.Open();
                 cmd.ExecuteNonQuery();
@@ -303,7 +312,7 @@ namespace SeitonSystem.src.dao
             }
             catch (Exception)
             {
-                throw new Exception(" Não encontrado!");
+                throw new Exception("Não encontrado!");
             }
             finally
             {

@@ -295,6 +295,12 @@ namespace SeitonSystem.view
             preencherDataGridView();
             preencherDataGridViewDeletados();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            FinançasViewGráficos finançasViewGráficos =  new FinançasViewGráficos();
+            finançasViewGráficos.ShowDialog();
+        }
     }
 }
 

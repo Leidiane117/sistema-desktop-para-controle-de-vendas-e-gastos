@@ -276,11 +276,6 @@ namespace SeitonSystem.view
             
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e)
-        {
-            Form1 formulario = new Form1();
-            formulario.ShowDialog();
-        }
 
         private void button_excluir_Click_1(object sender, EventArgs e)
         {
@@ -297,6 +292,12 @@ namespace SeitonSystem.view
         {
             Listar();
             ListarDeletados();
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+            ClienteView clienteView = new ClienteView();
+            clienteView.ShowDialog();
         }
     }
 }

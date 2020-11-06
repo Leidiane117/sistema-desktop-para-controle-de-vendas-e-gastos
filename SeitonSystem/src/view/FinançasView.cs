@@ -11,6 +11,7 @@ using SeitonSystem.src.dto;
 using SeitonSystem.src.controller;
 using SeitonSystem.src.view;
 using SeitonSystem.view;
+using System.Globalization;
 
 namespace SeitonSystem.src.view
 {
@@ -32,7 +33,7 @@ namespace SeitonSystem.src.view
             {
 
                 finançasController = new FinançasController();
-
+               
 
             }
             catch (Exception e)
@@ -54,7 +55,7 @@ namespace SeitonSystem.src.view
 
                 DataGridView2.DataSource = lista;
                 FormatarGrid2();
-
+                totalizar();
 
             }
             catch (Exception e)
@@ -72,7 +73,7 @@ namespace SeitonSystem.src.view
 
                 dataGridSaida.DataSource = lista3; // alimentar o data grid
                 FormatarGridSaida();
-
+                totalizar();
             }
             catch (Exception e)
             {
@@ -88,9 +89,11 @@ namespace SeitonSystem.src.view
                 List<Finanças> lista4 = new List<Finanças>();
                 lista4 = finançasController.ListarFluxoEntrada();
 
-                dataGridEntrada.DataSource = lista4; // alimentar o data grid
+                //dataGridEntrada.Columns.Clear();
+                dataGridEntrada.DataSource = lista4;
+                //dataGridEntrada.Refresh();// alimentar o data grid
                 FormatarGridEntrada();
-
+                totalizar();
             }
             catch (Exception e)
             {
@@ -143,7 +146,7 @@ namespace SeitonSystem.src.view
             dataGridEntrada.Columns["valor"].DefaultCellStyle.Format = "c";
             dataGridEntrada.MultiSelect = false; // slecionar uma linha por vez
             dataGridEntrada.DefaultCellStyle.WrapMode = DataGridViewTriState.True; // quebra de linha
-           
+
         }
         private void FormatarGrid2()
         {
@@ -174,25 +177,30 @@ namespace SeitonSystem.src.view
                 }
 
 
-                   else if (Convert.ToString(row.Cells["tipo_fluxo"].Value) == "Saida")
+                else if (Convert.ToString(row.Cells["tipo_fluxo"].Value) == "Saida")
                 {
                     row.DefaultCellStyle.ForeColor = Color.DarkRed;
-                    
+
                 }
 
 
 
             }
-        
-    }
+
+        }
         private void Finanças_Click(object sender, EventArgs e)
         {
 
             DataGridView2.Visible = true;
             dataGridEntrada.Visible = false;
             dataGridEntrada.Visible = false;
+            label_Vendas.Visible = false;
+            label_Gastos.Visible = false;
+            txt_total.Visible = true;
             ListarFluxoTotal();
+            totalizar();
             FormatarGrid2();
+            
         }
 
         private void btn_cadastrar_Click(object sender, EventArgs e)
@@ -201,7 +209,7 @@ namespace SeitonSystem.src.view
             financas.ShowDialog();
         }
 
-             
+
 
         private void DataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -222,7 +230,7 @@ namespace SeitonSystem.src.view
 
         }
 
-        private void button9_Click(object sender, EventArgs e)
+        private void btnVoltar_Click(object sender, EventArgs e)
         {
             ClienteView clienteView = new ClienteView();
             clienteView.ShowDialog(); // botão voltar- tela clientes
@@ -239,7 +247,7 @@ namespace SeitonSystem.src.view
             //message.ShowDialog();
             DeletarFluxo(idFluxo);
             ListarFluxoTotal();
-
+            totalizar();
         }
 
         private void EnviaMsg(String msg, String tipo)
@@ -256,20 +264,23 @@ namespace SeitonSystem.src.view
 
                 if (DataGridView2.Visible)
                 {
-                    finanças = finançasController.BuscarPNome(txt_pesquisa.Text);
+                    finanças = finançasController.BuscarPFiltro(txt_pesquisa.Text);
 
                     DataGridView2.Columns.Clear();
                     DataGridView2.DataSource = finanças;
+                    totalizar();
                     DataGridView2.Refresh();
                 }
 
                 else if (dataGridEntrada.Visible)
                 {
 
-                    finanças = finançasController.BuscarPNome(txt_pesquisa.Text);
+                    finanças = finançasController.BuscarPFiltro(txt_pesquisa.Text);
 
                     dataGridEntrada.Columns.Clear();
                     dataGridEntrada.DataSource = finanças;
+                  
+                    totalizar();
                     dataGridEntrada.Refresh();
 
                 }
@@ -277,10 +288,12 @@ namespace SeitonSystem.src.view
                 else if (dataGridSaida.Visible)
                 {
 
-                    finanças = finançasController.BuscarPNome(txt_pesquisa.Text);
+                    finanças = finançasController.BuscarPFiltro(txt_pesquisa.Text);
 
                     dataGridSaida.Columns.Clear();
                     dataGridSaida.DataSource = finanças;
+                    
+                    totalizar();
                     dataGridSaida.Refresh();
                 }
             }
@@ -313,7 +326,7 @@ namespace SeitonSystem.src.view
             panel1.Visible = true;
         }
 
-       
+
 
         private void dataGridEntrada_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -358,9 +371,13 @@ namespace SeitonSystem.src.view
             dataGridEntrada.Visible = false;
             btn_atualizar.Visible = false;
             button_excluir.Visible = false;
+            label_Gastos.Visible = true;
+            label_Vendas.Visible = false;
+            txt_total.Visible = false;
             ListarSaídas();
-
-            FormatarGridSaida();
+            totalizar();
+            
+            
         }
 
         private void button_vendas_Click(object sender, EventArgs e)
@@ -371,8 +388,12 @@ namespace SeitonSystem.src.view
             dataGridEntrada.Visible = true;
             btn_atualizar.Visible = false;
             button_excluir.Visible = false;
+            label_Vendas.Visible = true;
+            label_Gastos.Visible = false;
+            txt_total.Visible = false;
             ListarEntradas();
             FormatarGridEntrada();
+            totalizar();
         }
 
         private void buttonGraficos_Click(object sender, EventArgs e)
@@ -389,8 +410,61 @@ namespace SeitonSystem.src.view
                 financas.ShowDialog();
             }
         }
+
+       
+
+
+        private double CalculoTotal()
+        {
+            double totalEntrada = 0, totalSaida = 0;
+            int i = 0;
+
+
+            for (i = 0; i < DataGridView2.Rows.Count; i++)
+            {
+                if (DataGridView2.Rows[i].Cells[5].Value.ToString() == "Entrada")
+                {
+                    totalEntrada = totalEntrada + Convert.ToDouble(DataGridView2.Rows[i].Cells[2].Value);
+                    label_Vendas.Text = totalEntrada.ToString();
+                }
+                else
+                {
+                    totalSaida = totalSaida + Convert.ToDouble(DataGridView2.Rows[i].Cells[2].Value);
+                    label_Gastos.Text = totalSaida.ToString();
+                }
+            }
+
+         return totalEntrada - totalSaida;
+
+        }
+       
+
+        private void totalizar()
+        {
+
+            label_Gastos.ForeColor = Color.DarkRed;
+            label_Vendas.ForeColor = Color.DarkBlue;
+            txt_total.Text = CalculoTotal().ToString();
+            if (Convert.ToDouble(txt_total.Text) < 0)
+            {
+                txt_total.ForeColor = Color.DarkRed;
+
+            }
+            else
+            {
+                txt_total.ForeColor = Color.DarkGreen;
+
+            }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
+
 }
+
 
 
 

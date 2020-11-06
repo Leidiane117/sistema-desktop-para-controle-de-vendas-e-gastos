@@ -29,22 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancasAtualizarView));
-            this.saídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tipoDeFluxoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.entradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.label1 = new System.Windows.Forms.Label();
-            this.txt_AtualizarTitulo = new System.Windows.Forms.TextBox();
+            this.txt_atualizarTitulo = new System.Windows.Forms.TextBox();
             this.btn_limpar = new System.Windows.Forms.Button();
             this.btn_pedido = new System.Windows.Forms.Button();
             this.btn_produtos = new System.Windows.Forms.Button();
             this.btn_salvar = new System.Windows.Forms.Button();
             this.panel_dados = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.text_id = new System.Windows.Forms.TextBox();
-            this.atualizar_dateTime = new System.Windows.Forms.DateTimePicker();
-            this.textAtualizarValor = new System.Windows.Forms.TextBox();
-            this.txt_descricao = new System.Windows.Forms.TextBox();
+            this.txt_id = new System.Windows.Forms.TextBox();
+            this.dt_atualizar = new System.Windows.Forms.DateTimePicker();
+            this.txt_atualizarValor = new System.Windows.Forms.TextBox();
+            this.txt_atualizarDescricao = new System.Windows.Forms.TextBox();
             this.lbl_insta = new System.Windows.Forms.Label();
             this.lbl_telefone = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
@@ -52,7 +48,6 @@
             this.btn_titulo = new System.Windows.Forms.Button();
             this.btn_financas = new System.Windows.Forms.Button();
             this.btn_clientes = new System.Windows.Forms.Button();
-            this.btn_voltar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -60,53 +55,11 @@
             this.pic_calda = new System.Windows.Forms.PictureBox();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.menuStrip1.SuspendLayout();
+            this.cb_atualizar = new System.Windows.Forms.ComboBox();
             this.panel_dados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
-            // 
-            // saídaToolStripMenuItem
-            // 
-            this.saídaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.saídaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.saídaToolStripMenuItem.Name = "saídaToolStripMenuItem";
-            this.saídaToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.saídaToolStripMenuItem.Text = "Saída";
-            // 
-            // tipoDeFluxoToolStripMenuItem
-            // 
-            this.tipoDeFluxoToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.tipoDeFluxoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entradaToolStripMenuItem,
-            this.saídaToolStripMenuItem});
-            this.tipoDeFluxoToolStripMenuItem.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tipoDeFluxoToolStripMenuItem.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tipoDeFluxoToolStripMenuItem.Name = "tipoDeFluxoToolStripMenuItem";
-            this.tipoDeFluxoToolStripMenuItem.Size = new System.Drawing.Size(12, 20);
-            // 
-            // entradaToolStripMenuItem
-            // 
-            this.entradaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.entradaToolStripMenuItem.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.entradaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.entradaToolStripMenuItem.Name = "entradaToolStripMenuItem";
-            this.entradaToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.entradaToolStripMenuItem.Text = "Entrada";
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tipoDeFluxoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(632, 222);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(22, 24);
-            this.menuStrip1.TabIndex = 40;
-            this.menuStrip1.Text = "Tipo de Fluxo";
             // 
             // label1
             // 
@@ -122,18 +75,18 @@
             this.label1.Text = "*Data:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // txt_AtualizarTitulo
+            // txt_atualizarTitulo
             // 
-            this.txt_AtualizarTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_AtualizarTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_AtualizarTitulo.ForeColor = System.Drawing.Color.White;
-            this.txt_AtualizarTitulo.Location = new System.Drawing.Point(155, 80);
-            this.txt_AtualizarTitulo.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_AtualizarTitulo.MaxLength = 327;
-            this.txt_AtualizarTitulo.Multiline = true;
-            this.txt_AtualizarTitulo.Name = "txt_AtualizarTitulo";
-            this.txt_AtualizarTitulo.Size = new System.Drawing.Size(687, 39);
-            this.txt_AtualizarTitulo.TabIndex = 14;
+            this.txt_atualizarTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_atualizarTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_atualizarTitulo.ForeColor = System.Drawing.Color.White;
+            this.txt_atualizarTitulo.Location = new System.Drawing.Point(160, 80);
+            this.txt_atualizarTitulo.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_atualizarTitulo.MaxLength = 327;
+            this.txt_atualizarTitulo.Multiline = true;
+            this.txt_atualizarTitulo.Name = "txt_atualizarTitulo";
+            this.txt_atualizarTitulo.Size = new System.Drawing.Size(687, 39);
+            this.txt_atualizarTitulo.TabIndex = 14;
             // 
             // btn_limpar
             // 
@@ -209,14 +162,14 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_dados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
             this.panel_dados.Controls.Add(this.label2);
-            this.panel_dados.Controls.Add(this.text_id);
-            this.panel_dados.Controls.Add(this.atualizar_dateTime);
+            this.panel_dados.Controls.Add(this.txt_id);
+            this.panel_dados.Controls.Add(this.dt_atualizar);
             this.panel_dados.Controls.Add(this.label1);
-            this.panel_dados.Controls.Add(this.textAtualizarValor);
-            this.panel_dados.Controls.Add(this.txt_AtualizarTitulo);
+            this.panel_dados.Controls.Add(this.txt_atualizarValor);
+            this.panel_dados.Controls.Add(this.txt_atualizarTitulo);
             this.panel_dados.Controls.Add(this.btn_limpar);
             this.panel_dados.Controls.Add(this.btn_salvar);
-            this.panel_dados.Controls.Add(this.txt_descricao);
+            this.panel_dados.Controls.Add(this.txt_atualizarDescricao);
             this.panel_dados.Controls.Add(this.lbl_insta);
             this.panel_dados.Controls.Add(this.lbl_telefone);
             this.panel_dados.Controls.Add(this.lbl_nome);
@@ -234,54 +187,57 @@
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 17);
+            this.label2.Location = new System.Drawing.Point(13, 32);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 38);
             this.label2.TabIndex = 20;
-            this.label2.Text = "*Id:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.label2.Text = "Id:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // text_id
+            // txt_id
             // 
-            this.text_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
-            this.text_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.text_id.Location = new System.Drawing.Point(155, 16);
-            this.text_id.Margin = new System.Windows.Forms.Padding(4);
-            this.text_id.Name = "text_id";
-            this.text_id.Size = new System.Drawing.Size(105, 39);
-            this.text_id.TabIndex = 19;
+            this.txt_id.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.txt_id.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_id.Enabled = false;
+            this.txt_id.ForeColor = System.Drawing.Color.Gray;
+            this.txt_id.Location = new System.Drawing.Point(160, 31);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_id.Name = "txt_id";
+            this.txt_id.ReadOnly = true;
+            this.txt_id.Size = new System.Drawing.Size(105, 39);
+            this.txt_id.TabIndex = 19;
             // 
-            // atualizar_dateTime
+            // dt_atualizar
             // 
-            this.atualizar_dateTime.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.atualizar_dateTime.Location = new System.Drawing.Point(410, 132);
-            this.atualizar_dateTime.Name = "atualizar_dateTime";
-            this.atualizar_dateTime.Size = new System.Drawing.Size(162, 39);
-            this.atualizar_dateTime.TabIndex = 18;
+            this.dt_atualizar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_atualizar.Location = new System.Drawing.Point(379, 136);
+            this.dt_atualizar.Name = "dt_atualizar";
+            this.dt_atualizar.Size = new System.Drawing.Size(162, 39);
+            this.dt_atualizar.TabIndex = 18;
             // 
-            // textAtualizarValor
+            // txt_atualizarValor
             // 
-            this.textAtualizarValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
-            this.textAtualizarValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textAtualizarValor.Location = new System.Drawing.Point(160, 136);
-            this.textAtualizarValor.Margin = new System.Windows.Forms.Padding(4);
-            this.textAtualizarValor.Name = "textAtualizarValor";
-            this.textAtualizarValor.Size = new System.Drawing.Size(105, 39);
-            this.textAtualizarValor.TabIndex = 15;
+            this.txt_atualizarValor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.txt_atualizarValor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_atualizarValor.Location = new System.Drawing.Point(160, 136);
+            this.txt_atualizarValor.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_atualizarValor.Name = "txt_atualizarValor";
+            this.txt_atualizarValor.Size = new System.Drawing.Size(105, 39);
+            this.txt_atualizarValor.TabIndex = 15;
             // 
-            // txt_descricao
+            // txt_atualizarDescricao
             // 
-            this.txt_descricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_descricao.ForeColor = System.Drawing.Color.White;
-            this.txt_descricao.Location = new System.Drawing.Point(160, 194);
-            this.txt_descricao.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_descricao.MaxLength = 500;
-            this.txt_descricao.Multiline = true;
-            this.txt_descricao.Name = "txt_descricao";
-            this.txt_descricao.Size = new System.Drawing.Size(687, 39);
-            this.txt_descricao.TabIndex = 11;
+            this.txt_atualizarDescricao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_atualizarDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_atualizarDescricao.ForeColor = System.Drawing.Color.White;
+            this.txt_atualizarDescricao.Location = new System.Drawing.Point(160, 194);
+            this.txt_atualizarDescricao.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_atualizarDescricao.MaxLength = 500;
+            this.txt_atualizarDescricao.Multiline = true;
+            this.txt_atualizarDescricao.Name = "txt_atualizarDescricao";
+            this.txt_atualizarDescricao.Size = new System.Drawing.Size(687, 39);
+            this.txt_atualizarDescricao.TabIndex = 11;
             // 
             // lbl_insta
             // 
@@ -344,7 +300,7 @@
             this.btn_titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_titulo.ForeColor = System.Drawing.Color.White;
-            this.btn_titulo.Location = new System.Drawing.Point(100, 208);
+            this.btn_titulo.Location = new System.Drawing.Point(31, 206);
             this.btn_titulo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_titulo.Name = "btn_titulo";
             this.btn_titulo.Size = new System.Drawing.Size(391, 44);
@@ -386,23 +342,6 @@
             this.btn_clientes.TabIndex = 30;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_voltar.FlatAppearance.BorderSize = 0;
-            this.btn_voltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_voltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar;
-            this.btn_voltar.Location = new System.Drawing.Point(40, 204);
-            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(68, 48);
-            this.btn_voltar.TabIndex = 38;
-            this.btn_voltar.UseVisualStyleBackColor = false;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
             // button1
             // 
@@ -509,12 +448,22 @@
             this.label3.Text = "*Tipo de Fluxo:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cb_atualizar
+            // 
+            this.cb_atualizar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_atualizar.FormattingEnabled = true;
+            this.cb_atualizar.Location = new System.Drawing.Point(644, 223);
+            this.cb_atualizar.Name = "cb_atualizar";
+            this.cb_atualizar.Size = new System.Drawing.Size(142, 24);
+            this.cb_atualizar.TabIndex = 50;
+            // 
             // FinancasAtualizarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(997, 650);
+            this.Controls.Add(this.cb_atualizar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pic_logo);
             this.Controls.Add(this.pic_calda);
@@ -522,12 +471,10 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_pedido);
             this.Controls.Add(this.btn_produtos);
             this.Controls.Add(this.panel_dados);
             this.Controls.Add(this.linha);
-            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.btn_titulo);
             this.Controls.Add(this.btn_financas);
             this.Controls.Add(this.btn_clientes);
@@ -535,36 +482,27 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinancasAtualizarView";
             this.Text = "Seiton System";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             this.panel_dados.ResumeLayout(false);
             this.panel_dados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.ToolStripMenuItem saídaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem tipoDeFluxoToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem entradaToolStripMenuItem;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txt_AtualizarTitulo;
+        private System.Windows.Forms.TextBox txt_atualizarTitulo;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.Button btn_pedido;
         private System.Windows.Forms.Button btn_produtos;
         private System.Windows.Forms.Button btn_salvar;
         private System.Windows.Forms.Panel panel_dados;
-        private System.Windows.Forms.TextBox txt_descricao;
+        private System.Windows.Forms.TextBox txt_atualizarDescricao;
         private System.Windows.Forms.Label lbl_insta;
         private System.Windows.Forms.Label lbl_telefone;
         private System.Windows.Forms.Label lbl_nome;
         private System.Windows.Forms.Panel linha;
-        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.Button btn_titulo;
         private System.Windows.Forms.Button btn_financas;
         private System.Windows.Forms.Button btn_clientes;
@@ -574,10 +512,11 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.PictureBox pic_calda;
         private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.TextBox textAtualizarValor;
-        private System.Windows.Forms.DateTimePicker atualizar_dateTime;
+        private System.Windows.Forms.TextBox txt_atualizarValor;
+        private System.Windows.Forms.DateTimePicker dt_atualizar;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox text_id;
+        private System.Windows.Forms.TextBox txt_id;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cb_atualizar;
     }
 }

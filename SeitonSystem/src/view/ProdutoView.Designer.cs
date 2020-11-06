@@ -87,9 +87,10 @@
             this.ButtonProdutos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonProdutos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonProdutos.ForeColor = System.Drawing.Color.White;
-            this.ButtonProdutos.Location = new System.Drawing.Point(19, 184);
+            this.ButtonProdutos.Location = new System.Drawing.Point(25, 226);
+            this.ButtonProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonProdutos.Name = "ButtonProdutos";
-            this.ButtonProdutos.Size = new System.Drawing.Size(117, 30);
+            this.ButtonProdutos.Size = new System.Drawing.Size(156, 37);
             this.ButtonProdutos.TabIndex = 24;
             this.ButtonProdutos.Text = "Produtos";
             this.ButtonProdutos.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -109,9 +110,10 @@
             this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pedido.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_pedido.Location = new System.Drawing.Point(442, -7);
+            this.btn_pedido.Location = new System.Drawing.Point(589, -9);
+            this.btn_pedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_pedido.Name = "btn_pedido";
-            this.btn_pedido.Size = new System.Drawing.Size(174, 41);
+            this.btn_pedido.Size = new System.Drawing.Size(232, 50);
             this.btn_pedido.TabIndex = 20;
             this.btn_pedido.Text = "Pedidos";
             this.btn_pedido.UseVisualStyleBackColor = false;
@@ -129,9 +131,10 @@
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_financas.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_financas.Location = new System.Drawing.Point(570, -9);
+            this.btn_financas.Location = new System.Drawing.Point(760, -11);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_financas.Name = "btn_financas";
-            this.btn_financas.Size = new System.Drawing.Size(181, 41);
+            this.btn_financas.Size = new System.Drawing.Size(241, 50);
             this.btn_financas.TabIndex = 19;
             this.btn_financas.Text = "Finanças";
             this.btn_financas.UseVisualStyleBackColor = false;
@@ -150,9 +153,10 @@
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_produtos.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.btn_produtos.Location = new System.Drawing.Point(149, -2);
+            this.btn_produtos.Location = new System.Drawing.Point(199, -2);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(151, 31);
+            this.btn_produtos.Size = new System.Drawing.Size(201, 38);
             this.btn_produtos.TabIndex = 18;
             this.btn_produtos.Text = "Produtos";
             this.btn_produtos.UseVisualStyleBackColor = false;
@@ -171,8 +175,9 @@
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_clientes.Location = new System.Drawing.Point(-1, -2);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Size = new System.Drawing.Size(151, 31);
+            this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 0;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
@@ -216,9 +221,10 @@
             this.ButtonExcluidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonExcluidos.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonExcluidos.ForeColor = System.Drawing.Color.White;
-            this.ButtonExcluidos.Location = new System.Drawing.Point(589, 178);
+            this.ButtonExcluidos.Location = new System.Drawing.Point(785, 219);
+            this.ButtonExcluidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonExcluidos.Name = "ButtonExcluidos";
-            this.ButtonExcluidos.Size = new System.Drawing.Size(116, 30);
+            this.ButtonExcluidos.Size = new System.Drawing.Size(155, 37);
             this.ButtonExcluidos.TabIndex = 39;
             this.ButtonExcluidos.Text = "Excluídos";
             this.ButtonExcluidos.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -228,9 +234,10 @@
             // linha
             // 
             this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(28, 214);
+            this.linha.Location = new System.Drawing.Point(37, 263);
+            this.linha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linha.Name = "linha";
-            this.linha.Size = new System.Drawing.Size(692, 2);
+            this.linha.Size = new System.Drawing.Size(923, 2);
             this.linha.TabIndex = 41;
             // 
             // DataGridExcluídos
@@ -272,7 +279,8 @@
             this.DataGridExcluídos.EnableHeadersVisualStyles = false;
             this.DataGridExcluídos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DataGridExcluídos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridExcluídos.Location = new System.Drawing.Point(25, 260);
+            this.DataGridExcluídos.Location = new System.Drawing.Point(33, 320);
+            this.DataGridExcluídos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridExcluídos.Name = "DataGridExcluídos";
             this.DataGridExcluídos.ReadOnly = true;
             this.DataGridExcluídos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -297,7 +305,7 @@
             this.DataGridExcluídos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
             this.DataGridExcluídos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridExcluídos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridExcluídos.Size = new System.Drawing.Size(692, 357);
+            this.DataGridExcluídos.Size = new System.Drawing.Size(923, 439);
             this.DataGridExcluídos.TabIndex = 38;
             this.DataGridExcluídos.Visible = false;
             this.DataGridExcluídos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridExcluídos_CellContentClick);
@@ -347,7 +355,8 @@
             this.DataGridViewProdutos.EnableHeadersVisualStyles = false;
             this.DataGridViewProdutos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.DataGridViewProdutos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.DataGridViewProdutos.Location = new System.Drawing.Point(25, 260);
+            this.DataGridViewProdutos.Location = new System.Drawing.Point(33, 320);
+            this.DataGridViewProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.DataGridViewProdutos.Name = "DataGridViewProdutos";
             this.DataGridViewProdutos.ReadOnly = true;
             this.DataGridViewProdutos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -374,7 +383,7 @@
             this.DataGridViewProdutos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
             this.DataGridViewProdutos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.DataGridViewProdutos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DataGridViewProdutos.Size = new System.Drawing.Size(692, 357);
+            this.DataGridViewProdutos.Size = new System.Drawing.Size(923, 439);
             this.DataGridViewProdutos.TabIndex = 43;
             this.DataGridViewProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridViewProdutos_CellContentClick);
             // 
@@ -383,10 +392,11 @@
             this.TextBoxBuscar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.TextBoxBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TextBoxBuscar.ForeColor = System.Drawing.SystemColors.Control;
-            this.TextBoxBuscar.Location = new System.Drawing.Point(28, 224);
+            this.TextBoxBuscar.Location = new System.Drawing.Point(37, 276);
+            this.TextBoxBuscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TextBoxBuscar.Multiline = true;
             this.TextBoxBuscar.Name = "TextBoxBuscar";
-            this.TextBoxBuscar.Size = new System.Drawing.Size(677, 20);
+            this.TextBoxBuscar.Size = new System.Drawing.Size(903, 25);
             this.TextBoxBuscar.TabIndex = 47;
             this.TextBoxBuscar.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.TextBoxBuscar.Visible = false;
@@ -404,9 +414,10 @@
             this.btn_recuperar.ForeColor = System.Drawing.Color.White;
             this.btn_recuperar.Image = global::SeitonSystem.Properties.Resources.icone_recuperar;
             this.btn_recuperar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_recuperar.Location = new System.Drawing.Point(282, 650);
+            this.btn_recuperar.Location = new System.Drawing.Point(376, 800);
+            this.btn_recuperar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_recuperar.Name = "btn_recuperar";
-            this.btn_recuperar.Size = new System.Drawing.Size(122, 36);
+            this.btn_recuperar.Size = new System.Drawing.Size(163, 44);
             this.btn_recuperar.TabIndex = 49;
             this.btn_recuperar.Text = "    Recuperar";
             this.btn_recuperar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -426,9 +437,10 @@
             this.buttonAtualizar.ForeColor = System.Drawing.Color.White;
             this.buttonAtualizar.Image = ((System.Drawing.Image)(resources.GetObject("buttonAtualizar.Image")));
             this.buttonAtualizar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.buttonAtualizar.Location = new System.Drawing.Point(140, 650);
+            this.buttonAtualizar.Location = new System.Drawing.Point(187, 800);
+            this.buttonAtualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.buttonAtualizar.Name = "buttonAtualizar";
-            this.buttonAtualizar.Size = new System.Drawing.Size(136, 36);
+            this.buttonAtualizar.Size = new System.Drawing.Size(181, 44);
             this.buttonAtualizar.TabIndex = 48;
             this.buttonAtualizar.Text = "  Atualizar";
             this.buttonAtualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -446,9 +458,10 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_voltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar2;
             this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_voltar.Location = new System.Drawing.Point(19, 640);
+            this.btn_voltar.Location = new System.Drawing.Point(25, 788);
+            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(73, 65);
+            this.btn_voltar.Size = new System.Drawing.Size(97, 80);
             this.btn_voltar.TabIndex = 32;
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
@@ -463,9 +476,10 @@
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cadastrar.Location = new System.Drawing.Point(589, 631);
+            this.btn_cadastrar.Location = new System.Drawing.Point(785, 777);
+            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(131, 82);
+            this.btn_cadastrar.Size = new System.Drawing.Size(175, 101);
             this.btn_cadastrar.TabIndex = 29;
             this.btn_cadastrar.UseVisualStyleBackColor = false;
             this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
@@ -485,9 +499,10 @@
             this.ButtonPesquisar.ForeColor = System.Drawing.Color.White;
             this.ButtonPesquisar.Image = global::SeitonSystem.Properties.Resources.icone_lupa;
             this.ButtonPesquisar.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.ButtonPesquisar.Location = new System.Drawing.Point(307, 174);
+            this.ButtonPesquisar.Location = new System.Drawing.Point(409, 214);
+            this.ButtonPesquisar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ButtonPesquisar.Name = "ButtonPesquisar";
-            this.ButtonPesquisar.Size = new System.Drawing.Size(136, 40);
+            this.ButtonPesquisar.Size = new System.Drawing.Size(181, 49);
             this.ButtonPesquisar.TabIndex = 27;
             this.ButtonPesquisar.Text = "Pesquisar";
             this.ButtonPesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -502,9 +517,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_logo.Location = new System.Drawing.Point(296, -9);
+            this.pic_logo.Location = new System.Drawing.Point(395, -11);
+            this.pic_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(147, 162);
+            this.pic_logo.Size = new System.Drawing.Size(196, 199);
             this.pic_logo.TabIndex = 22;
             this.pic_logo.TabStop = false;
             // 
@@ -516,9 +532,10 @@
             this.pic_calda.BackColor = System.Drawing.Color.Transparent;
             this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
             this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_calda.Location = new System.Drawing.Point(-1, 29);
+            this.pic_calda.Location = new System.Drawing.Point(-1, 36);
+            this.pic_calda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_calda.Name = "pic_calda";
-            this.pic_calda.Size = new System.Drawing.Size(752, 123);
+            this.pic_calda.Size = new System.Drawing.Size(1003, 151);
             this.pic_calda.TabIndex = 21;
             this.pic_calda.TabStop = false;
             // 
@@ -565,9 +582,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(28, 252);
+            this.panel1.Location = new System.Drawing.Point(37, 310);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(692, 2);
+            this.panel1.Size = new System.Drawing.Size(923, 2);
             this.panel1.TabIndex = 50;
             this.panel1.Visible = false;
             // 
@@ -583,9 +601,10 @@
             this.button_excluir.ForeColor = System.Drawing.Color.White;
             this.button_excluir.Image = global::SeitonSystem.Properties.Resources.icone_deletar;
             this.button_excluir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.button_excluir.Location = new System.Drawing.Point(427, 650);
+            this.button_excluir.Location = new System.Drawing.Point(569, 800);
+            this.button_excluir.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_excluir.Name = "button_excluir";
-            this.button_excluir.Size = new System.Drawing.Size(122, 36);
+            this.button_excluir.Size = new System.Drawing.Size(163, 44);
             this.button_excluir.TabIndex = 51;
             this.button_excluir.Text = " Deletar";
             this.button_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -595,11 +614,11 @@
             // 
             // ProdutoView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(748, 719);
+            this.ClientSize = new System.Drawing.Size(997, 885);
             this.Controls.Add(this.button_excluir);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btn_recuperar);
@@ -621,6 +640,7 @@
             this.Controls.Add(this.btn_clientes);
             this.ForeColor = System.Drawing.SystemColors.ControlLight;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "ProdutoView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -39,25 +39,20 @@
             this.lbl_insta = new System.Windows.Forms.Label();
             this.lbl_nome = new System.Windows.Forms.Label();
             this.panel_dados = new System.Windows.Forms.Panel();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dt_cadastrar = new System.Windows.Forms.DateTimePicker();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_valor = new System.Windows.Forms.TextBox();
             this.valor = new System.Windows.Forms.Label();
             this.btn_pedido = new System.Windows.Forms.Button();
             this.btn_produtos = new System.Windows.Forms.Button();
             this.btn_clientes = new System.Windows.Forms.Button();
-            this.btn_voltar = new System.Windows.Forms.Button();
             this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_calda = new System.Windows.Forms.PictureBox();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.entradaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saídaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label3 = new System.Windows.Forms.Label();
+            this.cb_cadastrar = new System.Windows.Forms.ComboBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel_dados.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).BeginInit();
-            this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // linha
@@ -108,7 +103,7 @@
             this.btn_titulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_titulo.ForeColor = System.Drawing.Color.White;
-            this.btn_titulo.Location = new System.Drawing.Point(83, 193);
+            this.btn_titulo.Location = new System.Drawing.Point(26, 188);
             this.btn_titulo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_titulo.Name = "btn_titulo";
             this.btn_titulo.Size = new System.Drawing.Size(393, 52);
@@ -126,7 +121,7 @@
             this.btn_financas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_financas.Location = new System.Drawing.Point(796, -6);
+            this.btn_financas.Location = new System.Drawing.Point(784, -5);
             this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
             this.btn_financas.Size = new System.Drawing.Size(211, 38);
@@ -195,7 +190,7 @@
             // panel_dados
             // 
             this.panel_dados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
-            this.panel_dados.Controls.Add(this.dateTimePicker1);
+            this.panel_dados.Controls.Add(this.dt_cadastrar);
             this.panel_dados.Controls.Add(this.label1);
             this.panel_dados.Controls.Add(this.txt_valor);
             this.panel_dados.Controls.Add(this.txt_titulo);
@@ -213,14 +208,14 @@
             this.panel_dados.Size = new System.Drawing.Size(933, 316);
             this.panel_dados.TabIndex = 26;
             // 
-            // dateTimePicker1
+            // dt_cadastrar
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(388, 103);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(156, 39);
-            this.dateTimePicker1.TabIndex = 18;
-            this.dateTimePicker1.Value = new System.DateTime(2020, 10, 19, 0, 0, 0, 0);
+            this.dt_cadastrar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dt_cadastrar.Location = new System.Drawing.Point(388, 103);
+            this.dt_cadastrar.Name = "dt_cadastrar";
+            this.dt_cadastrar.Size = new System.Drawing.Size(156, 39);
+            this.dt_cadastrar.TabIndex = 18;
+            this.dt_cadastrar.Value = new System.DateTime(2020, 10, 26, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -269,7 +264,7 @@
             this.btn_pedido.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pedido.Location = new System.Drawing.Point(620, -6);
+            this.btn_pedido.Location = new System.Drawing.Point(590, -5);
             this.btn_pedido.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedido.Name = "btn_pedido";
             this.btn_pedido.Size = new System.Drawing.Size(207, 38);
@@ -286,10 +281,10 @@
             this.btn_produtos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_produtos.Location = new System.Drawing.Point(202, 88);
+            this.btn_produtos.Location = new System.Drawing.Point(208, -5);
             this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(237, 37);
+            this.btn_produtos.Size = new System.Drawing.Size(225, 37);
             this.btn_produtos.TabIndex = 20;
             this.btn_produtos.Text = "Produtos";
             this.btn_produtos.UseVisualStyleBackColor = false;
@@ -303,91 +298,27 @@
             this.btn_clientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clientes.Location = new System.Drawing.Point(13, 88);
+            this.btn_clientes.Location = new System.Drawing.Point(-11, -6);
             this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Size = new System.Drawing.Size(212, 38);
+            this.btn_clientes.Size = new System.Drawing.Size(227, 38);
             this.btn_clientes.TabIndex = 19;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_voltar.FlatAppearance.BorderSize = 0;
-            this.btn_voltar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_voltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar;
-            this.btn_voltar.Location = new System.Drawing.Point(27, 201);
-            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(68, 48);
-            this.btn_voltar.TabIndex = 27;
-            this.btn_voltar.UseVisualStyleBackColor = false;
+            this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
             // pic_logo
             // 
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_logo.Location = new System.Drawing.Point(431, -15);
+            this.pic_logo.Image = global::SeitonSystem.Properties.Resources.logo2;
+            this.pic_logo.Location = new System.Drawing.Point(415, -9);
             this.pic_logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(196, 196);
+            this.pic_logo.Size = new System.Drawing.Size(196, 189);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_logo.TabIndex = 21;
             this.pic_logo.TabStop = false;
-            // 
-            // pic_calda
-            // 
-            this.pic_calda.BackColor = System.Drawing.Color.Transparent;
-            this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
-            this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_calda.Location = new System.Drawing.Point(-52, 30);
-            this.pic_calda.Margin = new System.Windows.Forms.Padding(4);
-            this.pic_calda.Name = "pic_calda";
-            this.pic_calda.Size = new System.Drawing.Size(1099, 151);
-            this.pic_calda.TabIndex = 22;
-            this.pic_calda.TabStop = false;
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Font = new System.Drawing.Font("Segoe UI Semilight", 10F, System.Drawing.FontStyle.Bold);
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(639, 224);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(170, 28);
-            this.menuStrip1.TabIndex = 31;
-            this.menuStrip1.Text = "Tipo de Fluxo";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.Checked = true;
-            this.toolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.entradaToolStripMenuItem,
-            this.saídaToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(12, 24);
-            // 
-            // entradaToolStripMenuItem
-            // 
-            this.entradaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.entradaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.entradaToolStripMenuItem.Name = "entradaToolStripMenuItem";
-            this.entradaToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.entradaToolStripMenuItem.Text = "Entrada";
-            // 
-            // saídaToolStripMenuItem
-            // 
-            this.saídaToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.saídaToolStripMenuItem.ForeColor = System.Drawing.SystemColors.Window;
-            this.saídaToolStripMenuItem.Name = "saídaToolStripMenuItem";
-            this.saídaToolStripMenuItem.Size = new System.Drawing.Size(216, 28);
-            this.saídaToolStripMenuItem.Text = "Saída";
             // 
             // label3
             // 
@@ -403,24 +334,42 @@
             this.label3.Text = "*Tipo de Fluxo:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // cb_cadastrar
+            // 
+            this.cb_cadastrar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cb_cadastrar.FormattingEnabled = true;
+            this.cb_cadastrar.Location = new System.Drawing.Point(644, 219);
+            this.cb_cadastrar.Name = "cb_cadastrar";
+            this.cb_cadastrar.Size = new System.Drawing.Size(142, 24);
+            this.cb_cadastrar.TabIndex = 49;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
+            this.pictureBox3.Location = new System.Drawing.Point(-38, 30);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(1040, 151);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 140;
+            this.pictureBox3.TabStop = false;
+            // 
             // FinancasCadastrarView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.ClientSize = new System.Drawing.Size(995, 604);
+            this.Controls.Add(this.cb_cadastrar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.btn_titulo);
             this.Controls.Add(this.linha);
-            this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.pic_logo);
-            this.Controls.Add(this.pic_calda);
             this.Controls.Add(this.btn_financas);
             this.Controls.Add(this.panel_dados);
             this.Controls.Add(this.btn_pedido);
             this.Controls.Add(this.btn_produtos);
             this.Controls.Add(this.btn_clientes);
+            this.Controls.Add(this.pictureBox3);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinancasCadastrarView";
@@ -428,20 +377,15 @@
             this.panel_dados.ResumeLayout(false);
             this.panel_dados.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).EndInit();
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.Panel linha;
-        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.PictureBox pic_calda;
         private System.Windows.Forms.TextBox txt_titulo;
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.Button btn_titulo;
@@ -457,11 +401,9 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_valor;
         private System.Windows.Forms.Label valor;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem entradaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem saídaToolStripMenuItem;
+        private System.Windows.Forms.DateTimePicker dt_cadastrar;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox cb_cadastrar;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

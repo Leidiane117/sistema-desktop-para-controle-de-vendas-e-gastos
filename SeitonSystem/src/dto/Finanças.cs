@@ -14,12 +14,7 @@ namespace SeitonSystem.src.dto
         string descricao;
         DateTime data_lancamento;
         string tipo_fluxo;
-       // int fluxoE = (int)Tipo_Fluxo.Entrada;
-        //int fluxoS = (int)Tipo_Fluxo.Saida;
 
-      
-       
-       
         public int Id { get => id; set => id = value; }
         public string Titulo { get => titulo; set => titulo = value; }
         public double Valor { get => valor; set => valor = value; }
@@ -27,6 +22,14 @@ namespace SeitonSystem.src.dto
         public DateTime Data_lancamento { get => data_lancamento; set => data_lancamento = value; }
         public string Tipo_fluxo { get => tipo_fluxo; set => tipo_fluxo = value; }
        
+        // int fluxoE = (int)Tipo_Fluxo.Entrada;
+        //int fluxoS = (int)Tipo_Fluxo.Saida;
+
+
+
+
+
+
     }
   }
 

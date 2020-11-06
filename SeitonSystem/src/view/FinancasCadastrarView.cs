@@ -19,65 +19,75 @@ namespace SeitonSystem.src.view
         public FinancasCadastrarView()
         {
             InitializeComponent();
-        
 
-                try
-                {
-                    finançasController = new FinançasController();
-
-                }
-                catch (Exception e)
-                {
-                    enviaMsg(e.Message, "erro");
-                }
+            try
+            {
+                finançasController = new FinançasController();
+                Configurar();
 
             }
-                                
-            
-         
+            catch (Exception e)
+            {
+                enviaMsg(e.Message, "erro");
+            }
+
+        }
+
+       
+           
+
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             try
+            {
+                Finanças finanças = new Finanças
                 {
-                    Finanças finanças= new Finanças
-                    {
-                        
-                        Titulo = txt_titulo.Text,
-                        Valor = double.Parse(txt_valor.Text),
-                        Descricao = txt_descricao.Text
-                    };
-                    if (!Regex.Match(txt_valor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{1,}$").Success)
-                    {
-                        enviaMsg(" Informe o Valor  corretamente!", "aviso");
-                    }
-                    else if (finanças.Valor <= 0.00)
-                    {
-                        enviaMsg("Informe o Valor !", "aviso");
-                    }
 
-                    else if (!Regex.Match(txt_titulo.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{1,80}$").Success)
-                    {
-                        enviaMsg("Informe o Título da atividade corretamente!", "aviso");
-                    }
+                    Titulo = txt_titulo.Text,
+                    Valor = double.Parse(txt_valor.Text),
+                    Descricao = txt_descricao.Text,
+                    Data_lancamento= DateTime.Parse(dt_cadastrar.Text),
+                    Tipo_fluxo= cb_cadastrar.Text
+                };
 
-
-                    else
-                    {
-                        finançasController.InserirAtividade(finanças);
-                        enviaMsg("Atividade Cadastrada com Sucesso", "check");
-                        LimparForm();
-                    }
-
+                if(cb_cadastrar.Text =="" || cb_cadastrar.Text == null)
+                {
+                    enviaMsg("Informe o Tipo de Fluxo!", "aviso");
                 }
-                catch (Exception)
+                else if (!Regex.Match(txt_valor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{1,}$").Success)
                 {
-                    enviaMsg("Preencha todos os dados corretamente", "erro");
+                    enviaMsg(" Informe o Valor  corretamente!", "aviso");
+                }
+                else if (finanças.Valor <= 0.00)
+                {
+                    enviaMsg("Informe o Valor !", "aviso");
+                }
+
+                else if (!Regex.Match(txt_titulo.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{1,80}$").Success)
+                {
+                    enviaMsg("Informe o Título da atividade corretamente!", "aviso");
+                }
+
+
+                else
+                {
+                    finançasController.InserirAtividade(finanças);
+                    enviaMsg("Atividade Cadastrada com Sucesso", "check");
+                    LimparForm();
+                    Close();
+                    
                 }
 
             }
+            catch (Exception)
+            {
+                throw;
+            }
 
-       
+        }
+
+
 
         private void enviaMsg(String msg, String tipo)
         {
@@ -86,17 +96,27 @@ namespace SeitonSystem.src.view
         }
         public void LimparForm()
         {
-
+            
             txt_valor.Clear();
             txt_titulo.Clear();
             txt_descricao.Clear();
-                       
+            
+            
+            
         }
         private void btn_limpar_Click_1(object sender, EventArgs e)
         {
             LimparForm();
         }
 
-        
+        private void Configurar(){
+            cb_cadastrar.Items.Add("Entrada");
+            cb_cadastrar.Items.Add("Saida");
+        }
+
+        private void btn_clientes_Click(object sender, EventArgs e)
+        {
+            //
+        }
     }
 }
