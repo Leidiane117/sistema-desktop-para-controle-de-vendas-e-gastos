@@ -39,7 +39,9 @@ MetroUI --------------------------------------Framework para design dos formulá
 
 HeidSql---------------------------------------Ferramenta gráfica de SGBD	Visual Studio 2017- IDE
 
-Xamp------------------------------------------Servidor local de código aberto para o banco de dados MySql	Linguagem de Programação C#- Para desenvolver a lógica de programação do sistema
+Xamp------------------------------------------Servidor local de código aberto para o banco de dados MySql	
+
+Linguagem de Programação C#--------------------- Para desenvolver a lógica de programação do sistema
 
 Interface------------------------------------ Windows Forms
 
