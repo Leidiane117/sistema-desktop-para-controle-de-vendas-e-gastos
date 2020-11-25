@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeitonSystem.src.view;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace SeitonSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SeitonSystem.view.ClienteView());
+            Application.Run(new LoginView());
 
         }
     }

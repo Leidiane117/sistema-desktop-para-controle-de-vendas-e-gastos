@@ -42,5 +42,10 @@ namespace SeitonSystem.src.dto {
             get { return this.email; }
             set { this.email = value; }
         }
+
+        public override String ToString() {
+            return this.nome + ". Contato:" + this.celular + ". Instagram:" + this.instagram;
+        }
+
     }
 }

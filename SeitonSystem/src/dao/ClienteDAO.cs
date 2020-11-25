@@ -9,24 +9,21 @@ using System.Windows.Forms;
 
 namespace SeitonSystem.src.dao {
     class ClienteDAO {
-        public const String INSERT_CLIENTE = "INSERT INTO cliente(nome, telefone, celular, instagram, email)" +  
-            "VALUES(@nome, @telefone, @celular, @instagram, @email)";
+        public const String INSERT_CLIENTE = "INSERT INTO cliente(nome, telefone, celular, instagram, email, status)" +  
+            "VALUES(@nome, @telefone, @celular, @instagram, @email, 'ativo')";
 
         public const String UPDATE_CLIENTE = "UPDATE cliente SET nome = @nome, telefone = @telefone, celular = @celular, " +
             "instagram = @instagram, email = @email WHERE id = @id";
 
-        public const String SELECT_CLIENTES = "SELECT * FROM cliente";
+        public const String SELECT_CLIENTES = "SELECT * FROM cliente WHERE status='ativo'";
         public const String SELECT_CLIENTE_ID = "SELECT * FROM cliente WHERE id = @id";
-        public const String SELECT_CLIENTE_FILTRO = "SELECT * FROM cliente WHERE";
+        public const String SELECT_CLIENTE_FILTRO = "SELECT * FROM cliente WHERE status='ativo' AND ";
 
-        public const String SELECT_CLIENTES_DELETADOS = "SELECT * FROM cliente_deletados";
-        public const String SELECT_CLIENTES_DELETADOS_FILTRO = "SELECT * FROM cliente_deletados WHERE";
+        public const String SELECT_CLIENTES_DESATIVO = "SELECT * FROM cliente WHERE status='desativo'";
+        public const String SELECT_CLIENTES_DESATIVO_FILTRO = "SELECT * FROM cliente WHERE status='desativo' AND ";
 
-        public const String DELETE_CLIENTE = "DELETE FROM cliente WHERE id = @id";
-        public const String ENCAMINHA_CLIENTE = "INSERT INTO cliente_deletados SELECT * FROM cliente WHERE id = @id";
-
-        public const String DELETE_CLIENTE_DELETADOS = "DELETE FROM cliente_deletados WHERE id = @id";
-        public const String ENCAMINHA_CLIENTE_DELETADOS = "INSERT INTO cliente SELECT * FROM cliente_deletados WHERE id = @id";
+        public const String DESATIVE_CLIENTE = "UPDATE cliente SET status='desativo' WHERE id = @id";
+        public const String REATIVA_CLIENTE = "UPDATE cliente SET status='ativo' WHERE id = @id";
 
         MySqlConnection conn;
         MySqlCommand command;
@@ -82,17 +79,12 @@ namespace SeitonSystem.src.dao {
             }
         }
 
-        public void deletarCliente(int id) {
+        public void desativarCliente(int id) {
             try {
-                this.command = new MySqlCommand(ENCAMINHA_CLIENTE, this.conn);
+                this.command = new MySqlCommand(DESATIVE_CLIENTE, this.conn);
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
-                this.command.ExecuteNonQuery();
-                
-                this.command = new MySqlCommand(DELETE_CLIENTE, this.conn);
-                this.command.Parameters.Add(new MySqlParameter("@id", id));
-
                 this.command.ExecuteNonQuery();
          
             } catch (Exception) {
@@ -102,17 +94,12 @@ namespace SeitonSystem.src.dao {
             }
         }
 
-        public void recuperarCliente(int id) {
+        public void reativarCliente(int id) {
             try {
-                this.command = new MySqlCommand(ENCAMINHA_CLIENTE_DELETADOS, this.conn);
+                this.command = new MySqlCommand(REATIVA_CLIENTE, this.conn);
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
-                this.command.ExecuteNonQuery();
-
-                this.command = new MySqlCommand(DELETE_CLIENTE_DELETADOS, this.conn);
-                this.command.Parameters.Add(new MySqlParameter("@id", id));
-
                 this.command.ExecuteNonQuery();
             } catch (Exception) {
                 throw;
@@ -144,11 +131,11 @@ namespace SeitonSystem.src.dao {
             return clientes;
         }
 
-        public List<Cliente> pesquisaClientesDeletados() {
+        public List<Cliente> pesquisaClientesDesativados() {
             List<Cliente> clientes = new List<Cliente>();
 
             try {
-                this.command = new MySqlCommand(SELECT_CLIENTES_DELETADOS, this.conn);
+                this.command = new MySqlCommand(SELECT_CLIENTES_DESATIVO, this.conn);
 
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
@@ -190,6 +177,7 @@ namespace SeitonSystem.src.dao {
                 throw new Exception("Erro ao Carregar Dados");
             }finally{
                 ConnectDAO.CloseConnection(this.conn);
+                this.dataReader.Close();
             }
 
             return cliente;
@@ -229,12 +217,12 @@ namespace SeitonSystem.src.dao {
             return clientes;
         }
 
-        public List<Cliente> pesquisaClientesDeletadosFiltro(String filtro) {
+        public List<Cliente> pesquisaClientesDesativadosFiltro(String filtro) {
             List<Cliente> clientes = new List<Cliente>();
 
             try {
                 int num;
-                string select = SELECT_CLIENTES_DELETADOS_FILTRO;
+                string select = SELECT_CLIENTES_DESATIVO_FILTRO;
 
                 if (!int.TryParse(filtro, out num)){
                     select += " nome LIKE @filtro";

@@ -4,11 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;//
+using System.Threading.Tasks;
 
 namespace SeitonSystem.src.controller {
-    class ClienteController
-    {
+    class ClienteController {
         ClienteDAO clienteDAO;
 
         public ClienteController(){
@@ -35,18 +34,18 @@ namespace SeitonSystem.src.controller {
             }        
         }
 
-        public void deletarCliente(int id) {
+        public void desativarCliente(int id) {
             try {
-                this.clienteDAO.deletarCliente(id);
+                this.clienteDAO.desativarCliente(id);
             } catch (Exception){
                 throw;
             }
 
         }
 
-        public void recuperarCliente(int id){
+        public void reativarCliente(int id){
             try {
-                this.clienteDAO.recuperarCliente(id);
+                this.clienteDAO.reativarCliente(id);
             } catch (Exception){
                 throw;
             }
@@ -60,9 +59,9 @@ namespace SeitonSystem.src.controller {
             }
         }
 
-        public List<Cliente> pesquisaClientesDeletados(){
+        public List<Cliente> pesquisaClientesDesativados(){
             try {
-                return this.clienteDAO.pesquisaClientesDeletados();
+                return this.clienteDAO.pesquisaClientesDesativados();
             } catch (Exception) {
                 throw;
             }
@@ -88,12 +87,12 @@ namespace SeitonSystem.src.controller {
             }
         }
 
-        public List<Cliente> pesquisaClientesDeletadosFiltro(String filtro) {
+        public List<Cliente> pesquisaClientesDesativadosFiltro(String filtro) {
             try {
                 if (filtro.Trim() == "" || filtro == null) {
-                    return this.clienteDAO.pesquisaClientesDeletados();
+                    return this.clienteDAO.pesquisaClientesDesativados();
                 }else {
-                    return this.clienteDAO.pesquisaClientesDeletadosFiltro(filtro);
+                    return this.clienteDAO.pesquisaClientesDesativadosFiltro(filtro);
                 }
             }
             catch (Exception) {

@@ -12,6 +12,21 @@
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -36,7 +51,28 @@
     <ApplicationIcon>
     </ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentDateTime, Version=1.16.0.0, Culture=neutral, PublicKeyToken=6ccbc613702e6c71, processorArchitecture=MSIL">
+      <HintPath>packages\FluentDateTime.1.16.0\lib\net452\FluentDateTime.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.1.1.11\lib\net45\K4os.Compression.LZ4.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Compression.LZ4.Streams, Version=1.1.11.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Compression.LZ4.Streams.1.1.11\lib\net45\K4os.Compression.LZ4.Streams.dll</HintPath>
+    </Reference>
+    <Reference Include="K4os.Hash.xxHash, Version=1.0.6.0, Culture=neutral, PublicKeyToken=32cd54395057cec3, processorArchitecture=MSIL">
+      <HintPath>packages\K4os.Hash.xxHash.1.0.6\lib\net45\K4os.Hash.xxHash.dll</HintPath>
+    </Reference>
     <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
     </Reference>
@@ -46,34 +82,36 @@
     <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
       <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\MySql.Data.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    <Reference Include="MySqlBackup, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\MySqlBackup.NET.2.3.3.1\lib\net452\MySqlBackup.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
+      <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
-    </Reference>
-    <Reference Include="MySql.Data, Version=7.0.4.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\Program Files (x86)\MySQL\MySQL Connector Net 7.0.4\Assemblies\v4.5.1\MySql.Data.dll</HintPath>
-    </Reference>
-    <Reference Include="PresentationCore" />
-    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.3\lib\netstandard1.1\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.5.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.6.0\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
-    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -82,68 +120,90 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="WindowsBase" />
+    <Reference Include="Ubiety.Dns.Core, Version=2.2.1.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Ubiety.Dns.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Zstandard.Net, Version=1.1.7.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>packages\MySql.Data.8.0.21\lib\net452\Zstandard.Net.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connected Services\WSCorreios\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="src\controller\ClienteController.cs" />
-    <Compile Include="src\controller\FinançasController.cs" />
-    <Compile Include="src\controller\ProdutoClassController.cs" />
+    <Compile Include="src\controller\FinancasController.cs" />
+    <Compile Include="src\controller\PedidoController.cs" />
+    <Compile Include="src\controller\ProdutoController.cs" />
     <Compile Include="src\dao\ClienteDAO.cs" />
     <Compile Include="src\dao\ConnectDAO.cs" />
-    <Compile Include="src\dao\FinançasDAO.cs" />
-    <Compile Include="src\dao\ProdutoClassDAO1.cs" />
+    <Compile Include="src\dao\FinancasDAO.cs" />
+    <Compile Include="src\dao\PedidoDAO.cs" />
+    <Compile Include="src\dao\ProdutoDAO.cs" />
     <Compile Include="src\dto\Cliente.cs" />
-    <Compile Include="src\dto\Finanças.cs" />
-    <Compile Include="src\dto\ProdutoClassPrincipal.cs" />
-    <Compile Include="src\view\ClienteAtualizarView.cs">
+    <Compile Include="src\dto\Endereco.cs" />
+    <Compile Include="src\dto\Financas.cs" />
+    <Compile Include="src\dto\FinancasPesquisa.cs" />
+    <Compile Include="src\dto\Pedido.cs" />
+    <Compile Include="src\dto\PedidoPesquisa.cs" />
+    <Compile Include="src\dto\Produto.cs" />
+    <Compile Include="src\dto\ProdutoPesquisa.cs" />
+    <Compile Include="src\view\cliente\ClienteAtualizarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ClienteAtualizarView.Designer.cs">
+    <Compile Include="src\view\cliente\ClienteAtualizarView.designer.cs">
       <DependentUpon>ClienteAtualizarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\ClienteCadastrarView.cs">
+    <Compile Include="src\view\cliente\ClienteCadastrarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ClienteCadastrarView.Designer.cs">
+    <Compile Include="src\view\cliente\ClienteCadastrarView.designer.cs">
       <DependentUpon>ClienteCadastrarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\ClienteView.cs">
+    <Compile Include="src\view\cliente\ClienteView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ClienteView.Designer.cs">
+    <Compile Include="src\view\cliente\ClienteView.designer.cs">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\FinancasAtualizarView.cs">
+    <Compile Include="src\view\financas\FinancasAtualizarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\FinancasAtualizarView.Designer.cs">
+    <Compile Include="src\view\financas\FinancasAtualizarView.designer.cs">
       <DependentUpon>FinancasAtualizarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\FinancasCadastrarView.cs">
+    <Compile Include="src\view\financas\FinancasCadastrarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\FinancasCadastrarView.Designer.cs">
+    <Compile Include="src\view\financas\FinancasCadastrarView.designer.cs">
       <DependentUpon>FinancasCadastrarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\FinançasView.cs">
+    <Compile Include="src\view\financas\FinancasView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\FinançasView.Designer.cs">
-      <DependentUpon>FinançasView.cs</DependentUpon>
+    <Compile Include="src\view\financas\FinancasView.designer.cs">
+      <DependentUpon>FinancasView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\FinançasViewGráficos.cs">
+    <Compile Include="src\view\financas\GraficosView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\FinançasViewGráficos.Designer.cs">
-      <DependentUpon>FinançasViewGráficos.cs</DependentUpon>
+    <Compile Include="src\view\financas\GraficosView.Designer.cs">
+      <DependentUpon>GraficosView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\InicialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\InicialView.Designer.cs">
+      <DependentUpon>InicialView.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\LoginView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\LoginView.Designer.cs">
+    <Compile Include="src\view\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
     <Compile Include="src\view\MensagensView.cs">
@@ -152,22 +212,40 @@
     <Compile Include="src\view\MensagensView.Designer.cs">
       <DependentUpon>MensagensView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\ProdutoAtualizarView.cs">
+    <Compile Include="src\view\pedido\PedidoCadastrarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ProdutoAtualizarView.Designer.cs">
+    <Compile Include="src\view\pedido\PedidoCadastrarView.designer.cs">
+      <DependentUpon>PedidoCadastrarView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\pedido\PedidoDetailView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\pedido\PedidoDetailView.Designer.cs">
+      <DependentUpon>PedidoDetailView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\pedido\PedidoView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\pedido\PedidoView.Designer.cs">
+      <DependentUpon>PedidoView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\view\produto\ProdutoAtualizarView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\produto\ProdutoAtualizarView.Designer.cs">
       <DependentUpon>ProdutoAtualizarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\ProdutoCadastrarView.cs">
+    <Compile Include="src\view\produto\ProdutoCadastrarView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ProdutoCadastrarView.Designer.cs">
+    <Compile Include="src\view\produto\ProdutoCadastrarView.Designer.cs">
       <DependentUpon>ProdutoCadastrarView.cs</DependentUpon>
     </Compile>
-    <Compile Include="src\view\ProdutoView.cs">
+    <Compile Include="src\view\produto\ProdutoView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="src\view\ProdutoView.Designer.cs">
+    <Compile Include="src\view\produto\ProdutoView.Designer.cs">
       <DependentUpon>ProdutoView.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -180,29 +258,29 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="src\view\ClienteAtualizarView.resx">
+    <EmbeddedResource Include="src\view\cliente\ClienteAtualizarView.resx">
       <DependentUpon>ClienteAtualizarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\ClienteCadastrarView.resx">
+    <EmbeddedResource Include="src\view\cliente\ClienteCadastrarView.resx">
       <DependentUpon>ClienteCadastrarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\ClienteView.resx">
+    <EmbeddedResource Include="src\view\cliente\ClienteView.resx">
       <DependentUpon>ClienteView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FinancasAtualizarView.resx">
+    <EmbeddedResource Include="src\view\financas\FinancasAtualizarView.resx">
       <DependentUpon>FinancasAtualizarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FinancasCadastrarView.resx">
+    <EmbeddedResource Include="src\view\financas\FinancasCadastrarView.resx">
       <DependentUpon>FinancasCadastrarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FinançasView.resx">
-      <DependentUpon>FinançasView.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\financas\FinancasView.resx">
+      <DependentUpon>FinancasView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\FinançasViewGráficos.resx">
-      <DependentUpon>FinançasViewGráficos.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\financas\GraficosView.resx">
+      <DependentUpon>GraficosView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\LoginView.aa-DJ.resx">
-      <DependentUpon>LoginView.cs</DependentUpon>
+    <EmbeddedResource Include="src\view\InicialView.resx">
+      <DependentUpon>InicialView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
@@ -210,16 +288,190 @@
     <EmbeddedResource Include="src\view\MensagensView.resx">
       <DependentUpon>MensagensView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\ProdutoAtualizarView.resx">
+    <EmbeddedResource Include="src\view\pedido\PedidoCadastrarView.resx">
+      <DependentUpon>PedidoCadastrarView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\pedido\PedidoDetailView.resx">
+      <DependentUpon>PedidoDetailView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\pedido\PedidoView.resx">
+      <DependentUpon>PedidoView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\produto\ProdutoAtualizarView.resx">
       <DependentUpon>ProdutoAtualizarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\ProdutoCadastrarView.resx">
+    <EmbeddedResource Include="src\view\produto\ProdutoCadastrarView.resx">
       <DependentUpon>ProdutoCadastrarView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\ProdutoView.resx">
+    <EmbeddedResource Include="src\view\produto\ProdutoView.resx">
       <DependentUpon>ProdutoView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="src\view\RelatorioFinancas.rdlc" />
+    <None Include="Connected Services\WSCorreios\AtendeClienteService.wsdl" />
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.atualizaPagamentoNaEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.atualizaRemessaAgrupadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.bloquearObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaClienteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaContratoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaDataAtualResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaOpcoesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaPagamentoEntregaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaServicosAdicionaisAtivosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaServicosValorDeclaradoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaServicosXServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.buscaTarifaValeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.calculaTarifaServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.cancelarObjetoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.cancelarPedidoScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.clienteERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.consultaCEPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.contratoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.dimensaoTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.embalagemLRSMaster.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.enderecoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.fechaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.fechaPlpVariosServicosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.geraDigitoVerificadorEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.getStatusCartaoPostagemResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.getStatusPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.integrarUsuarioScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.mensagemParametrizadaTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.obterClienteAtualizacaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.obterEmbalagemLRSResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.obterMensagemParametrizadaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.pesquisarDimensoesServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.pesquisarEmbalagensPorServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.pesquisarParametrosPorDescricaoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.pesquisarServicosAdicionaisResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.retornoCancelamento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.servicoAdicionalTO.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.servicoAdicionalXML.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.servicoERP.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.solicitaEtiquetasResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.solicitaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.solicitarPostagemScolResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.solicitaXmlPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.statusCartao.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.statusPlp.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.tipoEmbalagem.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.valePostal.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.validaEtiquetaPLPResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.validaPlpResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.validarPostagemReversaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.validarPostagemSimultaneaResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.verificaDisponibilidadeServicoResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.verificaModalTransporteResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\WSCorreios\SeitonSystem.WSCorreios.VerificaSeTodosObjetosCanceladosResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -273,21 +525,95 @@
   <ItemGroup>
     <None Include="img\icon_check.png" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="SqlServerTypes\readme.htm" />
-    <Content Include="SqlServerTypes\x64\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\msvcr120.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
+    <None Include="img\retangulo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 e x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_umSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_dois.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_tres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_um.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_doisSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_tresSelect.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_ant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_fin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_prox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_lupa_preto.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icone_grafico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\chocEscorrendoD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_camD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_camE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\chocEscorrendoE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_rodape.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_cabecalho.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="img\icon_rentabilidade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Connected Services\WSCorreios\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSCorreios\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSCorreios\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Connected Services\WSCorreios\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

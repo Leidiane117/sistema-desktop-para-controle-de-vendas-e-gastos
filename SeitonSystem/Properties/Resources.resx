@@ -118,8 +118,62 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="icone_criar_novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icone_criar_novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="retangulo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\retangulo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_recuperar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_recuperar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_fin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_fin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_umSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_umSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_aviso" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_aviso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_add" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_add.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_camD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_camD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_tresSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_tresSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_um" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_um.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocEscorrendo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\chocEscorrendo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocEscorrendoD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\chocEscorrendoD.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="chocEscorrendoE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\chocEscorrendoE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_erro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_dois" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_dois.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_camE" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_camE.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logo2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\logo2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -127,34 +181,40 @@
   <data name="icone_deletar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\icone_deletar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icone_recuperar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icone_recuperar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icone_criar_novo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_criar_novo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_aviso" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icon_aviso.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone_lupa" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icone_lupa.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone_atualizar" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icone_atualizar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icon_erro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icon_erro.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="chocEscorrendo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\chocEscorrendo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="icone_voltar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icone_voltar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_cabecalho" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_cabecalho.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="icone_voltar" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\img\icone_voltar.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icon_check" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\img\icon_check.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icon_tres" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_tres.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_rodape" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_rodape.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_prox" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_prox.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_grafico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_grafico.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_doisSelect" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_doisSelect.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_voltar2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_voltar2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ant" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_ant.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icone_lupa_preto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icone_lupa_preto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_rentabilidade" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\img\icon_rentabilidade.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
