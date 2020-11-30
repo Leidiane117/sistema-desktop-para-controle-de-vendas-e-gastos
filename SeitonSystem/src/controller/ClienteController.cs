@@ -2,100 +2,144 @@
 using SeitonSystem.src.dto;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SeitonSystem.src.controller {
-    class ClienteController {
+namespace SeitonSystem.src.controller
+{
+    class ClienteController
+    {
         ClienteDAO clienteDAO;
 
-        public ClienteController(){
-            try {
+        public ClienteController()
+        {
+            try
+            {
                 this.clienteDAO = new ClienteDAO();
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public void inserirCliente(Cliente cliente) {
-            try {
+        public void inserirCliente(Cliente cliente)
+        {
+            try
+            {
                 this.clienteDAO.inserirCliente(cliente);
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public void atualizarCliente(Cliente cliente) {
-            try {
+        public void atualizarCliente(Cliente cliente)
+        {
+            try
+            {
                 this.clienteDAO.atualizarCliente(cliente);
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            }        
+            }
         }
 
-        public void desativarCliente(int id) {
-            try {
+        public void desativarCliente(int id)
+        {
+            try
+            {
                 this.clienteDAO.desativarCliente(id);
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
             }
 
         }
 
-        public void reativarCliente(int id){
-            try {
+        public void reativarCliente(int id)
+        {
+            try
+            {
                 this.clienteDAO.reativarCliente(id);
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public List<Cliente> pesquisaClientes(){
-            try {
+        public List<Cliente> pesquisaClientes()
+        {
+            try
+            {
                 return this.clienteDAO.pesquisaClientes();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public List<Cliente> pesquisaClientesDesativados(){
-            try {
+        public List<Cliente> pesquisaClientesDesativados()
+        {
+            try
+            {
                 return this.clienteDAO.pesquisaClientesDesativados();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public Cliente pesquisaClienteId(int id) {
-            try {
-               return this.clienteDAO.pesquisaClienteId(id);
-            } catch (Exception){
+        public Cliente pesquisaClienteId(int id)
+        {
+            try
+            {
+                return this.clienteDAO.pesquisaClienteId(id);
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public List<Cliente> pesquisaClientesFiltro(String filtro) {
-            try {
-                if(filtro.Trim() == "" || filtro == null) {
+        public List<Cliente> pesquisaClientesFiltro(String filtro)
+        {
+            try
+            {
+                if (filtro.Trim() == "" || filtro == null)
+                {
                     return this.clienteDAO.pesquisaClientes();
-                }else {
+                }
+                else
+                {
                     return this.clienteDAO.pesquisaClientesFiltro(filtro);
                 }
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
             }
         }
 
-        public List<Cliente> pesquisaClientesDesativadosFiltro(String filtro) {
-            try {
-                if (filtro.Trim() == "" || filtro == null) {
+        public List<Cliente> pesquisaClientesDesativadosFiltro(String filtro)
+        {
+            try
+            {
+                if (filtro.Trim() == "" || filtro == null)
+                {
                     return this.clienteDAO.pesquisaClientesDesativados();
-                }else {
+                }
+                else
+                {
                     return this.clienteDAO.pesquisaClientesDesativadosFiltro(filtro);
                 }
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 throw;
             }
         }

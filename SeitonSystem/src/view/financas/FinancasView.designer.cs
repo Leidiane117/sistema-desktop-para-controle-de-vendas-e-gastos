@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancasView));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancasView));
             this.colu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Preço = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,8 +71,6 @@
             this.btn_pesquisar = new System.Windows.Forms.Button();
             this.pic_cabecalho = new System.Windows.Forms.PictureBox();
             this.pic_rodape = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_calda = new System.Windows.Forms.PictureBox();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.dataGridViewImageColumn3 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
@@ -84,12 +82,14 @@
             this.lbl_entradaV = new System.Windows.Forms.Label();
             this.lbl_saidaV = new System.Windows.Forms.Label();
             this.cb_pesquisaTipo = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rentabilidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cabecalho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rodape)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // colu
@@ -132,9 +132,10 @@
             this.finanças.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.finanças.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.finanças.ForeColor = System.Drawing.Color.White;
-            this.finanças.Location = new System.Drawing.Point(302, 145);
+            this.finanças.Location = new System.Drawing.Point(403, 178);
+            this.finanças.Margin = new System.Windows.Forms.Padding(4);
             this.finanças.Name = "finanças";
-            this.finanças.Size = new System.Drawing.Size(138, 42);
+            this.finanças.Size = new System.Drawing.Size(184, 52);
             this.finanças.TabIndex = 105;
             this.finanças.Text = "Finanças";
             this.finanças.UseVisualStyleBackColor = false;
@@ -145,10 +146,9 @@
             this.label_total.Enabled = false;
             this.label_total.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold);
             this.label_total.ForeColor = System.Drawing.SystemColors.Window;
-            this.label_total.Location = new System.Drawing.Point(568, 588);
-            this.label_total.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_total.Location = new System.Drawing.Point(757, 724);
             this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(0, 21);
+            this.label_total.Size = new System.Drawing.Size(0, 28);
             this.label_total.TabIndex = 133;
             this.label_total.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -162,9 +162,10 @@
             this.btn_pedidos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedidos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pedidos.Location = new System.Drawing.Point(438, -2);
+            this.btn_pedidos.Location = new System.Drawing.Point(584, -2);
+            this.btn_pedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedidos.Name = "btn_pedidos";
-            this.btn_pedidos.Size = new System.Drawing.Size(165, 31);
+            this.btn_pedidos.Size = new System.Drawing.Size(220, 38);
             this.btn_pedidos.TabIndex = 140;
             this.btn_pedidos.Text = "Pedidos";
             this.btn_pedidos.UseVisualStyleBackColor = false;
@@ -180,9 +181,10 @@
             this.btn_financas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_financas.Location = new System.Drawing.Point(600, -2);
+            this.btn_financas.Location = new System.Drawing.Point(800, -2);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
-            this.btn_financas.Size = new System.Drawing.Size(151, 31);
+            this.btn_financas.Size = new System.Drawing.Size(201, 38);
             this.btn_financas.TabIndex = 139;
             this.btn_financas.Text = "Finanças";
             this.btn_financas.UseVisualStyleBackColor = false;
@@ -197,9 +199,10 @@
             this.btn_produtos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_produtos.Location = new System.Drawing.Point(149, -2);
+            this.btn_produtos.Location = new System.Drawing.Point(199, -2);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(157, 31);
+            this.btn_produtos.Size = new System.Drawing.Size(209, 38);
             this.btn_produtos.TabIndex = 138;
             this.btn_produtos.Text = "Produtos";
             this.btn_produtos.UseVisualStyleBackColor = false;
@@ -216,8 +219,9 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.Location = new System.Drawing.Point(-1, -2);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Size = new System.Drawing.Size(151, 31);
+            this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 137;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
@@ -226,9 +230,10 @@
             // linha
             // 
             this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(29, 188);
+            this.linha.Location = new System.Drawing.Point(39, 231);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
-            this.linha.Size = new System.Drawing.Size(692, 2);
+            this.linha.Size = new System.Drawing.Size(923, 2);
             this.linha.TabIndex = 143;
             // 
             // txt_view
@@ -238,11 +243,12 @@
             this.txt_view.Enabled = false;
             this.txt_view.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_view.ForeColor = System.Drawing.Color.White;
-            this.txt_view.Location = new System.Drawing.Point(340, 232);
+            this.txt_view.Location = new System.Drawing.Point(453, 286);
+            this.txt_view.Margin = new System.Windows.Forms.Padding(4);
             this.txt_view.Multiline = true;
             this.txt_view.Name = "txt_view";
             this.txt_view.ReadOnly = true;
-            this.txt_view.Size = new System.Drawing.Size(373, 32);
+            this.txt_view.Size = new System.Drawing.Size(497, 39);
             this.txt_view.TabIndex = 147;
             this.txt_view.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -252,10 +258,11 @@
             this.txt_pesquisa.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_pesquisa.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_pesquisa.ForeColor = System.Drawing.Color.Black;
-            this.txt_pesquisa.Location = new System.Drawing.Point(452, 235);
+            this.txt_pesquisa.Location = new System.Drawing.Point(603, 289);
+            this.txt_pesquisa.Margin = new System.Windows.Forms.Padding(4);
             this.txt_pesquisa.Multiline = true;
             this.txt_pesquisa.Name = "txt_pesquisa";
-            this.txt_pesquisa.Size = new System.Drawing.Size(259, 29);
+            this.txt_pesquisa.Size = new System.Drawing.Size(345, 36);
             this.txt_pesquisa.TabIndex = 149;
             this.txt_pesquisa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_pesquisa_KeyUp);
             // 
@@ -269,9 +276,10 @@
             this.lbl_atividade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_atividade.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_atividade.ForeColor = System.Drawing.Color.Black;
-            this.lbl_atividade.Location = new System.Drawing.Point(346, 203);
+            this.lbl_atividade.Location = new System.Drawing.Point(461, 250);
+            this.lbl_atividade.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_atividade.Name = "lbl_atividade";
-            this.lbl_atividade.Size = new System.Drawing.Size(162, 28);
+            this.lbl_atividade.Size = new System.Drawing.Size(216, 34);
             this.lbl_atividade.TabIndex = 150;
             this.lbl_atividade.Text = "Sua Atividade";
             this.lbl_atividade.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -280,17 +288,19 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(25, 262);
+            this.panel1.Location = new System.Drawing.Point(33, 322);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(290, 2);
+            this.panel1.Size = new System.Drawing.Size(387, 2);
             this.panel1.TabIndex = 144;
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(29, 302);
+            this.panel2.Location = new System.Drawing.Point(39, 372);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(290, 2);
+            this.panel2.Size = new System.Drawing.Size(387, 2);
             this.panel2.TabIndex = 145;
             // 
             // cb_pesquisaRentData
@@ -306,9 +316,10 @@
             "Último 3 meses",
             "Último 6 meses",
             "Último dia"});
-            this.cb_pesquisaRentData.Location = new System.Drawing.Point(25, 237);
+            this.cb_pesquisaRentData.Location = new System.Drawing.Point(33, 292);
+            this.cb_pesquisaRentData.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaRentData.Name = "cb_pesquisaRentData";
-            this.cb_pesquisaRentData.Size = new System.Drawing.Size(161, 23);
+            this.cb_pesquisaRentData.Size = new System.Drawing.Size(213, 28);
             this.cb_pesquisaRentData.TabIndex = 154;
             this.cb_pesquisaRentData.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaRentData_SelectedIndexChanged);
             // 
@@ -322,20 +333,22 @@
             this.lbl_rentabilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_rentabilidade.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rentabilidade.ForeColor = System.Drawing.Color.Black;
-            this.lbl_rentabilidade.Location = new System.Drawing.Point(25, 204);
+            this.lbl_rentabilidade.Location = new System.Drawing.Point(33, 251);
+            this.lbl_rentabilidade.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_rentabilidade.Name = "lbl_rentabilidade";
-            this.lbl_rentabilidade.Size = new System.Drawing.Size(290, 30);
+            this.lbl_rentabilidade.Size = new System.Drawing.Size(387, 37);
             this.lbl_rentabilidade.TabIndex = 155;
-            this.lbl_rentabilidade.Text = "Rentabilidade";
+            this.lbl_rentabilidade.Text = "Lucratividade";
             this.lbl_rentabilidade.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.lbl_rentabilidade.UseVisualStyleBackColor = false;
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(25, 232);
+            this.panel3.Location = new System.Drawing.Point(33, 286);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(290, 2);
+            this.panel3.Size = new System.Drawing.Size(387, 2);
             this.panel3.TabIndex = 145;
             // 
             // lbl_lucro
@@ -348,9 +361,10 @@
             this.lbl_lucro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_lucro.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_lucro.ForeColor = System.Drawing.Color.Black;
-            this.lbl_lucro.Location = new System.Drawing.Point(25, 268);
+            this.lbl_lucro.Location = new System.Drawing.Point(33, 330);
+            this.lbl_lucro.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_lucro.Name = "lbl_lucro";
-            this.lbl_lucro.Size = new System.Drawing.Size(161, 30);
+            this.lbl_lucro.Size = new System.Drawing.Size(215, 37);
             this.lbl_lucro.TabIndex = 156;
             this.lbl_lucro.Text = "Lucro";
             this.lbl_lucro.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -366,9 +380,10 @@
             this.lbl_mLucro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_mLucro.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_mLucro.ForeColor = System.Drawing.Color.Black;
-            this.lbl_mLucro.Location = new System.Drawing.Point(25, 306);
+            this.lbl_mLucro.Location = new System.Drawing.Point(33, 377);
+            this.lbl_mLucro.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_mLucro.Name = "lbl_mLucro";
-            this.lbl_mLucro.Size = new System.Drawing.Size(189, 35);
+            this.lbl_mLucro.Size = new System.Drawing.Size(252, 43);
             this.lbl_mLucro.TabIndex = 157;
             this.lbl_mLucro.Text = "Margem de Lucro";
             this.lbl_mLucro.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -384,9 +399,10 @@
             this.lbl_entrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_entrada.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_entrada.ForeColor = System.Drawing.Color.Black;
-            this.lbl_entrada.Location = new System.Drawing.Point(25, 372);
+            this.lbl_entrada.Location = new System.Drawing.Point(33, 458);
+            this.lbl_entrada.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_entrada.Name = "lbl_entrada";
-            this.lbl_entrada.Size = new System.Drawing.Size(161, 30);
+            this.lbl_entrada.Size = new System.Drawing.Size(215, 37);
             this.lbl_entrada.TabIndex = 158;
             this.lbl_entrada.Text = "Entrada";
             this.lbl_entrada.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -395,17 +411,19 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(29, 343);
+            this.panel4.Location = new System.Drawing.Point(39, 422);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(290, 2);
+            this.panel4.Size = new System.Drawing.Size(387, 2);
             this.panel4.TabIndex = 146;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(29, 448);
+            this.panel5.Location = new System.Drawing.Point(39, 551);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(290, 2);
+            this.panel5.Size = new System.Drawing.Size(387, 2);
             this.panel5.TabIndex = 158;
             // 
             // lbl_saida
@@ -418,9 +436,10 @@
             this.lbl_saida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_saida.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_saida.ForeColor = System.Drawing.Color.Black;
-            this.lbl_saida.Location = new System.Drawing.Point(25, 410);
+            this.lbl_saida.Location = new System.Drawing.Point(33, 505);
+            this.lbl_saida.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_saida.Name = "lbl_saida";
-            this.lbl_saida.Size = new System.Drawing.Size(189, 37);
+            this.lbl_saida.Size = new System.Drawing.Size(252, 46);
             this.lbl_saida.TabIndex = 159;
             this.lbl_saida.Text = "Saída";
             this.lbl_saida.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -429,9 +448,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(29, 406);
+            this.panel6.Location = new System.Drawing.Point(39, 500);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(290, 2);
+            this.panel6.Size = new System.Drawing.Size(387, 2);
             this.panel6.TabIndex = 147;
             // 
             // btn_cadastrar
@@ -443,9 +463,10 @@
             this.btn_cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.Location = new System.Drawing.Point(16, 487);
+            this.btn_cadastrar.Location = new System.Drawing.Point(21, 599);
+            this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(157, 28);
+            this.btn_cadastrar.Size = new System.Drawing.Size(209, 34);
             this.btn_cadastrar.TabIndex = 162;
             this.btn_cadastrar.Text = "Adicionar Atividade";
             this.btn_cadastrar.UseVisualStyleBackColor = false;
@@ -457,12 +478,13 @@
             this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_descricao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txt_descricao.ForeColor = System.Drawing.Color.White;
-            this.txt_descricao.Location = new System.Drawing.Point(16, 549);
+            this.txt_descricao.Location = new System.Drawing.Point(21, 676);
+            this.txt_descricao.Margin = new System.Windows.Forms.Padding(4);
             this.txt_descricao.MaxLength = 9999;
             this.txt_descricao.Multiline = true;
             this.txt_descricao.Name = "txt_descricao";
             this.txt_descricao.ReadOnly = true;
-            this.txt_descricao.Size = new System.Drawing.Size(307, 86);
+            this.txt_descricao.Size = new System.Drawing.Size(409, 105);
             this.txt_descricao.TabIndex = 163;
             this.txt_descricao.Visible = false;
             // 
@@ -472,9 +494,10 @@
             this.lbl_desc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_desc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_desc.ForeColor = System.Drawing.Color.White;
-            this.lbl_desc.Location = new System.Drawing.Point(14, 522);
+            this.lbl_desc.Location = new System.Drawing.Point(19, 642);
+            this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
-            this.lbl_desc.Size = new System.Drawing.Size(177, 23);
+            this.lbl_desc.Size = new System.Drawing.Size(236, 28);
             this.lbl_desc.TabIndex = 164;
             this.lbl_desc.Text = "Descrição:";
             this.lbl_desc.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
@@ -489,9 +512,10 @@
             this.btn_atualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.btn_atualizar.Location = new System.Drawing.Point(110, 669);
+            this.btn_atualizar.Location = new System.Drawing.Point(147, 823);
+            this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_atualizar.Name = "btn_atualizar";
-            this.btn_atualizar.Size = new System.Drawing.Size(102, 31);
+            this.btn_atualizar.Size = new System.Drawing.Size(136, 38);
             this.btn_atualizar.TabIndex = 166;
             this.btn_atualizar.Text = "Atualizar";
             this.btn_atualizar.UseVisualStyleBackColor = false;
@@ -507,9 +531,10 @@
             this.btn_deletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deletar.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.btn_deletar.Location = new System.Drawing.Point(221, 669);
+            this.btn_deletar.Location = new System.Drawing.Point(295, 823);
+            this.btn_deletar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_deletar.Name = "btn_deletar";
-            this.btn_deletar.Size = new System.Drawing.Size(102, 31);
+            this.btn_deletar.Size = new System.Drawing.Size(136, 38);
             this.btn_deletar.TabIndex = 167;
             this.btn_deletar.Text = "Deletar";
             this.btn_deletar.UseVisualStyleBackColor = false;
@@ -527,9 +552,10 @@
             this.btn_graficos.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_graficos.Image = global::SeitonSystem.Properties.Resources.icone_grafico;
             this.btn_graficos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_graficos.Location = new System.Drawing.Point(179, 487);
+            this.btn_graficos.Location = new System.Drawing.Point(239, 599);
+            this.btn_graficos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_graficos.Name = "btn_graficos";
-            this.btn_graficos.Size = new System.Drawing.Size(144, 28);
+            this.btn_graficos.Size = new System.Drawing.Size(192, 34);
             this.btn_graficos.TabIndex = 165;
             this.btn_graficos.Text = "     Gráficos";
             this.btn_graficos.UseVisualStyleBackColor = false;
@@ -538,9 +564,10 @@
             // pic_rentabilidade
             // 
             this.pic_rentabilidade.Image = global::SeitonSystem.Properties.Resources.icon_rentabilidade;
-            this.pic_rentabilidade.Location = new System.Drawing.Point(16, 202);
+            this.pic_rentabilidade.Location = new System.Drawing.Point(21, 249);
+            this.pic_rentabilidade.Margin = new System.Windows.Forms.Padding(4);
             this.pic_rentabilidade.Name = "pic_rentabilidade";
-            this.pic_rentabilidade.Size = new System.Drawing.Size(307, 279);
+            this.pic_rentabilidade.Size = new System.Drawing.Size(409, 343);
             this.pic_rentabilidade.TabIndex = 153;
             this.pic_rentabilidade.TabStop = false;
             // 
@@ -556,9 +583,10 @@
             this.btn_pesquisar.ForeColor = System.Drawing.Color.Black;
             this.btn_pesquisar.Image = global::SeitonSystem.Properties.Resources.icone_lupa_preto;
             this.btn_pesquisar.ImageAlign = System.Drawing.ContentAlignment.TopLeft;
-            this.btn_pesquisar.Location = new System.Drawing.Point(342, 232);
+            this.btn_pesquisar.Location = new System.Drawing.Point(456, 286);
+            this.btn_pesquisar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pesquisar.Name = "btn_pesquisar";
-            this.btn_pesquisar.Size = new System.Drawing.Size(136, 32);
+            this.btn_pesquisar.Size = new System.Drawing.Size(181, 39);
             this.btn_pesquisar.TabIndex = 148;
             this.btn_pesquisar.Text = "Pesquisar";
             this.btn_pesquisar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -569,41 +597,22 @@
             // 
             this.pic_cabecalho.BackColor = System.Drawing.Color.Transparent;
             this.pic_cabecalho.Image = global::SeitonSystem.Properties.Resources.icon_cabecalho;
-            this.pic_cabecalho.Location = new System.Drawing.Point(337, 200);
+            this.pic_cabecalho.Location = new System.Drawing.Point(449, 246);
+            this.pic_cabecalho.Margin = new System.Windows.Forms.Padding(4);
             this.pic_cabecalho.Name = "pic_cabecalho";
-            this.pic_cabecalho.Size = new System.Drawing.Size(379, 95);
+            this.pic_cabecalho.Size = new System.Drawing.Size(505, 117);
             this.pic_cabecalho.TabIndex = 145;
             this.pic_cabecalho.TabStop = false;
             // 
             // pic_rodape
             // 
             this.pic_rodape.BackgroundImage = global::SeitonSystem.Properties.Resources.icon_rodape;
-            this.pic_rodape.Location = new System.Drawing.Point(337, 669);
+            this.pic_rodape.Location = new System.Drawing.Point(449, 823);
+            this.pic_rodape.Margin = new System.Windows.Forms.Padding(4);
             this.pic_rodape.Name = "pic_rodape";
-            this.pic_rodape.Size = new System.Drawing.Size(379, 31);
+            this.pic_rodape.Size = new System.Drawing.Size(505, 38);
             this.pic_rodape.TabIndex = 144;
             this.pic_rodape.TabStop = false;
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
-            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_logo.Location = new System.Drawing.Point(298, -7);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(147, 154);
-            this.pic_logo.TabIndex = 142;
-            this.pic_logo.TabStop = false;
-            // 
-            // pic_calda
-            // 
-            this.pic_calda.BackColor = System.Drawing.Color.Transparent;
-            this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
-            this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_calda.Location = new System.Drawing.Point(-1, 27);
-            this.pic_calda.Name = "pic_calda";
-            this.pic_calda.Size = new System.Drawing.Size(752, 123);
-            this.pic_calda.TabIndex = 141;
-            this.pic_calda.TabStop = false;
             // 
             // btnVoltar
             // 
@@ -615,9 +624,10 @@
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar2;
             this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVoltar.Location = new System.Drawing.Point(29, 627);
+            this.btnVoltar.Location = new System.Drawing.Point(39, 772);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(75, 80);
+            this.btnVoltar.Size = new System.Drawing.Size(100, 98);
             this.btnVoltar.TabIndex = 110;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -678,9 +688,10 @@
             "Último 3 meses",
             "Último 6 meses",
             "Último dia"});
-            this.cb_pesquisaData.Location = new System.Drawing.Point(529, 267);
+            this.cb_pesquisaData.Location = new System.Drawing.Point(705, 329);
+            this.cb_pesquisaData.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaData.Name = "cb_pesquisaData";
-            this.cb_pesquisaData.Size = new System.Drawing.Size(180, 23);
+            this.cb_pesquisaData.Size = new System.Drawing.Size(239, 28);
             this.cb_pesquisaData.TabIndex = 168;
             this.cb_pesquisaData.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaData_SelectedIndexChanged);
             // 
@@ -715,7 +726,9 @@
             this.db_fluxos.EnableHeadersVisualStyles = false;
             this.db_fluxos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.db_fluxos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.db_fluxos.Location = new System.Drawing.Point(338, 296);
+            this.db_fluxos.Location = new System.Drawing.Point(453, 365);
+            this.db_fluxos.Margin = new System.Windows.Forms.Padding(4);
+            this.db_fluxos.MultiSelect = false;
             this.db_fluxos.Name = "db_fluxos";
             this.db_fluxos.ReadOnly = true;
             this.db_fluxos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -727,9 +740,10 @@
             dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.db_fluxos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.db_fluxos.RowHeadersWidth = 51;
             this.db_fluxos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.db_fluxos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.db_fluxos.Size = new System.Drawing.Size(377, 372);
+            this.db_fluxos.Size = new System.Drawing.Size(503, 458);
             this.db_fluxos.TabIndex = 169;
             this.db_fluxos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_fluxos_CellContentClick);
             // 
@@ -739,9 +753,10 @@
             this.lbl_lucroV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_lucroV.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_lucroV.ForeColor = System.Drawing.Color.Black;
-            this.lbl_lucroV.Location = new System.Drawing.Point(204, 268);
+            this.lbl_lucroV.Location = new System.Drawing.Point(272, 330);
+            this.lbl_lucroV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_lucroV.Name = "lbl_lucroV";
-            this.lbl_lucroV.Size = new System.Drawing.Size(115, 31);
+            this.lbl_lucroV.Size = new System.Drawing.Size(153, 38);
             this.lbl_lucroV.TabIndex = 170;
             this.lbl_lucroV.Text = "R$";
             this.lbl_lucroV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -752,35 +767,38 @@
             this.lbl_margemLucro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_margemLucro.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_margemLucro.ForeColor = System.Drawing.Color.Black;
-            this.lbl_margemLucro.Location = new System.Drawing.Point(204, 308);
+            this.lbl_margemLucro.Location = new System.Drawing.Point(272, 379);
+            this.lbl_margemLucro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_margemLucro.Name = "lbl_margemLucro";
-            this.lbl_margemLucro.Size = new System.Drawing.Size(115, 31);
+            this.lbl_margemLucro.Size = new System.Drawing.Size(153, 38);
             this.lbl_margemLucro.TabIndex = 171;
             this.lbl_margemLucro.Text = "%";
             this.lbl_margemLucro.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_entradaV
             // 
-            this.lbl_entradaV.BackColor = System.Drawing.Color.DodgerBlue;
+            this.lbl_entradaV.BackColor = System.Drawing.Color.SteelBlue;
             this.lbl_entradaV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_entradaV.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_entradaV.ForeColor = System.Drawing.Color.Black;
-            this.lbl_entradaV.Location = new System.Drawing.Point(204, 369);
+            this.lbl_entradaV.Location = new System.Drawing.Point(272, 454);
+            this.lbl_entradaV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_entradaV.Name = "lbl_entradaV";
-            this.lbl_entradaV.Size = new System.Drawing.Size(115, 31);
+            this.lbl_entradaV.Size = new System.Drawing.Size(153, 38);
             this.lbl_entradaV.TabIndex = 172;
             this.lbl_entradaV.Text = "R$";
             this.lbl_entradaV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // lbl_saidaV
             // 
-            this.lbl_saidaV.BackColor = System.Drawing.Color.Red;
+            this.lbl_saidaV.BackColor = System.Drawing.Color.Brown;
             this.lbl_saidaV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_saidaV.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_saidaV.ForeColor = System.Drawing.Color.Black;
-            this.lbl_saidaV.Location = new System.Drawing.Point(204, 413);
+            this.lbl_saidaV.Location = new System.Drawing.Point(272, 508);
+            this.lbl_saidaV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_saidaV.Name = "lbl_saidaV";
-            this.lbl_saidaV.Size = new System.Drawing.Size(115, 31);
+            this.lbl_saidaV.Size = new System.Drawing.Size(153, 38);
             this.lbl_saidaV.TabIndex = 173;
             this.lbl_saidaV.Text = "R$";
             this.lbl_saidaV.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -796,18 +814,41 @@
             "Todas as Operações",
             "Entrada",
             "Saída"});
-            this.cb_pesquisaTipo.Location = new System.Drawing.Point(340, 267);
+            this.cb_pesquisaTipo.Location = new System.Drawing.Point(453, 329);
+            this.cb_pesquisaTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaTipo.Name = "cb_pesquisaTipo";
-            this.cb_pesquisaTipo.Size = new System.Drawing.Size(180, 23);
+            this.cb_pesquisaTipo.Size = new System.Drawing.Size(239, 28);
             this.cb_pesquisaTipo.TabIndex = 174;
             this.cb_pesquisaTipo.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaTipo_SelectedIndexChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
+            this.pictureBox1.Location = new System.Drawing.Point(-10, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1022, 121);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 175;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::SeitonSystem.Properties.Resources.logo2;
+            this.pictureBox2.Location = new System.Drawing.Point(403, -2);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(184, 170);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 176;
+            this.pictureBox2.TabStop = false;
+            // 
             // FinancasView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(750, 719);
+            this.ClientSize = new System.Drawing.Size(1010, 948);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cb_pesquisaTipo);
             this.Controls.Add(this.lbl_saidaV);
             this.Controls.Add(this.lbl_entradaV);
@@ -841,8 +882,6 @@
             this.Controls.Add(this.pic_cabecalho);
             this.Controls.Add(this.pic_rodape);
             this.Controls.Add(this.linha);
-            this.Controls.Add(this.pic_logo);
-            this.Controls.Add(this.pic_calda);
             this.Controls.Add(this.btn_pedidos);
             this.Controls.Add(this.btn_financas);
             this.Controls.Add(this.btn_produtos);
@@ -851,7 +890,9 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.finanças);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FinancasView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -859,9 +900,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_rentabilidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cabecalho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rodape)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -878,8 +919,6 @@
         private System.Windows.Forms.Button finanças;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Label label_total;
-        private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.PictureBox pic_calda;
         private System.Windows.Forms.Button btn_pedidos;
         private System.Windows.Forms.Button btn_financas;
         private System.Windows.Forms.Button btn_produtos;
@@ -917,5 +956,7 @@
         private System.Windows.Forms.Label lbl_entradaV;
         private System.Windows.Forms.Label lbl_saidaV;
         private System.Windows.Forms.ComboBox cb_pesquisaTipo;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -1,84 +1,81 @@
-﻿using System;
-using SeitonSystem.src.dao;
-using SeitonSystem.src.controller;
+﻿using SeitonSystem.src.controller;
 using SeitonSystem.src.dto;
 using SeitonSystem.src.view;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using SeitonSystem.src.view.Inicial;
 using SeitonSystem.src.view.Pedido;
-using SeitonSystem.src.view.Inicial; 
+using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Windows.Forms;
 
-namespace SeitonSystem.view {
-    public partial class ProdutoView : Form {
-
-        ProdutoController produtoController;
+namespace SeitonSystem.view
+{
+    public partial class ProdutoView : Form
+    {
+        ProdutoController produtoController = new ProdutoController();
         int idProduto;
         string nomeProduto;
 
-        public ProdutoView() {
+        public ProdutoView()
+        {
             InitializeComponent();
 
-            try {
-                this.produtoController = new ProdutoController();
+            try
+            {
+
 
                 listar();
                 listarDeletados();
-
                 dataGridview(DataGridDesativados);
                 dataGridview(DataGridViewProdutos);
 
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
 
         }
 
-        public void listar(){
-            try{
+        public void listar()
+        {
+            try
+            {
                 List<Produto> lista = new List<Produto>();
                 lista = produtoController.pesquisarProdutos();
 
                 DataGridViewProdutos.DataSource = lista;
 
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
 
         }
 
 
-        private void listarDeletados(){
-            try {
+        private void listarDeletados()
+        {
+            try
+            {
                 List<Produto> lista = new List<Produto>();
                 lista = produtoController.pesquisaProdutosDesativados();
 
                 DataGridDesativados.DataSource = lista;
 
-            }catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
 
         }
 
-        private void DataGridViewProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e){
-            panel_produtos.Visible = true;
-            panel_excluidos.Visible = false;
+       
 
-            if (e.RowIndex >= 0){
-                DataGridViewRow row = DataGridViewProdutos.Rows[e.RowIndex];
-                idProduto = int.Parse(row.Cells["Id"].Value.ToString());
-                nomeProduto = row.Cells["Nome"].Value.ToString();  
-            }
-        }
-
-
-        private void ButtonProdutos_Click(object sender, EventArgs e){
+        private void ButtonProdutos_Click(object sender, EventArgs e)
+        {
             buttonProdutos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonDesativados.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -88,15 +85,17 @@ namespace SeitonSystem.view {
             DataGridDesativados.Visible = false;
             DataGridViewProdutos.Visible = true;
 
-            listar();  
+            listar();
         }
 
-        private void ButtonPesquisar_Click(object sender, EventArgs e) {
-            txt_pesquisa.Visible = true; 
+        private void ButtonPesquisar_Click(object sender, EventArgs e)
+        {
+            txt_pesquisa.Visible = true;
             panel1.Visible = true;
         }
 
-        private void ButtonDesativados_Click(object sender, EventArgs e){
+        private void ButtonDesativados_Click(object sender, EventArgs e)
+        {
             buttonDesativados.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             buttonProdutos.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -109,30 +108,35 @@ namespace SeitonSystem.view {
             listarDeletados();
         }
 
-        private void DataGridDesativados_CellContentClick(object sender, DataGridViewCellEventArgs e){
+        private void DataGridDesativados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             panel_produtos.Visible = false;
             panel_excluidos.Visible = true;
 
-            if (e.RowIndex >= 0){
+            if (e.RowIndex >= 0)
+            {
                 DataGridViewRow row = DataGridDesativados.Rows[e.RowIndex];
                 idProduto = int.Parse(row.Cells["Id"].Value.ToString());
-                nomeProduto = row.Cells["Nome"].Value.ToString(); 
+                nomeProduto = row.Cells["Nome"].Value.ToString();
             }
         }
 
-        private void enviaMsg(String msg, String tipo){
+        private void enviaMsg(String msg, String tipo)
+        {
             MensagensView message = new MensagensView(msg, tipo);
             message.ShowDialog();
         }
 
 
-        private void btn_cadastrar_Click(object sender, EventArgs e) {
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
             ProdutoCadastrarView produtoCadastrar = new ProdutoCadastrarView();
             produtoCadastrar.Show();
             this.Hide();
         }
 
-        private void button_desativar_Click(object sender, EventArgs e) {
+        private void button_desativar_Click(object sender, EventArgs e)
+        {
             String msg = "Deseja Desativar " + nomeProduto + "?";
 
             MensagensView message = new MensagensView(msg, "deleta", idProduto, "produto");
@@ -142,7 +146,8 @@ namespace SeitonSystem.view {
             panel_produtos.Visible = false;
         }
 
-        private void dataGridview(DataGridView dt) {
+        private void dataGridview(DataGridView dt)
+        {
             dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
             dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
@@ -158,18 +163,30 @@ namespace SeitonSystem.view {
             style.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            dt.Columns["Id"].Width = 100;
-            dt.Columns["Descricao"].Width = 180;
-            dt.Columns["Preco"].DefaultCellStyle.Format = "c";
+            for (int i = 0; i < 4; i++)
+            {
+                string[] cabecalho = { "Id", "Nome", "Preço", "Descrição" };
+
+                DataGridViewProdutos.Columns[i].HeaderText = cabecalho[i];
+                DataGridViewProdutos.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            }
+            dt.Columns[0].Width = 50;
+            dt.Columns[1].Width = 180;
+            dt.Columns[3].Width = 300;
+            dt.Columns[2].DefaultCellStyle.Format = "c";
+            dt.MultiSelect = false;
         }
 
-        private void buttonAtualizar_Click(object sender, EventArgs e) {
+        private void buttonAtualizar_Click(object sender, EventArgs e)
+        {
             ProdutoAtualizarView produtoAtualizar = new ProdutoAtualizarView(idProduto);
             produtoAtualizar.Show();
             this.Hide();
         }
 
-        private void btn_reativar_Click(object sender, EventArgs e){
+        private void btn_reativar_Click(object sender, EventArgs e)
+        {
             String msg = "Deseja Reativar " + nomeProduto + "?";
 
             MensagensView message = new MensagensView(msg, "recupera", idProduto, "produto");
@@ -179,48 +196,88 @@ namespace SeitonSystem.view {
             panel_excluidos.Visible = false;
         }
 
-        private void txt_pesquisa_KeyUp(object sender, EventArgs e) {
-            try {
+        private void txt_pesquisa_KeyUp(object sender, EventArgs e)
+        {
+            try
+            {
                 List<Produto> produto = new List<Produto>();
 
-                if (DataGridViewProdutos.Visible){
+                if (DataGridViewProdutos.Visible)
+                {
                     produto = this.produtoController.pesquisaProdutosFitro(txt_pesquisa.Text);
                     DataGridViewProdutos.DataSource = produto;
-                }else {
+                }
+                else
+                {
                     produto = this.produtoController.pesquisaProdutosDesativadosFiltro(txt_pesquisa.Text);
                     DataGridDesativados.DataSource = produto;
                 }
             }
-            catch (Exception e1){
+            catch (Exception e1)
+            {
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private void btn_clientes_Click(object sender, EventArgs e){
+        private void btn_clientes_Click(object sender, EventArgs e)
+        {
             ClienteView cv = new ClienteView();
             cv.Show();
             this.Hide();
         }
 
-        private void btn_pedido_Click(object sender, EventArgs e){
+        private void btn_pedido_Click(object sender, EventArgs e)
+        {
             PedidoView p = new PedidoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_financas_Click(object sender, EventArgs e){
+        private void btn_financas_Click(object sender, EventArgs e)
+        {
             FinancasView f = new FinancasView();
             f.Show();
             this.Hide();
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e) {
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
             InicialView i = new InicialView();
             i.Show();
             this.Hide();
         }
+        private void ProdutoView_Load(object sender, EventArgs e)
+        {
+            listar();
+            listarDeletados();
+            dataGridview(DataGridDesativados);
+            dataGridview(DataGridViewProdutos);
+
+        }
+
+        private void pic_calda_Click(object sender, EventArgs e)
+        {
+            //
+        }
+
+        private void DataGridViewProdutos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+                panel_produtos.Visible = true;
+                panel_excluidos.Visible = false;
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow row = DataGridViewProdutos.Rows[e.RowIndex];
+                    idProduto = int.Parse(row.Cells["Id"].Value.ToString());
+                    nomeProduto = row.Cells["Nome"].Value.ToString();
+                }
+            }
+
+
+        }
     }
-}
+  
+  
 
 
 

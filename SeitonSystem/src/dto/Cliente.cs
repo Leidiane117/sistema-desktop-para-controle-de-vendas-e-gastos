@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SeitonSystem.src.dto {
-    class Cliente {
+namespace SeitonSystem.src.dto
+{
+    class Cliente
+    {
         private int id;
         private String nome;
         private String telefone;
@@ -13,37 +11,44 @@ namespace SeitonSystem.src.dto {
         private String instagram;
         private String email;
 
-        public int Id{
+        public int Id
+        {
             get { return id; }
             set { id = value; }
         }
 
-        public String Nome {
+        public String Nome
+        {
             get { return this.nome; }
             set { this.nome = value; }
         }
 
-        public String Telefone{
+        public String Telefone
+        {
             get { return this.telefone; }
             set { this.telefone = value; }
         }
 
-        public String Celular {
+        public String Celular
+        {
             get { return this.celular; }
             set { this.celular = value; }
         }
 
-        public String Instagram {
+        public String Instagram
+        {
             get { return this.instagram; }
             set { this.instagram = value; }
         }
 
-        public String Email{
+        public String Email
+        {
             get { return this.email; }
             set { this.email = value; }
         }
 
-        public override String ToString() {
+        public override String ToString()
+        {
             return this.nome + ". Contato:" + this.celular + ". Instagram:" + this.instagram;
         }
 

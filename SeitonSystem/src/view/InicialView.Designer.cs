@@ -29,30 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicialView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_tbPedidos = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.btn_Add_Produto = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_add_cliente = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_restore = new System.Windows.Forms.Button();
+            this.btn_emails = new System.Windows.Forms.Button();
+            this.btn_abrir_manual = new System.Windows.Forms.Button();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.btn_ajuda = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_lucro = new System.Windows.Forms.TextBox();
             this.button7 = new System.Windows.Forms.Button();
             this.linha = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -60,36 +58,30 @@
             this.btn_financasCadastrar = new System.Windows.Forms.Button();
             this.btn_finançasView = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label_percent = new System.Windows.Forms.Label();
+            this.progressBarBackup = new System.Windows.Forms.ProgressBar();
             this.btn_bakup = new System.Windows.Forms.Button();
             this.btn_financas = new System.Windows.Forms.Button();
             this.btn_pedido = new System.Windows.Forms.Button();
             this.btn_produtos = new System.Windows.Forms.Button();
             this.btn_clientes = new System.Windows.Forms.Button();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.pic_calda = new System.Windows.Forms.PictureBox();
-            this.db_pedidos = new MetroFramework.Controls.MetroGrid();
-            this.coluna_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_tipo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_valorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_dataEntrega = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_dataPagamento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.coluna_situacao = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.progressBarBackup = new System.Windows.Forms.ProgressBar();
-            this.progressBarRestore = new System.Windows.Forms.ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.dt = new MetroFramework.Controls.MetroGrid();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_pedidos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -97,17 +89,19 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(115)))), ((int)(((byte)(94)))));
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.btn_tbPedidos);
-            this.panel1.Location = new System.Drawing.Point(1, 155);
+            this.panel1.Location = new System.Drawing.Point(8, 191);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(248, 147);
+            this.panel1.Size = new System.Drawing.Size(325, 170);
             this.panel1.TabIndex = 0;
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.White;
-            this.panel8.Location = new System.Drawing.Point(18, 36);
+            this.panel8.Location = new System.Drawing.Point(24, 44);
+            this.panel8.Margin = new System.Windows.Forms.Padding(4);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(212, 2);
+            this.panel8.Size = new System.Drawing.Size(283, 2);
             this.panel8.TabIndex = 18;
             // 
             // btn_tbPedidos
@@ -120,9 +114,10 @@
             this.btn_tbPedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_tbPedidos.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_tbPedidos.ForeColor = System.Drawing.Color.White;
-            this.btn_tbPedidos.Location = new System.Drawing.Point(5, 5);
+            this.btn_tbPedidos.Location = new System.Drawing.Point(7, 6);
+            this.btn_tbPedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_tbPedidos.Name = "btn_tbPedidos";
-            this.btn_tbPedidos.Size = new System.Drawing.Size(240, 28);
+            this.btn_tbPedidos.Size = new System.Drawing.Size(320, 34);
             this.btn_tbPedidos.TabIndex = 14;
             this.btn_tbPedidos.Text = "Adicionar Novo Pedido";
             this.btn_tbPedidos.UseVisualStyleBackColor = false;
@@ -133,18 +128,30 @@
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(115)))), ((int)(((byte)(94)))));
             this.panel2.Controls.Add(this.panel10);
             this.panel2.Controls.Add(this.btn_Add_Produto);
-            this.panel2.Location = new System.Drawing.Point(499, 155);
+            this.panel2.Location = new System.Drawing.Point(652, 191);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(248, 147);
+            this.panel2.Size = new System.Drawing.Size(337, 170);
             this.panel2.TabIndex = 1;
             // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.White;
-            this.panel10.Location = new System.Drawing.Point(16, 36);
+            this.panel10.Controls.Add(this.panel11);
+            this.panel10.Location = new System.Drawing.Point(21, 44);
+            this.panel10.Margin = new System.Windows.Forms.Padding(4);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(212, 2);
+            this.panel10.Size = new System.Drawing.Size(283, 2);
             this.panel10.TabIndex = 20;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.White;
+            this.panel11.Location = new System.Drawing.Point(0, 0);
+            this.panel11.Margin = new System.Windows.Forms.Padding(4);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(283, 2);
+            this.panel11.TabIndex = 21;
             // 
             // btn_Add_Produto
             // 
@@ -156,9 +163,10 @@
             this.btn_Add_Produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Add_Produto.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Add_Produto.ForeColor = System.Drawing.Color.White;
-            this.btn_Add_Produto.Location = new System.Drawing.Point(3, 5);
+            this.btn_Add_Produto.Location = new System.Drawing.Point(4, 6);
+            this.btn_Add_Produto.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Add_Produto.Name = "btn_Add_Produto";
-            this.btn_Add_Produto.Size = new System.Drawing.Size(240, 28);
+            this.btn_Add_Produto.Size = new System.Drawing.Size(320, 34);
             this.btn_Add_Produto.TabIndex = 15;
             this.btn_Add_Produto.Text = "Adicionar Novo Produto";
             this.btn_Add_Produto.UseVisualStyleBackColor = false;
@@ -169,17 +177,19 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.btn_add_cliente);
-            this.panel3.Location = new System.Drawing.Point(250, 155);
+            this.panel3.Location = new System.Drawing.Point(333, 191);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(248, 147);
+            this.panel3.Size = new System.Drawing.Size(328, 170);
             this.panel3.TabIndex = 2;
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.White;
-            this.panel9.Location = new System.Drawing.Point(21, 36);
+            this.panel9.Location = new System.Drawing.Point(28, 44);
+            this.panel9.Margin = new System.Windows.Forms.Padding(4);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(212, 2);
+            this.panel9.Size = new System.Drawing.Size(283, 2);
             this.panel9.TabIndex = 19;
             // 
             // btn_add_cliente
@@ -192,9 +202,10 @@
             this.btn_add_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_add_cliente.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_add_cliente.ForeColor = System.Drawing.Color.White;
-            this.btn_add_cliente.Location = new System.Drawing.Point(5, 5);
+            this.btn_add_cliente.Location = new System.Drawing.Point(7, 6);
+            this.btn_add_cliente.Margin = new System.Windows.Forms.Padding(4);
             this.btn_add_cliente.Name = "btn_add_cliente";
-            this.btn_add_cliente.Size = new System.Drawing.Size(240, 28);
+            this.btn_add_cliente.Size = new System.Drawing.Size(320, 34);
             this.btn_add_cliente.TabIndex = 15;
             this.btn_add_cliente.Text = "Adicionar Novo Cliente";
             this.btn_add_cliente.UseVisualStyleBackColor = false;
@@ -203,43 +214,105 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.progressBarRestore);
-            this.panel4.Controls.Add(this.btn_restore);
-            this.panel4.Location = new System.Drawing.Point(502, 576);
+            this.panel4.Controls.Add(this.btn_emails);
+            this.panel4.Controls.Add(this.btn_abrir_manual);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Controls.Add(this.btn_ajuda);
+            this.panel4.Location = new System.Drawing.Point(671, 567);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(248, 147);
+            this.panel4.Size = new System.Drawing.Size(318, 181);
             this.panel4.TabIndex = 3;
             // 
-            // btn_restore
+            // btn_emails
             // 
-            this.btn_restore.BackColor = System.Drawing.Color.Transparent;
-            this.btn_restore.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_restore.FlatAppearance.BorderSize = 0;
-            this.btn_restore.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_restore.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_restore.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_restore.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
-            this.btn_restore.ForeColor = System.Drawing.Color.White;
-            this.btn_restore.Location = new System.Drawing.Point(2, 38);
-            this.btn_restore.Name = "btn_restore";
-            this.btn_restore.Size = new System.Drawing.Size(240, 28);
-            this.btn_restore.TabIndex = 18;
-            this.btn_restore.Text = "Restaurar Base de Dados";
-            this.btn_restore.UseVisualStyleBackColor = false;
-            this.btn_restore.Click += new System.EventHandler(this.btn_restore_Click);
+            this.btn_emails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.btn_emails.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_emails.FlatAppearance.BorderSize = 0;
+            this.btn_emails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_emails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_emails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_emails.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.btn_emails.ForeColor = System.Drawing.Color.Black;
+            this.btn_emails.Location = new System.Drawing.Point(166, 118);
+            this.btn_emails.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_emails.Name = "btn_emails";
+            this.btn_emails.Size = new System.Drawing.Size(136, 36);
+            this.btn_emails.TabIndex = 23;
+            this.btn_emails.Text = "Entrar em Contato";
+            this.btn_emails.UseVisualStyleBackColor = false;
+            // 
+            // btn_abrir_manual
+            // 
+            this.btn_abrir_manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.btn_abrir_manual.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_abrir_manual.FlatAppearance.BorderSize = 0;
+            this.btn_abrir_manual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_abrir_manual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_abrir_manual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_abrir_manual.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.btn_abrir_manual.ForeColor = System.Drawing.Color.Black;
+            this.btn_abrir_manual.Location = new System.Drawing.Point(19, 118);
+            this.btn_abrir_manual.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_abrir_manual.Name = "btn_abrir_manual";
+            this.btn_abrir_manual.Size = new System.Drawing.Size(139, 36);
+            this.btn_abrir_manual.TabIndex = 22;
+            this.btn_abrir_manual.Text = "Consultar Manual";
+            this.btn_abrir_manual.UseVisualStyleBackColor = false;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.White;
+            this.panel13.Location = new System.Drawing.Point(19, 47);
+            this.panel13.Margin = new System.Windows.Forms.Padding(4);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(283, 2);
+            this.panel13.TabIndex = 21;
+            // 
+            // btn_ajuda
+            // 
+            this.btn_ajuda.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ajuda.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_ajuda.FlatAppearance.BorderSize = 0;
+            this.btn_ajuda.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_ajuda.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_ajuda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ajuda.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.btn_ajuda.ForeColor = System.Drawing.Color.White;
+            this.btn_ajuda.Image = ((System.Drawing.Image)(resources.GetObject("btn_ajuda.Image")));
+            this.btn_ajuda.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_ajuda.Location = new System.Drawing.Point(19, 7);
+            this.btn_ajuda.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_ajuda.Name = "btn_ajuda";
+            this.btn_ajuda.Size = new System.Drawing.Size(266, 40);
+            this.btn_ajuda.TabIndex = 18;
+            this.btn_ajuda.Text = "Ajuda";
+            this.btn_ajuda.UseVisualStyleBackColor = false;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
+            this.panel5.Controls.Add(this.txt_lucro);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.linha);
             this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.btn_finançasView);
-            this.panel5.Location = new System.Drawing.Point(0, 576);
+            this.panel5.Location = new System.Drawing.Point(8, 567);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(248, 147);
+            this.panel5.Size = new System.Drawing.Size(335, 181);
             this.panel5.TabIndex = 4;
+            // 
+            // txt_lucro
+            // 
+            this.txt_lucro.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_lucro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_lucro.Location = new System.Drawing.Point(128, 90);
+            this.txt_lucro.Name = "txt_lucro";
+            this.txt_lucro.ReadOnly = true;
+            this.txt_lucro.Size = new System.Drawing.Size(126, 23);
+            this.txt_lucro.TabIndex = 50;
+            this.txt_lucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button7
             // 
@@ -251,20 +324,23 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(19, 68);
+            this.button7.Location = new System.Drawing.Point(25, 84);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(197, 28);
+            this.button7.Size = new System.Drawing.Size(144, 34);
             this.button7.TabIndex = 18;
-            this.button7.Text = "Renda Liquída:    R$";
+            this.button7.TabStop = false;
+            this.button7.Text = "Saldo:    ";
             this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button7.UseVisualStyleBackColor = false;
             // 
             // linha
             // 
             this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(19, 38);
+            this.linha.Location = new System.Drawing.Point(25, 47);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
-            this.linha.Size = new System.Drawing.Size(212, 2);
+            this.linha.Size = new System.Drawing.Size(283, 2);
             this.linha.TabIndex = 17;
             // 
             // panel7
@@ -272,9 +348,10 @@
             this.panel7.BackColor = System.Drawing.Color.White;
             this.panel7.Controls.Add(this.pictureBox1);
             this.panel7.Controls.Add(this.btn_financasCadastrar);
-            this.panel7.Location = new System.Drawing.Point(20, 110);
+            this.panel7.Location = new System.Drawing.Point(27, 135);
+            this.panel7.Margin = new System.Windows.Forms.Padding(4);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(196, 27);
+            this.panel7.Size = new System.Drawing.Size(261, 33);
             this.panel7.TabIndex = 15;
             // 
             // pictureBox1
@@ -282,15 +359,16 @@
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox1.Location = new System.Drawing.Point(1, 2);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 23);
+            this.pictureBox1.Size = new System.Drawing.Size(59, 28);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 48;
             this.pictureBox1.TabStop = false;
             // 
             // btn_financasCadastrar
             // 
-            this.btn_financasCadastrar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_financasCadastrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
             this.btn_financasCadastrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_financasCadastrar.FlatAppearance.BorderSize = 0;
             this.btn_financasCadastrar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -299,8 +377,9 @@
             this.btn_financasCadastrar.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.btn_financasCadastrar.ForeColor = System.Drawing.Color.Black;
             this.btn_financasCadastrar.Location = new System.Drawing.Point(-1, 0);
+            this.btn_financasCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financasCadastrar.Name = "btn_financasCadastrar";
-            this.btn_financasCadastrar.Size = new System.Drawing.Size(196, 28);
+            this.btn_financasCadastrar.Size = new System.Drawing.Size(261, 34);
             this.btn_financasCadastrar.TabIndex = 17;
             this.btn_financasCadastrar.Text = "Adicionar Atividade";
             this.btn_financasCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -317,9 +396,12 @@
             this.btn_finançasView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_finançasView.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_finançasView.ForeColor = System.Drawing.Color.White;
-            this.btn_finançasView.Location = new System.Drawing.Point(4, 6);
+            this.btn_finançasView.Image = ((System.Drawing.Image)(resources.GetObject("btn_finançasView.Image")));
+            this.btn_finançasView.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_finançasView.Location = new System.Drawing.Point(5, 7);
+            this.btn_finançasView.Margin = new System.Windows.Forms.Padding(4);
             this.btn_finançasView.Name = "btn_finançasView";
-            this.btn_finançasView.Size = new System.Drawing.Size(240, 28);
+            this.btn_finançasView.Size = new System.Drawing.Size(320, 34);
             this.btn_finançasView.TabIndex = 16;
             this.btn_finançasView.Text = "Fluxo de Caixa";
             this.btn_finançasView.UseVisualStyleBackColor = false;
@@ -328,13 +410,44 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(115)))), ((int)(((byte)(94)))));
-            this.panel6.Controls.Add(this.label1);
+            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.panel12);
+            this.panel6.Controls.Add(this.label_percent);
             this.panel6.Controls.Add(this.progressBarBackup);
             this.panel6.Controls.Add(this.btn_bakup);
-            this.panel6.Location = new System.Drawing.Point(250, 576);
+            this.panel6.Location = new System.Drawing.Point(340, 567);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(248, 147);
+            this.panel6.Size = new System.Drawing.Size(333, 181);
             this.panel6.TabIndex = 1;
+            // 
+            // panel12
+            // 
+            this.panel12.BackColor = System.Drawing.Color.White;
+            this.panel12.Location = new System.Drawing.Point(33, 47);
+            this.panel12.Margin = new System.Windows.Forms.Padding(4);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(283, 2);
+            this.panel12.TabIndex = 21;
+            // 
+            // label_percent
+            // 
+            this.label_percent.AutoSize = true;
+            this.label_percent.Location = new System.Drawing.Point(28, 84);
+            this.label_percent.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label_percent.Name = "label_percent";
+            this.label_percent.Size = new System.Drawing.Size(0, 17);
+            this.label_percent.TabIndex = 19;
+            // 
+            // progressBarBackup
+            // 
+            this.progressBarBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.progressBarBackup.Location = new System.Drawing.Point(33, 118);
+            this.progressBarBackup.Margin = new System.Windows.Forms.Padding(4);
+            this.progressBarBackup.Name = "progressBarBackup";
+            this.progressBarBackup.Size = new System.Drawing.Size(285, 22);
+            this.progressBarBackup.TabIndex = 18;
+            this.progressBarBackup.Value = 50;
             // 
             // btn_bakup
             // 
@@ -344,13 +457,16 @@
             this.btn_bakup.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_bakup.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_bakup.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_bakup.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold);
+            this.btn_bakup.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
             this.btn_bakup.ForeColor = System.Drawing.Color.White;
-            this.btn_bakup.Location = new System.Drawing.Point(5, 38);
+            this.btn_bakup.Image = ((System.Drawing.Image)(resources.GetObject("btn_bakup.Image")));
+            this.btn_bakup.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_bakup.Location = new System.Drawing.Point(33, 7);
+            this.btn_bakup.Margin = new System.Windows.Forms.Padding(4);
             this.btn_bakup.Name = "btn_bakup";
-            this.btn_bakup.Size = new System.Drawing.Size(240, 28);
+            this.btn_bakup.Size = new System.Drawing.Size(283, 42);
             this.btn_bakup.TabIndex = 17;
-            this.btn_bakup.Text = "Fazer Backup Base de Dados";
+            this.btn_bakup.Text = "Fazer Backup";
             this.btn_bakup.UseVisualStyleBackColor = false;
             this.btn_bakup.Click += new System.EventHandler(this.btn_bakup_Click);
             // 
@@ -364,9 +480,10 @@
             this.btn_financas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_financas.Location = new System.Drawing.Point(598, 0);
+            this.btn_financas.Location = new System.Drawing.Point(797, 0);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
-            this.btn_financas.Size = new System.Drawing.Size(151, 31);
+            this.btn_financas.Size = new System.Drawing.Size(201, 38);
             this.btn_financas.TabIndex = 11;
             this.btn_financas.Text = "Finanças";
             this.btn_financas.UseVisualStyleBackColor = false;
@@ -382,9 +499,10 @@
             this.btn_pedido.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pedido.Location = new System.Drawing.Point(436, 0);
+            this.btn_pedido.Location = new System.Drawing.Point(581, 0);
+            this.btn_pedido.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedido.Name = "btn_pedido";
-            this.btn_pedido.Size = new System.Drawing.Size(165, 31);
+            this.btn_pedido.Size = new System.Drawing.Size(220, 38);
             this.btn_pedido.TabIndex = 10;
             this.btn_pedido.Text = "Pedidos";
             this.btn_pedido.UseVisualStyleBackColor = false;
@@ -400,9 +518,10 @@
             this.btn_produtos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_produtos.Location = new System.Drawing.Point(147, 0);
+            this.btn_produtos.Location = new System.Drawing.Point(196, 0);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(157, 31);
+            this.btn_produtos.Size = new System.Drawing.Size(209, 38);
             this.btn_produtos.TabIndex = 9;
             this.btn_produtos.Text = "Produtos";
             this.btn_produtos.UseVisualStyleBackColor = false;
@@ -418,240 +537,133 @@
             this.btn_clientes.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_clientes.Location = new System.Drawing.Point(-3, 0);
+            this.btn_clientes.Location = new System.Drawing.Point(-4, 0);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Size = new System.Drawing.Size(151, 31);
+            this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 8;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
             this.btn_clientes.Click += new System.EventHandler(this.btn_clientes_Click);
             // 
-            // pic_logo
+            // dt
             // 
-            this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
-            this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_logo.Location = new System.Drawing.Point(296, -3);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(147, 154);
-            this.pic_logo.TabIndex = 13;
-            this.pic_logo.TabStop = false;
+            this.dt.AllowUserToAddRows = false;
+            this.dt.AllowUserToDeleteRows = false;
+            this.dt.AllowUserToResizeColumns = false;
+            this.dt.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.dt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.dt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.dt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.dt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.dt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dt.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt.DefaultCellStyle = dataGridViewCellStyle18;
+            this.dt.EnableHeadersVisualStyles = false;
+            this.dt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.dt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.dt.Location = new System.Drawing.Point(8, 366);
+            this.dt.Margin = new System.Windows.Forms.Padding(4);
+            this.dt.MultiSelect = false;
+            this.dt.Name = "dt";
+            this.dt.ReadOnly = true;
+            this.dt.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.dt.RowHeadersWidth = 51;
+            this.dt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.dt.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.dt.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.dt.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dt.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.dt.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            this.dt.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.dt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dt.Size = new System.Drawing.Size(981, 193);
+            this.dt.TabIndex = 47;
             // 
-            // pic_calda
+            // pictureBox2
             // 
-            this.pic_calda.BackColor = System.Drawing.Color.Transparent;
-            this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
-            this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_calda.Location = new System.Drawing.Point(-3, 31);
-            this.pic_calda.Name = "pic_calda";
-            this.pic_calda.Size = new System.Drawing.Size(752, 123);
-            this.pic_calda.TabIndex = 12;
-            this.pic_calda.TabStop = false;
+            this.pictureBox2.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1002, 149);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
             // 
-            // db_pedidos
+            // pictureBox3
             // 
-            this.db_pedidos.AllowUserToAddRows = false;
-            this.db_pedidos.AllowUserToDeleteRows = false;
-            this.db_pedidos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_pedidos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.db_pedidos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.db_pedidos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            this.db_pedidos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.db_pedidos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.db_pedidos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_pedidos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.db_pedidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.db_pedidos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.coluna_id,
-            this.coluna_nome,
-            this.coluna_tipo,
-            this.coluna_valorTotal,
-            this.coluna_dataEntrega,
-            this.coluna_dataPagamento,
-            this.coluna_situacao});
-            this.db_pedidos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.db_pedidos.DefaultCellStyle = dataGridViewCellStyle10;
-            this.db_pedidos.EnableHeadersVisualStyles = false;
-            this.db_pedidos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.db_pedidos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.db_pedidos.Location = new System.Drawing.Point(6, 308);
-            this.db_pedidos.Name = "db_pedidos";
-            this.db_pedidos.ReadOnly = true;
-            this.db_pedidos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_pedidos.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
-            this.db_pedidos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_pedidos.RowsDefaultCellStyle = dataGridViewCellStyle12;
-            this.db_pedidos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            this.db_pedidos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db_pedidos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.db_pedidos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            this.db_pedidos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_pedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.db_pedidos.Size = new System.Drawing.Size(736, 262);
-            this.db_pedidos.TabIndex = 47;
-            this.db_pedidos.Visible = false;
+            this.pictureBox3.Image = global::SeitonSystem.Properties.Resources.logo2;
+            this.pictureBox3.Location = new System.Drawing.Point(378, -8);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(248, 192);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 49;
+            this.pictureBox3.TabStop = false;
             // 
-            // coluna_id
+            // button1
             // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_id.DefaultCellStyle = dataGridViewCellStyle3;
-            this.coluna_id.HeaderText = "Id ";
-            this.coluna_id.Name = "coluna_id";
-            this.coluna_id.ReadOnly = true;
-            this.coluna_id.Width = 50;
-            // 
-            // coluna_nome
-            // 
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_nome.DefaultCellStyle = dataGridViewCellStyle4;
-            this.coluna_nome.HeaderText = "Cliente";
-            this.coluna_nome.Name = "coluna_nome";
-            this.coluna_nome.ReadOnly = true;
-            // 
-            // coluna_tipo
-            // 
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_tipo.DefaultCellStyle = dataGridViewCellStyle5;
-            this.coluna_tipo.HeaderText = "Pedido";
-            this.coluna_tipo.Name = "coluna_tipo";
-            this.coluna_tipo.ReadOnly = true;
-            // 
-            // coluna_valorTotal
-            // 
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_valorTotal.DefaultCellStyle = dataGridViewCellStyle6;
-            this.coluna_valorTotal.HeaderText = "Total";
-            this.coluna_valorTotal.Name = "coluna_valorTotal";
-            this.coluna_valorTotal.ReadOnly = true;
-            this.coluna_valorTotal.Width = 70;
-            // 
-            // coluna_dataEntrega
-            // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_dataEntrega.DefaultCellStyle = dataGridViewCellStyle7;
-            this.coluna_dataEntrega.HeaderText = "Entrega";
-            this.coluna_dataEntrega.Name = "coluna_dataEntrega";
-            this.coluna_dataEntrega.ReadOnly = true;
-            this.coluna_dataEntrega.Width = 110;
-            // 
-            // coluna_dataPagamento
-            // 
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_dataPagamento.DefaultCellStyle = dataGridViewCellStyle8;
-            this.coluna_dataPagamento.HeaderText = "Pagamento";
-            this.coluna_dataPagamento.Name = "coluna_dataPagamento";
-            this.coluna_dataPagamento.ReadOnly = true;
-            this.coluna_dataPagamento.Width = 110;
-            // 
-            // coluna_situacao
-            // 
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Sienna;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.Tan;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
-            this.coluna_situacao.DefaultCellStyle = dataGridViewCellStyle9;
-            this.coluna_situacao.HeaderText = "Situação";
-            this.coluna_situacao.Name = "coluna_situacao";
-            this.coluna_situacao.ReadOnly = true;
-            this.coluna_situacao.Width = 110;
-            // 
-            // progressBarBackup
-            // 
-            this.progressBarBackup.Location = new System.Drawing.Point(21, 90);
-            this.progressBarBackup.Name = "progressBarBackup";
-            this.progressBarBackup.Size = new System.Drawing.Size(208, 30);
-            this.progressBarBackup.TabIndex = 18;
-            // 
-            // progressBarRestore
-            // 
-            this.progressBarRestore.Location = new System.Drawing.Point(13, 90);
-            this.progressBarRestore.Name = "progressBarRestore";
-            this.progressBarRestore.Size = new System.Drawing.Size(208, 30);
-            this.progressBarRestore.TabIndex = 19;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(21, 68);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
-            this.label1.TabIndex = 19;
-            this.label1.Text = "Processando..%";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 68);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 13);
-            this.label2.TabIndex = 20;
-            this.label2.Text = "Processando..%";
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(21, 68);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(154, 42);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Processando... %";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // InicialView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(747, 723);
-            this.Controls.Add(this.db_pedidos);
-            this.Controls.Add(this.pic_logo);
-            this.Controls.Add(this.pic_calda);
+            this.ClientSize = new System.Drawing.Size(996, 814);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.dt);
             this.Controls.Add(this.btn_financas);
             this.Controls.Add(this.btn_pedido);
             this.Controls.Add(this.btn_produtos);
@@ -662,24 +674,28 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "InicialView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bem-Vindo ao Seiton System";
+            this.Load += new System.EventHandler(this.InicialView_Load);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_calda)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_pedidos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -692,8 +708,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.PictureBox pic_calda;
         private System.Windows.Forms.Button btn_financas;
         private System.Windows.Forms.Button btn_pedido;
         private System.Windows.Forms.Button btn_produtos;
@@ -701,28 +715,28 @@
         private System.Windows.Forms.Button btn_tbPedidos;
         private System.Windows.Forms.Button btn_Add_Produto;
         private System.Windows.Forms.Button btn_add_cliente;
-        private System.Windows.Forms.Button btn_restore;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button btn_financasCadastrar;
         private System.Windows.Forms.Button btn_finançasView;
         private System.Windows.Forms.Button btn_bakup;
-        private MetroFramework.Controls.MetroGrid db_pedidos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_nome;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_valorTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_dataEntrega;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_dataPagamento;
-        private System.Windows.Forms.DataGridViewTextBoxColumn coluna_situacao;
+        private MetroFramework.Controls.MetroGrid dt;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Panel linha;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ProgressBar progressBarRestore;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_percent;
         private System.Windows.Forms.ProgressBar progressBarBackup;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btn_ajuda;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Button btn_emails;
+        private System.Windows.Forms.Button btn_abrir_manual;
+        private System.Windows.Forms.TextBox txt_lucro;
+        private System.Windows.Forms.Button button1;
     }
 }

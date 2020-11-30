@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SeitonSystem.src.dto;
-using SeitonSystem.src.dao;
+using System;
+using System.Collections.Generic;
 
-namespace SeitonSystem.src.dao {
-    public class FinancasDAO {
+namespace SeitonSystem.src.dao
+{
+    public class FinancasDAO
+    {
         public const string INSERT_FLUXO = "INSERT INTO fluxo_de_caixa(titulo, valor, descricao, data_lancamento, tipo_fluxo)" +
                 "VALUES(@titulo,@valor, @descricao, @data_lancamento,@tipo_fluxo)";
 
@@ -26,21 +24,25 @@ namespace SeitonSystem.src.dao {
         public const string SELECT_FLUXO_TIPO_DIA = "SELECT * FROM fluxo_de_caixa WHERE tipo_fluxo=@tipo AND data_lancamento = @data ORDER BY data_lancamento DESC ";
 
         public const string DELETE_FLUXO = "DELETE FROM fluxo_de_caixa WHERE id=@id";
-       
+
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataReader dtReader;
 
-        public FinancasDAO() {
+        public FinancasDAO()
+        {
             this.conn = ConnectDAO.GetConnection();
         }
 
-        public FinancasDAO(MySqlConnection conexao) {
-           this.conn = conexao;
+        public FinancasDAO(MySqlConnection conexao)
+        {
+            this.conn = conexao;
         }
 
-        public void inserirFluxo(Financas financas) {
-            try {
+        public void inserirFluxo(Financas financas)
+        {
+            try
+            {
                 this.cmd = new MySqlCommand(INSERT_FLUXO, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@titulo", financas.Titulo));
@@ -51,15 +53,21 @@ namespace SeitonSystem.src.dao {
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Inserir Atividade");
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void atualizarFluxo(Financas financas) {
-            try {
+        public void atualizarFluxo(Financas financas)
+        {
+            try
+            {
                 this.cmd = new MySqlCommand(UPDATE_FLUXO, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@id", financas.Id));
@@ -71,46 +79,64 @@ namespace SeitonSystem.src.dao {
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Atualizar Atividade");
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
 
         }
 
-        public void deletarFluxo(int id) {
-            try {
-                this.cmd = new MySqlCommand(DELETE_FLUXO, this.conn); 
+        public void deletarFluxo(int id)
+        {
+            try
+            {
+                this.cmd = new MySqlCommand(DELETE_FLUXO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public List<Financas> pesquisaFluxos() {
+        public List<Financas> pesquisaFluxos()
+        {
             List<Financas> lista = new List<Financas>();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO, this.conn);
 
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
-                
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()) { 
+
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -118,25 +144,33 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosData(DateTime data){
+        public List<Financas> pesquisaFluxosData(DateTime data)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_DATA, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@data", data));
 
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()) {
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -144,25 +178,33 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosDia(DateTime data){
+        public List<Financas> pesquisaFluxosDia(DateTime data)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try{
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_DIA, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@data", data));
 
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()){
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -170,25 +212,33 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosTipo(String tipo){
+        public List<Financas> pesquisaFluxosTipo(String tipo)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_TIPO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@tipo", tipo));
 
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()) {
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -196,10 +246,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosTipoData(String tipo, DateTime data) {
+        public List<Financas> pesquisaFluxosTipoData(String tipo, DateTime data)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_TIPO_DATA, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@tipo", tipo));
@@ -208,15 +260,21 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows) {
-                    while (this.dtReader.Read()){
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -224,10 +282,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosTipoDataPeriodo(String tipo, DateTime data1, DateTime data2){
+        public List<Financas> pesquisaFluxosTipoDataPeriodo(String tipo, DateTime data1, DateTime data2)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_TIPO_DATA_PERIODO, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@tipo", tipo));
@@ -237,15 +297,21 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()) {
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            } finally {
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -253,10 +319,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosTipoDia(String tipo, DateTime data) {
+        public List<Financas> pesquisaFluxosTipoDia(String tipo, DateTime data)
+        {
             List<Financas> lista = new List<Financas>();
 
-            try{
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_TIPO_DIA, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@tipo", tipo));
@@ -265,15 +333,21 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows){
-                    while (this.dtReader.Read()){
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         lista.Add(populaFinanca(this.dtReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 this.dtReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -281,10 +355,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public Financas pesquisaFinancasId(int id) {
+        public Financas pesquisaFinancasId(int id)
+        {
             Financas financas = new Financas();
 
-            try {
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_FLUXO_ID, this.conn);
 
                 this.cmd.Parameters.Add(new MySqlParameter("@id", id));
@@ -292,24 +368,33 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dtReader = this.cmd.ExecuteReader();
 
-                if (this.dtReader.HasRows) {
-                    while (this.dtReader.Read()){
+                if (this.dtReader.HasRows)
+                {
+                    while (this.dtReader.Read())
+                    {
                         financas = populaFinanca(this.dtReader);
                     }
-                }else {
+                }
+                else
+                {
                     throw new Exception("Id Não Cadastrado");
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(conn);
             }
 
             return financas;
         }
 
-        private Financas populaFinanca(MySqlDataReader dtReader) {
+        private Financas populaFinanca(MySqlDataReader dtReader)
+        {
             Financas dado = new Financas
             {
                 Id = int.Parse(dtReader["id"].ToString()),
@@ -323,21 +408,32 @@ namespace SeitonSystem.src.dao {
             return dado;
         }
 
-        public void lucro()
+       /* public void lucroProcedure()
         {
-            
 
+            try
+            {
+                cmd = new MySqlCommand("lucro",conn);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                
+
+                conn.Open();
+                cmd.BeginExecuteNonQuery();
+                
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                ConnectDAO.CloseConnection(conn);
+            }*/
 
         }
+
     }
-
-
-}
-
-
-
-
-         
+ 
 
 
 
@@ -353,7 +449,15 @@ namespace SeitonSystem.src.dao {
 
 
 
-   
+
+
+
+
+
+
+
+
+
 
 
 

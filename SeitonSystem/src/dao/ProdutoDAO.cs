@@ -1,42 +1,45 @@
-﻿using System;
-using System.Collections.Generic;
-using MySql.Data.MySqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MySql.Data.MySqlClient;
 using SeitonSystem.src.dto;
+using System;
+using System.Collections.Generic;
 
-namespace SeitonSystem.src.dao {
-    class ProdutoDAO {
+namespace SeitonSystem.src.dao
+{
+    class ProdutoDAO
+    {
         public const string INSERT_PRODUTO = "INSERT INTO produto(nome, preco, descricao, status)" +
-                 "VALUES(@nome, @preco, @descricao, 'ativo')"; 
+                 "VALUES(@nome, @preco, @descricao, 'ativo')";
 
         public const string UPDATE_PRODUTO = "UPDATE produto SET nome=@nome,preco=@preco,descricao=@descricao  WHERE id=@id";
         public const string DESATIVE_PRODUTO = "UPDATE produto SET status='desativo' WHERE id=@id";
         public const string REATIVA_PRODUTO = "UPDATE produto SET status='ativo' WHERE id=@id";
 
-        public const string SELECT_PRODUTO = "SELECT * FROM produto WHERE status='ativo'"; 
-        public const string SELECT_PRODUTO_FILTRO = "SELECT * FROM produto WHERE status='ativo' AND "; 
-        
+        public const string SELECT_PRODUTO = "SELECT * FROM produto WHERE status='ativo'";
+        public const string SELECT_PRODUTO_FILTRO = "SELECT * FROM produto WHERE status='ativo' AND ";
+
         public const string SELECT_PRODUTO_ID = "SELECT * FROM produto WHERE id=@id";
-        
-        public const string SELECT_PRODUTO_DESATIVADO= "SELECT * FROM produto WHERE status='desativo'";
+
+        public const string SELECT_PRODUTO_DESATIVADO = "SELECT * FROM produto WHERE status='desativo'";
         public const string SELECT_PRODUTO_DESATIVO_FILTRO = "SELECT * FROM produto WHERE status='desativo' AND ";
-        
+
         MySqlConnection conn;
         MySqlCommand cmd;
         MySqlDataReader dataReader;
 
-        public ProdutoDAO() {
+        public ProdutoDAO()
+        {
             this.conn = ConnectDAO.GetConnection();
         }
 
-        public ProdutoDAO(MySqlConnection conexao) {
+        public ProdutoDAO(MySqlConnection conexao)
+        {
             this.conn = conexao;
         }
 
-        public void inserirProduto(Produto produto) {
-            try {
+        public void inserirProduto(Produto produto)
+        {
+            try
+            {
 
                 this.cmd = new MySqlCommand(INSERT_PRODUTO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", produto.Id));
@@ -46,15 +49,21 @@ namespace SeitonSystem.src.dao {
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Inserir Produto");
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void atualizarProduto(Produto produto){
-            try {
+        public void atualizarProduto(Produto produto)
+        {
+            try
+            {
 
                 this.cmd = new MySqlCommand(UPDATE_PRODUTO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", produto.Id));
@@ -64,81 +73,110 @@ namespace SeitonSystem.src.dao {
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Atualizar Produto");
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
 
         }
 
-        public void desativarProduto(int id){
-            try {
+        public void desativarProduto(int id)
+        {
+            try
+            {
                 this.cmd = new MySqlCommand(DESATIVE_PRODUTO, this.conn);
-                this.cmd.Parameters.Add(new MySqlParameter("@id", id)); 
+                this.cmd.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            } catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void reativarProduto(int id){
-            try {
+        public void reativarProduto(int id)
+        {
+            try
+            {
                 this.cmd = new MySqlCommand(REATIVA_PRODUTO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(conn);
             }
         }
 
-        public List<Produto> pesquisarProdutos() {
+        public List<Produto> pesquisarProdutos()
+        {
             List<Produto> lista = new List<Produto>();
 
-            try {
-                this.cmd = new MySqlCommand(SELECT_PRODUTO, this.conn); 
+            try
+            {
+                this.cmd = new MySqlCommand(SELECT_PRODUTO, this.conn);
 
                 this.conn.Open();
 
                 this.dataReader = cmd.ExecuteReader();
-                
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()) { 
-                        Produto produto = publicarProduto(this.dataReader); 
+
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
+                        Produto produto = publicarProduto(this.dataReader);
                         lista.Add(produto);
                     }
                 }
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Listar Produtos");
-            }finally {
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(conn);
             }
 
             return lista;
-        }               
+        }
 
-        public List<Produto> pesquisaProdutosFiltro(string filtro){
+        public List<Produto> pesquisaProdutosFiltro(string filtro)
+        {
             List<Produto> lista = new List<Produto>();
-            
-            try {
+
+            try
+            {
                 int num;
                 string select = SELECT_PRODUTO_FILTRO;
 
-                if (!int.TryParse(filtro, out num)) {
+                if (!int.TryParse(filtro, out num))
+                {
                     filtro += "%";
                     select += " nome LIKE @nome";
-                } else {
-                    select += " id = @id";                
-                }                                                                 
+                }
+                else
+                {
+                    select += " id = @id";
+                }
 
                 this.cmd = new MySqlCommand(select, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@nome", filtro));
@@ -147,15 +185,21 @@ namespace SeitonSystem.src.dao {
                 this.cmd.ExecuteNonQuery();
                 this.dataReader = this.cmd.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         Produto dado = publicarProduto(this.dataReader);
                         lista.Add(dado);
                     }
                 }
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(conn);
             }
@@ -163,52 +207,70 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public Produto pesquisaProdutosId(int id){
+        public Produto pesquisaProdutosId(int id)
+        {
             Produto produto = new Produto();
 
-            try{
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_PRODUTO_ID, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", id));
 
                 this.conn.Open();
                 this.dataReader = this.cmd.ExecuteReader();
 
-                if (this.dataReader.HasRows){
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         produto = publicarProduto(this.dataReader);
                     }
-                }else {
+                }
+                else
+                {
                     throw new Exception("Id não Cadastrado");
                 }
 
-            }catch (Exception e){
-                throw new Exception("Erro ao Carregar Dados" +e.Message);
-            }finally{
+            }
+            catch (Exception e)
+            {
+                throw new Exception("Erro ao Carregar Dados" + e.Message);
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
 
             return produto;
         }
 
-        public List<Produto> pesquisaProdutosDesativados() {
+        public List<Produto> pesquisaProdutosDesativados()
+        {
             List<Produto> lista = new List<Produto>();
 
-            try{
+            try
+            {
                 this.cmd = new MySqlCommand(SELECT_PRODUTO_DESATIVADO, this.conn);
 
                 this.conn.Open();
 
                 this.dataReader = cmd.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         Produto produto = publicarProduto(this.dataReader);
                         lista.Add(produto);
                     }
                 }
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Listar Produtos Deletados");
-            }finally{
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(conn);
             }
@@ -217,19 +279,24 @@ namespace SeitonSystem.src.dao {
         }
 
 
-        public List<Produto> pesquisaProdutosDesativadosFiltro(string filtro) {
+        public List<Produto> pesquisaProdutosDesativadosFiltro(string filtro)
+        {
             List<Produto> lista = new List<Produto>();
 
-            try{
+            try
+            {
                 int num;
                 string select = SELECT_PRODUTO_DESATIVO_FILTRO;
 
-                if (!int.TryParse(filtro, out num)){
+                if (!int.TryParse(filtro, out num))
+                {
                     filtro += "%";
                     select += " nome LIKE @nome";
-                }else{
+                }
+                else
+                {
                     select += " id = @id";
-                }                                                                  
+                }
 
                 this.cmd = new MySqlCommand(select, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@nome", filtro));
@@ -238,15 +305,21 @@ namespace SeitonSystem.src.dao {
                 this.cmd.ExecuteNonQuery();
                 this.dataReader = this.cmd.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         Produto dado = publicarProduto(this.dataReader);
                         lista.Add(dado);
                     }
                 }
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally { 
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(conn);
             }
@@ -254,7 +327,8 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        private Produto publicarProduto(MySqlDataReader dataReader){
+        private Produto publicarProduto(MySqlDataReader dataReader)
+        {
             Produto produto = new Produto
             {
                 Id = int.Parse(dataReader["id"].ToString()),

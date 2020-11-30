@@ -5,24 +5,23 @@ using SeitonSystem.src.view.Inicial;
 using SeitonSystem.src.view.Pedido;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeitonSystem.view {
-    public partial class ClienteView : Form {
+namespace SeitonSystem.view
+{
+    public partial class ClienteView : Form
+    {
         ClienteController clienteController;
         int idCliente;
         String nomeCliente;
 
-        public ClienteView() {
+        public ClienteView()
+        {
             InitializeComponent();
 
-            try {
+            try
+            {
                 clienteController = new ClienteController();
 
                 preencherDataGridView();
@@ -31,12 +30,15 @@ namespace SeitonSystem.view {
                 dataGridview(db_clientes);
                 dataGridview(db_excluidos);
 
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void btn_tbClientes_Click(object sender, EventArgs e){
+        private void btn_tbClientes_Click(object sender, EventArgs e)
+        {
             btn_tbClientes.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btn_tbDesativados.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -49,7 +51,8 @@ namespace SeitonSystem.view {
             preencherDataGridView();
         }
 
-        private void btn_tbDesativados_Click(object sender, EventArgs e){
+        private void btn_tbDesativados_Click(object sender, EventArgs e)
+        {
             btn_tbDesativados.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             btn_tbClientes.Font = new System.Drawing.Font("Segoe UI Light", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 
@@ -62,39 +65,50 @@ namespace SeitonSystem.view {
             preencherDataGridViewDeletados();
         }
 
-        private void btn_pesquisar_Click(object sender, EventArgs e){
+        private void btn_pesquisar_Click(object sender, EventArgs e)
+        {
             txt_pesquisa.Visible = true;
             linha2.Visible = true;
         }
 
-        private void txt_pesquisa_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e) {
-            try {
+        private void txt_pesquisa_KeyUp(object sender, System.Windows.Forms.KeyEventArgs e)
+        {
+            try
+            {
                 List<Cliente> clientes = new List<Cliente>();
 
-                if (db_clientes.Visible) {
+                if (db_clientes.Visible)
+                {
                     clientes = this.clienteController.pesquisaClientesFiltro(txt_pesquisa.Text);
                     db_clientes.DataSource = clientes;
 
-                }else {
+                }
+                else
+                {
                     clientes = this.clienteController.pesquisaClientesDesativadosFiltro(txt_pesquisa.Text);
                     db_excluidos.DataSource = clientes;
                 }
-            } catch (Exception e1) {
+            }
+            catch (Exception e1)
+            {
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private void btn_cadastrar_Click(object sender, EventArgs e) {
+        private void btn_cadastrar_Click(object sender, EventArgs e)
+        {
             ClienteCadastrarView cdv = new ClienteCadastrarView();
             cdv.Show();
             this.Hide();
         }
 
-        private void db_excluidos_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void db_excluidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             panel_clientes.Visible = false;
             panel_excluidos.Visible = true;
 
-            if (e.RowIndex >= 0) {
+            if (e.RowIndex >= 0)
+            {
                 DataGridViewRow row = this.db_excluidos.Rows[e.RowIndex];
 
                 this.idCliente = int.Parse(row.Cells["Id"].Value.ToString());
@@ -102,11 +116,13 @@ namespace SeitonSystem.view {
             }
         }
 
-        private void db_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e) {
+        private void db_clientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
             panel_clientes.Visible = true;
             panel_excluidos.Visible = false;
 
-            if (e.RowIndex >= 0) {
+            if (e.RowIndex >= 0)
+            {
                 DataGridViewRow row = this.db_clientes.Rows[e.RowIndex];
 
                 this.idCliente = int.Parse(row.Cells["Id"].Value.ToString());
@@ -114,41 +130,51 @@ namespace SeitonSystem.view {
             }
         }
 
-        private void enviaMsg(String msg, String tipo){
+        private void enviaMsg(String msg, String tipo)
+        {
             MensagensView message = new MensagensView(msg, tipo);
             message.ShowDialog();
         }
 
-        private void preencherDataGridView(){
-            try {
+        private void preencherDataGridView()
+        {
+            try
+            {
                 List<Cliente> clientes = new List<Cliente>();
                 clientes = this.clienteController.pesquisaClientes();
                 db_clientes.DataSource = clientes;
 
             }
-            catch (Exception e) {
-                enviaMsg(e.Message, "erro");
-            }   
-        }
-
-        private void preencherDataGridViewDeletados() {
-            try {
-                List<Cliente> clientes = new List<Cliente>();
-                clientes = this.clienteController.pesquisaClientesDesativados();
-                db_excluidos.DataSource = clientes;
-
-            } catch (Exception e) {
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void btn_atualizar_Click(object sender, EventArgs e) {
+        private void preencherDataGridViewDeletados()
+        {
+            try
+            {
+                List<Cliente> clientes = new List<Cliente>();
+                clientes = this.clienteController.pesquisaClientesDesativados();
+                db_excluidos.DataSource = clientes;
+
+            }
+            catch (Exception e)
+            {
+                enviaMsg(e.Message, "erro");
+            }
+        }
+
+        private void btn_atualizar_Click(object sender, EventArgs e)
+        {
             ClienteAtualizarView clienteAtualizar = new ClienteAtualizarView(this.idCliente);
             clienteAtualizar.Show();
             this.Hide();
         }
 
-        private void btn_desativar_Click(object sender, EventArgs e) {
+        private void btn_desativar_Click(object sender, EventArgs e)
+        {
             String msg = "Deseja Desativar " + this.nomeCliente + "?";
 
             MensagensView message = new MensagensView(msg, "deleta", this.idCliente, "cliente");
@@ -158,7 +184,8 @@ namespace SeitonSystem.view {
             panel_clientes.Visible = false;
         }
 
-        private void btn_reativar_Click(object sender, EventArgs e) {
+        private void btn_reativar_Click(object sender, EventArgs e)
+        {
             String msg = "Deseja Reativar " + this.nomeCliente + "?";
 
             MensagensView message = new MensagensView(msg, "recupera", this.idCliente, "cliente");
@@ -168,7 +195,8 @@ namespace SeitonSystem.view {
             panel_excluidos.Visible = false;
         }
 
-        private void dataGridview(DataGridView dt) {
+        private void dataGridview(DataGridView dt)
+        {
             dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
             dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
@@ -185,29 +213,33 @@ namespace SeitonSystem.view {
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
             dt.Columns["Id"].Width = 50;
-            dt.Columns["Nome"].Width = 100;
+            dt.Columns["Nome"].Width = 120;
             dt.Columns["Email"].Width = 200;
         }
 
-        private void btn_produtos_Click(object sender, EventArgs e){
+        private void btn_produtos_Click(object sender, EventArgs e)
+        {
             ProdutoView p = new ProdutoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_pedido_Click(object sender, EventArgs e){
+        private void btn_pedido_Click(object sender, EventArgs e)
+        {
             PedidoView p = new PedidoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_financas_Click(object sender, EventArgs e){
+        private void btn_financas_Click(object sender, EventArgs e)
+        {
             FinancasView f = new FinancasView();
             f.Show();
             this.Hide();
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e){
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
             InicialView i = new InicialView();
             i.Show();
             this.Hide();

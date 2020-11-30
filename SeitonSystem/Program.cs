@@ -1,8 +1,7 @@
-﻿using SeitonSystem.src.view;
+﻿using SeitonSystem.src.view.Inicial;
+using SeitonSystem.src.view.Pedido;
+using SeitonSystem.view;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace SeitonSystem
@@ -18,7 +17,7 @@ namespace SeitonSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginView());
+            Application.Run(new PedidoView());
 
         }
     }

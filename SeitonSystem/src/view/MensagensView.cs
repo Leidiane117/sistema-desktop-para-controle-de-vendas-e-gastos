@@ -1,20 +1,11 @@
 ﻿using SeitonSystem.src.controller;
-using SeitonSystem.src.dto;
-using SeitonSystem.src.view;
-using SeitonSystem.src.dao;
-using SeitonSystem.view;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SeitonSystem.src.view {
-    public partial class MensagensView : Form {
+namespace SeitonSystem.src.view
+{
+    public partial class MensagensView : Form
+    {
         ProdutoController produtoController;
         ClienteController clienteController;
         FinancasController financasController;
@@ -23,7 +14,8 @@ namespace SeitonSystem.src.view {
         String obj;
         int id;
 
-        public MensagensView(String msg, String tipo, int id, string obj){
+        public MensagensView(String msg, String tipo, int id, string obj)
+        {
             InitializeComponent();
             pic_info.BackgroundImage = global::SeitonSystem.Properties.Resources.icon_aviso;
 
@@ -40,7 +32,8 @@ namespace SeitonSystem.src.view {
 
         }
 
-        public MensagensView(String msg, String tipo){
+        public MensagensView(String msg, String tipo)
+        {
             InitializeComponent();
 
             this.tipo = tipo;
@@ -49,35 +42,44 @@ namespace SeitonSystem.src.view {
             verificaTipoMsg();
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e){
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
             this.Close();
         }
 
-        private void btn_ok_Click(object sender, EventArgs e) {
-            if (this.tipo == "deleta" && this.obj == "produto") {
+        private void btn_ok_Click(object sender, EventArgs e)
+        {
+            if (this.tipo == "deleta" && this.obj == "produto")
+            {
                 DeletarProduto(id);
             }
 
-            if (this.tipo == "recupera" && this.obj == "produto") {
+            if (this.tipo == "recupera" && this.obj == "produto")
+            {
                 RecuperarProduto(id);
             }
 
-            if (this.tipo == "deleta" && this.obj == "cliente") {
+            if (this.tipo == "deleta" && this.obj == "cliente")
+            {
                 deletarCliente(this.id);
             }
 
-            if (this.tipo == "recupera" && this.obj == "cliente"){
+            if (this.tipo == "recupera" && this.obj == "cliente")
+            {
                 recuperarCliente(this.id);
             }
 
-            if (this.tipo == "deleta" && this.obj == "financas"){
+            if (this.tipo == "deleta" && this.obj == "financas")
+            {
                 deletarFinancas(this.id);
             }
 
         }
 
-        private void verificaTipoMsg() {
-            switch (this.tipo) {
+        private void verificaTipoMsg()
+        {
+            switch (this.tipo)
+            {
                 case "erro":
                     pic_info.BackgroundImage = global::SeitonSystem.Properties.Resources.icon_erro;
                     break;
@@ -92,57 +94,78 @@ namespace SeitonSystem.src.view {
             }
         }
 
-        private void DeletarProduto(int id) {
-            try {
+        private void DeletarProduto(int id)
+        {
+            try
+            {
                 produtoController.desativarProduto(id);
 
                 enviaMsg("Produto Desativado", "check");
-            }catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void RecuperarProduto(int id) {
-            try {
+        private void RecuperarProduto(int id)
+        {
+            try
+            {
                 produtoController.reativarProduto(id);
 
                 enviaMsg("Produto Reativado", "check");
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void deletarCliente(int id){
-            try {
+        private void deletarCliente(int id)
+        {
+            try
+            {
                 this.clienteController.desativarCliente(this.id);
 
                 enviaMsg("Cliente Desativado", "check");
-            } catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void recuperarCliente(int id) {
-            try {
+        private void recuperarCliente(int id)
+        {
+            try
+            {
                 this.clienteController.reativarCliente(this.id);
 
                 enviaMsg("Cliente Reativado", "check");
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void deletarFinancas(int id) {
-            try {
+        private void deletarFinancas(int id)
+        {
+            try
+            {
                 this.financasController.deletarFluxo(this.id);
 
                 enviaMsg("Atividade Deletada", "check");
-            }catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void enviaMsg(String msg, String tipo) {
+        private void enviaMsg(String msg, String tipo)
+        {
             MensagensView message = new MensagensView(msg, tipo);
             message.ShowDialog();
             Hide();

@@ -1,14 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SeitonSystem.src.dto;
+using System;
+using System.Collections.Generic;
 
-namespace SeitonSystem.src.dao {
-    class PedidoDAO {
+namespace SeitonSystem.src.dao
+{
+    class PedidoDAO
+    {
         public const String INSERT_PEDIDO = "INSERT INTO pedido(tipo_pedido, situacao_pedido, tipo_pagamento, data_pagamento, valor_total, " +
         "data_entrega, hora_entrega, cliente_id) VALUES (@tipo, @situacao, @tipo_pag, @data_pag, @valor, @data_ent, @hora_ent, @id_cliente)";
 
@@ -38,7 +36,7 @@ namespace SeitonSystem.src.dao {
         public const String SELECT_PRODUTO = "SELECT * FROM produto p INNER JOIN pedido_produto pe ON (p.id = pe.produto_id) WHERE pe.pedido_id = @id";
 
         public const String SELECT_PEDIDO = "SELECT p.id, c.nome, p.tipo_pedido, p.valor_total, p.data_entrega, p.data_pagamento,  " +
-        "p.situacao_pedido FROM pedido p INNER JOIN cliente c ON(p.cliente_id = c.id) ORDER BY data_entrega DESC";
+        "p.situacao_pedido FROM pedido p INNER JOIN cliente c ON(p.cliente_id = c.id) ORDER BY data_entrega ASC";
 
         public const String SELECT_PEDIDO_FILTRO = "SELECT p.id, c.nome, p.tipo_pedido, p.valor_total, p.data_entrega, p.data_pagamento,  " +
         "p.situacao_pedido FROM pedido p INNER JOIN cliente c ON(p.cliente_id = c.id) WHERE";
@@ -46,21 +44,29 @@ namespace SeitonSystem.src.dao {
         public const String SELECT_PRODUTO_MAIS_VENDIDO = "SELECT pro.id, pro.nome, sum(pe.quantidade) AS qtd FROM pedido_produto pe " +
         "INNER JOIN produto pro ON(pro.id = pe.produto_id) INNER JOIN pedido p ON(p.id = pe.pedido_id) " +
         "WHERE p.data_entrega BETWEEN @data1 AND @data2 GROUP BY pro.nome, pro.id ORDER BY qtd DESC";
-
+        
+        public const string SELECT_PEDIDOS_PENDENTES = "SELECT p.id, c.nome, p.tipo_pedido, p.valor_total, p.data_entrega, p.data_pagamento,  " +
+        "p.situacao_pedido FROM pedido p INNER JOIN cliente c ON(p.cliente_id = c.id) WHERE situacao_pedido = 'pendente' ORDER BY  data_entrega ASC";
+              
+       
         MySqlConnection conn;
         MySqlCommand command;
         MySqlDataReader dataReader;
 
-        public PedidoDAO() {
+        public PedidoDAO()
+        {
             this.conn = ConnectDAO.GetConnection();
         }
 
-        public PedidoDAO(MySqlConnection conexao) {
+        public PedidoDAO(MySqlConnection conexao)
+        {
             this.conn = conexao;
         }
 
-        public void inserirPedido(Pedido pedido, List<ProdutoPesquisa> produtos){
-            try {
+        public void inserirPedido(Pedido pedido, List<ProdutoPesquisa> produtos)
+        {
+            try
+            {
                 int idPedido = 0;
 
                 this.command = new MySqlCommand(INSERT_PEDIDO, this.conn);
@@ -81,33 +87,45 @@ namespace SeitonSystem.src.dao {
 
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         idPedido = int.Parse(this.dataReader["id"].ToString());
                     }
 
                     this.dataReader.Close();
-                }else {
+                }
+                else
+                {
                     throw new Exception("Erro ao Carregar Dados");
                 }
 
-                if (pedido.Tipo_pedido == "Entrega") {
+                if (pedido.Tipo_pedido == "Entrega")
+                {
                     inserirEndereco(pedido, idPedido);
                 }
 
-                foreach (ProdutoPesquisa p in produtos) {
+                foreach (ProdutoPesquisa p in produtos)
+                {
                     inserirProduto(p, idPedido);
                 }
 
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 throw new Exception(e.Message);
-            } finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void inserirProduto(ProdutoPesquisa produto, int idPedido) {
-            try {
+        public void inserirProduto(ProdutoPesquisa produto, int idPedido)
+        {
+            try
+            {
                 this.command = new MySqlCommand(INSERT_PRODUTO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@id_produto", produto.Id));
@@ -115,21 +133,28 @@ namespace SeitonSystem.src.dao {
                 this.command.Parameters.Add(new MySqlParameter("@qtd", produto.Quantidade));
                 this.command.Parameters.Add(new MySqlParameter("@obs", produto.Observacao));
 
-                if (this.conn.State != System.Data.ConnectionState.Open) {
+                if (this.conn.State != System.Data.ConnectionState.Open)
+                {
                     this.conn.Open();
                 }
 
                 this.command.ExecuteNonQuery();
 
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void inserirEndereco(Pedido pedido, int id) {
-            try {
+        public void inserirEndereco(Pedido pedido, int id)
+        {
+            try
+            {
                 this.command = new MySqlCommand(INSERT_ENDERECO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@log", pedido.Logradouro));
@@ -141,38 +166,51 @@ namespace SeitonSystem.src.dao {
                 this.command.Parameters.Add(new MySqlParameter("@uf", pedido.Uf));
                 this.command.Parameters.Add(new MySqlParameter("@id_pedido", id));
 
-                if (this.conn.State != System.Data.ConnectionState.Open){
+                if (this.conn.State != System.Data.ConnectionState.Open)
+                {
                     this.conn.Open();
                 }
-              
+
                 this.command.ExecuteNonQuery();
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void atualizarSituacao(String situacao, int id) {
-            try{
+        public void atualizarSituacao(String situacao, int id)
+        {
+            try
+            {
                 this.command = new MySqlCommand(UPDATE_SITUACAO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@situacao", situacao));
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
-           
+
                 this.conn.Open();
                 this.command.ExecuteNonQuery();
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
-        
+
         }
 
-        public void atualizarPedido(Pedido pedido, List<ProdutoPesquisa> produtos) {
-            try{
+        public void atualizarPedido(Pedido pedido, List<ProdutoPesquisa> produtos)
+        {
+            try
+            {
                 this.command = new MySqlCommand(UPDATE_PEDIDO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@tipo", pedido.Tipo_pedido));
@@ -187,26 +225,33 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.command.ExecuteNonQuery();
 
-                if (pedido.Tipo_pedido == "Entrega") {
+                if (pedido.Tipo_pedido == "Entrega")
+                {
                     atualizarEndereco(pedido);
                 }
 
                 deletarProduto(pedido.Id_pedido);
 
-                foreach (ProdutoPesquisa p in produtos){
+                foreach (ProdutoPesquisa p in produtos)
+                {
                     inserirProduto(p, pedido.Id_pedido);
                 }
 
-            } catch (Exception e){
+            }
+            catch (Exception e)
+            {
                 throw new Exception(e.Message);
-            }finally
+            }
+            finally
             {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void atualizarEndereco(Pedido pedido){
-            try{
+        public void atualizarEndereco(Pedido pedido)
+        {
+            try
+            {
                 this.command = new MySqlCommand(UPDATE_ENDERECO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@log", pedido.Logradouro));
@@ -218,40 +263,54 @@ namespace SeitonSystem.src.dao {
                 this.command.Parameters.Add(new MySqlParameter("@uf", pedido.Uf));
                 this.command.Parameters.Add(new MySqlParameter("@id", pedido.Id_endereco));
 
-                if (this.conn.State != System.Data.ConnectionState.Open){
+                if (this.conn.State != System.Data.ConnectionState.Open)
+                {
                     this.conn.Open();
                 }
 
                 this.command.ExecuteNonQuery();
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw;
-            } finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void deletarProduto(int idPedido) {
-            try {
+        public void deletarProduto(int idPedido)
+        {
+            try
+            {
                 this.command = new MySqlCommand(DELETE_PRODUTO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@pedido_id", idPedido));
 
-                if (this.conn.State != System.Data.ConnectionState.Open){
+                if (this.conn.State != System.Data.ConnectionState.Open)
+                {
                     this.conn.Open();
                 }
 
                 this.command.ExecuteNonQuery();
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
 
-        public void deletarEndereco(int idPedido) {
-            try {
+        public void deletarEndereco(int idPedido)
+        {
+            try
+            {
                 this.command = new MySqlCommand(DELETE_ENDERECO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@pedido_id", idPedido));
@@ -259,16 +318,22 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.command.ExecuteNonQuery();
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw;
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
             }
         }
-        public Pedido pesquisaPedidoId(int id){
+        public Pedido pesquisaPedidoId(int id)
+        {
             Pedido pedido = new Pedido();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PEDIDO_ID, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
@@ -276,17 +341,25 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows){
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         pedido = populaPedido(this.dataReader);
                     }
-                }else {
+                }
+                else
+                {
                     throw new Exception("Id não Cadastrado");
                 }
 
-            } catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
                 this.dataReader.Close();
             }
@@ -294,10 +367,12 @@ namespace SeitonSystem.src.dao {
             return pedido;
         }
 
-        public List<Pedido> pesquisaPedidoData(DateTime data, DateTime data2) {
+        public List<Pedido> pesquisaPedidoData(DateTime data, DateTime data2)
+        {
             List<Pedido> lista = new List<Pedido>();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PEDIDO_DATA, this.conn);
                 this.command.Parameters.Add(new MySqlParameter("@data", data));
                 this.command.Parameters.Add(new MySqlParameter("@data2", data2));
@@ -306,15 +381,21 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         lista.Add(populaPedido(this.dataReader));
                     }
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -322,10 +403,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public List<ProdutoPesquisa> pesquisaProduto(int id) {
+        public List<ProdutoPesquisa> pesquisaProduto(int id)
+        {
             List<ProdutoPesquisa> produtos = new List<ProdutoPesquisa>();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PRODUTO, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
@@ -333,17 +416,25 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         produtos.Add(populaProduto(this.dataReader));
                     }
-                }else{
+                }
+                else
+                {
                     throw new Exception("Id não Cadastrado");
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            } finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
                 this.dataReader.Close();
             }
@@ -351,10 +442,12 @@ namespace SeitonSystem.src.dao {
             return produtos;
         }
 
-        public ProdutoPesquisa pesquisaProdutoId(int id) {
+        public ProdutoPesquisa pesquisaProdutoId(int id)
+        {
             ProdutoPesquisa produto = new ProdutoPesquisa();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PRODUTO_ID, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
@@ -362,17 +455,25 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()) {
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         produto = populaProduto(this.dataReader);
                     }
-                }else {
+                }
+                else
+                {
                     throw new Exception("Id não Cadastrado");
                 }
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
                 this.dataReader.Close();
             }
@@ -380,10 +481,12 @@ namespace SeitonSystem.src.dao {
             return produto;
         }
 
-        public List<ProdutoPesquisa> pesquisaProdutoMaisVendidoData(DateTime data, DateTime data2) {
+        public List<ProdutoPesquisa> pesquisaProdutoMaisVendidoData(DateTime data, DateTime data2)
+        {
             List<ProdutoPesquisa> lista = new List<ProdutoPesquisa>();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PRODUTO_MAIS_VENDIDO, this.conn);
                 this.command.Parameters.Add(new MySqlParameter("@data1", data));
                 this.command.Parameters.Add(new MySqlParameter("@data2", data2));
@@ -391,8 +494,10 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()) {
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         ProdutoPesquisa p = new ProdutoPesquisa()
                         {
                             Id = int.Parse(dataReader["id"].ToString()),
@@ -404,9 +509,13 @@ namespace SeitonSystem.src.dao {
                     }
                 }
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -414,10 +523,12 @@ namespace SeitonSystem.src.dao {
             return lista;
         }
 
-        public Pedido pesquisaEnderecoId(int id) {
+        public Pedido pesquisaEnderecoId(int id)
+        {
             Pedido pedido = new Pedido();
 
-            try {
+            try
+            {
                 this.command = new MySqlCommand(SELECT_ENDERECO_ID, this.conn);
 
                 this.command.Parameters.Add(new MySqlParameter("@id", id));
@@ -425,17 +536,25 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()){
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         pedido = populaEndereco(this.dataReader);
                     }
-                }else{
+                }
+                else
+                {
                     throw new Exception("Id não Cadastrado");
                 }
 
-            }catch (Exception){
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            }finally{
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
                 this.dataReader.Close();
             }
@@ -443,24 +562,32 @@ namespace SeitonSystem.src.dao {
             return pedido;
         }
 
-        public List<PedidoPesquisa> pesquisaPedido() {
+        public List<PedidoPesquisa> pesquisaPedido()
+        {
             List<PedidoPesquisa> pedidos = new List<PedidoPesquisa>();
-           
-            try {
+
+            try
+            {
                 this.command = new MySqlCommand(SELECT_PEDIDO, this.conn);
 
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                if (this.dataReader.HasRows) {
-                    while (this.dataReader.Read()) {
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
                         pedidos.Add(populaPedidoPesquisa(this.dataReader));
                     }
                 }
 
-            }catch (Exception) {
+            }
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Carregar Dados");
-            }finally {
+            }
+            finally
+            {
                 ConnectDAO.CloseConnection(this.conn);
                 this.dataReader.Close();
             }
@@ -468,17 +595,55 @@ namespace SeitonSystem.src.dao {
             return pedidos;
         }
 
-        public List<PedidoPesquisa> pesquisaPedidosFiltro(String filtro) {
+        public List<PedidoPesquisa> ultimosPedidosPendentes()
+        {
             List<PedidoPesquisa> pedidos = new List<PedidoPesquisa>();
 
-            try {
+            try
+            {
+                this.command = new MySqlCommand(SELECT_PEDIDOS_PENDENTES, this.conn);
+
+                this.conn.Open();
+                this.dataReader = this.command.ExecuteReader();
+
+                if (this.dataReader.HasRows)
+                {
+                    while (this.dataReader.Read())
+                    {
+                        pedidos.Add(populaPedidoPesquisa(this.dataReader));
+                    }
+                }
+
+            }
+            catch (Exception )
+            {
+                throw new Exception("Erro ao Carregar Dados" );
+            }
+            finally
+            {
+                ConnectDAO.CloseConnection(this.conn);
+                this.dataReader.Close();
+            }
+
+            return pedidos;
+        }
+
+        public List<PedidoPesquisa> pesquisaPedidosFiltro(String filtro)
+        {
+            List<PedidoPesquisa> pedidos = new List<PedidoPesquisa>();
+
+            try
+            {
                 int num;
                 string select = SELECT_PEDIDO_FILTRO;
 
-                if (!int.TryParse(filtro, out num)) {
+                if (!int.TryParse(filtro, out num))
+                {
                     select += " nome LIKE @filtro OR situacao_pedido LIKE @filtro2 ORDER BY data_entrega DESC";
                     filtro += "%";
-                }else {
+                }
+                else
+                {
                     select += " p.id = @filtro ORDER BY data_entrega DESC";
                 }
 
@@ -489,12 +654,17 @@ namespace SeitonSystem.src.dao {
                 this.conn.Open();
                 this.dataReader = this.command.ExecuteReader();
 
-                while (this.dataReader.Read()){
+                while (this.dataReader.Read())
+                {
                     pedidos.Add(populaPedidoPesquisa(this.dataReader));
                 }
-            }catch (Exception e) {
+            }
+            catch (Exception e)
+            {
                 throw new Exception(e.Message);
-            }finally {
+            }
+            finally
+            {
                 this.dataReader.Close();
                 ConnectDAO.CloseConnection(this.conn);
             }
@@ -503,7 +673,8 @@ namespace SeitonSystem.src.dao {
         }
 
 
-        private ProdutoPesquisa populaProduto(MySqlDataReader dataReader){
+        private ProdutoPesquisa populaProduto(MySqlDataReader dataReader)
+        {
             ProdutoPesquisa produto = new ProdutoPesquisa();
 
             produto.Id = int.Parse(dataReader["id"].ToString());
@@ -515,7 +686,8 @@ namespace SeitonSystem.src.dao {
             return produto;
         }
 
-        private Pedido populaPedido(MySqlDataReader dataReader) {
+        private Pedido populaPedido(MySqlDataReader dataReader)
+        {
             Pedido pedido = new Pedido();
 
             pedido.Id_pedido = int.Parse(dataReader["id"].ToString());
@@ -526,26 +698,28 @@ namespace SeitonSystem.src.dao {
             pedido.Valor_total = double.Parse(dataReader["valor_total"].ToString());
             pedido.Data_entrega = dataReader["data_entrega"].ToString();
             pedido.Hora_entrega = dataReader["hora_entrega"].ToString();
-            pedido.Id_cliente  = int.Parse(dataReader["cliente_id"].ToString());
+            pedido.Id_cliente = int.Parse(dataReader["cliente_id"].ToString());
 
             return pedido;
         }
 
-        private PedidoPesquisa populaPedidoPesquisa(MySqlDataReader dataReader) {
+        private PedidoPesquisa populaPedidoPesquisa(MySqlDataReader dataReader)
+        {
             PedidoPesquisa pedido = new PedidoPesquisa();
 
             pedido.Id = int.Parse(dataReader["id"].ToString());
             pedido.Cliente = dataReader["nome"].ToString();
             pedido.Pedido = dataReader["tipo_pedido"].ToString();
             pedido.Situação = dataReader["situacao_pedido"].ToString();
-            pedido.Pagamento = dataReader["data_pagamento"].ToString().Substring(0,10);
+            pedido.Pagamento = dataReader["data_pagamento"].ToString().Substring(0, 10);
             pedido.Total = double.Parse(dataReader["valor_total"].ToString());
-            pedido.Entrega = dataReader["data_entrega"].ToString().Substring(0,10);
-   
+            pedido.Entrega = dataReader["data_entrega"].ToString().Substring(0, 10);
+
             return pedido;
         }
 
-        private Pedido populaEndereco(MySqlDataReader dataReader){
+        private Pedido populaEndereco(MySqlDataReader dataReader)
+        {
             Pedido pedido = new Pedido();
 
             pedido.Logradouro = dataReader["logradouro"].ToString();
@@ -560,4 +734,4 @@ namespace SeitonSystem.src.dao {
             return pedido;
         }
     }
-}   
+}

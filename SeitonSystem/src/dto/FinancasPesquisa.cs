@@ -1,38 +1,41 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SeitonSystem.src.dto {
-    class FinancasPesquisa {
+namespace SeitonSystem.src.dto
+{
+    class FinancasPesquisa
+    {
         private int id;
         private String titulo;
         private double valor;
         private DateTime data_lancamento;
-        private String fluxo; 
-    
-        public int Id {
+        private String fluxo;
+
+        public int Id
+        {
             get { return id; }
             set { id = value; }
         }
 
-        public String Identificacao{
+        public String Identificacao
+        {
             get { return this.titulo; }
             set { this.titulo = value; }
         }
 
-        public double Total {
+        public double Total
+        {
             get { return this.valor; }
             set { this.valor = value; }
         }
 
-        public DateTime Lancamento {
+        public DateTime Lancamento
+        {
             get { return this.data_lancamento; }
             set { this.data_lancamento = value; }
         }
 
-        public String Fluxo{
+        public String Fluxo
+        {
             get { return this.fluxo; }
             set { this.fluxo = value; }
         }

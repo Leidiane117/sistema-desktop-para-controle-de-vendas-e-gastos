@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SeitonSystem.src.view.Inicial;
+using System;
 using System.Windows.Forms;
-using SeitonSystem.src.view;
-using SeitonSystem.src.view.Inicial;
 
 namespace SeitonSystem.src.view
 {
@@ -21,19 +13,28 @@ namespace SeitonSystem.src.view
 
         private void Entrar_Click(object sender, EventArgs e)
         {
-            if (txt_user.Text == "admin" && txt_senha.Text == "4321")
+
+
+            if (txt_user.Text.Trim() == "" || txt_senha.Text.Trim() == "")
             {
-               
-                
-               InicialView  inicialView = new InicialView();
-                inicialView.ShowDialog();
-                Hide();
+
+                enviaMsg("Preencha todos os campos!", "aviso");
+
+
             }
+            else if (txt_user.Text == "admin" && txt_senha.Text == "4321")
+            {
+
+                InicialView inicialView = new InicialView();
+                inicialView.ShowDialog();
+                Close();
+            }
+
 
             else
             {
-                enviaMsg("Você não tem acesso ao Sistema!, entre em contato com Administrador", "erro");
-                Close();
+                enviaMsg("Senha ou usuário inválidos!", "erro");
+
             }
         }
 

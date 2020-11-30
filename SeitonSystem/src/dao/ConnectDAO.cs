@@ -1,35 +1,43 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using SeitonSystem.src.view;
+using System;
+using SeitonSystem.src.view.Inicial;
+using System.Windows.Forms;
 
-namespace SeitonSystem.src.dao {
-    class ConnectDAO {
+namespace SeitonSystem.src.dao
+{
+    class ConnectDAO
+    {
         public const String url = @"server=127.0.0.1;user id=root;database=seiton_system;SslMode=none";
 
-        public static MySqlConnection GetConnection() {
-            try {
+        public static MySqlConnection GetConnection()
+        {
+            try
+            {
                 MySqlConnection conn = new MySqlConnection(url);
                 return conn;
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 throw new Exception("Não foi possível realizar Conexão com Banco de Dados");
             }
         }
 
-        public static void CloseConnection(MySqlConnection conn) {
-            try {
-                if (conn != null) {
+        public static void CloseConnection(MySqlConnection conn)
+        {
+            try
+            {
+                if (conn != null)
+                {
                     conn.Close();
                 }
             }
-            catch (Exception) {
+            catch (Exception)
+            {
                 throw new Exception("Erro ao Fechar Banco de Dados");
             }
         }
+
 
 
         public void BackupMySql()
@@ -37,7 +45,7 @@ namespace SeitonSystem.src.dao {
         {
             try
             {
-                string arquivo = "C:\\BackUp_Seiton_System\\seiton_system.sql";
+                string arquivo = "C:\\backup_restore\\seiton_system.txt";
                 using (MySqlConnection conn = new MySqlConnection(url))
                 {
                     using (MySqlCommand comando = new MySqlCommand())
@@ -46,54 +54,59 @@ namespace SeitonSystem.src.dao {
                         {
                             comando.Connection = conn;
                             conn.Open();
+                            dados.ExportProgressChanged += Dados_ExportProgressChanged;
+                            dados.ExportCompleted += Dados_ExportCompleted1;
+                            dados.ExportInfo.IntervalForProgressReport = (int)500;
                             dados.ExportToFile(arquivo);
                             conn.Close();
 
                         }
                     }
                 }
-                enviaMsg("Backup realizado com Sucesso", "check"); // dá pra colocar o mensagens view
+
             }
-            catch (Exception e)
+            catch (Exception)
             {
-                enviaMsg("Erro ao Fazer Backup", "erro" + e);
+                enviaMsg("Erro ao Fazer Backup", "erro");
             }
         }
-           public void RestoreMySql()
 
-            {
-                try
-                {
-                    string arquivo = "C:\\BackUp_Seiton_System\\seiton_systemRestore.sql";
-                    using (MySqlConnection conn = new MySqlConnection(url))
-                    {
-                        using (MySqlCommand comando = new MySqlCommand())
-                        {
-                            using (MySqlBackup dados = new MySqlBackup(comando))
-                            {
-                                comando.Connection = conn;
-                                conn.Open();
-                                dados.ImportFromFile(arquivo);
-                                conn.Close();
+        public void Dados_ExportProgressChanged(object sender, ExportProgressArgs e)
+        {
 
-                            }
-                        }
-                    }
-                    enviaMsg("Resutauração realizada com Sucesso","check");
-                }
-                catch (Exception e)
-                {
-                    enviaMsg("Erro ao Fazer Restauração","erro" + e);
-                }
 
-            }
-            private void enviaMsg(String msg, String tipo)
-            {
-                MensagensView message = new MensagensView(msg, tipo);
-                message.ShowDialog();
-            }
+            ProgressBar progressBar = new ProgressBar();
+            progressBar.Visible = true;
+            progressBar.Minimum = 1;
+            progressBar.Maximum = 100;
+            progressBar.Value = 1;
+            progressBar.Step = 1;
+
+
 
 
         }
+
+
+
+
+        private void Dados_ExportCompleted1(object sender, ExportCompleteArgs e)
+        {
+
+            enviaMsg("Backup realizado com Sucesso", "check");
+        }
+
+
+
+        
+        private void enviaMsg(String msg, String tipo)
+        {
+            MensagensView message = new MensagensView(msg, tipo);
+            message.ShowDialog();
+        }
+
+
 
     }
+
+}
