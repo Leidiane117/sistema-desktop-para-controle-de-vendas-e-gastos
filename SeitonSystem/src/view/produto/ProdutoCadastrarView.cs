@@ -3,6 +3,7 @@ using SeitonSystem.src.dto;
 using SeitonSystem.src.view;
 using SeitonSystem.src.view.Pedido;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SeitonSystem.view
@@ -10,6 +11,7 @@ namespace SeitonSystem.view
     public partial class ProdutoCadastrarView : Form
     {
         ProdutoController produtoController;
+
 
         public ProdutoCadastrarView()
         {
@@ -31,16 +33,9 @@ namespace SeitonSystem.view
         {
             try
             {
-                validaProduto();
-
-                Produto produto = new Produto
-                {
-                    Nome = txt_nome.Text,
-                    Preco = double.Parse(txt_preco.Text),
-                    Descricao = txt_descricao.Text
-                };
-
-                this.produtoController.inserirProduto(produto);
+                Produto produto = publicarProduto();
+                validaProduto(produto);
+                produtoController.inserirProduto(produto);
                 enviaMsg("Produto Cadastrado!", "check");
                 LimparForm();
 
@@ -66,26 +61,52 @@ namespace SeitonSystem.view
             txt_descricao.Clear();
         }
 
-        private void validaProduto()
+
+        private Produto publicarProduto()
         {
-            double num;
+            Produto produto = new Produto();
+            produto.Nome = txt_nome.Text;
+            produto.Preco = double.Parse(txt_preco.Text);
+            produto.Descricao = txt_descricao.Text;
+            return produto;
 
-            if (txt_nome.Text == "" || txt_nome.Text.Length < 2)
-            {
-                throw new Exception("Informe o Nome");
-            }
 
-            if (txt_preco.Text == "")
-            {
-                throw new Exception("Informe o Preço");
-            }
-
-            if (!double.TryParse(txt_preco.Text, out num))
-            {
-                throw new Exception("Informe um Preço Válido");
-            }
         }
 
+        private void validaProduto(Produto produto)
+        {
+            try
+            {
+
+                if (string.IsNullOrEmpty(txt_nome.Text) || string.IsNullOrEmpty(txt_preco.Text))
+                {
+                    throw new Exception("Preencha todos os campos!");
+
+
+                }
+                if (!Regex.Match(txt_preco.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
+                {
+                    throw new Exception("Informe o preço do produto corretamente!");
+                }
+                if (produto.Preco<=0)
+                {
+                    throw new Exception("Informe o preço do produto!");
+                } 
+
+                if (!Regex.Match(produto.Nome, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
+                {
+                    throw new Exception("Informe o Nome do produto corretamente!");
+                }
+            }
+            catch (Exception )
+            {
+                
+                throw ;
+
+            }
+           
+        }
+    
         private void enviaMsg(String msg, String tipo)
         {
             MensagensView message = new MensagensView(msg, tipo);

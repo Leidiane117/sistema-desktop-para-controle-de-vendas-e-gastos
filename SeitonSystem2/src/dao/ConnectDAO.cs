@@ -12,6 +12,8 @@ namespace SeitonSystem.src.dao
     {
         public const String url = @"server=127.0.0.1;user id=root;database=seiton_system;SslMode=none";
 
+        public string caminho = System.Environment.CurrentDirectory.ToString();
+
         public static MySqlConnection GetConnection()
         {
             try

@@ -1,4 +1,5 @@
 ﻿using SeitonSystem.src.view.Inicial;
+using SeitonSystem.view;
 using System;
 using System.Windows.Forms;
 
@@ -25,8 +26,8 @@ namespace SeitonSystem.src.view
             else if (txt_user.Text == "admin" && txt_senha.Text == "4321")
             {
 
-                InicialView inicialView = new InicialView();
-                inicialView.ShowDialog();
+                InicialView inicial = new InicialView();
+                inicial.Show();
                 Close();
             }
 

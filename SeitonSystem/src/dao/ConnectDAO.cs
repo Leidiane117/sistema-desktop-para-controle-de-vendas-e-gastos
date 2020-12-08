@@ -45,7 +45,7 @@ namespace SeitonSystem.src.dao
         {
             try
             {
-                string arquivo = "C:\\backup_restore\\seiton_system.txt";
+                string arquivo = "C:\\seiton_system.sql";
                 using (MySqlConnection conn = new MySqlConnection(url))
                 {
                     using (MySqlCommand comando = new MySqlCommand())
@@ -93,7 +93,7 @@ namespace SeitonSystem.src.dao
         private void Dados_ExportCompleted1(object sender, ExportCompleteArgs e)
         {
 
-            enviaMsg("Backup realizado com Sucesso", "check");
+            enviaMsg("Backup criado em C:\\seiton_system.sql com sucesso", "check");
         }
 
 

@@ -5,48 +5,18 @@ namespace SeitonSystem.src.dto
     public class Financas
     {
         private int id;
-        private String titulo;
+        private string titulo;
         private double valor;
-        private String descricao;
+        private string descricao;
         private DateTime data_lancamento;
-        private String tipo_fluxo;
+        private string tipo_fluxo;
 
-        public int Id
-        {
-            get { return id; }
-            set { id = value; }
-        }
-
-        public String Titulo
-        {
-            get { return this.titulo; }
-            set { this.titulo = value; }
-        }
-
-        public double Valor
-        {
-            get { return this.valor; }
-            set { this.valor = value; }
-        }
-
-        public String Descricao
-        {
-            get { return this.descricao; }
-            set { this.descricao = value; }
-        }
-
-        public DateTime Data_lancamento
-        {
-            get { return this.data_lancamento; }
-            set { this.data_lancamento = value; }
-        }
-
-        public String Tipo_fluxo
-        {
-            get { return this.tipo_fluxo; }
-            set { this.tipo_fluxo = value; }
-        }
-
+        public int Id { get => id; set => id = value; }
+        public string Titulo { get => titulo; set => titulo = value; }
+        public double Valor { get => valor; set => valor = value; }
+        public string Descricao { get => descricao; set => descricao = value; }
+        public DateTime Data_lancamento { get => data_lancamento; set => data_lancamento = value; }
+        public string Tipo_fluxo { get => tipo_fluxo; set => tipo_fluxo = value; }
     }
 }
 

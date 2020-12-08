@@ -1,18 +1,20 @@
-﻿using SeitonSystem.src.controller;
-using SeitonSystem.src.dto;
-using SeitonSystem.view;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using SeitonSystem.view;
+using SeitonSystem.src.view.Pedido;
+using SeitonSystem.src.dto;
+using SeitonSystem.src.controller;
+using System.Globalization;
 
-namespace SeitonSystem.src.view.Pedido
-{
-    public partial class PedidoCadastrarView : Form
-    {
+namespace SeitonSystem.src.view.Pedido {
+    public partial class PedidoCadastrarView : Form {
         ClienteController clienteController;
         ProdutoController produtoController;
         PedidoController pedidoController;
@@ -27,12 +29,10 @@ namespace SeitonSystem.src.view.Pedido
         int colunaIndex;
         double valorTotal = 0;
 
-        public PedidoCadastrarView()
-        {
+        public PedidoCadastrarView() {
             InitializeComponent();
 
-            try
-            {
+            try {
                 clientes = new List<Cliente>();
                 produtos = new List<ProdutoPesquisa>();
                 produtosCadastrados = new List<Produto>();
@@ -48,17 +48,19 @@ namespace SeitonSystem.src.view.Pedido
                 this.clientes = this.clienteController.pesquisaClientes();
 
                 preencheComboBox();
+
                 txt_dataEntrega.Value = DateTime.Now;
-               // txt_dataEntrega.CalendarMonthBackground = Color.Aquamarine;
+                
+
                 txt_dataEntrega.MaxDate = DateTime.Now.AddDays(60);
                 txt_dataEntrega.MinDate = DateTime.Now.AddDays(-60);
-                txt_dataPag.MaxDate = DateTime.Now.AddDays(60);
-                txt_dataPag.MinDate = DateTime.Now.AddDays(-60);
 
-                
-            }
-            catch (Exception e)
-            {
+                txt_dataPag.Value = txt_dataEntrega.Value;
+
+                txt_dataPag.MinDate = txt_dataEntrega.MinDate;
+                txt_dataPag.MaxDate = txt_dataEntrega.MaxDate;
+
+            }catch(Exception e) {
                 enviaMsg(e.Message, "erro");
 
                 PedidoView p = new PedidoView();
@@ -67,62 +69,51 @@ namespace SeitonSystem.src.view.Pedido
             }
         }
 
-        private void btn_clientes_Click(object sender, EventArgs e)
-        {
+        private void btn_clientes_Click(object sender, EventArgs e) {
             ClienteView c = new ClienteView();
             c.Show();
             this.Hide();
         }
 
-        private void btn_produtos_Click(object sender, EventArgs e)
-        {
+        private void btn_produtos_Click(object sender, EventArgs e){
             ProdutoView p = new ProdutoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_pedido_Click(object sender, EventArgs e)
-        {
+        private void btn_pedido_Click(object sender, EventArgs e) {
             PedidoView p = new PedidoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_financas_Click(object sender, EventArgs e)
-        {
+        private void btn_financas_Click(object sender, EventArgs e){
             FinancasView f = new FinancasView();
             f.Show();
             this.Hide();
         }
 
-        private void preencheComboBox()
-        {
-            try
-            {
-                foreach (Produto p in this.produtosCadastrados)
-                {
+        private void preencheComboBox(){
+            try {
+                foreach (Produto p in this.produtosCadastrados){
                     cb_produtos.Items.Add(p);
                 }
 
-                foreach (Cliente c in this.clientes)
-                {
+                foreach (Cliente c in this.clientes){
                     cb_cliente.Items.Add(c);
                 }
 
-            }
-            catch (Exception e)
-            {
+            }catch (Exception e){
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void dataGridview(DataGridView dt)
-        {
+        private void dataGridview(DataGridView dt) {
             dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
-            dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
+            //dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
             dt.RowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(195, 167, 166);
-            dt.RowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
+            //dt.RowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
             dt.BackgroundColor = System.Drawing.Color.FromArgb(235, 207, 206);
             dt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -132,40 +123,42 @@ namespace SeitonSystem.src.view.Pedido
             style.ForeColor = Color.White;
             style.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            
             dt.Columns["Id"].Width = 30;
             dt.Columns["Nome"].Width = 90;
             dt.Columns["Quantidade"].Width = 80;
             dt.Columns["Observacao"].Width = 100;
             dt.Columns["Preco"].DefaultCellStyle.Format = "c";
 
+            for (int i = 0; i < dt.ColumnCount; i++)
+            {
+
+                dt.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            }
+
         }
 
-        private void atualizaValorTotal()
-        {
+        private void atualizaValorTotal() {
             this.valorTotal = 0;
 
-            foreach (ProdutoPesquisa p in this.produtos)
-            {
+            foreach (ProdutoPesquisa p in this.produtos) {
                 this.valorTotal += p.Preco * p.Quantidade;
             }
 
             txt_valorTotal.Text = this.valorTotal.ToString();
         }
 
-        private void validaProduto()
-        {
-            if (cb_produtos.SelectedItem == null)
-            {
+        private void validaProduto() {
+            if (cb_produtos.SelectedItem == null){
                 throw new Exception("Selecione um Produto");
             }
 
-            if (txt_quantidade.Value <= 0)
-            {
+            if (txt_quantidade.Value <= 0) {
                 throw new Exception("Informe a Quantidade");
-            }
+            }   
         }
-
-        private void cb_produtos_SelectedIndexChanged(object sender, EventArgs e)
+        private void cb_produtos_SelectedIndexChanged_1(object sender, EventArgs e)
         {
             txt_quantidade.ReadOnly = false;
             txt_obs.ReadOnly = false;
@@ -175,9 +168,11 @@ namespace SeitonSystem.src.view.Pedido
             btn_addProd.Visible = true;
             btn_addProd.Enabled = true;
         }
+       
+            private void btn_limpar_Click_1(object sender, EventArgs e)
+            {
 
-        private void btn_limpar_Click(object sender, EventArgs e)
-        {
+            
             txt_quantidade.Value = 0;
             txt_obs.Clear();
 
@@ -187,10 +182,12 @@ namespace SeitonSystem.src.view.Pedido
             btn_limpar.Visible = false;
         }
 
-        private void db_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
+
+            private void db_produtos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
             {
+
+            
+            if (e.RowIndex >= 0) {
                 panel_produtos.Visible = true;
 
                 DataGridViewRow row = this.db_produtos.Rows[e.RowIndex];
@@ -207,8 +204,11 @@ namespace SeitonSystem.src.view.Pedido
             }
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
+
+            private void btn_excluir_Click_1(object sender, EventArgs e)
+            {
+
+            
             this.produtos.RemoveAt(this.colunaIndex);
 
             db_produtos.DataSource = null;
@@ -228,8 +228,7 @@ namespace SeitonSystem.src.view.Pedido
             txt_quantidade.ReadOnly = false;
             txt_obs.ReadOnly = false;
         }
-
-        private void btn_addProd_Click(object sender, EventArgs e)
+        private void btn_addProd_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -279,104 +278,83 @@ namespace SeitonSystem.src.view.Pedido
                 enviaMsg(e1.Message, "erro");
             }
         }
+    
+          
 
-        private void validaCliente()
-        {
-            if (cb_cliente.SelectedItem == null)
-            {
+        private void validaCliente(){ 
+            if(cb_cliente.SelectedItem == null) {
                 throw new Exception("Selecione um Cliente");
             }
 
-            if (cb_tipoPedido.SelectedItem == null)
-            {
+            if (cb_tipoPedido.SelectedItem == null){
                 throw new Exception("Selecione o Tipo de Pedido");
             }
 
-            if (cb_tipoPag.SelectedItem == null)
-            {
+            if (cb_tipoPag.SelectedItem == null) {
                 throw new Exception("Selecione o Tipo de Pagamento");
             }
 
             DateTime dt = Convert.ToDateTime(txt_horaEntrega.Value);
-            if (dt.Hour >= 0 && dt.Hour <= 6)
-            {
+            if (dt.Hour >= 0 && dt.Hour <= 6) {
                 throw new Exception("Informe uma Hora Válida");
             }
 
-            if (txt_dataPag.Value > txt_dataEntrega.Value)
-            {
+            if (txt_dataPag.Value > txt_dataEntrega.Value) {
                 throw new Exception("Informe uma Data de Pagamento Válida");
             }
 
         }
 
-        private void validaEndereco()
-        {
+        private void validaEndereco(){
             int num;
 
-            if (txt_logradouro.Text == null || txt_logradouro.Text.Trim() == "")
-            {
+            if (txt_logradouro.Text == null || txt_logradouro.Text.Trim() == ""){
                 throw new Exception("Informe o Logradouro");
             }
 
-            if (txt_bairro.Text == null || txt_bairro.Text.Trim() == "")
-            {
+            if (txt_bairro.Text == null || txt_bairro.Text.Trim() == "") {
                 throw new Exception("Informe o Bairro");
             }
 
-            if (txt_cidade.Text == null || txt_cidade.Text.Trim() == "")
-            {
+            if (txt_cidade.Text == null || txt_cidade.Text.Trim() == "") {
                 throw new Exception("Informe a Cidade");
             }
 
-            if (txt_cep.Text == null || txt_cep.Text.Trim() == "")
-            {
+            if (txt_cep.Text == null || txt_cep.Text.Trim() == ""){
                 throw new Exception("Informe o CEP");
             }
 
-            if (txt_cep.Text.Length < 8 || !int.TryParse(txt_cep.Text, out num))
-            {
+            if (txt_cep.Text.Length < 8 || !int.TryParse(txt_cep.Text, out num)) {
                 throw new Exception("Informe um CEP Válido");
             }
 
-            if (txt_num.Text == null || txt_num.Text.Trim() == "")
-            {
+            if (txt_num.Text == null || txt_num.Text.Trim() == "") {
                 throw new Exception("Informe o Número");
             }
 
-            if (txt_num.Text.Where(c => char.IsNumber(c)).Count() == 0)
-            {
+            if (txt_num.Text.Where(c => char.IsNumber(c)).Count() == 0){
                 throw new Exception("Informe um Número Válido");
             }
 
-            if (Convert.ToInt32(txt_num.Text) <= 0)
-            {
+            if (Convert.ToInt32(txt_num.Text) <= 0) {
                 throw new Exception("Informe um Número Válido");
             }
 
-            if (txt_uf.Text == null || txt_uf.Text.Trim() == "")
-            {
+            if (txt_uf.Text == null || txt_uf.Text.Trim() == ""){
                 throw new Exception("Informe o UF");
             }
 
-            if (txt_uf.Text.Length < 2)
-            {
+            if (txt_uf.Text.Length < 2){
                 throw new Exception("Informe um UF Válido");
             }
         }
 
-        private void txt_cep_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txt_cep.Text.Trim() == "")
-                {
+        private void txt_cep_Leave(object sender, EventArgs e) {
+            try{
+                if(txt_cep.Text.Trim() == "") {
                     throw new Exception("Informe o CEP para consulta");
-                }
-                else
-                {
-                    using (var ws = new WSCorreios.AtendeClienteClient())
-                    {
+                }else{
+                    using(var ws = new WSCorreios.AtendeClienteClient()){
                         var endereco = ws.consultaCEP(txt_cep.Text.Trim());
 
                         txt_logradouro.Text = endereco.end;
@@ -385,41 +363,32 @@ namespace SeitonSystem.src.view.Pedido
                         txt_uf.Text = endereco.uf;
                     }
                 }
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1){
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private void cb_tipoPedido_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cb_tipoPedido.SelectedItem.ToString() == "Entrega")
-            {
+        private void cb_tipoPedido_SelectedIndexChanged(object sender, EventArgs e) {
+            if(cb_tipoPedido.SelectedItem.ToString() == "Entrega") {
                 btn_proximoDoisE.Visible = true;
                 btn_proximoDois.Visible = false;
-            }
-            else
-            {
+            }else {
                 btn_proximoDoisE.Visible = false;
                 btn_proximoDois.Visible = true;
             }
         }
 
-        private String converteData(DateTimePicker txt)
-        {
+        private String converteData(DateTimePicker txt) {
             DateTime dt = Convert.ToDateTime(txt.Value);
             return dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString();
         }
 
-        private String converteHora(DateTimePicker txt)
-        {
+        private String converteHora(DateTimePicker txt){
             DateTime dt = Convert.ToDateTime(txt.Value);
             return dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString();
         }
 
-        private void populaPedido()
-        {
+        private void populaPedido() {
             this.cliente = (Cliente)cb_cliente.SelectedItem;
             this.pedido.Id_cliente = this.cliente.Id;
 
@@ -432,8 +401,7 @@ namespace SeitonSystem.src.view.Pedido
             this.pedido.Data_pagamento = converteData(txt_dataPag);
         }
 
-        private void populaEndereco()
-        {
+        private void populaEndereco() {
             this.pedido.Logradouro = txt_logradouro.Text;
             this.pedido.Numero = int.Parse(txt_num.Text);
             this.pedido.Bairro = txt_bairro.Text;
@@ -443,10 +411,8 @@ namespace SeitonSystem.src.view.Pedido
             this.pedido.Uf = txt_uf.Text;
         }
 
-        private void preencheTextBox()
-        {
-            if (this.pedido.Tipo_pedido == "Entrega")
-            {
+        private void preencheTextBox() {
+            if (this.pedido.Tipo_pedido == "Entrega") {
                 panel_pedido.Location = new System.Drawing.Point(61, 171);
 
                 panel_enderecoV.Visible = true;
@@ -458,9 +424,7 @@ namespace SeitonSystem.src.view.Pedido
                 txt_complV.Text = this.pedido.Complemento;
                 txt_cidadeV.Text = this.pedido.Cidade;
                 txt_ufV.Text = this.pedido.Uf;
-            }
-            else
-            {
+            }else {
                 panel_pedido.Location = new System.Drawing.Point(61, 238);
             }
 
@@ -473,7 +437,7 @@ namespace SeitonSystem.src.view.Pedido
 
             cb_situacaoV.SelectedItem = this.pedido.Situacao_pedido;
             cb_tipoPagV.SelectedItem = this.pedido.Tipo_pagamento;
-            cb_tipoPedidoV.SelectedItem = this.pedido.Tipo_pedido; ;
+            cb_tipoPedidoV.SelectedItem = this.pedido.Tipo_pedido;;
             txt_valorTotalV.Text = this.pedido.Valor_total.ToString();
 
             txt_dataEntregaV.Value = DateTime.Parse(this.pedido.Data_entrega, new CultureInfo("pt-BR"));
@@ -482,18 +446,17 @@ namespace SeitonSystem.src.view.Pedido
 
         }
 
-        private void enviaMsg(String msg, String tipo)
-        {
+        private void enviaMsg(String msg, String tipo) {
             MensagensView message = new MensagensView(msg, tipo);
             message.ShowDialog();
         }
 
-        private void btn_proximo_Click(object sender, EventArgs e)
-        {
-            try
+            private void btn_proximo_Click_1(object sender, EventArgs e)
             {
-                if (this.produtos.Count <= 0)
-                {
+
+            
+            try {
+                if (this.produtos.Count <= 0) {
                     throw new Exception("Selecione Produtos para realizar o Pedido");
                 }
 
@@ -502,91 +465,69 @@ namespace SeitonSystem.src.view.Pedido
                 panel_produto.Visible = false;
                 panel_cliente.Visible = true;
 
-            }
-            catch (Exception e1)
-            {
+            }catch(Exception e1) {
                 enviaMsg(e1.Message, "aviso");
             }
         }
 
-        private void btn_anterior_Click(object sender, EventArgs e)
-        {
+        private void btn_anterior_Click(object sender, EventArgs e){
             panel_produto.Visible = true;
             panel_cliente.Visible = false;
         }
 
-        private void btn_proximoDois_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_proximoDois_Click(object sender, EventArgs e) {
+            try {
                 validaCliente();
                 populaPedido();
 
                 panel_cliente.Visible = false;
                 preencheTextBox();
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1){
                 enviaMsg(e1.Message, "aviso");
             }
         }
 
-        private void btn_proximoDoisE_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_proximoDoisE_Click(object sender, EventArgs e) {
+            try {
                 validaCliente();
                 populaPedido();
 
                 panel_cliente.Visible = false;
                 panel_endereco.Visible = true;
-            }
-            catch (Exception e1)
-            {
+            }catch(Exception e1) {
                 enviaMsg(e1.Message, "aviso");
             }
         }
 
-        private void btn_anteriorDois_Click(object sender, EventArgs e)
-        {
+        private void btn_anteriorDois_Click(object sender, EventArgs e){
             panel_cliente.Visible = true;
             panel_endereco.Visible = false;
         }
 
-        private void btn_proximoTres_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_proximoTres_Click(object sender, EventArgs e){
+            try {
                 validaEndereco();
                 populaEndereco();
 
                 panel_endereco.Visible = false;
                 preencheTextBox();
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1) {
                 enviaMsg(e1.Message, "aviso");
             }
         }
 
-        private void btn_anteriorTres_Click(object sender, EventArgs e)
-        {
-            if (this.pedido.Tipo_pedido == "Entrega")
-            {
+        private void btn_anteriorTres_Click(object sender, EventArgs e){
+            if(this.pedido.Tipo_pedido == "Entrega"){
                 panel_endereco.Visible = true;
                 panel_pedido.Visible = false;
-            }
-            else
-            {
+            }else{
                 panel_cliente.Visible = true;
                 panel_pedido.Visible = false;
             }
         }
 
-        private void btn_cadastrar_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_cadastrar_Click(object sender, EventArgs e) {
+            try {
                 this.pedidoController.inserirPedido(this.pedido, this.produtos);
                 enviaMsg("Pedido Cadastrado!", "check");
 
@@ -594,12 +535,21 @@ namespace SeitonSystem.src.view.Pedido
                 p.Show();
                 this.Hide();
 
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1){
                 enviaMsg(e1.Message, "erro");
             }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ProdutoCadastrarView produto = new ProdutoCadastrarView();
+            produto.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ClienteCadastrarView cliente = new ClienteCadastrarView();
+            cliente.ShowDialog();
+        }
     }
 }

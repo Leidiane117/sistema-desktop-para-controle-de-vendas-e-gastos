@@ -60,7 +60,7 @@
             // 
             this.linha.BackColor = System.Drawing.Color.White;
             this.linha.Location = new System.Drawing.Point(27, 250);
-            this.linha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
             this.linha.Size = new System.Drawing.Size(933, 2);
             this.linha.TabIndex = 28;
@@ -71,7 +71,7 @@
             this.txt_titulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_titulo.ForeColor = System.Drawing.Color.White;
             this.txt_titulo.Location = new System.Drawing.Point(29, 46);
-            this.txt_titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_titulo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_titulo.MaxLength = 327;
             this.txt_titulo.Multiline = true;
             this.txt_titulo.Name = "txt_titulo";
@@ -86,7 +86,7 @@
             this.btn_limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_limpar.Location = new System.Drawing.Point(621, 254);
-            this.btn_limpar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_limpar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_limpar.Name = "btn_limpar";
             this.btn_limpar.Size = new System.Drawing.Size(141, 43);
             this.btn_limpar.TabIndex = 13;
@@ -105,7 +105,7 @@
             this.btn_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_titulo.ForeColor = System.Drawing.Color.White;
             this.btn_titulo.Location = new System.Drawing.Point(15, 210);
-            this.btn_titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_titulo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_titulo.Name = "btn_titulo";
             this.btn_titulo.Size = new System.Drawing.Size(393, 34);
             this.btn_titulo.TabIndex = 25;
@@ -122,7 +122,7 @@
             this.btn_salvar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_salvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_salvar.Location = new System.Drawing.Point(771, 254);
-            this.btn_salvar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_salvar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_salvar.Name = "btn_salvar";
             this.btn_salvar.Size = new System.Drawing.Size(141, 43);
             this.btn_salvar.TabIndex = 12;
@@ -136,7 +136,7 @@
             this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_descricao.ForeColor = System.Drawing.Color.White;
             this.txt_descricao.Location = new System.Drawing.Point(29, 124);
-            this.txt_descricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_descricao.Margin = new System.Windows.Forms.Padding(4);
             this.txt_descricao.MaxLength = 500;
             this.txt_descricao.Multiline = true;
             this.txt_descricao.Name = "txt_descricao";
@@ -190,7 +190,7 @@
             this.panel_dados.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_dados.ForeColor = System.Drawing.Color.White;
             this.panel_dados.Location = new System.Drawing.Point(27, 260);
-            this.panel_dados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_dados.Margin = new System.Windows.Forms.Padding(4);
             this.panel_dados.Name = "panel_dados";
             this.panel_dados.Size = new System.Drawing.Size(933, 316);
             this.panel_dados.TabIndex = 26;
@@ -199,12 +199,12 @@
             // 
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(685, 190);
+            this.label8.Location = new System.Drawing.Point(684, 182);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 34);
+            this.label8.Size = new System.Drawing.Size(66, 33);
             this.label8.TabIndex = 153;
             this.label8.Text = "R$";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -233,9 +233,9 @@
             this.cb_cadastrar.FormattingEnabled = true;
             this.cb_cadastrar.Items.AddRange(new object[] {
             "Entrada",
-            "Saída"});
+            "Saida"});
             this.cb_cadastrar.Location = new System.Drawing.Point(603, 46);
-            this.cb_cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.cb_cadastrar.Name = "cb_cadastrar";
             this.cb_cadastrar.Size = new System.Drawing.Size(308, 38);
             this.cb_cadastrar.TabIndex = 152;
@@ -251,7 +251,7 @@
             this.dt_cadastrar.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.dt_cadastrar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_cadastrar.Location = new System.Drawing.Point(601, 126);
-            this.dt_cadastrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dt_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.dt_cadastrar.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.dt_cadastrar.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dt_cadastrar.Name = "dt_cadastrar";
@@ -279,8 +279,8 @@
             this.txt_valor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_valor.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.txt_valor.ForeColor = System.Drawing.Color.White;
-            this.txt_valor.Location = new System.Drawing.Point(681, 188);
-            this.txt_valor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_valor.Location = new System.Drawing.Point(681, 182);
+            this.txt_valor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_valor.Name = "txt_valor";
             this.txt_valor.Size = new System.Drawing.Size(230, 36);
             this.txt_valor.TabIndex = 15;
@@ -305,7 +305,7 @@
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_logo.Location = new System.Drawing.Point(395, -9);
-            this.pic_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_logo.Name = "pic_logo";
             this.pic_logo.Size = new System.Drawing.Size(196, 190);
             this.pic_logo.TabIndex = 149;
@@ -317,7 +317,7 @@
             this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
             this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_calda.Location = new System.Drawing.Point(-4, 33);
-            this.pic_calda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_calda.Margin = new System.Windows.Forms.Padding(4);
             this.pic_calda.Name = "pic_calda";
             this.pic_calda.Size = new System.Drawing.Size(1003, 151);
             this.pic_calda.TabIndex = 148;
@@ -334,7 +334,7 @@
             this.btn_pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedidos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pedidos.Location = new System.Drawing.Point(581, -2);
-            this.btn_pedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_pedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedidos.Name = "btn_pedidos";
             this.btn_pedidos.Size = new System.Drawing.Size(220, 38);
             this.btn_pedidos.TabIndex = 147;
@@ -353,7 +353,7 @@
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_financas.Location = new System.Drawing.Point(797, -2);
-            this.btn_financas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
             this.btn_financas.Size = new System.Drawing.Size(201, 38);
             this.btn_financas.TabIndex = 146;
@@ -372,7 +372,7 @@
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_produtos.Location = new System.Drawing.Point(196, -2);
-            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
             this.btn_produtos.Size = new System.Drawing.Size(209, 38);
             this.btn_produtos.TabIndex = 145;
@@ -391,7 +391,7 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.Location = new System.Drawing.Point(-4, -2);
-            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
             this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 144;
@@ -415,7 +415,7 @@
             this.Controls.Add(this.panel_dados);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FinancasCadastrarView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

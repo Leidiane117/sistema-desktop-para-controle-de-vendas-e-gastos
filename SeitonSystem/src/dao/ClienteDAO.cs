@@ -13,11 +13,11 @@ namespace SeitonSystem.src.dao
         public const String UPDATE_CLIENTE = "UPDATE cliente SET nome = @nome, telefone = @telefone, celular = @celular, " +
             "instagram = @instagram, email = @email WHERE id = @id";
 
-        public const String SELECT_CLIENTES = "SELECT * FROM cliente WHERE status='ativo'";
+        public const String SELECT_CLIENTES = "SELECT * FROM cliente WHERE status='ativo' order by nome ASC";
         public const String SELECT_CLIENTE_ID = "SELECT * FROM cliente WHERE id = @id";
         public const String SELECT_CLIENTE_FILTRO = "SELECT * FROM cliente WHERE status='ativo' AND ";
 
-        public const String SELECT_CLIENTES_DESATIVO = "SELECT * FROM cliente WHERE status='desativo'";
+        public const String SELECT_CLIENTES_DESATIVO = "SELECT * FROM cliente WHERE status='desativo' order by nome ASC";
         public const String SELECT_CLIENTES_DESATIVO_FILTRO = "SELECT * FROM cliente WHERE status='desativo' AND ";
 
         public const String DESATIVE_CLIENTE = "UPDATE cliente SET status='desativo' WHERE id = @id";

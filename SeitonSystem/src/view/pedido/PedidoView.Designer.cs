@@ -256,7 +256,7 @@
             this.db_pedidos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
             this.db_pedidos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.db_pedidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.db_pedidos.Size = new System.Drawing.Size(923, 427);
+            this.db_pedidos.Size = new System.Drawing.Size(923, 401);
             this.db_pedidos.TabIndex = 46;
             this.db_pedidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_pedidos_CellContentClick);
             // 
@@ -327,6 +327,7 @@
             this.cb_situacao.Name = "cb_situacao";
             this.cb_situacao.Size = new System.Drawing.Size(228, 36);
             this.cb_situacao.TabIndex = 40;
+            this.cb_situacao.SelectedIndexChanged += new System.EventHandler(this.cb_situacao_SelectedIndexChanged);
             // 
             // lbl_situacao
             // 
@@ -357,10 +358,10 @@
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cadastrar.Image = ((System.Drawing.Image)(resources.GetObject("btn_cadastrar.Image")));
             this.btn_cadastrar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_cadastrar.Location = new System.Drawing.Point(789, 740);
+            this.btn_cadastrar.Location = new System.Drawing.Point(789, 714);
             this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cadastrar.Name = "btn_cadastrar";
-            this.btn_cadastrar.Size = new System.Drawing.Size(174, 84);
+            this.btn_cadastrar.Size = new System.Drawing.Size(198, 110);
             this.btn_cadastrar.TabIndex = 45;
             this.btn_cadastrar.UseVisualStyleBackColor = false;
             this.btn_cadastrar.Click += new System.EventHandler(this.btn_cadastrar_Click);
@@ -375,10 +376,10 @@
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_voltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar2;
             this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_voltar.Location = new System.Drawing.Point(28, 740);
+            this.btn_voltar.Location = new System.Drawing.Point(28, 714);
             this.btn_voltar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(112, 74);
+            this.btn_voltar.Size = new System.Drawing.Size(112, 100);
             this.btn_voltar.TabIndex = 44;
             this.btn_voltar.UseVisualStyleBackColor = false;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
@@ -434,7 +435,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1000, 890);
+            this.ClientSize = new System.Drawing.Size(1000, 861);
             this.Controls.Add(this.panel_pedidos);
             this.Controls.Add(this.db_pedidos);
             this.Controls.Add(this.btn_cadastrar);

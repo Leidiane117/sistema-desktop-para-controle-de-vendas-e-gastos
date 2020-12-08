@@ -85,7 +85,6 @@ namespace SeitonSystem.src.view.Pedido
 
         private void dataGridview(DataGridView dt)
         {
-            dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
             dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
             dt.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
@@ -113,8 +112,9 @@ namespace SeitonSystem.src.view.Pedido
 
             }
             dt.Columns[0].Width = 50;
-            dt.Columns[1].Width = 110;
-            dt.Columns[3].Width = 90;
+            dt.Columns[1].Width = 100;
+            dt.Columns[3].Width = 80;
+            dt.Columns[6].Width = 110;
             dt.Columns["Total"].DefaultCellStyle.Format = "c";
         }
 
@@ -179,8 +179,8 @@ namespace SeitonSystem.src.view.Pedido
                         Financas f = new Financas
                         {
                             Tipo_fluxo = "Entrada",
-                            Titulo = "Pedido " + p.Id_pedido,
-                            Descricao = "Cliente: " + c.Nome + ", Celular: " + c.Celular +
+                            Titulo = "Pedido " + c.Nome,
+                            Descricao = "Contato: " + c.Celular + c.Email +
                             ", Data de Entrega: " + p.Data_entrega.Substring(0, 10),
                             Valor = p.Valor_total,
                             Data_lancamento = DateTime.Now
@@ -274,6 +274,11 @@ namespace SeitonSystem.src.view.Pedido
             InicialView i = new InicialView();
             i.Show();
             this.Hide();
+        }
+
+        private void cb_situacao_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 

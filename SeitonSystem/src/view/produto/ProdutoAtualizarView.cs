@@ -3,6 +3,7 @@ using SeitonSystem.src.dto;
 using SeitonSystem.src.view;
 using SeitonSystem.src.view.Pedido;
 using System;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
 namespace SeitonSystem.view
@@ -31,19 +32,19 @@ namespace SeitonSystem.view
             }
         }
 
-        private Produto PublicarProduto()
+        private Produto publicarProduto()
         {
-            Produto produto = new Produto
-            {
-                Id = int.Parse(textID.Text),
-                Nome = textAtualizarNome.Text,
-                Preco = double.Parse(txtAtualizarPreco.Text),
-                Descricao = txtAtualizarDescricao.Text
-            };
+            Produto produto = new Produto();
 
+            
+            produto.Id = int.Parse(textID.Text);
+            produto.Nome = textAtualizarNome.Text;
+            produto.Preco = double.Parse(txtAtualizarPreco.Text);
+            produto.Descricao = txtAtualizarDescricao.Text;
             return produto;
-        }
+    
 
+        }
         private void enviaMsg(String msg, String tipo)
         {
             MensagensView message = new MensagensView(msg, tipo);
@@ -69,31 +70,47 @@ namespace SeitonSystem.view
 
         private void validaProduto()
         {
-            double num;
-
-            if (textAtualizarNome.Text == "" || textAtualizarNome.Text.Length < 2)
+            try
             {
-                throw new Exception("Informe o Nome");
-            }
 
-            if (txtAtualizarPreco.Text == "")
-            {
-                throw new Exception("Informe o Preço");
-            }
+                if (string.IsNullOrEmpty(textAtualizarNome.Text)|| string.IsNullOrEmpty(txtAtualizarPreco.Text))
+                {
+                    throw new Exception("Preencha todos os campos!");
 
-            if (!double.TryParse(txtAtualizarPreco.Text, out num))
-            {
-                throw new Exception("Informe um Preço Válido");
+
+                }
+                if (produto.Preco <= 0)
+                {
+                    throw new Exception("Informe o preço do produto!");
+                }
+
+                if (!Regex.Match(txtAtualizarPreco.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
+                {
+                    throw new Exception("Informe o preço do produto corretamente!");
+                }
+                
+
+                if (!Regex.Match(textAtualizarNome.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
+                {
+                    throw new Exception("Informe o Nome do produto corretamente!");
+                }
+
+               
             }
+            catch (Exception)
+            {
+                throw;
+            }
+           
         }
 
         private void btn_salvar_Click(object sender, EventArgs e)
         {
             try
             {
+                
+                Produto produto = publicarProduto();
                 validaProduto();
-
-                Produto produto = PublicarProduto();
                 produtoController.atualizarProduto(produto);
 
                 enviaMsg("Produto Alterado!", "check");
@@ -101,7 +118,7 @@ namespace SeitonSystem.view
 
                 ProdutoView p = new ProdutoView();
                 p.Show();
-                this.Hide();
+                Close();
 
             }
             catch (Exception e1)

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InicialView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle31 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle32 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle33 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle34 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_tbPedidos = new System.Windows.Forms.Button();
@@ -45,43 +46,41 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.btn_add_cliente = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btn_emails = new System.Windows.Forms.Button();
             this.btn_abrir_manual = new System.Windows.Forms.Button();
             this.panel13 = new System.Windows.Forms.Panel();
             this.btn_ajuda = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txt_lucro = new System.Windows.Forms.TextBox();
+            this.btn_financasCadastrar = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.linha = new System.Windows.Forms.Panel();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btn_financasCadastrar = new System.Windows.Forms.Button();
             this.btn_finançasView = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.label_percent = new System.Windows.Forms.Label();
-            this.progressBarBackup = new System.Windows.Forms.ProgressBar();
             this.btn_bakup = new System.Windows.Forms.Button();
             this.btn_financas = new System.Windows.Forms.Button();
             this.btn_pedido = new System.Windows.Forms.Button();
             this.btn_produtos = new System.Windows.Forms.Button();
             this.btn_clientes = new System.Windows.Forms.Button();
             this.dt = new MetroFramework.Controls.MetroGrid();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.metroProgressBar1 = new MetroFramework.Controls.MetroProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lbl_processando = new MetroFramework.Controls.MetroLabel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -214,7 +213,6 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
-            this.panel4.Controls.Add(this.btn_emails);
             this.panel4.Controls.Add(this.btn_abrir_manual);
             this.panel4.Controls.Add(this.panel13);
             this.panel4.Controls.Add(this.btn_ajuda);
@@ -224,24 +222,6 @@
             this.panel4.Size = new System.Drawing.Size(318, 181);
             this.panel4.TabIndex = 3;
             // 
-            // btn_emails
-            // 
-            this.btn_emails.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            this.btn_emails.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_emails.FlatAppearance.BorderSize = 0;
-            this.btn_emails.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_emails.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_emails.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_emails.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
-            this.btn_emails.ForeColor = System.Drawing.Color.Black;
-            this.btn_emails.Location = new System.Drawing.Point(166, 118);
-            this.btn_emails.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_emails.Name = "btn_emails";
-            this.btn_emails.Size = new System.Drawing.Size(136, 36);
-            this.btn_emails.TabIndex = 23;
-            this.btn_emails.Text = "Entrar em Contato";
-            this.btn_emails.UseVisualStyleBackColor = false;
-            // 
             // btn_abrir_manual
             // 
             this.btn_abrir_manual.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
@@ -250,15 +230,16 @@
             this.btn_abrir_manual.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.btn_abrir_manual.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btn_abrir_manual.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_abrir_manual.Font = new System.Drawing.Font("Segoe UI", 7F, System.Drawing.FontStyle.Bold);
+            this.btn_abrir_manual.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.btn_abrir_manual.ForeColor = System.Drawing.Color.Black;
-            this.btn_abrir_manual.Location = new System.Drawing.Point(19, 118);
+            this.btn_abrir_manual.Location = new System.Drawing.Point(32, 104);
             this.btn_abrir_manual.Margin = new System.Windows.Forms.Padding(4);
             this.btn_abrir_manual.Name = "btn_abrir_manual";
-            this.btn_abrir_manual.Size = new System.Drawing.Size(139, 36);
+            this.btn_abrir_manual.Size = new System.Drawing.Size(270, 36);
             this.btn_abrir_manual.TabIndex = 22;
             this.btn_abrir_manual.Text = "Consultar Manual";
             this.btn_abrir_manual.UseVisualStyleBackColor = false;
+            this.btn_abrir_manual.Click += new System.EventHandler(this.btn_abrir_manual_Click);
             // 
             // panel13
             // 
@@ -292,10 +273,11 @@
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
+            this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.txt_lucro);
+            this.panel5.Controls.Add(this.btn_financasCadastrar);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.linha);
-            this.panel5.Controls.Add(this.panel7);
             this.panel5.Controls.Add(this.btn_finançasView);
             this.panel5.Location = new System.Drawing.Point(8, 567);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
@@ -303,68 +285,29 @@
             this.panel5.Size = new System.Drawing.Size(335, 181);
             this.panel5.TabIndex = 4;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(24, 119);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(71, 33);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 48;
+            this.pictureBox1.TabStop = false;
+            // 
             // txt_lucro
             // 
             this.txt_lucro.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txt_lucro.Font = new System.Drawing.Font("Segoe UI Semibold", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_lucro.Location = new System.Drawing.Point(128, 90);
+            this.txt_lucro.Location = new System.Drawing.Point(133, 79);
             this.txt_lucro.Name = "txt_lucro";
             this.txt_lucro.ReadOnly = true;
-            this.txt_lucro.Size = new System.Drawing.Size(126, 23);
+            this.txt_lucro.Size = new System.Drawing.Size(172, 23);
             this.txt_lucro.TabIndex = 50;
             this.txt_lucro.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Transparent;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(25, 84);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(144, 34);
-            this.button7.TabIndex = 18;
-            this.button7.TabStop = false;
-            this.button7.Text = "Saldo:    ";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.UseVisualStyleBackColor = false;
-            // 
-            // linha
-            // 
-            this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(25, 47);
-            this.linha.Margin = new System.Windows.Forms.Padding(4);
-            this.linha.Name = "linha";
-            this.linha.Size = new System.Drawing.Size(283, 2);
-            this.linha.TabIndex = 17;
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.White;
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Controls.Add(this.btn_financasCadastrar);
-            this.panel7.Location = new System.Drawing.Point(27, 135);
-            this.panel7.Margin = new System.Windows.Forms.Padding(4);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(261, 33);
-            this.panel7.TabIndex = 15;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(1, 2);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(59, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 48;
-            this.pictureBox1.TabStop = false;
             // 
             // btn_financasCadastrar
             // 
@@ -376,15 +319,44 @@
             this.btn_financasCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financasCadastrar.Font = new System.Drawing.Font("Segoe UI", 10.25F, System.Drawing.FontStyle.Bold);
             this.btn_financasCadastrar.ForeColor = System.Drawing.Color.Black;
-            this.btn_financasCadastrar.Location = new System.Drawing.Point(-1, 0);
+            this.btn_financasCadastrar.Location = new System.Drawing.Point(24, 118);
             this.btn_financasCadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financasCadastrar.Name = "btn_financasCadastrar";
-            this.btn_financasCadastrar.Size = new System.Drawing.Size(261, 34);
+            this.btn_financasCadastrar.Size = new System.Drawing.Size(281, 34);
             this.btn_financasCadastrar.TabIndex = 17;
             this.btn_financasCadastrar.Text = "Adicionar Atividade";
             this.btn_financasCadastrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btn_financasCadastrar.UseVisualStyleBackColor = false;
             this.btn_financasCadastrar.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold);
+            this.button7.ForeColor = System.Drawing.Color.White;
+            this.button7.Location = new System.Drawing.Point(24, 73);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(115, 34);
+            this.button7.TabIndex = 18;
+            this.button7.TabStop = false;
+            this.button7.Text = "Saldo do Dia:";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // linha
+            // 
+            this.linha.BackColor = System.Drawing.Color.White;
+            this.linha.Location = new System.Drawing.Point(25, 47);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
+            this.linha.Name = "linha";
+            this.linha.Size = new System.Drawing.Size(283, 2);
+            this.linha.TabIndex = 17;
             // 
             // btn_finançasView
             // 
@@ -410,10 +382,10 @@
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(165)))), ((int)(((byte)(115)))), ((int)(((byte)(94)))));
-            this.panel6.Controls.Add(this.button1);
+            this.panel6.Controls.Add(this.lbl_processando);
+            this.panel6.Controls.Add(this.metroProgressBar1);
             this.panel6.Controls.Add(this.panel12);
             this.panel6.Controls.Add(this.label_percent);
-            this.panel6.Controls.Add(this.progressBarBackup);
             this.panel6.Controls.Add(this.btn_bakup);
             this.panel6.Location = new System.Drawing.Point(340, 567);
             this.panel6.Margin = new System.Windows.Forms.Padding(4);
@@ -438,16 +410,6 @@
             this.label_percent.Name = "label_percent";
             this.label_percent.Size = new System.Drawing.Size(0, 17);
             this.label_percent.TabIndex = 19;
-            // 
-            // progressBarBackup
-            // 
-            this.progressBarBackup.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.progressBarBackup.Location = new System.Drawing.Point(33, 118);
-            this.progressBarBackup.Margin = new System.Windows.Forms.Padding(4);
-            this.progressBarBackup.Name = "progressBarBackup";
-            this.progressBarBackup.Size = new System.Drawing.Size(285, 22);
-            this.progressBarBackup.TabIndex = 18;
-            this.progressBarBackup.Value = 50;
             // 
             // btn_bakup
             // 
@@ -552,36 +514,36 @@
             this.dt.AllowUserToDeleteRows = false;
             this.dt.AllowUserToResizeColumns = false;
             this.dt.AllowUserToResizeRows = false;
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
-            this.dt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle31.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle31.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle31.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle31.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle31.SelectionForeColor = System.Drawing.Color.Black;
+            this.dt.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle31;
             this.dt.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dt.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
             this.dt.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dt.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.dt.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle32.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle32.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle32.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle32.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            dataGridViewCellStyle32.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle32.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle32.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle32;
             this.dt.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dt.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dt.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle33.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle33.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle33.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle33.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle33.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle33.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dt.DefaultCellStyle = dataGridViewCellStyle33;
             this.dt.EnableHeadersVisualStyles = false;
             this.dt.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.dt.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -591,22 +553,22 @@
             this.dt.Name = "dt";
             this.dt.ReadOnly = true;
             this.dt.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dt.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle34.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle34.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle34.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle34.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle34.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle34.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dt.RowHeadersDefaultCellStyle = dataGridViewCellStyle34;
             this.dt.RowHeadersWidth = 51;
             this.dt.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            this.dt.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle35.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle35.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle35.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle35.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle35.SelectionForeColor = System.Drawing.Color.Black;
+            this.dt.RowsDefaultCellStyle = dataGridViewCellStyle35;
             this.dt.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
             this.dt.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dt.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -615,16 +577,6 @@
             this.dt.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dt.Size = new System.Drawing.Size(981, 193);
             this.dt.TabIndex = 47;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
-            this.pictureBox2.Location = new System.Drawing.Point(-4, 35);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(1002, 149);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 48;
-            this.pictureBox2.TabStop = false;
             // 
             // pictureBox3
             // 
@@ -636,24 +588,40 @@
             this.pictureBox3.TabIndex = 49;
             this.pictureBox3.TabStop = false;
             // 
-            // button1
+            // pictureBox2
             // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.25F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(21, 68);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(154, 42);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Processando... %";
-            this.button1.UseVisualStyleBackColor = false;
+            this.pictureBox2.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
+            this.pictureBox2.Location = new System.Drawing.Point(-4, 35);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(1002, 149);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 48;
+            this.pictureBox2.TabStop = false;
+            // 
+            // metroProgressBar1
+            // 
+            this.metroProgressBar1.Location = new System.Drawing.Point(31, 104);
+            this.metroProgressBar1.Name = "metroProgressBar1";
+            this.metroProgressBar1.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.metroProgressBar1.Size = new System.Drawing.Size(285, 36);
+            this.metroProgressBar1.Style = MetroFramework.MetroColorStyle.Pink;
+            this.metroProgressBar1.TabIndex = 23;
+            this.metroProgressBar1.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.metroProgressBar1.Value = 5;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lbl_processando
+            // 
+            this.lbl_processando.AutoSize = true;
+            this.lbl_processando.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_processando.Location = new System.Drawing.Point(33, 73);
+            this.lbl_processando.Name = "lbl_processando";
+            this.lbl_processando.Size = new System.Drawing.Size(0, 0);
+            this.lbl_processando.Style = MetroFramework.MetroColorStyle.Brown;
+            this.lbl_processando.TabIndex = 24;
             // 
             // InicialView
             // 
@@ -689,13 +657,12 @@
             this.panel4.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dt)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -715,8 +682,6 @@
         private System.Windows.Forms.Button btn_tbPedidos;
         private System.Windows.Forms.Button btn_Add_Produto;
         private System.Windows.Forms.Button btn_add_cliente;
-        private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.Button btn_financasCadastrar;
         private System.Windows.Forms.Button btn_finançasView;
         private System.Windows.Forms.Button btn_bakup;
         private MetroFramework.Controls.MetroGrid dt;
@@ -727,16 +692,17 @@
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label_percent;
-        private System.Windows.Forms.ProgressBar progressBarBackup;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Button btn_ajuda;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
-        private System.Windows.Forms.Button btn_emails;
         private System.Windows.Forms.Button btn_abrir_manual;
         private System.Windows.Forms.TextBox txt_lucro;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_financasCadastrar;
+        private MetroFramework.Controls.MetroProgressBar metroProgressBar1;
+        private System.Windows.Forms.Timer timer1;
+        private MetroFramework.Controls.MetroLabel lbl_processando;
     }
 }

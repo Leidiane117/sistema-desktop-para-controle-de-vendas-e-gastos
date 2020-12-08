@@ -14,12 +14,12 @@ namespace SeitonSystem.src.dao
         public const string DESATIVE_PRODUTO = "UPDATE produto SET status='desativo' WHERE id=@id";
         public const string REATIVA_PRODUTO = "UPDATE produto SET status='ativo' WHERE id=@id";
 
-        public const string SELECT_PRODUTO = "SELECT * FROM produto WHERE status='ativo'";
+        public const string SELECT_PRODUTO = "SELECT * FROM produto WHERE status='ativo' Order By nome ASC";
         public const string SELECT_PRODUTO_FILTRO = "SELECT * FROM produto WHERE status='ativo' AND ";
 
         public const string SELECT_PRODUTO_ID = "SELECT * FROM produto WHERE id=@id";
 
-        public const string SELECT_PRODUTO_DESATIVADO = "SELECT * FROM produto WHERE status='desativo'";
+        public const string SELECT_PRODUTO_DESATIVADO = "SELECT * FROM produto WHERE status='desativo' Order by nome ASC";
         public const string SELECT_PRODUTO_DESATIVO_FILTRO = "SELECT * FROM produto WHERE status='desativo' AND ";
 
         MySqlConnection conn;
@@ -111,7 +111,7 @@ namespace SeitonSystem.src.dao
             {
                 this.cmd = new MySqlCommand(REATIVA_PRODUTO, this.conn);
                 this.cmd.Parameters.Add(new MySqlParameter("@id", id));
-
+                
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();
             }

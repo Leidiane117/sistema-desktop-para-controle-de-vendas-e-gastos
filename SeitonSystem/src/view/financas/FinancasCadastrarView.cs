@@ -31,31 +31,41 @@ namespace SeitonSystem.src.view
 
         private void validaFinanca()
         {
-            if (txt_titulo.Text.Trim() == "")
+           try 
+            { 
+            if (string.IsNullOrEmpty(txt_titulo.Text) || string.IsNullOrEmpty(txt_valor.Text))
             {
-                throw new Exception("Informe o Título");
-            }
+                throw new Exception("Preencha todos os campos!");
 
-            if (!Regex.Match(txt_valor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{1,}$").Success)
+
+            }
+            if (!Regex.Match(txt_valor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
             {
-                throw new Exception("Informe um Valor Válido");
+                throw new Exception("Informe o valor corretamente!");
             }
-
             if (double.Parse(txt_valor.Text) <= 0)
             {
-                throw new Exception("Informe o valor");
+                throw new Exception("Informe o valor!");
             }
 
-            if (cb_cadastrar.SelectedItem == null)
+            if (!Regex.Match(txt_titulo.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
             {
-                throw new Exception("Selecione o Tipo de Fluxo");
+                throw new Exception("Informe o titulo corretamente!");
             }
+           if (cb_cadastrar.SelectedItem == null)
+           {
+                    throw new Exception("Selecione o Tipo de Fluxo");
+           }
+          }
+           catch (Exception){
 
-        }
+                throw;
+            }
+   
+       }
         private void dataPikcerformat()
         {
             dt_cadastrar.Value = DateTime.Now;
-            dt_cadastrar.CalendarMonthBackground = Color.Aquamarine;
             dt_cadastrar.MaxDate = DateTime.Now.AddDays(60);
             dt_cadastrar.MinDate = DateTime.Now.AddDays(-60);
 

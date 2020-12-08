@@ -1,18 +1,19 @@
-﻿using SeitonSystem.src.controller;
-using SeitonSystem.src.dto;
-using SeitonSystem.view;
-using System;
+﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using SeitonSystem.src.dto;
+using SeitonSystem.src.controller;
+using SeitonSystem.view;
+using System.Globalization;
 
-namespace SeitonSystem.src.view.Pedido
-{
-    public partial class PedidoDetailView : Form
-    {
+namespace SeitonSystem.src.view.Pedido {
+    public partial class PedidoDetailView : Form {
         PedidoController pedidoController;
         ClienteController clienteController;
         ProdutoController produtoController;
@@ -28,12 +29,10 @@ namespace SeitonSystem.src.view.Pedido
         dto.Pedido pedido;
         dto.Pedido endereco;
 
-        public PedidoDetailView(int id)
-        {
+        public PedidoDetailView(int id) {
             InitializeComponent();
 
-            try
-            {
+            try {
                 produtos = new List<ProdutoPesquisa>();
                 produtosCadastrados = new List<Produto>();
 
@@ -52,12 +51,20 @@ namespace SeitonSystem.src.view.Pedido
                 cb_tipoPedido.SelectedItem = this.pedido.Tipo_pedido;
                 this.valorTotal = this.pedido.Valor_total;
 
+                       
+
                 txt_dataEntrega.Value = DateTime.Now;
-                txt_dataEntrega.CalendarMonthBackground = Color.Aquamarine;
-                txt_dataEntrega.MaxDate = DateTime.Now.AddDays(60);
-                txt_dataEntrega.MinDate = DateTime.Now.AddDays(-60);
-               
-              
+                txt_dataPag.Value = txt_dataEntrega.Value;
+
+                
+
+                txt_dataEntregaE.MaxDate = DateTime.Now.AddDays(60);
+                txt_dataEntregaE.MinDate = DateTime.Now.AddDays(-60);
+
+
+                txt_dataPagE.MaxDate = txt_dataEntregaE.MaxDate;
+                txt_dataPagE.MinDate = txt_dataEntregaE.MinDate;
+
 
                 preencheComboBoxProduto();
                 preencheDataGrid();
@@ -65,75 +72,60 @@ namespace SeitonSystem.src.view.Pedido
                 dataGridview(db_produtos);
                 dataGridview(db_produtosE);
 
-                if (pedido.Tipo_pedido == "Entrega")
-                {
+                if (pedido.Tipo_pedido == "Entrega") {
                     panel_dadosEntrega.Visible = true;
                     panel_dadosRetirada.Visible = false;
 
                     endereco = this.pedidoController.pesquisaEnderecoId(this.idPedido);
                     preencheTextBoxEntrega();
 
-                }
-                else
-                {
+                }else {
                     panel_dadosEntrega.Visible = false;
                     panel_dadosRetirada.Visible = true;
 
                     preencheTextBox();
                 }
 
-            }
-            catch (Exception e)
-            {
+            }catch (Exception e){
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void btn_voltar_Click(object sender, EventArgs e)
-        {
+        private void btn_voltar_Click(object sender, EventArgs e) {
             PedidoView p = new PedidoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_clientes_Click(object sender, EventArgs e)
-        {
+        private void btn_clientes_Click(object sender, EventArgs e){
             ClienteView c = new ClienteView();
             c.Show();
             this.Hide();
         }
 
-        private void enviaMsg(String msg, String tipo)
-        {
+        private void enviaMsg(String msg, String tipo) {
             MensagensView message = new MensagensView(msg, tipo);
             message.ShowDialog();
         }
 
-        private void preencheComboBoxProduto()
-        {
-            try
-            {
+        private void preencheComboBoxProduto(){
+            try {
                 this.produtosCadastrados = this.produtoController.pesquisarProdutos();
 
-                foreach (Produto p in this.produtosCadastrados)
-                {
+                foreach(Produto p in this.produtosCadastrados) {
                     cb_produtos.Items.Add(p);
                     cb_produtosE.Items.Add(p);
                 }
 
-            }
-            catch (Exception e)
-            {
+            }catch (Exception e) {
                 enviaMsg(e.Message, "erro");
             }
 
         }
-        private void atualizaValorTotal()
-        {
+        private void atualizaValorTotal() {
             this.valorTotal = 0;
 
-            foreach (ProdutoPesquisa p in this.produtos)
-            {
+            foreach(ProdutoPesquisa p in this.produtos){
                 this.valorTotal += p.Preco * p.Quantidade;
             }
 
@@ -141,8 +133,7 @@ namespace SeitonSystem.src.view.Pedido
             txt_valorTotalE.Text = this.valorTotal.ToString();
         }
 
-        private void preencheTextBox()
-        {
+        private void preencheTextBox() {
             txt_idPedido.Text = this.pedido.Id_pedido.ToString();
             txt_cliente.Text = this.cliente.ToString();
 
@@ -157,8 +148,7 @@ namespace SeitonSystem.src.view.Pedido
             txt_horaEntrega.Value = DateTime.Parse(this.pedido.Hora_entrega, new CultureInfo("pt-BR"));
         }
 
-        private void preencheTextBoxEntrega()
-        {
+        private void preencheTextBoxEntrega() {
             txt_idPedidoE.Text = this.pedido.Id_pedido.ToString();
             txt_clienteE.Text = this.cliente.ToString();
 
@@ -181,23 +171,18 @@ namespace SeitonSystem.src.view.Pedido
             txt_uf.Text = this.endereco.Uf;
         }
 
-        private void preencheDataGrid()
-        {
-            try
-            {
+        private void preencheDataGrid() {
+            try {
                 this.produtos = this.pedidoController.pesquisaProduto(this.idPedido);
 
                 db_produtos.DataSource = this.produtos;
                 db_produtosE.DataSource = this.produtos;
-            }
-            catch (Exception e)
-            {
+            } catch (Exception e) {
                 enviaMsg(e.Message, "erro");
             }
         }
 
-        private void dataGridview(DataGridView dt)
-        {
+        private void dataGridview(DataGridView dt) {
             dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
             dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
@@ -212,25 +197,24 @@ namespace SeitonSystem.src.view.Pedido
             style.ForeColor = Color.White;
             style.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            for (int i = 0; i < dt.Columns.Count; i++)
+            {
+
+                dt.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            }
             dt.Columns["Id"].Width = 30;
             dt.Columns["Nome"].Width = 90;
             dt.Columns["Quantidade"].Width = 80;
             dt.Columns["Observacao"].Width = 100;
             dt.Columns["Preco"].DefaultCellStyle.Format = "c";
-           
-
         }
 
-        private void txt_cep_Leave(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txt_cep.Text.Trim() == "")
-                {
+        private void txt_cep_Leave(object sender, EventArgs e) {
+            try {
+                if (txt_cep.Text.Trim() == "") {
                     throw new Exception("Informe o CEP para consulta");
-                }
-                else
-                {
+                }else {
                     using (var ws = new WSCorreios.AtendeClienteClient())
                     {
                         var endereco = ws.consultaCEP(txt_cep.Text.Trim());
@@ -242,19 +226,16 @@ namespace SeitonSystem.src.view.Pedido
                     }
                 }
             }
-            catch (Exception e1)
-            {
+            catch (Exception e1) {
                 enviaMsg(e1.Message, "aviso");
             }
         }
 
 
-        private void db_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void db_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             panel_produtos.Visible = true;
 
-            if (e.RowIndex >= 0)
-            {
+            if (e.RowIndex >= 0) {
                 DataGridViewRow row = this.db_produtos.Rows[e.RowIndex];
                 this.colunaIndex = row.Index;
 
@@ -269,12 +250,10 @@ namespace SeitonSystem.src.view.Pedido
             }
         }
 
-        private void db_produtosE_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+        private void db_produtosE_CellContentClick(object sender, DataGridViewCellEventArgs e) {
             panel_produtosE.Visible = true;
 
-            if (e.RowIndex >= 0)
-            {
+            if (e.RowIndex >= 0) {
                 DataGridViewRow row = this.db_produtosE.Rows[e.RowIndex];
                 this.colunaIndex = row.Index;
 
@@ -289,8 +268,7 @@ namespace SeitonSystem.src.view.Pedido
             }
         }
 
-        private void btn_excluir_Click(object sender, EventArgs e)
-        {
+        private void btn_excluir_Click(object sender, EventArgs e) {
             this.produtos.RemoveAt(this.colunaIndex);
 
             db_produtos.DataSource = null;
@@ -311,8 +289,7 @@ namespace SeitonSystem.src.view.Pedido
             txt_obs.Enabled = true;
         }
 
-        private void btn_excluirE_Click(object sender, EventArgs e)
-        {
+        private void btn_excluirE_Click(object sender, EventArgs e){
             this.produtos.RemoveAt(this.colunaIndex);
 
             db_produtosE.DataSource = null;
@@ -333,8 +310,7 @@ namespace SeitonSystem.src.view.Pedido
             txt_obsE.Enabled = true;
         }
 
-        private void btn_limpar_Click(object sender, EventArgs e)
-        {
+        private void btn_limpar_Click(object sender, EventArgs e) {
             btn_addProduto.Enabled = true;
             btn_addProduto.Visible = false;
 
@@ -346,8 +322,7 @@ namespace SeitonSystem.src.view.Pedido
             panel_produtos.Visible = false;
         }
 
-        private void btn_limparE_Click(object sender, EventArgs e)
-        {
+        private void btn_limparE_Click(object sender, EventArgs e) {
             btn_addProdutoE.Enabled = true;
             btn_addProdutoE.Visible = false;
 
@@ -359,138 +334,110 @@ namespace SeitonSystem.src.view.Pedido
             panel_produtosE.Visible = false;
         }
 
-        private void validaPedido()
-        {
-            if (cb_tipoPag.SelectedItem == null)
-            {
+        private void validaPedido() {
+            if(cb_tipoPag.SelectedItem == null) {
                 throw new Exception("Informe o Tipo de Pagamento");
             }
 
-            if (txt_dataEntrega.Value < DateTime.Parse(this.pedido.Data_pagamento, new CultureInfo("pt-BR")))
-            {
+            if(txt_dataEntrega.Value < DateTime.Parse(this.pedido.Data_pagamento, new CultureInfo("pt-BR"))) {
                 throw new Exception("Informe uma Data de Entrega Válida");
             }
 
             DateTime dt = Convert.ToDateTime(txt_horaEntrega.Value);
-            if (dt.Hour >= 0 && dt.Hour <= 6)
-            {
+            if(dt.Hour >= 0 && dt.Hour <= 6) {
                 throw new Exception("Informe uma Hora Válida");
             }
 
-            if (this.produtos.Count <= 0)
-            {
+            if (this.produtos.Count <= 0) {
                 throw new Exception("Selecione os Produtos para o Pedido");
             }
         }
 
-        private void validaPedidoEntrega()
-        {
+        private void validaPedidoEntrega(){
             int num;
 
-            if (cb_tipoPagE.SelectedItem == null)
-            {
+            if (cb_tipoPagE.SelectedItem == null) {
                 throw new Exception("Informe o Tipo de Pagamento");
             }
 
-            if (txt_dataEntregaE.Value < DateTime.Parse(this.pedido.Data_pagamento, new CultureInfo("pt-BR")))
-            {
+            if (txt_dataEntregaE.Value < DateTime.Parse(this.pedido.Data_pagamento, new CultureInfo("pt-BR"))){
                 throw new Exception("Informe uma Data de Entrega Válida");
             }
 
             DateTime dt = Convert.ToDateTime(txt_horaEntregaE.Value);
-            if (dt.Hour >= 0 && dt.Hour <= 6)
-            {
+            if (dt.Hour >= 0 && dt.Hour <= 6){
                 throw new Exception("Informe uma Hora Válida");
             }
 
-            if (this.produtos.Count <= 0)
-            {
+            if (this.produtos.Count <= 0) {
                 throw new Exception("Selecione os Produtos para o Pedido");
             }
 
-            if (txt_cep.Text == null || txt_cep.Text.Trim() == "")
-            {
+            if (txt_cep.Text == null || txt_cep.Text.Trim() == "") {
                 throw new Exception("Informe o CEP");
             }
 
-            if (txt_cep.Text.Length < 8 || !int.TryParse(txt_cep.Text, out num))
-            {
+            if (txt_cep.Text.Length < 8 || !int.TryParse(txt_cep.Text, out num)) {
                 throw new Exception("Informe um CEP Válido");
             }
 
-            if (txt_logradouro.Text == null || txt_logradouro.Text.Trim() == "")
-            {
+            if (txt_logradouro.Text == null || txt_logradouro.Text.Trim() == "") {
                 throw new Exception("Informe o Logradouro");
             }
 
-            if (txt_cidade.Text == null || txt_cidade.Text.Trim() == "")
-            {
+            if (txt_cidade.Text == null || txt_cidade.Text.Trim() == "") {
                 throw new Exception("Informe a Cidade");
             }
 
-            if (txt_uf.Text == null || txt_uf.Text.Trim() == "")
-            {
+            if (txt_uf.Text == null || txt_uf.Text.Trim() == "") {
                 throw new Exception("Informe o UF");
             }
 
-            if (txt_uf.Text.Length < 2)
-            {
+            if (txt_uf.Text.Length < 2) {
                 throw new Exception("Informe um UF Válido");
             }
 
-            if (txt_numero.Text == null || txt_numero.Text.Trim() == "")
-            {
+            if (txt_numero.Text == null || txt_numero.Text.Trim() == "") {
                 throw new Exception("Informe o Número");
             }
 
-            if (txt_numero.Text.Where(c => char.IsNumber(c)).Count() == 0)
-            {
+            if (txt_numero.Text.Where(c => char.IsNumber(c)).Count() == 0){
                 throw new Exception("Informe um Número Válido");
             }
 
-            if (Convert.ToInt32(txt_numero.Text) <= 0)
-            {
+            if(Convert.ToInt32(txt_numero.Text) <= 0) {
                 throw new Exception("Informe um Número Válido");
             }
 
-            if (txt_bairro.Text == null || txt_bairro.Text.Trim() == "")
-            {
+            if (txt_bairro.Text == null || txt_bairro.Text.Trim() == "") {
                 throw new Exception("Informe o Bairro");
             }
 
-
+       
         }
 
-        private void validaProduto()
-        {
-            if (txt_quantidade.Value <= 0)
-            {
+        private void validaProduto() {
+            if (txt_quantidade.Value <= 0){
                 throw new Exception("Informe a Quantidade");
             }
 
-            if (cb_produtos.SelectedItem == null)
-            {
+            if (cb_produtos.SelectedItem == null){
                 throw new Exception("Selecione um Produto");
             }
         }
 
-        private void validaProdutoE()
-        {
-            if (txt_quantidadeE.Value <= 0)
-            {
+        private void validaProdutoE() {
+            if (txt_quantidadeE.Value <= 0){
                 throw new Exception("Informe a Quantidade");
             }
 
-            if (cb_produtosE.SelectedItem == null)
-            {
+            if (cb_produtosE.SelectedItem == null) {
                 throw new Exception("Selecione um Produto");
             }
         }
 
-        private void btn_addProduto_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_addProduto_Click(object sender, EventArgs e) {
+            try {
                 int cont = 0;
 
                 validaProduto();
@@ -504,17 +451,14 @@ namespace SeitonSystem.src.view.Pedido
                 produto.Quantidade = int.Parse(txt_quantidade.Value.ToString());
                 produto.Observacao = txt_obs.Text;
 
-                foreach (ProdutoPesquisa pr in this.produtos)
-                {
-                    if (pr.Id == produto.Id)
-                    {
+                foreach(ProdutoPesquisa pr in this.produtos) {
+                    if (pr.Id == produto.Id){
                         pr.Quantidade += produto.Quantidade;
                         cont = 1;
                     }
                 }
 
-                if (cont != 1)
-                {
+                if(cont != 1) {
                     this.produtos.Add(produto);
                 }
 
@@ -530,17 +474,13 @@ namespace SeitonSystem.src.view.Pedido
                 txt_obs.Clear();
 
                 btn_addProduto.Visible = false;
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1) {
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private void btn_addProdutoE_Click(object sender, EventArgs e)
-        {
-            try
-            {
+        private void btn_addProdutoE_Click(object sender, EventArgs e){
+            try {
                 int cont = 0;
 
                 validaProdutoE();
@@ -554,17 +494,14 @@ namespace SeitonSystem.src.view.Pedido
                 produto.Quantidade = int.Parse(txt_quantidadeE.Value.ToString());
                 produto.Observacao = txt_obsE.Text;
 
-                foreach (ProdutoPesquisa pr in this.produtos)
-                {
-                    if (pr.Id == produto.Id)
-                    {
+                foreach (ProdutoPesquisa pr in this.produtos){
+                    if (pr.Id == produto.Id){
                         pr.Quantidade += produto.Quantidade;
                         cont = 1;
                     }
                 }
 
-                if (cont != 1)
-                {
+                if (cont != 1)  {
                     this.produtos.Add(produto);
                 }
 
@@ -578,34 +515,27 @@ namespace SeitonSystem.src.view.Pedido
 
                 txt_quantidadeE.Value = 0;
                 txt_obsE.Clear();
-
+                
                 btn_addProdutoE.Visible = false;
-            }
-            catch (Exception e1)
-            {
+            }catch (Exception e1){
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private void btn_atualizar_Click(object sender, EventArgs e)
-        {
-            if (this.pedido.Situacao_pedido != "Finalizado" && this.pedido.Situacao_pedido != "Cancelado")
-            {
+        private void btn_atualizar_Click(object sender, EventArgs e) {
+            if(this.pedido.Situacao_pedido != "Finalizado" && this.pedido.Situacao_pedido != "Cancelado") {
                 btn_atualizar.Enabled = false;
                 btn_salvar.Visible = true;
                 btn_cancelar.Visible = true;
 
                 mudaCampos(true);
-            }
-            else
-            {
+            }else {
                 enviaMsg("Não é possível Atualizar Pedido Cancelado ou Finalizado", "erro");
             }
-
+            
         }
 
-        private void mudaCampos(bool a)
-        {
+        private void mudaCampos(bool a) {
             cb_tipoPedido.Enabled = a;
 
             cb_tipoPag.Enabled = a;
@@ -642,20 +572,16 @@ namespace SeitonSystem.src.view.Pedido
             db_produtosE.Enabled = a;
         }
 
-        private void cb_produtos_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cb_produtos_SelectedIndexChanged(object sender, EventArgs e) {
             btn_addProduto.Visible = true;
         }
 
-        private void cb_produtosE_SelectedIndexChanged(object sender, EventArgs e)
-        {
+        private void cb_produtosE_SelectedIndexChanged(object sender, EventArgs e) {
             btn_addProdutoE.Visible = true;
         }
 
-        private void cb_tipoPedido_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cb_tipoPedido.SelectedItem.ToString() == "Retirada")
-            {
+        private void cb_tipoPedido_SelectedIndexChanged(object sender, EventArgs e){
+            if (cb_tipoPedido.SelectedItem.ToString() == "Retirada"){
                 panel_dadosEntrega.Visible = false;
                 panel_dadosRetirada.Visible = true;
 
@@ -664,9 +590,7 @@ namespace SeitonSystem.src.view.Pedido
                 cb_tipoPedido.SelectedItem = "Retirada";
 
                 preencheDataGrid();
-            }
-            else
-            {
+            }else {
                 panel_dadosRetirada.Visible = false;
                 panel_dadosEntrega.Visible = true;
 
@@ -678,8 +602,7 @@ namespace SeitonSystem.src.view.Pedido
             }
         }
 
-        private void btn_cancelar_Click(object sender, EventArgs e)
-        {
+        private void btn_cancelar_Click(object sender, EventArgs e) {
             btn_atualizar.Enabled = true;
             btn_salvar.Visible = false;
             btn_cancelar.Visible = false;
@@ -695,28 +618,21 @@ namespace SeitonSystem.src.view.Pedido
             preencheDataGrid();
         }
 
-        private void btn_salvar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (cb_tipoPedido.SelectedItem.ToString() == "Retirada")
-                {
+        private void btn_salvar_Click(object sender, EventArgs e) {
+            try { 
+                if(cb_tipoPedido.SelectedItem.ToString() == "Retirada") {
                     validaPedido();
 
-                    if (this.pedido.Tipo_pedido == "Entrega")
-                    {
+                    if(this.pedido.Tipo_pedido == "Entrega") {
                         this.pedidoController.deletarEndereco(this.idPedido);
                     }
 
                     this.pedidoController.atualizarPedido(populaPedido(), this.produtos);
                     enviaMsg("Pedido Atualizado!", "check");
-                }
-                else
-                {
+                }else {
                     validaPedidoEntrega();
 
-                    if (this.pedido.Tipo_pedido == "Retirada")
-                    {
+                    if(this.pedido.Tipo_pedido == "Retirada") {
                         this.pedidoController.inserirEndereco(populaPedidoEntrega(), this.idPedido);
                     }
 
@@ -728,27 +644,22 @@ namespace SeitonSystem.src.view.Pedido
                 p.Show();
                 this.Hide();
 
-            }
-            catch (Exception e1)
-            {
+            }catch(Exception e1){
                 enviaMsg(e1.Message, "erro");
             }
         }
 
-        private String converteData(DateTimePicker txt)
-        {
+        private String converteData(DateTimePicker txt) {
             DateTime dt = Convert.ToDateTime(txt.Value);
             return dt.Year.ToString() + "-" + dt.Month.ToString() + "-" + dt.Day.ToString();
         }
 
-        private String converteHora(DateTimePicker txt)
-        {
+        private String converteHora(DateTimePicker txt) {
             DateTime dt = Convert.ToDateTime(txt.Value);
             return dt.Hour.ToString() + ":" + dt.Minute.ToString() + ":" + dt.Second.ToString();
         }
 
-        private dto.Pedido populaPedido()
-        {
+        private dto.Pedido populaPedido() {
             dto.Pedido pedido = new dto.Pedido();
 
             pedido.Id_pedido = this.pedido.Id_pedido;
@@ -767,8 +678,7 @@ namespace SeitonSystem.src.view.Pedido
             return pedido;
         }
 
-        private dto.Pedido populaPedidoEntrega()
-        {
+        private dto.Pedido populaPedidoEntrega() {
             dto.Pedido pedido = new dto.Pedido();
 
             pedido.Id_pedido = this.pedido.Id_pedido;
@@ -783,7 +693,7 @@ namespace SeitonSystem.src.view.Pedido
             pedido.Hora_entrega = converteHora(txt_horaEntregaE);
 
             pedido.Valor_total = this.valorTotal;
-
+          
             pedido.Id_endereco = this.endereco.Id_endereco;
             pedido.Logradouro = txt_logradouro.Text;
             pedido.Numero = int.Parse(txt_numero.Text);
@@ -796,26 +706,30 @@ namespace SeitonSystem.src.view.Pedido
             return pedido;
         }
 
-
-        private void btn_produtos_Click(object sender, EventArgs e)
-        {
+    
+        private void btn_produtos_Click(object sender, EventArgs e){
             ProdutoView p = new ProdutoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_pedido_Click(object sender, EventArgs e)
-        {
+        private void btn_pedido_Click(object sender, EventArgs e) {
             PedidoView p = new PedidoView();
             p.Show();
             this.Hide();
         }
 
-        private void btn_financas_Click(object sender, EventArgs e)
-        {
+        private void btn_financas_Click(object sender, EventArgs e) {
             FinancasView f = new FinancasView();
             f.Show();
             this.Hide();
+        }
+
+        private void btn_voltar_Click_1(object sender, EventArgs e)
+        {
+            PedidoView p = new PedidoView();
+            p.Show();
+            this.Close();
         }
     }
 }

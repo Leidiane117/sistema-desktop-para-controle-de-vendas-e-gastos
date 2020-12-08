@@ -33,7 +33,7 @@ namespace SeitonSystem.src.dao
         public const String SELECT_PEDIDO_ID = "SELECT * FROM pedido WHERE id = @id";
         public const String SELECT_PEDIDO_DATA = "SELECT * FROM pedido WHERE data_entrega BETWEEN @data AND @data2";
 
-        public const String SELECT_PRODUTO = "SELECT * FROM produto p INNER JOIN pedido_produto pe ON (p.id = pe.produto_id) WHERE pe.pedido_id = @id";
+        public const String SELECT_PRODUTO = "SELECT * FROM produto p INNER JOIN pedido_produto pe ON (p.id = pe.produto_id) WHERE pe.pedido_id = @id order by nome ASC";
 
         public const String SELECT_PEDIDO = "SELECT p.id, c.nome, p.tipo_pedido, p.valor_total, p.data_entrega, p.data_pagamento,  " +
         "p.situacao_pedido FROM pedido p INNER JOIN cliente c ON(p.cliente_id = c.id) ORDER BY data_entrega ASC";

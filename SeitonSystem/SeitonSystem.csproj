@@ -88,6 +88,7 @@
     <Reference Include="MySqlBackup, Version=2.3.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\MySqlBackup.NET.2.3.3.1\lib\net452\MySqlBackup.dll</HintPath>
     </Reference>
+    <Reference Include="PresentationFramework" />
     <Reference Include="Renci.SshNet, Version=2016.1.0.0, Culture=neutral, PublicKeyToken=1cee9f8bde3db106, processorArchitecture=MSIL">
       <HintPath>packages\SSH.NET.2016.1.0\lib\net40\Renci.SshNet.dll</HintPath>
     </Reference>
@@ -206,6 +207,12 @@
     <Compile Include="src\view\LoginView.designer.cs">
       <DependentUpon>LoginView.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\view\ManualView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\ManualView.Designer.cs">
+      <DependentUpon>ManualView.cs</DependentUpon>
+    </Compile>
     <Compile Include="src\view\MensagensView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -248,6 +255,12 @@
     <Compile Include="src\view\produto\ProdutoView.Designer.cs">
       <DependentUpon>ProdutoView.cs</DependentUpon>
     </Compile>
+    <Compile Include="src\view\relatorios\RelatorioView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\view\relatorios\RelatorioView.Designer.cs">
+      <DependentUpon>RelatorioView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -284,6 +297,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\LoginView.resx">
       <DependentUpon>LoginView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\view\ManualView.resx">
+      <DependentUpon>ManualView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="src\view\MensagensView.resx">
       <DependentUpon>MensagensView.cs</DependentUpon>

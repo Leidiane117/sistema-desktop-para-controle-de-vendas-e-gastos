@@ -163,17 +163,15 @@ namespace SeitonSystem.view
             style.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
-            for (int i = 0; i < 4; i++)
+            for (int i = 0; i < dt.ColumnCount; i++)
             {
-                string[] cabecalho = { "Id", "Nome", "Preço", "Descrição" };
-
-                DataGridViewProdutos.Columns[i].HeaderText = cabecalho[i];
-                DataGridViewProdutos.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dt.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             }
-            dt.Columns[0].Width = 50;
-            dt.Columns[1].Width = 180;
-            dt.Columns[3].Width = 300;
+            dt.Columns["Id"].Width = 50;
+            dt.Columns["Nome"].Width = 180;
+            dt.Columns["Preco"].Width = 100;
+            dt.Columns["Descricao"].Width = 300;
             dt.Columns[2].DefaultCellStyle.Format = "c";
             dt.MultiSelect = false;
         }

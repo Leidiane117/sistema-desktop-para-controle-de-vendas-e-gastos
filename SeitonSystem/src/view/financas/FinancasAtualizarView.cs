@@ -70,24 +70,36 @@ namespace SeitonSystem.src.view
 
         private void validaFinanca()
         {
-            if (txt_atualizarTitulo.Text.Trim() == "")
+            try
             {
-                throw new Exception("Informe o Título");
-            }
+                if (string.IsNullOrEmpty(txt_atualizarTitulo.Text) || string.IsNullOrEmpty(txt_atualizarValor.Text))
+                {
+                    throw new Exception("Preencha todos os campos!");
 
-            if (!Regex.Match(txt_atualizarValor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{1,}$").Success)
-            {
-                throw new Exception("Informe um Valor Válido");
-            }
 
-            if (double.Parse(txt_atualizarValor.Text) <= 0)
-            {
-                throw new Exception("Informe o valor");
-            }
+                }
+                if (!Regex.Match(txt_atualizarValor.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
+                {
+                    throw new Exception("Informe o valor corretamente!");
+                }
+                if (double.Parse(txt_atualizarValor.Text) <= 0)
+                {
+                    throw new Exception("Informe o valor!");
+                }
 
-            if (cb_atualizar.SelectedItem == null)
+                if (!Regex.Match(txt_atualizarTitulo.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
+                {
+                    throw new Exception("Informe o titulo corretamente!");
+                }
+                if (cb_atualizar.SelectedItem == null)
+                {
+                    throw new Exception("Selecione o Tipo de Fluxo");
+                }
+            }
+            catch (Exception)
             {
-                throw new Exception("Selecione o Tipo de Fluxo");
+
+                throw;
             }
 
         }
@@ -150,6 +162,11 @@ namespace SeitonSystem.src.view
             FinancasView f = new FinancasView();
             f.Show();
             this.Hide();
+        }
+
+        private void cb_atualizar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

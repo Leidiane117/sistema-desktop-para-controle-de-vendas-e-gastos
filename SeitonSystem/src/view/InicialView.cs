@@ -14,19 +14,24 @@ namespace SeitonSystem.src.view.Inicial
 
     public partial class InicialView : Form
     {
-        FinancasController financas = new FinancasController();
-        PedidoController pedidoController = new PedidoController();
+        FinancasController financasController;
+        PedidoController pedidoController; 
+
+
         public InicialView()
         {
             InitializeComponent();
-           // saldo();
-           // txt();
+
             try
             {
-               
+                pedidoController = new PedidoController();
+                financasController = new FinancasController();
                 preencherDataGridView();
                 dataGridview();
+
                 
+                //saldo();
+                //total();
 
             }
             catch (Exception e)
@@ -41,9 +46,9 @@ namespace SeitonSystem.src.view.Inicial
                 List<dto.PedidoPesquisa> pedidos = new List<dto.PedidoPesquisa>();
                 pedidos = this.pedidoController.pesquisaPedidosPendentes();
 
-                
+
                 dt.DataSource = pedidos;
-                
+
 
             }
             catch (Exception e)
@@ -57,33 +62,25 @@ namespace SeitonSystem.src.view.Inicial
             message.ShowDialog();
         }
         private void dataGridview()
-              {
-            dt.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
-            dt.DefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
+        {
             dt.Columns["Total"].DefaultCellStyle.Format = "c";
             dt.MultiSelect = false; // selecionar apenas uma linha por vez
-            dt.AlternatingRowsDefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(235, 207, 206);
-            dt.AlternatingRowsDefaultCellStyle.ForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
 
-            dt.RowsDefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(195, 167, 166);
-            dt.RowsDefaultCellStyle.SelectionForeColor = System.Drawing.Color.FromArgb(0, 0, 0);
-
-            dt.BackgroundColor = System.Drawing.Color.FromArgb(235, 207, 206);
-            dt.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             for (int i = 0; i < dt.ColumnCount; i++)
             {
-                string[] cabecalho = { "Id", "Cliente", "Pedido", "Total","Pagamento", "Entrega", "Situação" };
+                string[] cabecalho = { "Id", "Cliente", "Pedido", "Total", "Pagamento", "Entrega", "Situação" };
 
                 dt.Columns[i].HeaderText = cabecalho[i];
                 dt.Columns[i].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             }
             DataGridViewCellStyle style = dt.ColumnHeadersDefaultCellStyle;
-            style.BackColor = System.Drawing.Color.FromArgb(153, 88, 63);
             style.ForeColor = Color.White;
             style.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-
+            dt.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            style.BackColor = System.Drawing.Color.FromArgb(153, 88, 63);
+            dt.Columns[1].Width = 100;
             dt.Columns[0].Width = 50;
             dt.Columns[5].Width = 130;
 
@@ -156,41 +153,58 @@ namespace SeitonSystem.src.view.Inicial
         }
 
 
-
-
-
-
-        /*private double saldo()
-        {
-
-
-            return financas.lucro();
-        }
-        */
-
-            
         private void btn_bakup_Click(object sender, EventArgs e)
         {
-            //ConnectDAO connect = new ConnectDAO();
-            //connect.BackupMySql();
-            progressBarBackup.BackColor = Color.Green;
-            progressBarBackup.Minimum = 1;
-            progressBarBackup.Maximum = 100;
-            
-            
+            timer1.Enabled = true;
+
+
         }
 
         private void InicialView_Load(object sender, EventArgs e)
         {
 
 
-           // txt_lucro.Text = "145.00";
-            //txt_lucro.BackColor = Color.PaleGreen;
-            
-            //saldo();
+
             //textLucro();
         }
+
+        private void btn_abrir_manual_Click(object sender, EventArgs e)
+        {
+            using (var formWebBrowser = new ManualView())
+            {
+                formWebBrowser.Show();
+            }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (metroProgressBar1.Value < metroProgressBar1.Maximum)
+            {
+                metroProgressBar1.Value += 1;
+                label_percent.Text = string.Format("Processando {0}%", metroProgressBar1.ProgressTotalPercent);
+                label_percent.ForeColor = Color.White;
+
+            }
+            else
+            {
+                timer1.Stop();
+                ConnectDAO connect = new ConnectDAO();
+                connect.BackupMySql();
+
+
+            }
+        }
+
     }
- }
- 
+
+}
+
+
+
+
+
+
+
+
+
 

@@ -9,29 +9,11 @@ namespace SeitonSystem.src.dto
         private double preco;
         private string descricao;
 
-        public int Id
-        {
-            get { return this.id; }
-            set { this.id = value; }
-        }
+        public int Id { get => id; set => id = value; }
+        public string Nome { get => nome; set => nome = value; }
+        public double Preco { get => preco; set => preco = value; }
+        public string Descricao { get => descricao; set => descricao = value; }
 
-        public String Nome
-        {
-            get { return this.nome; }
-            set { this.nome = value; }
-        }
-
-        public double Preco
-        {
-            get { return this.preco; }
-            set { this.preco = value; }
-        }
-
-        public String Descricao
-        {
-            get { return this.descricao; }
-            set { this.descricao = value; }
-        }
 
         public override String ToString()
         {

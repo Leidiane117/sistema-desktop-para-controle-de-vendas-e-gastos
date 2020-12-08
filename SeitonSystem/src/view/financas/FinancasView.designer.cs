@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FinancasView));
             this.colu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descrição = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -76,7 +78,6 @@
             this.dataGridViewImageColumn2 = new System.Windows.Forms.DataGridViewImageColumn();
             this.dataGridViewImageColumn1 = new System.Windows.Forms.DataGridViewImageColumn();
             this.cb_pesquisaData = new System.Windows.Forms.ComboBox();
-            this.db_fluxos = new MetroFramework.Controls.MetroGrid();
             this.lbl_lucroV = new System.Windows.Forms.Label();
             this.lbl_margemLucro = new System.Windows.Forms.Label();
             this.lbl_entradaV = new System.Windows.Forms.Label();
@@ -84,12 +85,13 @@
             this.cb_pesquisaTipo = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.db_fluxos = new MetroFramework.Controls.MetroGrid();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rentabilidade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cabecalho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rodape)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).BeginInit();
             this.SuspendLayout();
             // 
             // colu
@@ -132,7 +134,7 @@
             this.finanças.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.finanças.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.finanças.ForeColor = System.Drawing.Color.White;
-            this.finanças.Location = new System.Drawing.Point(403, 178);
+            this.finanças.Location = new System.Drawing.Point(403, 158);
             this.finanças.Margin = new System.Windows.Forms.Padding(4);
             this.finanças.Name = "finanças";
             this.finanças.Size = new System.Drawing.Size(184, 52);
@@ -230,7 +232,7 @@
             // linha
             // 
             this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(39, 231);
+            this.linha.Location = new System.Drawing.Point(39, 208);
             this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
             this.linha.Size = new System.Drawing.Size(923, 2);
@@ -264,7 +266,7 @@
             this.txt_pesquisa.Name = "txt_pesquisa";
             this.txt_pesquisa.Size = new System.Drawing.Size(345, 36);
             this.txt_pesquisa.TabIndex = 149;
-            this.txt_pesquisa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txt_pesquisa_KeyUp);
+            this.txt_pesquisa.TextChanged += new System.EventHandler(this.txt_pesquisa_TextChanged);
             // 
             // lbl_atividade
             // 
@@ -311,11 +313,9 @@
             this.cb_pesquisaRentData.Font = new System.Drawing.Font("Segoe UI Semilight", 8.75F);
             this.cb_pesquisaRentData.FormattingEnabled = true;
             this.cb_pesquisaRentData.Items.AddRange(new object[] {
-            "Todos",
+            "Últimos 3 meses",
             "Último mês",
-            "Último 3 meses",
-            "Último 6 meses",
-            "Último dia"});
+            "Última Semana "});
             this.cb_pesquisaRentData.Location = new System.Drawing.Point(33, 292);
             this.cb_pesquisaRentData.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaRentData.Name = "cb_pesquisaRentData";
@@ -333,7 +333,7 @@
             this.lbl_rentabilidade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_rentabilidade.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_rentabilidade.ForeColor = System.Drawing.Color.Black;
-            this.lbl_rentabilidade.Location = new System.Drawing.Point(33, 251);
+            this.lbl_rentabilidade.Location = new System.Drawing.Point(24, 249);
             this.lbl_rentabilidade.Margin = new System.Windows.Forms.Padding(4);
             this.lbl_rentabilidade.Name = "lbl_rentabilidade";
             this.lbl_rentabilidade.Size = new System.Drawing.Size(387, 37);
@@ -463,7 +463,7 @@
             this.btn_cadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_cadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_cadastrar.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_cadastrar.Location = new System.Drawing.Point(21, 599);
+            this.btn_cadastrar.Location = new System.Drawing.Point(21, 580);
             this.btn_cadastrar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cadastrar.Name = "btn_cadastrar";
             this.btn_cadastrar.Size = new System.Drawing.Size(209, 34);
@@ -478,13 +478,13 @@
             this.txt_descricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_descricao.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txt_descricao.ForeColor = System.Drawing.Color.White;
-            this.txt_descricao.Location = new System.Drawing.Point(21, 676);
+            this.txt_descricao.Location = new System.Drawing.Point(24, 660);
             this.txt_descricao.Margin = new System.Windows.Forms.Padding(4);
             this.txt_descricao.MaxLength = 9999;
             this.txt_descricao.Multiline = true;
             this.txt_descricao.Name = "txt_descricao";
             this.txt_descricao.ReadOnly = true;
-            this.txt_descricao.Size = new System.Drawing.Size(409, 105);
+            this.txt_descricao.Size = new System.Drawing.Size(404, 81);
             this.txt_descricao.TabIndex = 163;
             this.txt_descricao.Visible = false;
             // 
@@ -494,7 +494,7 @@
             this.lbl_desc.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_desc.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_desc.ForeColor = System.Drawing.Color.White;
-            this.lbl_desc.Location = new System.Drawing.Point(19, 642);
+            this.lbl_desc.Location = new System.Drawing.Point(19, 628);
             this.lbl_desc.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_desc.Name = "lbl_desc";
             this.lbl_desc.Size = new System.Drawing.Size(236, 28);
@@ -512,7 +512,7 @@
             this.btn_atualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atualizar.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.btn_atualizar.Location = new System.Drawing.Point(147, 823);
+            this.btn_atualizar.Location = new System.Drawing.Point(119, 768);
             this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(136, 38);
@@ -531,10 +531,10 @@
             this.btn_deletar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_deletar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_deletar.Font = new System.Drawing.Font("Segoe UI", 12.25F);
-            this.btn_deletar.Location = new System.Drawing.Point(295, 823);
+            this.btn_deletar.Location = new System.Drawing.Point(272, 768);
             this.btn_deletar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_deletar.Name = "btn_deletar";
-            this.btn_deletar.Size = new System.Drawing.Size(136, 38);
+            this.btn_deletar.Size = new System.Drawing.Size(148, 38);
             this.btn_deletar.TabIndex = 167;
             this.btn_deletar.Text = "Deletar";
             this.btn_deletar.UseVisualStyleBackColor = false;
@@ -552,7 +552,7 @@
             this.btn_graficos.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_graficos.Image = global::SeitonSystem.Properties.Resources.icone_grafico;
             this.btn_graficos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_graficos.Location = new System.Drawing.Point(239, 599);
+            this.btn_graficos.Location = new System.Drawing.Point(238, 580);
             this.btn_graficos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_graficos.Name = "btn_graficos";
             this.btn_graficos.Size = new System.Drawing.Size(192, 34);
@@ -564,7 +564,7 @@
             // pic_rentabilidade
             // 
             this.pic_rentabilidade.Image = global::SeitonSystem.Properties.Resources.icon_rentabilidade;
-            this.pic_rentabilidade.Location = new System.Drawing.Point(21, 249);
+            this.pic_rentabilidade.Location = new System.Drawing.Point(21, 229);
             this.pic_rentabilidade.Margin = new System.Windows.Forms.Padding(4);
             this.pic_rentabilidade.Name = "pic_rentabilidade";
             this.pic_rentabilidade.Size = new System.Drawing.Size(409, 343);
@@ -597,20 +597,22 @@
             // 
             this.pic_cabecalho.BackColor = System.Drawing.Color.Transparent;
             this.pic_cabecalho.Image = global::SeitonSystem.Properties.Resources.icon_cabecalho;
-            this.pic_cabecalho.Location = new System.Drawing.Point(449, 246);
+            this.pic_cabecalho.Location = new System.Drawing.Point(450, 229);
             this.pic_cabecalho.Margin = new System.Windows.Forms.Padding(4);
             this.pic_cabecalho.Name = "pic_cabecalho";
-            this.pic_cabecalho.Size = new System.Drawing.Size(505, 117);
+            this.pic_cabecalho.Size = new System.Drawing.Size(500, 128);
             this.pic_cabecalho.TabIndex = 145;
             this.pic_cabecalho.TabStop = false;
             // 
             // pic_rodape
             // 
             this.pic_rodape.BackgroundImage = global::SeitonSystem.Properties.Resources.icon_rodape;
-            this.pic_rodape.Location = new System.Drawing.Point(449, 823);
+            this.pic_rodape.Image = global::SeitonSystem.Properties.Resources.icon_rodape;
+            this.pic_rodape.Location = new System.Drawing.Point(450, 745);
             this.pic_rodape.Margin = new System.Windows.Forms.Padding(4);
             this.pic_rodape.Name = "pic_rodape";
-            this.pic_rodape.Size = new System.Drawing.Size(505, 38);
+            this.pic_rodape.Size = new System.Drawing.Size(500, 32);
+            this.pic_rodape.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_rodape.TabIndex = 144;
             this.pic_rodape.TabStop = false;
             // 
@@ -623,11 +625,10 @@
             this.btnVoltar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVoltar.Image = global::SeitonSystem.Properties.Resources.icone_voltar2;
-            this.btnVoltar.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnVoltar.Location = new System.Drawing.Point(39, 772);
+            this.btnVoltar.Location = new System.Drawing.Point(13, 738);
             this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(100, 98);
+            this.btnVoltar.Size = new System.Drawing.Size(98, 87);
             this.btnVoltar.TabIndex = 110;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
@@ -683,69 +684,15 @@
             this.cb_pesquisaData.Font = new System.Drawing.Font("Segoe UI Semilight", 8.75F);
             this.cb_pesquisaData.FormattingEnabled = true;
             this.cb_pesquisaData.Items.AddRange(new object[] {
-            "Todos",
+            "Últimos 3 meses",
             "Último mês",
-            "Último 3 meses",
-            "Último 6 meses",
-            "Último dia"});
-            this.cb_pesquisaData.Location = new System.Drawing.Point(705, 329);
+            "Última Semana"});
+            this.cb_pesquisaData.Location = new System.Drawing.Point(700, 322);
             this.cb_pesquisaData.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaData.Name = "cb_pesquisaData";
-            this.cb_pesquisaData.Size = new System.Drawing.Size(239, 28);
+            this.cb_pesquisaData.Size = new System.Drawing.Size(248, 28);
             this.cb_pesquisaData.TabIndex = 168;
             this.cb_pesquisaData.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaData_SelectedIndexChanged);
-            // 
-            // db_fluxos
-            // 
-            this.db_fluxos.AllowUserToAddRows = false;
-            this.db_fluxos.AllowUserToDeleteRows = false;
-            this.db_fluxos.AllowUserToResizeRows = false;
-            this.db_fluxos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.db_fluxos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(178)))), ((int)(((byte)(192)))));
-            this.db_fluxos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.db_fluxos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.db_fluxos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_fluxos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.db_fluxos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.db_fluxos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.db_fluxos.DefaultCellStyle = dataGridViewCellStyle5;
-            this.db_fluxos.EnableHeadersVisualStyles = false;
-            this.db_fluxos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.db_fluxos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.db_fluxos.Location = new System.Drawing.Point(453, 365);
-            this.db_fluxos.Margin = new System.Windows.Forms.Padding(4);
-            this.db_fluxos.MultiSelect = false;
-            this.db_fluxos.Name = "db_fluxos";
-            this.db_fluxos.ReadOnly = true;
-            this.db_fluxos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_fluxos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.db_fluxos.RowHeadersWidth = 51;
-            this.db_fluxos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.db_fluxos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.db_fluxos.Size = new System.Drawing.Size(503, 458);
-            this.db_fluxos.TabIndex = 169;
-            this.db_fluxos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_fluxos_CellContentClick);
             // 
             // lbl_lucroV
             // 
@@ -763,7 +710,7 @@
             // 
             // lbl_margemLucro
             // 
-            this.lbl_margemLucro.BackColor = System.Drawing.Color.Silver;
+            this.lbl_margemLucro.BackColor = System.Drawing.Color.White;
             this.lbl_margemLucro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_margemLucro.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_margemLucro.ForeColor = System.Drawing.Color.Black;
@@ -777,7 +724,7 @@
             // 
             // lbl_entradaV
             // 
-            this.lbl_entradaV.BackColor = System.Drawing.Color.SteelBlue;
+            this.lbl_entradaV.BackColor = System.Drawing.Color.CornflowerBlue;
             this.lbl_entradaV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_entradaV.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_entradaV.ForeColor = System.Drawing.Color.Black;
@@ -791,7 +738,7 @@
             // 
             // lbl_saidaV
             // 
-            this.lbl_saidaV.BackColor = System.Drawing.Color.Brown;
+            this.lbl_saidaV.BackColor = System.Drawing.Color.Tomato;
             this.lbl_saidaV.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbl_saidaV.Font = new System.Drawing.Font("Segoe UI", 13.25F);
             this.lbl_saidaV.ForeColor = System.Drawing.Color.Black;
@@ -813,11 +760,11 @@
             this.cb_pesquisaTipo.Items.AddRange(new object[] {
             "Todas as Operações",
             "Entrada",
-            "Saída"});
-            this.cb_pesquisaTipo.Location = new System.Drawing.Point(453, 329);
+            "Saida"});
+            this.cb_pesquisaTipo.Location = new System.Drawing.Point(453, 322);
             this.cb_pesquisaTipo.Margin = new System.Windows.Forms.Padding(4);
             this.cb_pesquisaTipo.Name = "cb_pesquisaTipo";
-            this.cb_pesquisaTipo.Size = new System.Drawing.Size(239, 28);
+            this.cb_pesquisaTipo.Size = new System.Drawing.Size(247, 28);
             this.cb_pesquisaTipo.TabIndex = 174;
             this.cb_pesquisaTipo.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaTipo_SelectedIndexChanged);
             // 
@@ -826,7 +773,7 @@
             this.pictureBox1.Image = global::SeitonSystem.Properties.Resources.chocEscorrendo;
             this.pictureBox1.Location = new System.Drawing.Point(-10, 37);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1022, 121);
+            this.pictureBox1.Size = new System.Drawing.Size(1021, 114);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 175;
             this.pictureBox1.TabStop = false;
@@ -836,17 +783,90 @@
             this.pictureBox2.Image = global::SeitonSystem.Properties.Resources.logo2;
             this.pictureBox2.Location = new System.Drawing.Point(403, -2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(184, 170);
+            this.pictureBox2.Size = new System.Drawing.Size(184, 153);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 176;
             this.pictureBox2.TabStop = false;
+            // 
+            // db_fluxos
+            // 
+            this.db_fluxos.AllowUserToAddRows = false;
+            this.db_fluxos.AllowUserToDeleteRows = false;
+            this.db_fluxos.AllowUserToResizeColumns = false;
+            this.db_fluxos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_fluxos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.db_fluxos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.db_fluxos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.db_fluxos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.db_fluxos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.db_fluxos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_fluxos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.db_fluxos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.db_fluxos.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.db_fluxos.DefaultCellStyle = dataGridViewCellStyle6;
+            this.db_fluxos.EnableHeadersVisualStyles = false;
+            this.db_fluxos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.db_fluxos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.db_fluxos.Location = new System.Drawing.Point(450, 349);
+            this.db_fluxos.Margin = new System.Windows.Forms.Padding(4);
+            this.db_fluxos.Name = "db_fluxos";
+            this.db_fluxos.ReadOnly = true;
+            this.db_fluxos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_fluxos.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.db_fluxos.RowHeadersWidth = 51;
+            this.db_fluxos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_fluxos.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.db_fluxos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.db_fluxos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.db_fluxos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.db_fluxos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            this.db_fluxos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_fluxos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.db_fluxos.Size = new System.Drawing.Size(500, 403);
+            this.db_fluxos.TabIndex = 177;
+            this.db_fluxos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_fluxos_CellContentClick_1);
             // 
             // FinancasView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1010, 948);
+            this.ClientSize = new System.Drawing.Size(980, 885);
+            this.Controls.Add(this.db_fluxos);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cb_pesquisaTipo);
@@ -854,7 +874,6 @@
             this.Controls.Add(this.lbl_entradaV);
             this.Controls.Add(this.lbl_margemLucro);
             this.Controls.Add(this.lbl_lucroV);
-            this.Controls.Add(this.db_fluxos);
             this.Controls.Add(this.cb_pesquisaData);
             this.Controls.Add(this.btn_deletar);
             this.Controls.Add(this.btn_atualizar);
@@ -890,19 +909,20 @@
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.finanças);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.Name = "FinancasView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seiton System";
+            this.Load += new System.EventHandler(this.FinancasView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pic_rentabilidade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cabecalho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_rodape)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_fluxos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -950,7 +970,6 @@
         private System.Windows.Forms.Button btn_atualizar;
         private System.Windows.Forms.Button btn_deletar;
         private System.Windows.Forms.ComboBox cb_pesquisaData;
-        private MetroFramework.Controls.MetroGrid db_fluxos;
         private System.Windows.Forms.Label lbl_lucroV;
         private System.Windows.Forms.Label lbl_margemLucro;
         private System.Windows.Forms.Label lbl_entradaV;
@@ -958,5 +977,6 @@
         private System.Windows.Forms.ComboBox cb_pesquisaTipo;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private MetroFramework.Controls.MetroGrid db_fluxos;
     }
 }

@@ -57,16 +57,21 @@ namespace SeitonSystem.src.controller
             }
         }
 
-        public List<Financas> pesquisaFluxos()
+      
+
+        public double lucroProcedure()
         {
             try
             {
-                return this.financasDAO.pesquisaFluxos();
+                return financasDAO.lucroProcedure();
             }
             catch (Exception)
             {
                 throw;
             }
+
+
+
         }
 
         public List<Financas> pesquisaFluxosData(DateTime data)
@@ -81,18 +86,7 @@ namespace SeitonSystem.src.controller
             }
         }
 
-        public List<Financas> pesquisaFluxosDia(DateTime data)
-        {
-            try
-            {
-                return this.financasDAO.pesquisaFluxosDia(data);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-        }
-
+      
         public Financas pesquisaFinancasId(int id)
         {
             try
@@ -141,28 +135,9 @@ namespace SeitonSystem.src.controller
             }
         }
 
-       /* public double lucro()
-        {
-                          
-
-               financasDAO.lucroProcedure();
-
-                return lucro();
-            }
-
-        */
+      
             
         
-        public List<Financas> pesquisaFluxosTipoDia(String tipo, DateTime data)
-        {
-            try
-            {
-                return this.financasDAO.pesquisaFluxosTipoDia(tipo, data);
-            }
-            catch (Exception)
-            {
-                throw;
-            }
         }
     }
-}
+

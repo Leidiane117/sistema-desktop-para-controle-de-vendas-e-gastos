@@ -61,7 +61,7 @@
             // 
             this.linha.BackColor = System.Drawing.Color.White;
             this.linha.Location = new System.Drawing.Point(32, 254);
-            this.linha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.linha.Margin = new System.Windows.Forms.Padding(4);
             this.linha.Name = "linha";
             this.linha.Size = new System.Drawing.Size(933, 2);
             this.linha.TabIndex = 39;
@@ -77,7 +77,7 @@
             this.btn_titulo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_titulo.ForeColor = System.Drawing.Color.White;
             this.btn_titulo.Location = new System.Drawing.Point(23, 215);
-            this.btn_titulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_titulo.Margin = new System.Windows.Forms.Padding(4);
             this.btn_titulo.Name = "btn_titulo";
             this.btn_titulo.Size = new System.Drawing.Size(391, 36);
             this.btn_titulo.TabIndex = 36;
@@ -90,7 +90,7 @@
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_logo.Location = new System.Drawing.Point(396, -10);
-            this.pic_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_logo.Margin = new System.Windows.Forms.Padding(4);
             this.pic_logo.Name = "pic_logo";
             this.pic_logo.Size = new System.Drawing.Size(196, 190);
             this.pic_logo.TabIndex = 148;
@@ -102,7 +102,7 @@
             this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
             this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pic_calda.Location = new System.Drawing.Point(-3, 34);
-            this.pic_calda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pic_calda.Margin = new System.Windows.Forms.Padding(4);
             this.pic_calda.Name = "pic_calda";
             this.pic_calda.Size = new System.Drawing.Size(1003, 151);
             this.pic_calda.TabIndex = 147;
@@ -119,7 +119,7 @@
             this.btn_pedidos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedidos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_pedidos.Location = new System.Drawing.Point(583, -1);
-            this.btn_pedidos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_pedidos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_pedidos.Name = "btn_pedidos";
             this.btn_pedidos.Size = new System.Drawing.Size(220, 38);
             this.btn_pedidos.TabIndex = 146;
@@ -138,7 +138,7 @@
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_financas.Location = new System.Drawing.Point(799, -1);
-            this.btn_financas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4);
             this.btn_financas.Name = "btn_financas";
             this.btn_financas.Size = new System.Drawing.Size(201, 38);
             this.btn_financas.TabIndex = 145;
@@ -157,7 +157,7 @@
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_produtos.Location = new System.Drawing.Point(197, -1);
-            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4);
             this.btn_produtos.Name = "btn_produtos";
             this.btn_produtos.Size = new System.Drawing.Size(209, 38);
             this.btn_produtos.TabIndex = 144;
@@ -176,7 +176,7 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.Location = new System.Drawing.Point(-3, -1);
-            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4);
             this.btn_clientes.Name = "btn_clientes";
             this.btn_clientes.Size = new System.Drawing.Size(201, 38);
             this.btn_clientes.TabIndex = 143;
@@ -204,7 +204,7 @@
             this.panel_dados.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_dados.ForeColor = System.Drawing.Color.White;
             this.panel_dados.Location = new System.Drawing.Point(32, 267);
-            this.panel_dados.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel_dados.Margin = new System.Windows.Forms.Padding(4);
             this.panel_dados.Name = "panel_dados";
             this.panel_dados.Size = new System.Drawing.Size(933, 354);
             this.panel_dados.TabIndex = 149;
@@ -230,7 +230,7 @@
             this.txt_id.Enabled = false;
             this.txt_id.ForeColor = System.Drawing.Color.White;
             this.txt_id.Location = new System.Drawing.Point(707, 47);
-            this.txt_id.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_id.Margin = new System.Windows.Forms.Padding(4);
             this.txt_id.MaxLength = 8;
             this.txt_id.Multiline = true;
             this.txt_id.Name = "txt_id";
@@ -276,12 +276,13 @@
             this.cb_atualizar.FormattingEnabled = true;
             this.cb_atualizar.Items.AddRange(new object[] {
             "Entrada",
-            "Saída"});
+            "Saida"});
             this.cb_atualizar.Location = new System.Drawing.Point(599, 126);
-            this.cb_atualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cb_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.cb_atualizar.Name = "cb_atualizar";
             this.cb_atualizar.Size = new System.Drawing.Size(312, 38);
             this.cb_atualizar.TabIndex = 152;
+            this.cb_atualizar.SelectedIndexChanged += new System.EventHandler(this.cb_atualizar_SelectedIndexChanged);
             // 
             // dt_atualizar
             // 
@@ -294,7 +295,7 @@
             this.dt_atualizar.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.dt_atualizar.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dt_atualizar.Location = new System.Drawing.Point(681, 177);
-            this.dt_atualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dt_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.dt_atualizar.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
             this.dt_atualizar.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
             this.dt_atualizar.Name = "dt_atualizar";
@@ -323,7 +324,7 @@
             this.txt_atualizarValor.Font = new System.Drawing.Font("Segoe UI", 13F);
             this.txt_atualizarValor.ForeColor = System.Drawing.Color.White;
             this.txt_atualizarValor.Location = new System.Drawing.Point(681, 234);
-            this.txt_atualizarValor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_atualizarValor.Margin = new System.Windows.Forms.Padding(4);
             this.txt_atualizarValor.Name = "txt_atualizarValor";
             this.txt_atualizarValor.Size = new System.Drawing.Size(230, 36);
             this.txt_atualizarValor.TabIndex = 15;
@@ -335,7 +336,7 @@
             this.txt_atualizarTitulo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_atualizarTitulo.ForeColor = System.Drawing.Color.White;
             this.txt_atualizarTitulo.Location = new System.Drawing.Point(29, 46);
-            this.txt_atualizarTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_atualizarTitulo.Margin = new System.Windows.Forms.Padding(4);
             this.txt_atualizarTitulo.MaxLength = 327;
             this.txt_atualizarTitulo.Multiline = true;
             this.txt_atualizarTitulo.Name = "txt_atualizarTitulo";
@@ -351,7 +352,7 @@
             this.btn_atualizar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
             this.btn_atualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_atualizar.Location = new System.Drawing.Point(681, 292);
-            this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_atualizar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_atualizar.Name = "btn_atualizar";
             this.btn_atualizar.Size = new System.Drawing.Size(231, 43);
             this.btn_atualizar.TabIndex = 12;
@@ -365,7 +366,7 @@
             this.txt_atualizarDescricao.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_atualizarDescricao.ForeColor = System.Drawing.Color.White;
             this.txt_atualizarDescricao.Location = new System.Drawing.Point(29, 124);
-            this.txt_atualizarDescricao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_atualizarDescricao.Margin = new System.Windows.Forms.Padding(4);
             this.txt_atualizarDescricao.MaxLength = 500;
             this.txt_atualizarDescricao.Multiline = true;
             this.txt_atualizarDescricao.Name = "txt_atualizarDescricao";
@@ -431,7 +432,7 @@
             this.Controls.Add(this.btn_titulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FinancasAtualizarView";
             this.Text = "Seiton System";
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
