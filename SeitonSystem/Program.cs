@@ -1,4 +1,5 @@
 ﻿using SeitonSystem.src.view;
+using SeitonSystem.src.view.financas;
 using SeitonSystem.src.view.Inicial;
 using SeitonSystem.src.view.Pedido;
 using SeitonSystem.view;
@@ -18,7 +19,7 @@ namespace SeitonSystem
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FinancasView());
+            Application.Run(new InicialView());
 
         }
     }

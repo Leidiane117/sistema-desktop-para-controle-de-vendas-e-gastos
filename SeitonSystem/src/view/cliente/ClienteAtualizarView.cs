@@ -9,6 +9,7 @@ namespace SeitonSystem.view
 {
     public partial class ClienteAtualizarView : Form
     {
+
         ClienteController clienteController;
         Cliente cliente;
 
@@ -128,10 +129,13 @@ namespace SeitonSystem.view
             txt_id.Text = this.cliente.Id.ToString();
             txt_nome.Text = this.cliente.Nome;
 
-            txt_ddTel.Text = this.cliente.Telefone.Substring(0, 2);
-            txt_telefone.Text = this.cliente.Telefone.Substring(2);
+            if (this.cliente.Telefone.Trim() != "")
+            {
+                txt_ddTel.Text = this.cliente.Telefone.Substring(1, 2);
+                txt_telefone.Text = this.cliente.Telefone.Substring(2);
+            }
 
-            txt_ddCel.Text = this.cliente.Celular.Substring(0, 2);
+            txt_ddCel.Text = this.cliente.Celular.Substring(1, 2);
             txt_celular.Text = this.cliente.Celular.Substring(2);
 
             txt_insta.Text = this.cliente.Instagram;
@@ -161,7 +165,7 @@ namespace SeitonSystem.view
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }

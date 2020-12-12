@@ -198,13 +198,14 @@
             // label8
             // 
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold);
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.White;
             this.label8.Location = new System.Drawing.Point(684, 182);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(66, 33);
+            this.label8.Size = new System.Drawing.Size(78, 36);
             this.label8.TabIndex = 153;
             this.label8.Text = "R$";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;

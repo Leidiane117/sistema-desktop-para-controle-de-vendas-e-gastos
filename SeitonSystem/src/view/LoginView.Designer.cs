@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginView));
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -44,6 +45,8 @@
             this.panel8 = new System.Windows.Forms.Panel();
             this.txt_senha = new System.Windows.Forms.TextBox();
             this.txt_user = new System.Windows.Forms.TextBox();
+            this.pb_login = new MetroFramework.Controls.MetroProgressBar();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
@@ -239,12 +242,29 @@
             this.txt_user.Size = new System.Drawing.Size(237, 21);
             this.txt_user.TabIndex = 148;
             // 
+            // pb_login
+            // 
+            this.pb_login.Location = new System.Drawing.Point(463, 544);
+            this.pb_login.Name = "pb_login";
+            this.pb_login.ProgressBarStyle = System.Windows.Forms.ProgressBarStyle.Blocks;
+            this.pb_login.Size = new System.Drawing.Size(418, 19);
+            this.pb_login.Style = MetroFramework.MetroColorStyle.Pink;
+            this.pb_login.TabIndex = 161;
+            this.pb_login.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.pb_login.Value = 5;
+            this.pb_login.Visible = false;
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // LoginView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(229)))), ((int)(((byte)(165)))), ((int)(((byte)(138)))));
             this.ClientSize = new System.Drawing.Size(996, 607);
+            this.Controls.Add(this.pb_login);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -282,5 +302,7 @@
         private System.Windows.Forms.Button btn_limpar;
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private MetroFramework.Controls.MetroProgressBar pb_login;
+        private System.Windows.Forms.Timer timer1;
     }
 }

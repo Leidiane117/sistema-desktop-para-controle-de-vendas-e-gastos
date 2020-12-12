@@ -28,17 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PedidoDetailView));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
             this.linha = new System.Windows.Forms.Panel();
             this.btn_titulo = new System.Windows.Forms.Button();
             this.btn_atualizar = new System.Windows.Forms.Button();
@@ -94,43 +94,43 @@
             this.btn_addProdutoE = new System.Windows.Forms.Button();
             this.panel_dadosEntrega = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
+            this.panel_dadosRetirada = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.btn_limpar = new System.Windows.Forms.Button();
+            this.btn_addProduto = new System.Windows.Forms.Button();
+            this.txt_cliente = new System.Windows.Forms.TextBox();
+            this.cb_tipoPag = new System.Windows.Forms.ComboBox();
+            this.db_produtos = new MetroFramework.Controls.MetroGrid();
+            this.txt_valorTotal = new System.Windows.Forms.TextBox();
+            this.lbl_valor = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel_produtos = new System.Windows.Forms.Panel();
+            this.btn_excluir = new System.Windows.Forms.Button();
+            this.txt_horaEntrega = new System.Windows.Forms.DateTimePicker();
+            this.txt_dataPag = new System.Windows.Forms.DateTimePicker();
+            this.txt_dataEntrega = new System.Windows.Forms.DateTimePicker();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.lbl_obs = new System.Windows.Forms.Label();
+            this.lbl_qtd = new System.Windows.Forms.Label();
+            this.txt_quantidade = new System.Windows.Forms.NumericUpDown();
+            this.cb_produtos = new System.Windows.Forms.ComboBox();
+            this.lbl_produto = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.lbl_idPedido = new System.Windows.Forms.Label();
+            this.txt_idPedido = new System.Windows.Forms.TextBox();
+            this.lbl_dataPag = new System.Windows.Forms.Label();
+            this.lbl_tipo = new System.Windows.Forms.Label();
+            this.lbl_HoraEntrega = new System.Windows.Forms.Label();
+            this.lbl_dataEntrega = new System.Windows.Forms.Label();
+            this.cb_situacao = new System.Windows.Forms.ComboBox();
+            this.lbl_situacao = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.txt_obs = new System.Windows.Forms.TextBox();
+            this.lbl_cliente = new System.Windows.Forms.Label();
             this.panel_produtosE = new System.Windows.Forms.Panel();
             this.btn_excluirE = new System.Windows.Forms.Button();
             this.lbl_obsE = new System.Windows.Forms.Label();
             this.txt_obsE = new System.Windows.Forms.TextBox();
-            this.lbl_cliente = new System.Windows.Forms.Label();
-            this.txt_obs = new System.Windows.Forms.TextBox();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.lbl_situacao = new System.Windows.Forms.Label();
-            this.cb_situacao = new System.Windows.Forms.ComboBox();
-            this.lbl_dataEntrega = new System.Windows.Forms.Label();
-            this.lbl_HoraEntrega = new System.Windows.Forms.Label();
-            this.lbl_tipo = new System.Windows.Forms.Label();
-            this.lbl_dataPag = new System.Windows.Forms.Label();
-            this.txt_idPedido = new System.Windows.Forms.TextBox();
-            this.lbl_idPedido = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.lbl_produto = new System.Windows.Forms.Label();
-            this.cb_produtos = new System.Windows.Forms.ComboBox();
-            this.txt_quantidade = new System.Windows.Forms.NumericUpDown();
-            this.lbl_qtd = new System.Windows.Forms.Label();
-            this.lbl_obs = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.txt_dataEntrega = new System.Windows.Forms.DateTimePicker();
-            this.txt_dataPag = new System.Windows.Forms.DateTimePicker();
-            this.txt_horaEntrega = new System.Windows.Forms.DateTimePicker();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lbl_valor = new System.Windows.Forms.Label();
-            this.txt_valorTotal = new System.Windows.Forms.TextBox();
-            this.db_produtos = new MetroFramework.Controls.MetroGrid();
-            this.cb_tipoPag = new System.Windows.Forms.ComboBox();
-            this.txt_cliente = new System.Windows.Forms.TextBox();
-            this.btn_addProduto = new System.Windows.Forms.Button();
-            this.btn_limpar = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.panel_dadosRetirada = new System.Windows.Forms.Panel();
-            this.panel_produtos = new System.Windows.Forms.Panel();
-            this.btn_excluir = new System.Windows.Forms.Button();
             this.pic_cantoe = new System.Windows.Forms.PictureBox();
             this.pic_caldaE = new System.Windows.Forms.PictureBox();
             this.pic_cantod = new System.Windows.Forms.PictureBox();
@@ -141,11 +141,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.txt_quantidadeE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_produtosE)).BeginInit();
             this.panel_dadosEntrega.SuspendLayout();
-            this.panel_produtosE.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.txt_quantidade)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_produtos)).BeginInit();
             this.panel_dadosRetirada.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.db_produtos)).BeginInit();
             this.panel_produtos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txt_quantidade)).BeginInit();
+            this.panel_produtosE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cantoe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_caldaE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cantod)).BeginInit();
@@ -684,36 +684,36 @@
             this.db_produtosE.AllowUserToAddRows = false;
             this.db_produtosE.AllowUserToDeleteRows = false;
             this.db_produtosE.AllowUserToResizeRows = false;
-            dataGridViewCellStyle61.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle61.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle61.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle61.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle61.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_produtosE.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle61;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_produtosE.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle11;
             this.db_produtosE.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.db_produtosE.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
             this.db_produtosE.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.db_produtosE.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
             this.db_produtosE.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle62.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle62.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle62.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle62.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle62.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            dataGridViewCellStyle62.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle62.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle62.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_produtosE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle62;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_produtosE.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.db_produtosE.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.db_produtosE.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle63.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle63.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle63.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle63.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle63.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle63.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle63.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.db_produtosE.DefaultCellStyle = dataGridViewCellStyle63;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.db_produtosE.DefaultCellStyle = dataGridViewCellStyle13;
             this.db_produtosE.Enabled = false;
             this.db_produtosE.EnableHeadersVisualStyles = false;
             this.db_produtosE.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -723,22 +723,22 @@
             this.db_produtosE.Name = "db_produtosE";
             this.db_produtosE.ReadOnly = true;
             this.db_produtosE.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle64.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle64.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle64.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle64.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle64.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle64.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle64.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_produtosE.RowHeadersDefaultCellStyle = dataGridViewCellStyle64;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_produtosE.RowHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.db_produtosE.RowHeadersWidth = 51;
             this.db_produtosE.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle65.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle65.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle65.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle65.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle65.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_produtosE.RowsDefaultCellStyle = dataGridViewCellStyle65;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_produtosE.RowsDefaultCellStyle = dataGridViewCellStyle15;
             this.db_produtosE.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
             this.db_produtosE.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.db_produtosE.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
@@ -1046,7 +1046,6 @@
             this.panel_dadosEntrega.Controls.Add(this.lbl_logradouro);
             this.panel_dadosEntrega.Controls.Add(this.txt_logradouro);
             this.panel_dadosEntrega.Controls.Add(this.panel3);
-            this.panel_dadosEntrega.Controls.Add(this.panel_dadosRetirada);
             this.panel_dadosEntrega.Controls.Add(this.txt_bairro);
             this.panel_dadosEntrega.Controls.Add(this.txt_cep);
             this.panel_dadosEntrega.Controls.Add(this.txt_compl);
@@ -1082,10 +1081,10 @@
             this.panel_dadosEntrega.Controls.Add(this.lbl_clienteE);
             this.panel_dadosEntrega.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel_dadosEntrega.ForeColor = System.Drawing.Color.White;
-            this.panel_dadosEntrega.Location = new System.Drawing.Point(9, 243);
+            this.panel_dadosEntrega.Location = new System.Drawing.Point(79, 229);
             this.panel_dadosEntrega.Margin = new System.Windows.Forms.Padding(4);
             this.panel_dadosEntrega.Name = "panel_dadosEntrega";
-            this.panel_dadosEntrega.Size = new System.Drawing.Size(1145, 549);
+            this.panel_dadosEntrega.Size = new System.Drawing.Size(1145, 558);
             this.panel_dadosEntrega.TabIndex = 16;
             this.panel_dadosEntrega.Visible = false;
             // 
@@ -1107,6 +1106,589 @@
             this.button1.Text = "Endereço:";
             this.button1.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // panel_dadosRetirada
+            // 
+            this.panel_dadosRetirada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.panel_dadosRetirada.Controls.Add(this.panel6);
+            this.panel_dadosRetirada.Controls.Add(this.btn_limpar);
+            this.panel_dadosRetirada.Controls.Add(this.btn_addProduto);
+            this.panel_dadosRetirada.Controls.Add(this.txt_cliente);
+            this.panel_dadosRetirada.Controls.Add(this.cb_tipoPag);
+            this.panel_dadosRetirada.Controls.Add(this.db_produtos);
+            this.panel_dadosRetirada.Controls.Add(this.txt_valorTotal);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_valor);
+            this.panel_dadosRetirada.Controls.Add(this.label8);
+            this.panel_dadosRetirada.Controls.Add(this.panel_produtos);
+            this.panel_dadosRetirada.Controls.Add(this.txt_horaEntrega);
+            this.panel_dadosRetirada.Controls.Add(this.txt_dataPag);
+            this.panel_dadosRetirada.Controls.Add(this.txt_dataEntrega);
+            this.panel_dadosRetirada.Controls.Add(this.textBox9);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_obs);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_qtd);
+            this.panel_dadosRetirada.Controls.Add(this.txt_quantidade);
+            this.panel_dadosRetirada.Controls.Add(this.cb_produtos);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_produto);
+            this.panel_dadosRetirada.Controls.Add(this.panel4);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_idPedido);
+            this.panel_dadosRetirada.Controls.Add(this.txt_idPedido);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_dataPag);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_tipo);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_HoraEntrega);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_dataEntrega);
+            this.panel_dadosRetirada.Controls.Add(this.cb_situacao);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_situacao);
+            this.panel_dadosRetirada.Controls.Add(this.panel5);
+            this.panel_dadosRetirada.Controls.Add(this.txt_obs);
+            this.panel_dadosRetirada.Controls.Add(this.lbl_cliente);
+            this.panel_dadosRetirada.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel_dadosRetirada.ForeColor = System.Drawing.Color.White;
+            this.panel_dadosRetirada.Location = new System.Drawing.Point(71, 261);
+            this.panel_dadosRetirada.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_dadosRetirada.Name = "panel_dadosRetirada";
+            this.panel_dadosRetirada.Size = new System.Drawing.Size(1161, 476);
+            this.panel_dadosRetirada.TabIndex = 72;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.White;
+            this.panel6.Location = new System.Drawing.Point(777, 220);
+            this.panel6.Margin = new System.Windows.Forms.Padding(4);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(64, 2);
+            this.panel6.TabIndex = 81;
+            // 
+            // btn_limpar
+            // 
+            this.btn_limpar.BackColor = System.Drawing.Color.Transparent;
+            this.btn_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_limpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_limpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.btn_limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_limpar.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btn_limpar.Location = new System.Drawing.Point(635, 404);
+            this.btn_limpar.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_limpar.Name = "btn_limpar";
+            this.btn_limpar.Size = new System.Drawing.Size(97, 34);
+            this.btn_limpar.TabIndex = 80;
+            this.btn_limpar.Text = "Limpar";
+            this.btn_limpar.UseVisualStyleBackColor = false;
+            this.btn_limpar.Visible = false;
+            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
+            // 
+            // btn_addProduto
+            // 
+            this.btn_addProduto.BackColor = System.Drawing.Color.Transparent;
+            this.btn_addProduto.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_addProduto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.btn_addProduto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.btn_addProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.btn_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_addProduto.Font = new System.Drawing.Font("Segoe UI", 11F);
+            this.btn_addProduto.Location = new System.Drawing.Point(757, 404);
+            this.btn_addProduto.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_addProduto.Name = "btn_addProduto";
+            this.btn_addProduto.Size = new System.Drawing.Size(97, 34);
+            this.btn_addProduto.TabIndex = 79;
+            this.btn_addProduto.Text = "Salvar";
+            this.btn_addProduto.UseVisualStyleBackColor = false;
+            this.btn_addProduto.Visible = false;
+            this.btn_addProduto.Click += new System.EventHandler(this.btn_addProduto_Click);
+            // 
+            // txt_cliente
+            // 
+            this.txt_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_cliente.ForeColor = System.Drawing.Color.DimGray;
+            this.txt_cliente.Location = new System.Drawing.Point(127, 23);
+            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_cliente.MaxLength = 9999;
+            this.txt_cliente.Multiline = true;
+            this.txt_cliente.Name = "txt_cliente";
+            this.txt_cliente.ReadOnly = true;
+            this.txt_cliente.Size = new System.Drawing.Size(715, 35);
+            this.txt_cliente.TabIndex = 78;
+            // 
+            // cb_tipoPag
+            // 
+            this.cb_tipoPag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.cb_tipoPag.Enabled = false;
+            this.cb_tipoPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_tipoPag.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.cb_tipoPag.ForeColor = System.Drawing.Color.White;
+            this.cb_tipoPag.FormattingEnabled = true;
+            this.cb_tipoPag.Items.AddRange(new object[] {
+            "Dinheiro",
+            "Cartão"});
+            this.cb_tipoPag.Location = new System.Drawing.Point(28, 106);
+            this.cb_tipoPag.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_tipoPag.Name = "cb_tipoPag";
+            this.cb_tipoPag.Size = new System.Drawing.Size(192, 36);
+            this.cb_tipoPag.TabIndex = 77;
+            // 
+            // db_produtos
+            // 
+            this.db_produtos.AllowUserToAddRows = false;
+            this.db_produtos.AllowUserToDeleteRows = false;
+            this.db_produtos.AllowUserToResizeRows = false;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_produtos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            this.db_produtos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.db_produtos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
+            this.db_produtos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.db_produtos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
+            this.db_produtos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_produtos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
+            this.db_produtos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.db_produtos.Cursor = System.Windows.Forms.Cursors.Hand;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.db_produtos.DefaultCellStyle = dataGridViewCellStyle18;
+            this.db_produtos.Enabled = false;
+            this.db_produtos.EnableHeadersVisualStyles = false;
+            this.db_produtos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.db_produtos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.db_produtos.Location = new System.Drawing.Point(23, 247);
+            this.db_produtos.Margin = new System.Windows.Forms.Padding(4);
+            this.db_produtos.Name = "db_produtos";
+            this.db_produtos.ReadOnly = true;
+            this.db_produtos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.db_produtos.RowHeadersDefaultCellStyle = dataGridViewCellStyle19;
+            this.db_produtos.RowHeadersWidth = 51;
+            this.db_produtos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_produtos.RowsDefaultCellStyle = dataGridViewCellStyle20;
+            this.db_produtos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
+            this.db_produtos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.db_produtos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
+            this.db_produtos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
+            this.db_produtos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
+            this.db_produtos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.db_produtos.Size = new System.Drawing.Size(595, 162);
+            this.db_produtos.TabIndex = 76;
+            this.db_produtos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_produtos_CellContentClick);
+            // 
+            // txt_valorTotal
+            // 
+            this.txt_valorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_valorTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_valorTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_valorTotal.ForeColor = System.Drawing.Color.White;
+            this.txt_valorTotal.Location = new System.Drawing.Point(947, 375);
+            this.txt_valorTotal.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_valorTotal.MaxLength = 9999;
+            this.txt_valorTotal.Multiline = true;
+            this.txt_valorTotal.Name = "txt_valorTotal";
+            this.txt_valorTotal.ReadOnly = true;
+            this.txt_valorTotal.Size = new System.Drawing.Size(172, 28);
+            this.txt_valorTotal.TabIndex = 75;
+            this.txt_valorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_valor
+            // 
+            this.lbl_valor.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_valor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_valor.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_valor.ForeColor = System.Drawing.Color.White;
+            this.lbl_valor.Location = new System.Drawing.Point(889, 293);
+            this.lbl_valor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_valor.Name = "lbl_valor";
+            this.lbl_valor.Size = new System.Drawing.Size(143, 28);
+            this.lbl_valor.TabIndex = 73;
+            this.lbl_valor.Text = "Valor Total:";
+            this.lbl_valor.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(892, 327);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(64, 118);
+            this.label8.TabIndex = 74;
+            this.label8.Text = "R$";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel_produtos
+            // 
+            this.panel_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.panel_produtos.BackgroundImage = global::SeitonSystem.Properties.Resources.retangulo;
+            this.panel_produtos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.panel_produtos.Controls.Add(this.btn_excluir);
+            this.panel_produtos.Location = new System.Drawing.Point(0, 391);
+            this.panel_produtos.Margin = new System.Windows.Forms.Padding(4);
+            this.panel_produtos.Name = "panel_produtos";
+            this.panel_produtos.Size = new System.Drawing.Size(152, 59);
+            this.panel_produtos.TabIndex = 70;
+            this.panel_produtos.Visible = false;
+            // 
+            // btn_excluir
+            // 
+            this.btn_excluir.BackColor = System.Drawing.Color.Transparent;
+            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_excluir.FlatAppearance.BorderSize = 0;
+            this.btn_excluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btn_excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_excluir.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_excluir.ForeColor = System.Drawing.Color.Black;
+            this.btn_excluir.Image = ((System.Drawing.Image)(resources.GetObject("btn_excluir.Image")));
+            this.btn_excluir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
+            this.btn_excluir.Location = new System.Drawing.Point(17, 15);
+            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_excluir.Name = "btn_excluir";
+            this.btn_excluir.Size = new System.Drawing.Size(133, 39);
+            this.btn_excluir.TabIndex = 39;
+            this.btn_excluir.Text = "Deletar";
+            this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_excluir.UseVisualStyleBackColor = false;
+            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
+            // 
+            // txt_horaEntrega
+            // 
+            this.txt_horaEntrega.CalendarFont = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_horaEntrega.CalendarForeColor = System.Drawing.Color.White;
+            this.txt_horaEntrega.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.txt_horaEntrega.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.txt_horaEntrega.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.txt_horaEntrega.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_horaEntrega.Enabled = false;
+            this.txt_horaEntrega.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_horaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.txt_horaEntrega.Location = new System.Drawing.Point(677, 108);
+            this.txt_horaEntrega.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_horaEntrega.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.txt_horaEntrega.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.txt_horaEntrega.Name = "txt_horaEntrega";
+            this.txt_horaEntrega.ShowUpDown = true;
+            this.txt_horaEntrega.Size = new System.Drawing.Size(160, 30);
+            this.txt_horaEntrega.TabIndex = 66;
+            this.txt_horaEntrega.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
+            // 
+            // txt_dataPag
+            // 
+            this.txt_dataPag.CalendarFont = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_dataPag.CalendarForeColor = System.Drawing.Color.White;
+            this.txt_dataPag.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.txt_dataPag.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.txt_dataPag.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.txt_dataPag.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_dataPag.Enabled = false;
+            this.txt_dataPag.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_dataPag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_dataPag.Location = new System.Drawing.Point(449, 108);
+            this.txt_dataPag.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dataPag.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.txt_dataPag.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.txt_dataPag.Name = "txt_dataPag";
+            this.txt_dataPag.Size = new System.Drawing.Size(195, 30);
+            this.txt_dataPag.TabIndex = 65;
+            this.txt_dataPag.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
+            // 
+            // txt_dataEntrega
+            // 
+            this.txt_dataEntrega.CalendarFont = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.txt_dataEntrega.CalendarForeColor = System.Drawing.Color.White;
+            this.txt_dataEntrega.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
+            this.txt_dataEntrega.CalendarTitleBackColor = System.Drawing.Color.Transparent;
+            this.txt_dataEntrega.CalendarTitleForeColor = System.Drawing.Color.Black;
+            this.txt_dataEntrega.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_dataEntrega.Enabled = false;
+            this.txt_dataEntrega.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_dataEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.txt_dataEntrega.Location = new System.Drawing.Point(249, 108);
+            this.txt_dataEntrega.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_dataEntrega.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
+            this.txt_dataEntrega.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
+            this.txt_dataEntrega.Name = "txt_dataEntrega";
+            this.txt_dataEntrega.Size = new System.Drawing.Size(163, 30);
+            this.txt_dataEntrega.TabIndex = 64;
+            this.txt_dataEntrega.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
+            // 
+            // textBox9
+            // 
+            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox9.Enabled = false;
+            this.textBox9.ForeColor = System.Drawing.Color.White;
+            this.textBox9.Location = new System.Drawing.Point(889, 325);
+            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.textBox9.MaxLength = 9;
+            this.textBox9.Multiline = true;
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(234, 124);
+            this.textBox9.TabIndex = 72;
+            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // lbl_obs
+            // 
+            this.lbl_obs.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_obs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_obs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_obs.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_obs.ForeColor = System.Drawing.Color.White;
+            this.lbl_obs.Location = new System.Drawing.Point(632, 235);
+            this.lbl_obs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_obs.Name = "lbl_obs";
+            this.lbl_obs.Size = new System.Drawing.Size(133, 28);
+            this.lbl_obs.TabIndex = 63;
+            this.lbl_obs.Text = "Observação:";
+            this.lbl_obs.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // lbl_qtd
+            // 
+            this.lbl_qtd.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_qtd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_qtd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_qtd.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_qtd.ForeColor = System.Drawing.Color.White;
+            this.lbl_qtd.Location = new System.Drawing.Point(631, 191);
+            this.lbl_qtd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_qtd.Name = "lbl_qtd";
+            this.lbl_qtd.Size = new System.Drawing.Size(139, 28);
+            this.lbl_qtd.TabIndex = 62;
+            this.lbl_qtd.Text = "*Quantidade:";
+            this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txt_quantidade
+            // 
+            this.txt_quantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_quantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txt_quantidade.Enabled = false;
+            this.txt_quantidade.Font = new System.Drawing.Font("Segoe UI", 10.25F);
+            this.txt_quantidade.ForeColor = System.Drawing.Color.White;
+            this.txt_quantidade.Location = new System.Drawing.Point(777, 192);
+            this.txt_quantidade.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_quantidade.Name = "txt_quantidade";
+            this.txt_quantidade.Size = new System.Drawing.Size(64, 26);
+            this.txt_quantidade.TabIndex = 61;
+            // 
+            // cb_produtos
+            // 
+            this.cb_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.cb_produtos.Enabled = false;
+            this.cb_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_produtos.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.cb_produtos.ForeColor = System.Drawing.Color.White;
+            this.cb_produtos.FormattingEnabled = true;
+            this.cb_produtos.Location = new System.Drawing.Point(159, 192);
+            this.cb_produtos.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_produtos.Name = "cb_produtos";
+            this.cb_produtos.Size = new System.Drawing.Size(457, 36);
+            this.cb_produtos.TabIndex = 59;
+            this.cb_produtos.SelectedIndexChanged += new System.EventHandler(this.cb_produtos_SelectedIndexChanged);
+            // 
+            // lbl_produto
+            // 
+            this.lbl_produto.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_produto.Font = new System.Drawing.Font("Segoe UI", 14.25F);
+            this.lbl_produto.ForeColor = System.Drawing.Color.White;
+            this.lbl_produto.Location = new System.Drawing.Point(17, 193);
+            this.lbl_produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_produto.Name = "lbl_produto";
+            this.lbl_produto.Size = new System.Drawing.Size(143, 28);
+            this.lbl_produto.TabIndex = 57;
+            this.lbl_produto.Text = "Produtos:";
+            this.lbl_produto.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Location = new System.Drawing.Point(29, 159);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(817, 2);
+            this.panel4.TabIndex = 13;
+            // 
+            // lbl_idPedido
+            // 
+            this.lbl_idPedido.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_idPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_idPedido.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_idPedido.ForeColor = System.Drawing.Color.White;
+            this.lbl_idPedido.Location = new System.Drawing.Point(881, 17);
+            this.lbl_idPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_idPedido.Name = "lbl_idPedido";
+            this.lbl_idPedido.Size = new System.Drawing.Size(129, 28);
+            this.lbl_idPedido.TabIndex = 17;
+            this.lbl_idPedido.Text = "ID:";
+            this.lbl_idPedido.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // txt_idPedido
+            // 
+            this.txt_idPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_idPedido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_idPedido.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_idPedido.ForeColor = System.Drawing.Color.White;
+            this.txt_idPedido.Location = new System.Drawing.Point(884, 47);
+            this.txt_idPedido.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_idPedido.MaxLength = 9999;
+            this.txt_idPedido.Multiline = true;
+            this.txt_idPedido.Name = "txt_idPedido";
+            this.txt_idPedido.ReadOnly = true;
+            this.txt_idPedido.Size = new System.Drawing.Size(239, 35);
+            this.txt_idPedido.TabIndex = 17;
+            // 
+            // lbl_dataPag
+            // 
+            this.lbl_dataPag.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_dataPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_dataPag.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_dataPag.ForeColor = System.Drawing.Color.White;
+            this.lbl_dataPag.Location = new System.Drawing.Point(447, 75);
+            this.lbl_dataPag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_dataPag.Name = "lbl_dataPag";
+            this.lbl_dataPag.Size = new System.Drawing.Size(200, 28);
+            this.lbl_dataPag.TabIndex = 54;
+            this.lbl_dataPag.Text = "*Data de Pagamento:";
+            this.lbl_dataPag.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // lbl_tipo
+            // 
+            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_tipo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_tipo.ForeColor = System.Drawing.Color.White;
+            this.lbl_tipo.Location = new System.Drawing.Point(24, 71);
+            this.lbl_tipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_tipo.Name = "lbl_tipo";
+            this.lbl_tipo.Size = new System.Drawing.Size(211, 28);
+            this.lbl_tipo.TabIndex = 53;
+            this.lbl_tipo.Text = "*Tipo de Pagamento:";
+            this.lbl_tipo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // lbl_HoraEntrega
+            // 
+            this.lbl_HoraEntrega.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_HoraEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_HoraEntrega.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_HoraEntrega.ForeColor = System.Drawing.Color.White;
+            this.lbl_HoraEntrega.Location = new System.Drawing.Point(676, 75);
+            this.lbl_HoraEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_HoraEntrega.Name = "lbl_HoraEntrega";
+            this.lbl_HoraEntrega.Size = new System.Drawing.Size(177, 28);
+            this.lbl_HoraEntrega.TabIndex = 50;
+            this.lbl_HoraEntrega.Text = "*Hora de Entrega:";
+            this.lbl_HoraEntrega.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // lbl_dataEntrega
+            // 
+            this.lbl_dataEntrega.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_dataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_dataEntrega.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dataEntrega.ForeColor = System.Drawing.Color.White;
+            this.lbl_dataEntrega.Location = new System.Drawing.Point(249, 74);
+            this.lbl_dataEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_dataEntrega.Name = "lbl_dataEntrega";
+            this.lbl_dataEntrega.Size = new System.Drawing.Size(179, 28);
+            this.lbl_dataEntrega.TabIndex = 49;
+            this.lbl_dataEntrega.Text = "*Data de Entrega:";
+            this.lbl_dataEntrega.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // cb_situacao
+            // 
+            this.cb_situacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.cb_situacao.Enabled = false;
+            this.cb_situacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cb_situacao.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
+            this.cb_situacao.ForeColor = System.Drawing.Color.White;
+            this.cb_situacao.FormattingEnabled = true;
+            this.cb_situacao.Items.AddRange(new object[] {
+            "Pendente",
+            "Em Andamento"});
+            this.cb_situacao.Location = new System.Drawing.Point(885, 117);
+            this.cb_situacao.Margin = new System.Windows.Forms.Padding(4);
+            this.cb_situacao.Name = "cb_situacao";
+            this.cb_situacao.Size = new System.Drawing.Size(239, 36);
+            this.cb_situacao.TabIndex = 44;
+            // 
+            // lbl_situacao
+            // 
+            this.lbl_situacao.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_situacao.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_situacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_situacao.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_situacao.ForeColor = System.Drawing.Color.White;
+            this.lbl_situacao.Location = new System.Drawing.Point(881, 84);
+            this.lbl_situacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_situacao.Name = "lbl_situacao";
+            this.lbl_situacao.Size = new System.Drawing.Size(93, 28);
+            this.lbl_situacao.TabIndex = 43;
+            this.lbl_situacao.Text = "Situação:";
+            this.lbl_situacao.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.White;
+            this.panel5.Location = new System.Drawing.Point(864, 33);
+            this.panel5.Margin = new System.Windows.Forms.Padding(4);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(3, 431);
+            this.panel5.TabIndex = 42;
+            // 
+            // txt_obs
+            // 
+            this.txt_obs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
+            this.txt_obs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_obs.Enabled = false;
+            this.txt_obs.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.txt_obs.ForeColor = System.Drawing.Color.White;
+            this.txt_obs.Location = new System.Drawing.Point(635, 265);
+            this.txt_obs.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_obs.MaxLength = 9999;
+            this.txt_obs.Multiline = true;
+            this.txt_obs.Name = "txt_obs";
+            this.txt_obs.Size = new System.Drawing.Size(219, 132);
+            this.txt_obs.TabIndex = 9;
+            // 
+            // lbl_cliente
+            // 
+            this.lbl_cliente.BackColor = System.Drawing.Color.Transparent;
+            this.lbl_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.lbl_cliente.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.lbl_cliente.ForeColor = System.Drawing.Color.White;
+            this.lbl_cliente.Location = new System.Drawing.Point(25, 26);
+            this.lbl_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_cliente.Name = "lbl_cliente";
+            this.lbl_cliente.Size = new System.Drawing.Size(112, 28);
+            this.lbl_cliente.TabIndex = 0;
+            this.lbl_cliente.Text = "*Cliente:";
+            this.lbl_cliente.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
             // panel_produtosE
             // 
@@ -1173,589 +1755,6 @@
             this.txt_obsE.Name = "txt_obsE";
             this.txt_obsE.Size = new System.Drawing.Size(237, 108);
             this.txt_obsE.TabIndex = 9;
-            // 
-            // lbl_cliente
-            // 
-            this.lbl_cliente.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_cliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_cliente.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_cliente.ForeColor = System.Drawing.Color.White;
-            this.lbl_cliente.Location = new System.Drawing.Point(25, 26);
-            this.lbl_cliente.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_cliente.Name = "lbl_cliente";
-            this.lbl_cliente.Size = new System.Drawing.Size(112, 28);
-            this.lbl_cliente.TabIndex = 0;
-            this.lbl_cliente.Text = "*Cliente:";
-            this.lbl_cliente.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txt_obs
-            // 
-            this.txt_obs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_obs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_obs.Enabled = false;
-            this.txt_obs.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_obs.ForeColor = System.Drawing.Color.White;
-            this.txt_obs.Location = new System.Drawing.Point(635, 265);
-            this.txt_obs.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_obs.MaxLength = 9999;
-            this.txt_obs.Multiline = true;
-            this.txt_obs.Name = "txt_obs";
-            this.txt_obs.Size = new System.Drawing.Size(219, 132);
-            this.txt_obs.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.White;
-            this.panel5.Location = new System.Drawing.Point(864, 33);
-            this.panel5.Margin = new System.Windows.Forms.Padding(4);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(3, 431);
-            this.panel5.TabIndex = 42;
-            // 
-            // lbl_situacao
-            // 
-            this.lbl_situacao.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_situacao.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_situacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_situacao.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_situacao.ForeColor = System.Drawing.Color.White;
-            this.lbl_situacao.Location = new System.Drawing.Point(881, 84);
-            this.lbl_situacao.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_situacao.Name = "lbl_situacao";
-            this.lbl_situacao.Size = new System.Drawing.Size(93, 28);
-            this.lbl_situacao.TabIndex = 43;
-            this.lbl_situacao.Text = "Situação:";
-            this.lbl_situacao.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // cb_situacao
-            // 
-            this.cb_situacao.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.cb_situacao.Enabled = false;
-            this.cb_situacao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_situacao.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.cb_situacao.ForeColor = System.Drawing.Color.White;
-            this.cb_situacao.FormattingEnabled = true;
-            this.cb_situacao.Items.AddRange(new object[] {
-            "Pendente",
-            "Em Andamento"});
-            this.cb_situacao.Location = new System.Drawing.Point(885, 117);
-            this.cb_situacao.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_situacao.Name = "cb_situacao";
-            this.cb_situacao.Size = new System.Drawing.Size(239, 36);
-            this.cb_situacao.TabIndex = 44;
-            // 
-            // lbl_dataEntrega
-            // 
-            this.lbl_dataEntrega.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_dataEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_dataEntrega.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_dataEntrega.ForeColor = System.Drawing.Color.White;
-            this.lbl_dataEntrega.Location = new System.Drawing.Point(249, 74);
-            this.lbl_dataEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_dataEntrega.Name = "lbl_dataEntrega";
-            this.lbl_dataEntrega.Size = new System.Drawing.Size(179, 28);
-            this.lbl_dataEntrega.TabIndex = 49;
-            this.lbl_dataEntrega.Text = "*Data de Entrega:";
-            this.lbl_dataEntrega.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lbl_HoraEntrega
-            // 
-            this.lbl_HoraEntrega.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_HoraEntrega.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_HoraEntrega.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HoraEntrega.ForeColor = System.Drawing.Color.White;
-            this.lbl_HoraEntrega.Location = new System.Drawing.Point(676, 75);
-            this.lbl_HoraEntrega.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_HoraEntrega.Name = "lbl_HoraEntrega";
-            this.lbl_HoraEntrega.Size = new System.Drawing.Size(177, 28);
-            this.lbl_HoraEntrega.TabIndex = 50;
-            this.lbl_HoraEntrega.Text = "*Hora de Entrega:";
-            this.lbl_HoraEntrega.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lbl_tipo
-            // 
-            this.lbl_tipo.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_tipo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_tipo.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_tipo.ForeColor = System.Drawing.Color.White;
-            this.lbl_tipo.Location = new System.Drawing.Point(24, 71);
-            this.lbl_tipo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_tipo.Name = "lbl_tipo";
-            this.lbl_tipo.Size = new System.Drawing.Size(211, 28);
-            this.lbl_tipo.TabIndex = 53;
-            this.lbl_tipo.Text = "*Tipo de Pagamento:";
-            this.lbl_tipo.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lbl_dataPag
-            // 
-            this.lbl_dataPag.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_dataPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_dataPag.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_dataPag.ForeColor = System.Drawing.Color.White;
-            this.lbl_dataPag.Location = new System.Drawing.Point(447, 75);
-            this.lbl_dataPag.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_dataPag.Name = "lbl_dataPag";
-            this.lbl_dataPag.Size = new System.Drawing.Size(200, 28);
-            this.lbl_dataPag.TabIndex = 54;
-            this.lbl_dataPag.Text = "*Data de Pagamento:";
-            this.lbl_dataPag.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txt_idPedido
-            // 
-            this.txt_idPedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_idPedido.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_idPedido.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_idPedido.ForeColor = System.Drawing.Color.White;
-            this.txt_idPedido.Location = new System.Drawing.Point(884, 47);
-            this.txt_idPedido.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_idPedido.MaxLength = 9999;
-            this.txt_idPedido.Multiline = true;
-            this.txt_idPedido.Name = "txt_idPedido";
-            this.txt_idPedido.ReadOnly = true;
-            this.txt_idPedido.Size = new System.Drawing.Size(239, 35);
-            this.txt_idPedido.TabIndex = 17;
-            // 
-            // lbl_idPedido
-            // 
-            this.lbl_idPedido.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_idPedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_idPedido.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_idPedido.ForeColor = System.Drawing.Color.White;
-            this.lbl_idPedido.Location = new System.Drawing.Point(881, 17);
-            this.lbl_idPedido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_idPedido.Name = "lbl_idPedido";
-            this.lbl_idPedido.Size = new System.Drawing.Size(129, 28);
-            this.lbl_idPedido.TabIndex = 17;
-            this.lbl_idPedido.Text = "ID:";
-            this.lbl_idPedido.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(29, 159);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(817, 2);
-            this.panel4.TabIndex = 13;
-            // 
-            // lbl_produto
-            // 
-            this.lbl_produto.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_produto.Font = new System.Drawing.Font("Segoe UI", 14.25F);
-            this.lbl_produto.ForeColor = System.Drawing.Color.White;
-            this.lbl_produto.Location = new System.Drawing.Point(17, 193);
-            this.lbl_produto.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_produto.Name = "lbl_produto";
-            this.lbl_produto.Size = new System.Drawing.Size(143, 28);
-            this.lbl_produto.TabIndex = 57;
-            this.lbl_produto.Text = "Produtos:";
-            this.lbl_produto.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // cb_produtos
-            // 
-            this.cb_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.cb_produtos.Enabled = false;
-            this.cb_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_produtos.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.cb_produtos.ForeColor = System.Drawing.Color.White;
-            this.cb_produtos.FormattingEnabled = true;
-            this.cb_produtos.Location = new System.Drawing.Point(159, 192);
-            this.cb_produtos.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_produtos.Name = "cb_produtos";
-            this.cb_produtos.Size = new System.Drawing.Size(457, 36);
-            this.cb_produtos.TabIndex = 59;
-            this.cb_produtos.SelectedIndexChanged += new System.EventHandler(this.cb_produtos_SelectedIndexChanged);
-            // 
-            // txt_quantidade
-            // 
-            this.txt_quantidade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_quantidade.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_quantidade.Enabled = false;
-            this.txt_quantidade.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_quantidade.ForeColor = System.Drawing.Color.White;
-            this.txt_quantidade.Location = new System.Drawing.Point(777, 192);
-            this.txt_quantidade.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_quantidade.Name = "txt_quantidade";
-            this.txt_quantidade.Size = new System.Drawing.Size(64, 26);
-            this.txt_quantidade.TabIndex = 61;
-            // 
-            // lbl_qtd
-            // 
-            this.lbl_qtd.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_qtd.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_qtd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_qtd.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_qtd.ForeColor = System.Drawing.Color.White;
-            this.lbl_qtd.Location = new System.Drawing.Point(631, 191);
-            this.lbl_qtd.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_qtd.Name = "lbl_qtd";
-            this.lbl_qtd.Size = new System.Drawing.Size(139, 28);
-            this.lbl_qtd.TabIndex = 62;
-            this.lbl_qtd.Text = "*Quantidade:";
-            this.lbl_qtd.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // lbl_obs
-            // 
-            this.lbl_obs.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_obs.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_obs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_obs.Font = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.lbl_obs.ForeColor = System.Drawing.Color.White;
-            this.lbl_obs.Location = new System.Drawing.Point(632, 235);
-            this.lbl_obs.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_obs.Name = "lbl_obs";
-            this.lbl_obs.Size = new System.Drawing.Size(133, 28);
-            this.lbl_obs.TabIndex = 63;
-            this.lbl_obs.Text = "Observação:";
-            this.lbl_obs.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // textBox9
-            // 
-            this.textBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.textBox9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox9.Enabled = false;
-            this.textBox9.ForeColor = System.Drawing.Color.White;
-            this.textBox9.Location = new System.Drawing.Point(889, 325);
-            this.textBox9.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox9.MaxLength = 9;
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(234, 124);
-            this.textBox9.TabIndex = 72;
-            this.textBox9.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // txt_dataEntrega
-            // 
-            this.txt_dataEntrega.CalendarFont = new System.Drawing.Font("Segoe UI", 11.25F);
-            this.txt_dataEntrega.CalendarForeColor = System.Drawing.Color.White;
-            this.txt_dataEntrega.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.txt_dataEntrega.CalendarTitleBackColor = System.Drawing.Color.Transparent;
-            this.txt_dataEntrega.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.txt_dataEntrega.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_dataEntrega.Enabled = false;
-            this.txt_dataEntrega.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_dataEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_dataEntrega.Location = new System.Drawing.Point(249, 108);
-            this.txt_dataEntrega.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_dataEntrega.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
-            this.txt_dataEntrega.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.txt_dataEntrega.Name = "txt_dataEntrega";
-            this.txt_dataEntrega.Size = new System.Drawing.Size(163, 30);
-            this.txt_dataEntrega.TabIndex = 64;
-            this.txt_dataEntrega.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
-            // 
-            // txt_dataPag
-            // 
-            this.txt_dataPag.CalendarFont = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_dataPag.CalendarForeColor = System.Drawing.Color.White;
-            this.txt_dataPag.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.txt_dataPag.CalendarTitleBackColor = System.Drawing.Color.Transparent;
-            this.txt_dataPag.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.txt_dataPag.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_dataPag.Enabled = false;
-            this.txt_dataPag.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_dataPag.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.txt_dataPag.Location = new System.Drawing.Point(449, 108);
-            this.txt_dataPag.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_dataPag.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
-            this.txt_dataPag.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.txt_dataPag.Name = "txt_dataPag";
-            this.txt_dataPag.Size = new System.Drawing.Size(195, 30);
-            this.txt_dataPag.TabIndex = 65;
-            this.txt_dataPag.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
-            // 
-            // txt_horaEntrega
-            // 
-            this.txt_horaEntrega.CalendarFont = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_horaEntrega.CalendarForeColor = System.Drawing.Color.White;
-            this.txt_horaEntrega.CalendarMonthBackground = System.Drawing.Color.WhiteSmoke;
-            this.txt_horaEntrega.CalendarTitleBackColor = System.Drawing.Color.Transparent;
-            this.txt_horaEntrega.CalendarTitleForeColor = System.Drawing.Color.Black;
-            this.txt_horaEntrega.CalendarTrailingForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_horaEntrega.Enabled = false;
-            this.txt_horaEntrega.Font = new System.Drawing.Font("Segoe UI", 10.25F);
-            this.txt_horaEntrega.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.txt_horaEntrega.Location = new System.Drawing.Point(677, 108);
-            this.txt_horaEntrega.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_horaEntrega.MaxDate = new System.DateTime(2040, 12, 31, 0, 0, 0, 0);
-            this.txt_horaEntrega.MinDate = new System.DateTime(2020, 1, 1, 0, 0, 0, 0);
-            this.txt_horaEntrega.Name = "txt_horaEntrega";
-            this.txt_horaEntrega.ShowUpDown = true;
-            this.txt_horaEntrega.Size = new System.Drawing.Size(160, 30);
-            this.txt_horaEntrega.TabIndex = 66;
-            this.txt_horaEntrega.Value = new System.DateTime(2020, 10, 20, 0, 0, 0, 0);
-            // 
-            // label8
-            // 
-            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.label8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label8.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(892, 327);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(64, 118);
-            this.label8.TabIndex = 74;
-            this.label8.Text = "R$";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // lbl_valor
-            // 
-            this.lbl_valor.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_valor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.lbl_valor.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_valor.ForeColor = System.Drawing.Color.White;
-            this.lbl_valor.Location = new System.Drawing.Point(889, 293);
-            this.lbl_valor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_valor.Name = "lbl_valor";
-            this.lbl_valor.Size = new System.Drawing.Size(143, 28);
-            this.lbl_valor.TabIndex = 73;
-            this.lbl_valor.Text = "Valor Total:";
-            this.lbl_valor.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // txt_valorTotal
-            // 
-            this.txt_valorTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_valorTotal.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_valorTotal.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_valorTotal.ForeColor = System.Drawing.Color.White;
-            this.txt_valorTotal.Location = new System.Drawing.Point(947, 375);
-            this.txt_valorTotal.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_valorTotal.MaxLength = 9999;
-            this.txt_valorTotal.Multiline = true;
-            this.txt_valorTotal.Name = "txt_valorTotal";
-            this.txt_valorTotal.ReadOnly = true;
-            this.txt_valorTotal.Size = new System.Drawing.Size(172, 28);
-            this.txt_valorTotal.TabIndex = 75;
-            this.txt_valorTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // db_produtos
-            // 
-            this.db_produtos.AllowUserToAddRows = false;
-            this.db_produtos.AllowUserToDeleteRows = false;
-            this.db_produtos.AllowUserToResizeRows = false;
-            dataGridViewCellStyle66.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle66.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle66.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle66.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle66.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_produtos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle66;
-            this.db_produtos.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
-            this.db_produtos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(215)))), ((int)(((byte)(214)))));
-            this.db_produtos.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.db_produtos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.RaisedVertical;
-            this.db_produtos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle67.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle67.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle67.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle67.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle67.Padding = new System.Windows.Forms.Padding(0, 2, 0, 0);
-            dataGridViewCellStyle67.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle67.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle67.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_produtos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle67;
-            this.db_produtos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.db_produtos.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle68.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle68.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle68.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle68.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle68.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle68.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle68.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.db_produtos.DefaultCellStyle = dataGridViewCellStyle68;
-            this.db_produtos.Enabled = false;
-            this.db_produtos.EnableHeadersVisualStyles = false;
-            this.db_produtos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.db_produtos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.db_produtos.Location = new System.Drawing.Point(23, 247);
-            this.db_produtos.Margin = new System.Windows.Forms.Padding(4);
-            this.db_produtos.Name = "db_produtos";
-            this.db_produtos.ReadOnly = true;
-            this.db_produtos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle69.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle69.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle69.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle69.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle69.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle69.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle69.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.db_produtos.RowHeadersDefaultCellStyle = dataGridViewCellStyle69;
-            this.db_produtos.RowHeadersWidth = 51;
-            this.db_produtos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            dataGridViewCellStyle70.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle70.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle70.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            dataGridViewCellStyle70.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_produtos.RowsDefaultCellStyle = dataGridViewCellStyle70;
-            this.db_produtos.RowTemplate.DefaultCellStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(234)))), ((int)(((byte)(207)))), ((int)(((byte)(206)))));
-            this.db_produtos.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.db_produtos.RowTemplate.DefaultCellStyle.ForeColor = System.Drawing.Color.Black;
-            this.db_produtos.RowTemplate.DefaultCellStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(167)))), ((int)(((byte)(166)))));
-            this.db_produtos.RowTemplate.DefaultCellStyle.SelectionForeColor = System.Drawing.Color.Black;
-            this.db_produtos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.db_produtos.Size = new System.Drawing.Size(595, 162);
-            this.db_produtos.TabIndex = 76;
-            this.db_produtos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.db_produtos_CellContentClick);
-            // 
-            // cb_tipoPag
-            // 
-            this.cb_tipoPag.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.cb_tipoPag.Enabled = false;
-            this.cb_tipoPag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cb_tipoPag.Font = new System.Drawing.Font("Segoe UI Semilight", 12F);
-            this.cb_tipoPag.ForeColor = System.Drawing.Color.White;
-            this.cb_tipoPag.FormattingEnabled = true;
-            this.cb_tipoPag.Items.AddRange(new object[] {
-            "Dinheiro",
-            "Cartão"});
-            this.cb_tipoPag.Location = new System.Drawing.Point(28, 106);
-            this.cb_tipoPag.Margin = new System.Windows.Forms.Padding(4);
-            this.cb_tipoPag.Name = "cb_tipoPag";
-            this.cb_tipoPag.Size = new System.Drawing.Size(192, 36);
-            this.cb_tipoPag.TabIndex = 77;
-            // 
-            // txt_cliente
-            // 
-            this.txt_cliente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(171)))), ((int)(((byte)(177)))));
-            this.txt_cliente.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txt_cliente.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.txt_cliente.ForeColor = System.Drawing.Color.DimGray;
-            this.txt_cliente.Location = new System.Drawing.Point(127, 23);
-            this.txt_cliente.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_cliente.MaxLength = 9999;
-            this.txt_cliente.Multiline = true;
-            this.txt_cliente.Name = "txt_cliente";
-            this.txt_cliente.ReadOnly = true;
-            this.txt_cliente.Size = new System.Drawing.Size(715, 35);
-            this.txt_cliente.TabIndex = 78;
-            // 
-            // btn_addProduto
-            // 
-            this.btn_addProduto.BackColor = System.Drawing.Color.Transparent;
-            this.btn_addProduto.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_addProduto.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_addProduto.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.btn_addProduto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.btn_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_addProduto.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btn_addProduto.Location = new System.Drawing.Point(757, 404);
-            this.btn_addProduto.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_addProduto.Name = "btn_addProduto";
-            this.btn_addProduto.Size = new System.Drawing.Size(97, 34);
-            this.btn_addProduto.TabIndex = 79;
-            this.btn_addProduto.Text = "Salvar";
-            this.btn_addProduto.UseVisualStyleBackColor = false;
-            this.btn_addProduto.Visible = false;
-            this.btn_addProduto.Click += new System.EventHandler(this.btn_addProduto_Click);
-            // 
-            // btn_limpar
-            // 
-            this.btn_limpar.BackColor = System.Drawing.Color.Transparent;
-            this.btn_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_limpar.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.btn_limpar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.btn_limpar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.btn_limpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_limpar.Font = new System.Drawing.Font("Segoe UI", 11F);
-            this.btn_limpar.Location = new System.Drawing.Point(635, 404);
-            this.btn_limpar.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_limpar.Name = "btn_limpar";
-            this.btn_limpar.Size = new System.Drawing.Size(97, 34);
-            this.btn_limpar.TabIndex = 80;
-            this.btn_limpar.Text = "Limpar";
-            this.btn_limpar.UseVisualStyleBackColor = false;
-            this.btn_limpar.Visible = false;
-            this.btn_limpar.Click += new System.EventHandler(this.btn_limpar_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(777, 220);
-            this.panel6.Margin = new System.Windows.Forms.Padding(4);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(64, 2);
-            this.panel6.TabIndex = 81;
-            // 
-            // panel_dadosRetirada
-            // 
-            this.panel_dadosRetirada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
-            this.panel_dadosRetirada.Controls.Add(this.panel6);
-            this.panel_dadosRetirada.Controls.Add(this.btn_limpar);
-            this.panel_dadosRetirada.Controls.Add(this.btn_addProduto);
-            this.panel_dadosRetirada.Controls.Add(this.txt_cliente);
-            this.panel_dadosRetirada.Controls.Add(this.cb_tipoPag);
-            this.panel_dadosRetirada.Controls.Add(this.db_produtos);
-            this.panel_dadosRetirada.Controls.Add(this.txt_valorTotal);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_valor);
-            this.panel_dadosRetirada.Controls.Add(this.label8);
-            this.panel_dadosRetirada.Controls.Add(this.panel_produtos);
-            this.panel_dadosRetirada.Controls.Add(this.txt_horaEntrega);
-            this.panel_dadosRetirada.Controls.Add(this.txt_dataPag);
-            this.panel_dadosRetirada.Controls.Add(this.txt_dataEntrega);
-            this.panel_dadosRetirada.Controls.Add(this.textBox9);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_obs);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_qtd);
-            this.panel_dadosRetirada.Controls.Add(this.txt_quantidade);
-            this.panel_dadosRetirada.Controls.Add(this.cb_produtos);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_produto);
-            this.panel_dadosRetirada.Controls.Add(this.panel4);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_idPedido);
-            this.panel_dadosRetirada.Controls.Add(this.txt_idPedido);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_dataPag);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_tipo);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_HoraEntrega);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_dataEntrega);
-            this.panel_dadosRetirada.Controls.Add(this.cb_situacao);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_situacao);
-            this.panel_dadosRetirada.Controls.Add(this.panel5);
-            this.panel_dadosRetirada.Controls.Add(this.txt_obs);
-            this.panel_dadosRetirada.Controls.Add(this.lbl_cliente);
-            this.panel_dadosRetirada.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel_dadosRetirada.ForeColor = System.Drawing.Color.White;
-            this.panel_dadosRetirada.Location = new System.Drawing.Point(9, 21);
-            this.panel_dadosRetirada.Margin = new System.Windows.Forms.Padding(4);
-            this.panel_dadosRetirada.Name = "panel_dadosRetirada";
-            this.panel_dadosRetirada.Size = new System.Drawing.Size(1178, 483);
-            this.panel_dadosRetirada.TabIndex = 72;
-            // 
-            // panel_produtos
-            // 
-            this.panel_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
-            this.panel_produtos.BackgroundImage = global::SeitonSystem.Properties.Resources.retangulo;
-            this.panel_produtos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.panel_produtos.Controls.Add(this.btn_excluir);
-            this.panel_produtos.Location = new System.Drawing.Point(0, 391);
-            this.panel_produtos.Margin = new System.Windows.Forms.Padding(4);
-            this.panel_produtos.Name = "panel_produtos";
-            this.panel_produtos.Size = new System.Drawing.Size(152, 59);
-            this.panel_produtos.TabIndex = 70;
-            this.panel_produtos.Visible = false;
-            // 
-            // btn_excluir
-            // 
-            this.btn_excluir.BackColor = System.Drawing.Color.Transparent;
-            this.btn_excluir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_excluir.FlatAppearance.BorderSize = 0;
-            this.btn_excluir.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
-            this.btn_excluir.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
-            this.btn_excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_excluir.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_excluir.ForeColor = System.Drawing.Color.Black;
-            this.btn_excluir.Image = ((System.Drawing.Image)(resources.GetObject("btn_excluir.Image")));
-            this.btn_excluir.ImageAlign = System.Drawing.ContentAlignment.BottomLeft;
-            this.btn_excluir.Location = new System.Drawing.Point(17, 15);
-            this.btn_excluir.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_excluir.Name = "btn_excluir";
-            this.btn_excluir.Size = new System.Drawing.Size(133, 39);
-            this.btn_excluir.TabIndex = 39;
-            this.btn_excluir.Text = "Deletar";
-            this.btn_excluir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_excluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_excluir.UseVisualStyleBackColor = false;
-            this.btn_excluir.Click += new System.EventHandler(this.btn_excluir_Click);
             // 
             // pic_cantoe
             // 
@@ -1849,7 +1848,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(1312, 969);
+            this.ClientSize = new System.Drawing.Size(1308, 851);
             this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.panel_dadosEntrega);
             this.Controls.Add(this.pic_cantoe);
@@ -1863,6 +1862,7 @@
             this.Controls.Add(this.btn_produtos);
             this.Controls.Add(this.btn_clientes);
             this.Controls.Add(this.btn_cancelar);
+            this.Controls.Add(this.panel_dadosRetirada);
             this.Controls.Add(this.btn_titulo);
             this.Controls.Add(this.linha);
             this.Controls.Add(this.btn_atualizar);
@@ -1876,16 +1876,17 @@
             this.Name = "PedidoDetailView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Seiton System";
+            this.Load += new System.EventHandler(this.PedidoDetailView_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txt_quantidadeE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.db_produtosE)).EndInit();
             this.panel_dadosEntrega.ResumeLayout(false);
             this.panel_dadosEntrega.PerformLayout();
-            this.panel_produtosE.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.txt_quantidade)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.db_produtos)).EndInit();
             this.panel_dadosRetirada.ResumeLayout(false);
             this.panel_dadosRetirada.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.db_produtos)).EndInit();
             this.panel_produtos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.txt_quantidade)).EndInit();
+            this.panel_produtosE.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pic_cantoe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_caldaE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_cantod)).EndInit();

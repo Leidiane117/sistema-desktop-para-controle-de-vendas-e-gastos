@@ -179,8 +179,8 @@ namespace SeitonSystem.src.view.Pedido
                         Financas f = new Financas
                         {
                             Tipo_fluxo = "Entrada",
-                            Titulo = "Pedido " + c.Nome,
-                            Descricao = "Contato: " + c.Celular + c.Email +
+                            Titulo = "Pedido " + " de " + c.Nome,
+                            Descricao = "Contato:" + c.Celular +
                             ", Data de Entrega: " + p.Data_entrega.Substring(0, 10),
                             Valor = p.Valor_total,
                             Data_lancamento = DateTime.Now
@@ -264,7 +264,7 @@ namespace SeitonSystem.src.view.Pedido
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }

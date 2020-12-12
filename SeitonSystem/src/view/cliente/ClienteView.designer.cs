@@ -68,6 +68,7 @@
             // 
             this.btn_clientes.BackColor = System.Drawing.Color.White;
             this.btn_clientes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_clientes.Enabled = false;
             this.btn_clientes.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_clientes.FlatAppearance.BorderSize = 0;
             this.btn_clientes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;

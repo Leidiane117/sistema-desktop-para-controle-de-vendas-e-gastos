@@ -79,24 +79,24 @@ namespace SeitonSystem.view
 
 
                 }
-                if (produto.Preco <= 0)
+                if (double.Parse(txtAtualizarPreco.Text) <= 0)
                 {
-                    throw new Exception("Informe o preço do produto!");
-                }
 
-                if (!Regex.Match(txtAtualizarPreco.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
-                {
-                    throw new Exception("Informe o preço do produto corretamente!");
+                    throw new Exception("Informe o Preço!");
                 }
-                
+                    if (!Regex.Match(txtAtualizarPreco.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
+                    {
+                        throw new Exception("Informe o preço do produto corretamente!");
+                    }
 
-                if (!Regex.Match(textAtualizarNome.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
-                {
-                    throw new Exception("Informe o Nome do produto corretamente!");
+
+                    if (!Regex.Match(textAtualizarNome.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
+                    {
+                        throw new Exception("Informe o Nome do produto corretamente!");
+                    }
+
+
                 }
-
-               
-            }
             catch (Exception)
             {
                 throw;
@@ -150,7 +150,7 @@ namespace SeitonSystem.view
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }

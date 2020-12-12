@@ -720,7 +720,7 @@ namespace SeitonSystem.src.view.Pedido {
         }
 
         private void btn_financas_Click(object sender, EventArgs e) {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }
@@ -730,6 +730,11 @@ namespace SeitonSystem.src.view.Pedido {
             PedidoView p = new PedidoView();
             p.Show();
             this.Close();
+        }
+
+        private void PedidoDetailView_Load(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

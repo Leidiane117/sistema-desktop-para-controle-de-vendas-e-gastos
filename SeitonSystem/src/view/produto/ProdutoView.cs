@@ -72,7 +72,7 @@ namespace SeitonSystem.view
 
         }
 
-       
+
 
         private void ButtonProdutos_Click(object sender, EventArgs e)
         {
@@ -194,28 +194,6 @@ namespace SeitonSystem.view
             panel_excluidos.Visible = false;
         }
 
-        private void txt_pesquisa_KeyUp(object sender, EventArgs e)
-        {
-            try
-            {
-                List<Produto> produto = new List<Produto>();
-
-                if (DataGridViewProdutos.Visible)
-                {
-                    produto = this.produtoController.pesquisaProdutosFitro(txt_pesquisa.Text);
-                    DataGridViewProdutos.DataSource = produto;
-                }
-                else
-                {
-                    produto = this.produtoController.pesquisaProdutosDesativadosFiltro(txt_pesquisa.Text);
-                    DataGridDesativados.DataSource = produto;
-                }
-            }
-            catch (Exception e1)
-            {
-                enviaMsg(e1.Message, "erro");
-            }
-        }
 
         private void btn_clientes_Click(object sender, EventArgs e)
         {
@@ -233,7 +211,7 @@ namespace SeitonSystem.view
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }
@@ -260,22 +238,50 @@ namespace SeitonSystem.view
 
         private void DataGridViewProdutos_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-                panel_produtos.Visible = true;
-                panel_excluidos.Visible = false;
+            panel_produtos.Visible = true;
+            panel_excluidos.Visible = false;
 
-                if (e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
+            {
+                DataGridViewRow row = DataGridViewProdutos.Rows[e.RowIndex];
+                idProduto = int.Parse(row.Cells["Id"].Value.ToString());
+                nomeProduto = row.Cells["Nome"].Value.ToString();
+            }
+        }
+
+
+
+
+        private void txt_pesquisa_KeyUp(object sender, KeyEventArgs e)
+        {
+            try
+            {
+                List<Produto> produto = new List<Produto>();
+
+                if (DataGridViewProdutos.Visible)
                 {
-                    DataGridViewRow row = DataGridViewProdutos.Rows[e.RowIndex];
-                    idProduto = int.Parse(row.Cells["Id"].Value.ToString());
-                    nomeProduto = row.Cells["Nome"].Value.ToString();
+                    produto = this.produtoController.pesquisaProdutosFitro(txt_pesquisa.Text);
+                    DataGridViewProdutos.DataSource = produto;
+                }
+                else
+                {
+                    produto = this.produtoController.pesquisaProdutosDesativadosFiltro(txt_pesquisa.Text);
+                    DataGridDesativados.DataSource = produto;
                 }
             }
-
-
+            catch (Exception e1)
+            {
+                enviaMsg(e1.Message, "erro");
+            }
         }
+
     }
-  
-  
+}
+    
+
+
+
+
 
 
 

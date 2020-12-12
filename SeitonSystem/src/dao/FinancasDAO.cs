@@ -67,7 +67,6 @@ namespace SeitonSystem.src.dao
             {
                 this.cmd = new MySqlCommand(UPDATE_FLUXO, this.conn);
 
-                this.cmd.Parameters.Add(new MySqlParameter("@id", financas.Id));
                 this.cmd.Parameters.Add(new MySqlParameter("@titulo", financas.Titulo));
                 this.cmd.Parameters.Add(new MySqlParameter("@valor", financas.Valor));
                 this.cmd.Parameters.Add(new MySqlParameter("@descricao", financas.Descricao));
@@ -142,39 +141,7 @@ namespace SeitonSystem.src.dao
             return lista;
         }
 
-        public List<Financas> pesquisaFluxosSemana(DateTime data)
-        {
-            List<Financas> lista = new List<Financas>();
-
-            try
-            {
-                this.cmd = new MySqlCommand(SELECT_FLUXO_DATA, this.conn);
-                this.cmd.Parameters.Add(new MySqlParameter("@data", data));
-
-                this.conn.Open();
-                this.dtReader = this.cmd.ExecuteReader();
-
-                if (this.dtReader.HasRows)
-                {
-                    while (this.dtReader.Read())
-                    {
-                        lista.Add(populaFinanca(this.dtReader));
-                    }
-                }
-
-            }
-            catch (Exception)
-            {
-                throw new Exception("Erro ao carregar Dados");
-            }
-            finally
-            {
-                this.dtReader.Close();
-                ConnectDAO.CloseConnection(this.conn);
-            }
-
-            return lista;
-        }
+             
 
         public List<Financas> pesquisaFluxosTipo(String tipo)
         {
@@ -339,29 +306,7 @@ namespace SeitonSystem.src.dao
         }
 
 
-        public  double  lucroProcedure()
-        {
-            
-            try
-            {
-                cmd = new MySqlCommand("lucro", conn);
-                cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                conn.Open();
-                cmd.BeginExecuteNonQuery();
-                
-            }
-            catch (Exception e)
-            {
-                throw new Exception("Erro ao exibir lucro" +"" +e);
-            }
-            finally
-            {
-
-                ConnectDAO.CloseConnection(conn);
-            }
-            return lucroProcedure();
-
-        }
+      
         }
     }
 

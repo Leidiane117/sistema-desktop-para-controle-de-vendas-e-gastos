@@ -15,9 +15,9 @@ namespace SeitonSystem.src.controller
             {
                 this.financasDAO = new FinancasDAO();
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                throw;
+                throw e;
             }
         }
 
@@ -59,21 +59,7 @@ namespace SeitonSystem.src.controller
 
       
 
-        public double lucroProcedure()
-        {
-            try
-            {
-                return financasDAO.lucroProcedure();
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-
-
-
-        }
-
+       
         public List<Financas> pesquisaFluxosData(DateTime data)
         {
             try

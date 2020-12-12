@@ -29,7 +29,7 @@ namespace SeitonSystem.src.view.financas
             {
                 enviaMsg(e.Message, "erro");
 
-                FinancasView f = new FinancasView();
+                FinancasView2 f = new FinancasView2();
                 f.Show();
                 this.Close();
             }
@@ -40,9 +40,6 @@ namespace SeitonSystem.src.view.financas
             DateTime data = DateTime.Now;
 
             cb_pesquisaAno.Items.Add(data.Year);
-            cb_pesquisaAno.Items.Add(data.AddYears(-1).Year);
-            cb_pesquisaAno.Items.Add(data.AddYears(-2).Year);
-
             cb_pesquisaAno.SelectedItem = data.Year;
             cb_pesquisaData.SelectedIndex = 1;
         }
@@ -80,7 +77,7 @@ namespace SeitonSystem.src.view.financas
             {
                 enviaMsg(e1.Message, "aviso");
 
-                FinancasView f = new FinancasView();
+                FinancasView2 f = new FinancasView2();
                 f.Show();
                 this.Close();
             }
@@ -116,7 +113,7 @@ namespace SeitonSystem.src.view.financas
                 data = DateTime.Now;
             }
 
-            if (cb_pesquisaData.SelectedItem.ToString() == "Último 6 meses")
+            if (cb_pesquisaData.SelectedItem.ToString() == "Últimos 6 meses")
             {
                 limparGrafico();
 
@@ -222,7 +219,7 @@ namespace SeitonSystem.src.view.financas
             List<Financas> financasSaida = new List<Financas>();
 
             financasEntrada = this.financasController.pesquisaFluxosTipoDataPeriodo("Entrada", data, data.LastDayOfMonth());
-            financasSaida = this.financasController.pesquisaFluxosTipoDataPeriodo("Saída", data, data.LastDayOfMonth());
+            financasSaida = this.financasController.pesquisaFluxosTipoDataPeriodo("Saida", data, data.LastDayOfMonth());
 
             double valorEntrada = 0;
             double valorSaida = 0;
@@ -331,9 +328,14 @@ namespace SeitonSystem.src.view.financas
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
+        }
+
+        private void gf_entrada_Click(object sender, EventArgs e)
+        {
+            //
         }
     }
 }

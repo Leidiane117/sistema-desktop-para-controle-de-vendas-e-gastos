@@ -15,8 +15,10 @@ namespace SeitonSystem.src.view.Inicial
     public partial class InicialView : Form
     {
         FinancasController financasController;
-        PedidoController pedidoController; 
-
+        PedidoController pedidoController;
+        double lucro;
+        double entrada;
+        double saida;
 
         public InicialView()
         {
@@ -29,9 +31,7 @@ namespace SeitonSystem.src.view.Inicial
                 preencherDataGridView();
                 dataGridview();
 
-                
-                //saldo();
-                //total();
+                lucroDia();
 
             }
             catch (Exception e)
@@ -48,7 +48,7 @@ namespace SeitonSystem.src.view.Inicial
 
 
                 dt.DataSource = pedidos;
-
+               
 
             }
             catch (Exception e)
@@ -80,9 +80,14 @@ namespace SeitonSystem.src.view.Inicial
             dt.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             dt.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             style.BackColor = System.Drawing.Color.FromArgb(153, 88, 63);
-            dt.Columns[1].Width = 100;
+            
+           
             dt.Columns[0].Width = 50;
-            dt.Columns[5].Width = 130;
+            dt.Columns[1].Width = 130;
+            dt.Columns[2].Width = 100;
+            dt.Columns[3].Width = 100;
+            dt.Columns[4].Width = 100;
+            dt.Columns[5].Width = 100;
 
         }
 
@@ -109,7 +114,7 @@ namespace SeitonSystem.src.view.Inicial
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }
@@ -123,7 +128,7 @@ namespace SeitonSystem.src.view.Inicial
 
         private void button3_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }
@@ -158,6 +163,62 @@ namespace SeitonSystem.src.view.Inicial
             timer1.Enabled = true;
 
 
+        }
+
+        public void lucroDia()
+        {
+            this.lucro = 0;
+            this.entrada = 0;
+            this.saida = 0;
+
+            calculaLucrosGastos("Último dia", "Entrada");
+            calculaLucrosGastos("Último dia", "Saida");
+
+            if (this.lucro <= 0)
+            {
+                txt_lucro.BackColor = Color.Salmon;
+            }
+            else
+            {
+                txt_lucro.BackColor = Color.PaleGreen;
+            }
+
+            txt_lucro.Text = "R$" + " " + this.lucro;
+
+
+        }
+        private void calculaLucrosGastos(String periodo, String tipo)
+        {
+            List<Financas> f = new List<Financas>();
+
+            switch (periodo)
+            {
+                
+                case "Último 3 meses":
+                    f = this.financasController.pesquisaFluxosTipoData(tipo, DateTime.Now.AddMonths(-2));
+                    break;
+                case "Último 6 meses":
+                    f = this.financasController.pesquisaFluxosTipoData(tipo, DateTime.Now.AddMonths(-5));
+                    break;
+                case "Último dia":
+                    f = this.financasController.pesquisaFluxosTipoData(tipo, DateTime.Now.Date);
+                    break;
+            }
+
+            foreach (Financas fi in f)
+            {
+                if (tipo == "Entrada")
+                {
+                    this.entrada += fi.Valor;
+                }
+                else
+                {
+                    this.saida += fi.Valor;
+                }
+            }
+
+            this.lucro = this.entrada - this.saida;
+           
         }
 
         private void InicialView_Load(object sender, EventArgs e)
@@ -195,6 +256,15 @@ namespace SeitonSystem.src.view.Inicial
             }
         }
 
+        private void btn_ajuda_MouseEnter(object sender, EventArgs e)
+        {
+            //btn_ajuda.BackColor = Color.Pink;
+        }
+
+        private void btn_ajuda_MouseHover(object sender, EventArgs e)
+        {
+            //btn_ajuda.BackColor = Color.LightPink;
+        }
     }
 
 }

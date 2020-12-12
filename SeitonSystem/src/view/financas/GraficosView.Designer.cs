@@ -82,9 +82,10 @@
             this.btn_produtos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_produtos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_produtos.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_produtos.Location = new System.Drawing.Point(149, -2);
+            this.btn_produtos.Location = new System.Drawing.Point(199, -2);
+            this.btn_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_produtos.Name = "btn_produtos";
-            this.btn_produtos.Size = new System.Drawing.Size(149, 31);
+            this.btn_produtos.Size = new System.Drawing.Size(199, 38);
             this.btn_produtos.TabIndex = 4;
             this.btn_produtos.Text = "Produtos";
             this.btn_produtos.UseVisualStyleBackColor = false;
@@ -100,9 +101,10 @@
             this.btn_pedido.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pedido.Location = new System.Drawing.Point(445, -2);
+            this.btn_pedido.Location = new System.Drawing.Point(593, -2);
+            this.btn_pedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_pedido.Name = "btn_pedido";
-            this.btn_pedido.Size = new System.Drawing.Size(153, 31);
+            this.btn_pedido.Size = new System.Drawing.Size(204, 38);
             this.btn_pedido.TabIndex = 14;
             this.btn_pedido.Text = "Pedidos";
             this.btn_pedido.UseVisualStyleBackColor = false;
@@ -118,9 +120,10 @@
             this.btn_financas.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.Menu;
             this.btn_financas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_financas.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_financas.Location = new System.Drawing.Point(598, -2);
+            this.btn_financas.Location = new System.Drawing.Point(797, -2);
+            this.btn_financas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_financas.Name = "btn_financas";
-            this.btn_financas.Size = new System.Drawing.Size(152, 31);
+            this.btn_financas.Size = new System.Drawing.Size(203, 38);
             this.btn_financas.TabIndex = 15;
             this.btn_financas.Text = "Finanças";
             this.btn_financas.UseVisualStyleBackColor = false;
@@ -131,9 +134,10 @@
             this.pic_calda.BackColor = System.Drawing.Color.Transparent;
             this.pic_calda.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pic_calda.BackgroundImage")));
             this.pic_calda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_calda.Location = new System.Drawing.Point(0, 30);
+            this.pic_calda.Location = new System.Drawing.Point(0, 37);
+            this.pic_calda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_calda.Name = "pic_calda";
-            this.pic_calda.Size = new System.Drawing.Size(752, 123);
+            this.pic_calda.Size = new System.Drawing.Size(1003, 151);
             this.pic_calda.TabIndex = 16;
             this.pic_calda.TabStop = false;
             // 
@@ -141,9 +145,10 @@
             // 
             this.pic_logo.BackgroundImage = global::SeitonSystem.Properties.Resources.logo2;
             this.pic_logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pic_logo.Location = new System.Drawing.Point(298, -5);
+            this.pic_logo.Location = new System.Drawing.Point(397, -6);
+            this.pic_logo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(147, 154);
+            this.pic_logo.Size = new System.Drawing.Size(196, 190);
             this.pic_logo.TabIndex = 17;
             this.pic_logo.TabStop = false;
             // 
@@ -157,9 +162,10 @@
             this.grafico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.grafico.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
             this.grafico.ForeColor = System.Drawing.Color.White;
-            this.grafico.Location = new System.Drawing.Point(19, 158);
+            this.grafico.Location = new System.Drawing.Point(25, 194);
+            this.grafico.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.grafico.Name = "grafico";
-            this.grafico.Size = new System.Drawing.Size(161, 42);
+            this.grafico.Size = new System.Drawing.Size(215, 52);
             this.grafico.TabIndex = 106;
             this.grafico.Text = "Gráficos";
             this.grafico.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -168,14 +174,17 @@
             // linha
             // 
             this.linha.BackColor = System.Drawing.Color.White;
-            this.linha.Location = new System.Drawing.Point(29, 200);
+            this.linha.Location = new System.Drawing.Point(39, 246);
+            this.linha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.linha.Name = "linha";
-            this.linha.Size = new System.Drawing.Size(697, 2);
+            this.linha.Size = new System.Drawing.Size(929, 2);
             this.linha.TabIndex = 144;
             // 
             // gf_pedido
             // 
-            this.gf_pedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.gf_pedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.gf_pedido.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.gf_pedido.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea1.Area3DStyle.Enable3D = true;
             chartArea1.AxisX.Interval = 1D;
             chartArea1.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -186,7 +195,8 @@
             chartArea1.Name = "gf_pedidoArea";
             chartArea1.ShadowColor = System.Drawing.Color.White;
             this.gf_pedido.ChartAreas.Add(chartArea1);
-            this.gf_pedido.Location = new System.Drawing.Point(44, 1247);
+            this.gf_pedido.Location = new System.Drawing.Point(0, 1594);
+            this.gf_pedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gf_pedido.Name = "gf_pedido";
             this.gf_pedido.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series1.ChartArea = "gf_pedidoArea";
@@ -198,7 +208,7 @@
             series1.ShadowColor = System.Drawing.Color.White;
             series1.YValuesPerPoint = 2;
             this.gf_pedido.Series.Add(series1);
-            this.gf_pedido.Size = new System.Drawing.Size(579, 225);
+            this.gf_pedido.Size = new System.Drawing.Size(974, 332);
             this.gf_pedido.TabIndex = 145;
             // 
             // cb_pesquisaAno
@@ -208,15 +218,18 @@
             this.cb_pesquisaAno.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cb_pesquisaAno.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_pesquisaAno.FormattingEnabled = true;
-            this.cb_pesquisaAno.Location = new System.Drawing.Point(617, 165);
+            this.cb_pesquisaAno.Location = new System.Drawing.Point(823, 203);
+            this.cb_pesquisaAno.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_pesquisaAno.Name = "cb_pesquisaAno";
-            this.cb_pesquisaAno.Size = new System.Drawing.Size(108, 29);
+            this.cb_pesquisaAno.Size = new System.Drawing.Size(143, 36);
             this.cb_pesquisaAno.TabIndex = 169;
             this.cb_pesquisaAno.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaAno_SelectedIndexChanged);
             // 
             // gf_entrada
             // 
-            this.gf_entrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.gf_entrada.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.gf_entrada.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.gf_entrada.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea2.Area3DStyle.Enable3D = true;
             chartArea2.AxisX.Interval = 1D;
             chartArea2.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -232,9 +245,15 @@
             legend1.Name = "legenda_entrada";
             legend1.TitleFont = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gf_entrada.Legends.Add(legend1);
-            this.gf_entrada.Location = new System.Drawing.Point(46, 59);
+            this.gf_entrada.Location = new System.Drawing.Point(0, 73);
+            this.gf_entrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gf_entrada.Name = "gf_entrada";
-            this.gf_entrada.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.gf_entrada.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            this.gf_entrada.PaletteCustomColors = new System.Drawing.Color[] {
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128))))),
+        System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))))};
             series2.ChartArea = "gf_EntradaArea";
             series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
             series2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
@@ -244,12 +263,15 @@
             series2.ShadowColor = System.Drawing.Color.White;
             series2.YValuesPerPoint = 2;
             this.gf_entrada.Series.Add(series2);
-            this.gf_entrada.Size = new System.Drawing.Size(579, 276);
+            this.gf_entrada.Size = new System.Drawing.Size(974, 305);
             this.gf_entrada.TabIndex = 171;
+            this.gf_entrada.Click += new System.EventHandler(this.gf_entrada_Click);
             // 
             // gf_saida
             // 
-            this.gf_saida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.gf_saida.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.gf_saida.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.gf_saida.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea3.Area3DStyle.Enable3D = true;
             chartArea3.AxisX.Interval = 1D;
             chartArea3.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -264,7 +286,8 @@
             legend2.IsTextAutoFit = false;
             legend2.Name = "legendas_saida";
             this.gf_saida.Legends.Add(legend2);
-            this.gf_saida.Location = new System.Drawing.Point(46, 351);
+            this.gf_saida.Location = new System.Drawing.Point(0, 472);
+            this.gf_saida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gf_saida.Name = "gf_saida";
             this.gf_saida.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
             series3.ChartArea = "gf_SaidaArea";
@@ -276,7 +299,7 @@
             series3.ShadowColor = System.Drawing.Color.White;
             series3.YValuesPerPoint = 2;
             this.gf_saida.Series.Add(series3);
-            this.gf_saida.Size = new System.Drawing.Size(579, 276);
+            this.gf_saida.Size = new System.Drawing.Size(974, 305);
             this.gf_saida.TabIndex = 172;
             // 
             // btn_clientes
@@ -290,8 +313,9 @@
             this.btn_clientes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_clientes.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_clientes.Location = new System.Drawing.Point(0, -2);
+            this.btn_clientes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_clientes.Name = "btn_clientes";
-            this.btn_clientes.Size = new System.Drawing.Size(149, 31);
+            this.btn_clientes.Size = new System.Drawing.Size(199, 38);
             this.btn_clientes.TabIndex = 177;
             this.btn_clientes.Text = "Clientes";
             this.btn_clientes.UseVisualStyleBackColor = false;
@@ -299,7 +323,9 @@
             // 
             // gf_lucro
             // 
-            this.gf_lucro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.gf_lucro.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.gf_lucro.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.gf_lucro.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea4.Area3DStyle.Enable3D = true;
             chartArea4.AxisX.Interval = 1D;
             chartArea4.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -310,9 +336,10 @@
             chartArea4.Name = "gf_lucroArea";
             chartArea4.ShadowColor = System.Drawing.Color.White;
             this.gf_lucro.ChartAreas.Add(chartArea4);
-            this.gf_lucro.Location = new System.Drawing.Point(46, 982);
+            this.gf_lucro.Location = new System.Drawing.Point(0, 1218);
+            this.gf_lucro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gf_lucro.Name = "gf_lucro";
-            this.gf_lucro.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Berry;
+            this.gf_lucro.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Chocolate;
             series4.ChartArea = "gf_lucroArea";
             series4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series4.IsValueShownAsLabel = true;
@@ -322,7 +349,7 @@
             series4.ShadowColor = System.Drawing.Color.White;
             series4.YValuesPerPoint = 2;
             this.gf_lucro.Series.Add(series4);
-            this.gf_lucro.Size = new System.Drawing.Size(579, 225);
+            this.gf_lucro.Size = new System.Drawing.Size(974, 319);
             this.gf_lucro.TabIndex = 179;
             // 
             // cb_pesquisaData
@@ -333,11 +360,12 @@
             this.cb_pesquisaData.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cb_pesquisaData.FormattingEnabled = true;
             this.cb_pesquisaData.Items.AddRange(new object[] {
-            "Último 6 meses",
-            "Último 12 meses"});
-            this.cb_pesquisaData.Location = new System.Drawing.Point(445, 165);
+            "Últimos 6 meses",
+            "Últimos 12 meses"});
+            this.cb_pesquisaData.Location = new System.Drawing.Point(593, 203);
+            this.cb_pesquisaData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cb_pesquisaData.Name = "cb_pesquisaData";
-            this.cb_pesquisaData.Size = new System.Drawing.Size(166, 29);
+            this.cb_pesquisaData.Size = new System.Drawing.Size(220, 36);
             this.cb_pesquisaData.TabIndex = 180;
             this.cb_pesquisaData.SelectedIndexChanged += new System.EventHandler(this.cb_pesquisaData_SelectedIndexChanged);
             // 
@@ -351,9 +379,10 @@
             this.entrada.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.entrada.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.entrada.ForeColor = System.Drawing.Color.White;
-            this.entrada.Location = new System.Drawing.Point(27, 27);
+            this.entrada.Location = new System.Drawing.Point(4, 4);
+            this.entrada.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.entrada.Name = "entrada";
-            this.entrada.Size = new System.Drawing.Size(148, 26);
+            this.entrada.Size = new System.Drawing.Size(197, 32);
             this.entrada.TabIndex = 181;
             this.entrada.Text = "Fluxo de Entrada";
             this.entrada.UseVisualStyleBackColor = false;
@@ -368,9 +397,10 @@
             this.saida.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.saida.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.saida.ForeColor = System.Drawing.Color.White;
-            this.saida.Location = new System.Drawing.Point(27, 319);
+            this.saida.Location = new System.Drawing.Point(4, 432);
+            this.saida.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.saida.Name = "saida";
-            this.saida.Size = new System.Drawing.Size(129, 26);
+            this.saida.Size = new System.Drawing.Size(172, 32);
             this.saida.TabIndex = 182;
             this.saida.Text = "Fluxo de Saída";
             this.saida.UseVisualStyleBackColor = false;
@@ -385,9 +415,10 @@
             this.pedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pedido.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.pedido.ForeColor = System.Drawing.Color.White;
-            this.pedido.Location = new System.Drawing.Point(27, 1218);
+            this.pedido.Location = new System.Drawing.Point(25, 1554);
+            this.pedido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pedido.Name = "pedido";
-            this.pedido.Size = new System.Drawing.Size(201, 26);
+            this.pedido.Size = new System.Drawing.Size(268, 32);
             this.pedido.TabIndex = 183;
             this.pedido.Text = "Quantidade de Pedidos";
             this.pedido.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -403,9 +434,10 @@
             this.lucro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lucro.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.lucro.ForeColor = System.Drawing.Color.White;
-            this.lucro.Location = new System.Drawing.Point(27, 954);
+            this.lucro.Location = new System.Drawing.Point(25, 1177);
+            this.lucro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lucro.Name = "lucro";
-            this.lucro.Size = new System.Drawing.Size(61, 27);
+            this.lucro.Size = new System.Drawing.Size(81, 33);
             this.lucro.TabIndex = 184;
             this.lucro.Text = "Lucro";
             this.lucro.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -413,7 +445,9 @@
             // 
             // gf_produtos
             // 
-            this.gf_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.gf_produtos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
+            this.gf_produtos.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.HorizontalCenter;
+            this.gf_produtos.BackSecondaryColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             chartArea5.Area3DStyle.Enable3D = true;
             chartArea5.AxisX.Interval = 1D;
             chartArea5.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -424,7 +458,8 @@
             chartArea5.Name = "gf_ProdutoArea";
             chartArea5.ShadowColor = System.Drawing.Color.White;
             this.gf_produtos.ChartAreas.Add(chartArea5);
-            this.gf_produtos.Location = new System.Drawing.Point(46, 676);
+            this.gf_produtos.Location = new System.Drawing.Point(0, 833);
+            this.gf_produtos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.gf_produtos.Name = "gf_produtos";
             this.gf_produtos.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Light;
             series5.ChartArea = "gf_ProdutoArea";
@@ -435,7 +470,7 @@
             series5.ShadowColor = System.Drawing.Color.White;
             series5.YValuesPerPoint = 2;
             this.gf_produtos.Series.Add(series5);
-            this.gf_produtos.Size = new System.Drawing.Size(579, 225);
+            this.gf_produtos.Size = new System.Drawing.Size(970, 336);
             this.gf_produtos.TabIndex = 185;
             // 
             // produto
@@ -448,18 +483,18 @@
             this.produto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.produto.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold);
             this.produto.ForeColor = System.Drawing.Color.White;
-            this.produto.Location = new System.Drawing.Point(27, 633);
+            this.produto.Location = new System.Drawing.Point(4, 785);
+            this.produto.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.produto.Name = "produto";
-            this.produto.Size = new System.Drawing.Size(131, 26);
+            this.produto.Size = new System.Drawing.Size(227, 40);
             this.produto.TabIndex = 186;
             this.produto.Text = "Mais Vendidos";
-            this.produto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.produto.UseVisualStyleBackColor = false;
             // 
             // panel_graficos
             // 
             this.panel_graficos.AutoScroll = true;
-            this.panel_graficos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(218)))), ((int)(((byte)(167)))), ((int)(((byte)(177)))));
+            this.panel_graficos.BackColor = System.Drawing.Color.Transparent;
             this.panel_graficos.Controls.Add(this.entrada);
             this.panel_graficos.Controls.Add(this.saida);
             this.panel_graficos.Controls.Add(this.lucro);
@@ -470,17 +505,19 @@
             this.panel_graficos.Controls.Add(this.gf_produtos);
             this.panel_graficos.Controls.Add(this.gf_entrada);
             this.panel_graficos.Controls.Add(this.gf_saida);
-            this.panel_graficos.Location = new System.Drawing.Point(32, 215);
+            this.panel_graficos.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel_graficos.Location = new System.Drawing.Point(0, 479);
+            this.panel_graficos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel_graficos.Name = "panel_graficos";
-            this.panel_graficos.Size = new System.Drawing.Size(694, 507);
+            this.panel_graficos.Size = new System.Drawing.Size(999, 546);
             this.panel_graficos.TabIndex = 187;
             // 
             // GraficosView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(214)))), ((int)(((byte)(156)))), ((int)(((byte)(154)))));
-            this.ClientSize = new System.Drawing.Size(749, 749);
+            this.ClientSize = new System.Drawing.Size(999, 1025);
             this.Controls.Add(this.panel_graficos);
             this.Controls.Add(this.cb_pesquisaData);
             this.Controls.Add(this.btn_clientes);
@@ -493,6 +530,7 @@
             this.Controls.Add(this.btn_pedido);
             this.Controls.Add(this.btn_produtos);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.Name = "GraficosView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

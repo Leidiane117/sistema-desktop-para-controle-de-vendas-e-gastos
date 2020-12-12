@@ -14,27 +14,18 @@ namespace SeitonSystem.src.view
 
         private void Entrar_Click(object sender, EventArgs e)
         {
-
-
+            timer1.Enabled = true;
             if (txt_user.Text.Trim() == "" || txt_senha.Text.Trim() == "")
             {
 
                 enviaMsg("Preencha todos os campos!", "aviso");
 
 
-            }
-            else if (txt_user.Text == "admin" && txt_senha.Text == "4321")
-            {
+                if (txt_user.Text != "admin" && txt_senha.Text != "4321")
+                {
+                    enviaMsg("Senha ou usuário inválidos!", "erro");
 
-                InicialView inicial = new InicialView();
-                inicial.Show();
-                Close();
-            }
-
-
-            else
-            {
-                enviaMsg("Senha ou usuário inválidos!", "erro");
+                }
 
             }
         }
@@ -51,8 +42,29 @@ namespace SeitonSystem.src.view
             message.ShowDialog();
         }
 
+        private void timer1_Tick(object sender, EventArgs e)
+        {
 
 
+            pb_login.Visible = true;
+            if (pb_login.Value < pb_login.Maximum)
+            {
+                pb_login.Value += 1;
 
+            }
+            else
+            {
+                timer1.Stop();
+                
+                InicialView inicial = new InicialView();
+                inicial.Show();
+                this.Hide();
+
+
+            }
+
+        }
     }
 }
+
+

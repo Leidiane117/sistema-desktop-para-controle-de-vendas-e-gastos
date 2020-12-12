@@ -42,7 +42,6 @@ namespace SeitonSystem.src.dao
             {
 
                 this.cmd = new MySqlCommand(INSERT_PRODUTO, this.conn);
-                this.cmd.Parameters.Add(new MySqlParameter("@id", produto.Id));
                 this.cmd.Parameters.Add(new MySqlParameter("@nome", produto.Nome));
                 this.cmd.Parameters.Add(new MySqlParameter("@preco", produto.Preco));
                 this.cmd.Parameters.Add(new MySqlParameter("@descricao", produto.Descricao));
@@ -66,7 +65,6 @@ namespace SeitonSystem.src.dao
             {
 
                 this.cmd = new MySqlCommand(UPDATE_PRODUTO, this.conn);
-                this.cmd.Parameters.Add(new MySqlParameter("@id", produto.Id));
                 this.cmd.Parameters.Add(new MySqlParameter("@nome", produto.Nome));
                 this.cmd.Parameters.Add(new MySqlParameter("@preco", produto.Preco));
                 this.cmd.Parameters.Add(new MySqlParameter("@descricao", produto.Descricao));
@@ -171,15 +169,15 @@ namespace SeitonSystem.src.dao
                 if (!int.TryParse(filtro, out num))
                 {
                     filtro += "%";
-                    select += " nome LIKE @nome";
+                    select += " nome LIKE @filtro";
                 }
                 else
                 {
-                    select += " id = @id";
+                    select += " id = @filtro";
                 }
 
                 this.cmd = new MySqlCommand(select, this.conn);
-                this.cmd.Parameters.Add(new MySqlParameter("@nome", filtro));
+                this.cmd.Parameters.Add(new MySqlParameter("@filtro", filtro));
 
                 this.conn.Open();
                 this.cmd.ExecuteNonQuery();

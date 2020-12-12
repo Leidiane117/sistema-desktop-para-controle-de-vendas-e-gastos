@@ -101,6 +101,7 @@
             // 
             this.btn_pedido.BackColor = System.Drawing.Color.White;
             this.btn_pedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_pedido.Enabled = false;
             this.btn_pedido.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.btn_pedido.FlatAppearance.BorderSize = 0;
             this.btn_pedido.FlatAppearance.MouseDownBackColor = System.Drawing.Color.White;

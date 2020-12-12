@@ -126,7 +126,7 @@ namespace SeitonSystem.view
 
                 if (!cliente.Email.Contains("@") || !cliente.Email.Contains("."))
                 {
-                    throw new Exception("Informe um Número Válido");
+                    throw new Exception("Informe um Email Válido");
                 }
             }
             catch (Exception)
@@ -158,7 +158,7 @@ namespace SeitonSystem.view
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }

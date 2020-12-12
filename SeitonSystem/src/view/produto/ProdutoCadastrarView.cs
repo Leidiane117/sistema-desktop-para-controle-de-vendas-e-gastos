@@ -33,8 +33,16 @@ namespace SeitonSystem.view
         {
             try
             {
-                Produto produto = publicarProduto();
-                validaProduto(produto);
+
+                validaProduto();
+                Produto produto = new Produto
+                {
+                    Nome = txt_nome.Text,
+                    Preco = double.Parse(txt_preco.Text),
+                    Descricao = txt_descricao.Text,
+                   
+                };
+               
                 produtoController.inserirProduto(produto);
                 enviaMsg("Produto Cadastrado!", "check");
                 LimparForm();
@@ -45,7 +53,7 @@ namespace SeitonSystem.view
             }
             catch (Exception e1)
             {
-                enviaMsg(e1.Message, "aviso");
+                enviaMsg(e1.Message, "erro");
             }
         }
 
@@ -62,38 +70,27 @@ namespace SeitonSystem.view
         }
 
 
-        private Produto publicarProduto()
-        {
-            Produto produto = new Produto();
-            produto.Nome = txt_nome.Text;
-            produto.Preco = double.Parse(txt_preco.Text);
-            produto.Descricao = txt_descricao.Text;
-            return produto;
 
-
-        }
-
-        private void validaProduto(Produto produto)
+        private void validaProduto()
         {
             try
             {
-
-                if (string.IsNullOrEmpty(txt_nome.Text) || string.IsNullOrEmpty(txt_preco.Text))
+                if (string.IsNullOrEmpty(txt_preco.Text) || string.IsNullOrEmpty(txt_nome.Text))
                 {
                     throw new Exception("Preencha todos os campos!");
 
 
                 }
+
                 if (!Regex.Match(txt_preco.Text, "^[0-9]{0,4}[,]{0,1}[0-9]{0,4}$").Success)
                 {
                     throw new Exception("Informe o preço do produto corretamente!");
                 }
-                if (produto.Preco<=0)
+                if (double.Parse(txt_preco.Text) <= 0)
                 {
-                    throw new Exception("Informe o preço do produto!");
-                } 
-
-                if (!Regex.Match(produto.Nome, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
+                    throw new Exception("Informe o Preço!");
+                }
+                if (!Regex.Match(txt_nome.Text, "^[A-Za-zàáâãéèíóôúçÁÀÉÈÍÔÓÕÚÇ ]{3,80}$").Success)
                 {
                     throw new Exception("Informe o Nome do produto corretamente!");
                 }
@@ -136,7 +133,7 @@ namespace SeitonSystem.view
 
         private void btn_financas_Click(object sender, EventArgs e)
         {
-            FinancasView f = new FinancasView();
+            FinancasView2 f = new FinancasView2();
             f.Show();
             this.Hide();
         }
