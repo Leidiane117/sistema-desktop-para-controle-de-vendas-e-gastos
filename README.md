@@ -52,7 +52,7 @@ Sistema Operacional --------------------------Windows 10
 
 
  
- ![Tela Login](SeitonSystem/img/tela_de_login.png)
+ ![Tela Login](SeitonSystem/img/tela_de_login.png)  ![Tela Finanças](SeitonSystem/img/Tela_Principal_Finanças.png)  ![Tela Finanças](SeitonSystem/img/Sem_título.png)
  
  
- ![Tela Finanças](SeitonSystem/img/Tela_Principal_Finanças.png)
+ 
