@@ -59,7 +59,6 @@ Sistema Operacional --------------------------Windows 10
  
  ![Tela Finanças](SeitonSystem/img/Sem_título.png)
  
- ![Tela Finanças](SeitonSystem/img/Tela_Principal_Finanças.png)  
  
  
  
